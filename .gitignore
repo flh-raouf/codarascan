@@ -1,0 +1,41 @@
+# macOS and editor artifacts
+.DS_Store
+.idea/
+.vscode/
+
+# Python environments and caches
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Generated dependencies and temporary work
+node_modules/
+tmp/
+*.log
+
+# Confidential company source documents (never commit)
+**/private evaluation document.pdf
+**/private evaluation document.pdf
+
+# Confidential outputs derived from private evaluation document.pdf
+/bin/output/
+/notebooks/output/
+/output/opencv-detailed/
+/test/
+**/piero_yolov8s/output*/
+/1-deterministic_barcode_locator/output/
+/2-hybrid_barcode_pipeline/output/
+/3-zxing_only_barcode_pipeline/output/dossier/
+/3-zxing_only_barcode_pipeline/dossier_expected.json
+
+# Dossier-derived diagnostic tests and images
+/bin/notebooks/tests/
+
+# The separately authored LaTeX report and its generated PDF
+/docs/barcode-report/
+/output/pdf/Barcode Detection and Decoding in Scanned Industrial Documents.pdf
