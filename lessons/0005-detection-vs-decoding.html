@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lesson 5 - Detection vs Decoding</title>
+  <link rel="stylesheet" href="../assets/course.css">
+  <script src="../assets/quiz.js" defer></script>
+</head>
+<body>
+<main>
+  <nav><a href="index.html">Index</a><a href="0004-qr-and-2d-codes.html">Back</a><a href="0006-preprocessing-scanned-pages.html">Next</a></nav>
+  <p class="kicker">Lesson 5</p>
+  <h1>Detection vs Decoding</h1>
+  <p class="lede">Detection answers "where is the code?" Decoding answers "what does it say?"</p>
+
+  <div class="grid">
+    <div class="panel">
+      <h2>Detector output</h2>
+      <p>A box or polygon: four points around the barcode region, plus maybe a confidence score.</p>
+    </div>
+    <div class="panel">
+      <h2>Decoder output</h2>
+      <p>A string, a symbology type, and sometimes quality or orientation.</p>
+    </div>
+  </div>
+
+  <h2>Why we separate them</h2>
+  <p>A decoder can fail even when the detector found the right box: blur, bad thresholding, tiny modules, crop margins, or wrong symbology. If we mix the two, we will not know whether localization or reading failed.</p>
+
+  <pre><code>page image -> detector -> candidate boxes
+candidate crop -> rectification -> decoder -> string or empty</code></pre>
+
+  <div class="quiz" data-answer="a">
+    <h2>Retrieval check</h2>
+    <p>If a crop is correct but unreadable, which stage failed?</p>
+    <ol type="A">
+      <li>Decoding or crop preparation.</li>
+      <li>PDF page rendering only.</li>
+    </ol>
+    <button data-choice="a">A</button><button data-choice="b">B</button>
+    <p class="result" aria-live="polite"></p>
+  </div>
+
+  <div class="source">
+    <p><strong>Primary source:</strong> OpenCV's <a href="https://docs.opencv.org/4.x/dc/df7/classcv_1_1barcode_1_1BarcodeDetector.html">BarcodeDetector API</a> exposes detection, decoding, and combined methods.</p>
+  </div>
+</main>
+</body>
+</html>

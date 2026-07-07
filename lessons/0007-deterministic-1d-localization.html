@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lesson 7 - Deterministic 1D Localization</title>
+  <link rel="stylesheet" href="../assets/course.css">
+  <script src="../assets/quiz.js" defer></script>
+</head>
+<body>
+<main>
+  <nav><a href="index.html">Index</a><a href="0006-preprocessing-scanned-pages.html">Back</a><a href="0008-false-positive-rejection.html">Next</a></nav>
+  <p class="kicker">Lesson 7</p>
+  <h1>Deterministic 1D Localization</h1>
+  <p class="lede">The core trick: turn many thin parallel bars into one candidate rectangle.</p>
+
+  <div class="figure">
+    <img src="../output/opencv-stroke-preview/page-16.png" alt="Classical detector preview on page 16">
+    <p class="caption">The detector boxes the long header barcode and several rotated label barcodes. Some boxes need later cleanup.</p>
+  </div>
+
+  <h2>Minimal pipeline</h2>
+  <pre><code>gray = grayscale(page)
+grad = abs(sobel_x(gray))
+mask = threshold(grad)
+mask = close(mask, wide_kernel)
+contours = find_contours(mask)
+boxes = min_area_rect(contours)</code></pre>
+
+  <h2>Rotation strategy</h2>
+  <p>If the detector expects vertical bars, rotate the page through a small angle set, detect there, then map the box points back. This is boring and effective.</p>
+
+  <div class="quiz" data-answer="a">
+    <h2>Retrieval check</h2>
+    <p>What does morphology closing do for 1D barcode localization?</p>
+    <ol type="A">
+      <li>Merges nearby bars into blobs.</li>
+      <li>Decodes the barcode string.</li>
+    </ol>
+    <button data-choice="a">A</button><button data-choice="b">B</button>
+    <p class="result" aria-live="polite"></p>
+  </div>
+
+  <div class="source">
+    <p><strong>Primary source:</strong> The classical paper <a href="https://publicatio.bibl.u-szeged.hu/8602/2/barcode_morph_02.pdf">Barcode Detection with Morphological Operations and Clustering</a> studies morphology-based barcode detection.</p>
+  </div>
+</main>
+</body>
+</html>

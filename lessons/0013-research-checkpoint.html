@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lesson 13 - Research Checkpoint</title>
+  <link rel="stylesheet" href="../assets/course.css">
+  <script src="../assets/quiz.js" defer></script>
+</head>
+<body>
+<main>
+  <nav><a href="index.html">Index</a><a href="0012-decode-crops.html">Back</a><a href="../reference/deterministic-barcode-cheatsheet.html">Cheat Sheet</a></nav>
+  <p class="kicker">Lesson 13</p>
+  <h1>Research Checkpoint</h1>
+  <p class="lede">Only consider training after deterministic failure is measured and named.</p>
+
+  <h2>Decision rule</h2>
+  <p>Classical detection is enough if the remaining misses are rare and explainable by small tuning changes. A learned detector becomes reasonable if failures are varied, frequent, and expensive to encode as rules.</p>
+
+  <table>
+    <tr><th>Evidence</th><th>Next move</th></tr>
+    <tr><td>Mostly misses rotated labels at known angles.</td><td>Add angles or improve box merging.</td></tr>
+    <tr><td>Mostly false positives on tables.</td><td>Improve transition and quiet-zone filters.</td></tr>
+    <tr><td>Labels are blurred or damaged.</td><td>Improve rendering, denoising, and crop decoding.</td></tr>
+    <tr><td>Many visual cases with no clean rule.</td><td>Use ground truth to train or benchmark a detector.</td></tr>
+  </table>
+
+  <h2>Literature path</h2>
+  <p>Read classical morphology work first, then the BarBeR benchmark survey. That gives you the map before choosing tools.</p>
+
+  <div class="quiz" data-answer="a">
+    <h2>Retrieval check</h2>
+    <p>When is training justified?</p>
+    <ol type="A">
+      <li>After measured rule failures.</li>
+      <li>Before looking at pages.</li>
+    </ol>
+    <button data-choice="a">A</button><button data-choice="b">B</button>
+    <p class="result" aria-live="polite"></p>
+  </div>
+
+  <div class="source">
+    <p><strong>Primary sources:</strong> <a href="https://www.sciencedirect.com/science/article/pii/S0952197625002593">State-of-the-art review and benchmarking of barcode localization methods</a> and the <a href="https://ditto.ing.unimore.it/barber/">BarBeR repository</a>.</p>
+    <p>Ask me follow-up questions while reviewing any lesson. That is part of the course, not an interruption.</p>
+  </div>
+</main>
+</body>
+</html>

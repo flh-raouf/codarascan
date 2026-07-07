@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lesson 9 - Library Survey Lab</title>
+  <link rel="stylesheet" href="../assets/course.css">
+  <script src="../assets/quiz.js" defer></script>
+</head>
+<body>
+<main>
+  <nav><a href="index.html">Index</a><a href="0008-false-positive-rejection.html">Back</a><a href="0010-build-the-dossier-detector.html">Next</a></nav>
+  <p class="kicker">Lesson 9</p>
+  <h1>Library Survey Lab</h1>
+  <p class="lede">Use libraries as probes. Do not surrender the problem to them.</p>
+
+  <table>
+    <tr><th>Library</th><th>Useful for</th><th>Watch out</th></tr>
+    <tr><td>OpenCV BarcodeDetector</td><td>1D detection and decoding with quadrangle outputs.</td><td>May miss rotated or low-resolution dossier labels.</td></tr>
+    <tr><td>OpenCV QRCodeDetector</td><td>QR-specific detection and decoding.</td><td>Not for ordinary 1D labels.</td></tr>
+    <tr><td>pyzbar/ZBar</td><td>Decoding 1D and QR codes, returning rectangles/polygons.</td><td>Needs native ZBar on macOS/Linux.</td></tr>
+    <tr><td>ZXing</td><td>Strong multi-format decoding and format support.</td><td>Detection behavior depends on wrapper and image quality.</td></tr>
+  </table>
+
+  <h2>Lab idea</h2>
+  <p>Run each library on page 16, page 20, and page 21. Record three things only: found boxes, decoded strings, and misses. That tells us whether the library is a detector, decoder, or both for our pages.</p>
+
+  <div class="quiz" data-answer="a">
+    <h2>Retrieval check</h2>
+    <p>What is the best first use of these libraries?</p>
+    <ol type="A">
+      <li>Compare behavior on real pages.</li>
+      <li>Assume they solve everything.</li>
+    </ol>
+    <button data-choice="a">A</button><button data-choice="b">B</button>
+    <p class="result" aria-live="polite"></p>
+  </div>
+
+  <div class="source">
+    <p><strong>Primary sources:</strong> <a href="https://docs.opencv.org/4.x/dc/df7/classcv_1_1barcode_1_1BarcodeDetector.html">OpenCV BarcodeDetector</a>, <a href="https://github.com/zxing/zxing">ZXing</a>, and <a href="https://pypi.org/project/pyzbar/">pyzbar</a>.</p>
+  </div>
+</main>
+</body>
+</html>

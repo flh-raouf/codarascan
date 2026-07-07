@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lesson 12 - Decode Crops</title>
+  <link rel="stylesheet" href="../assets/course.css">
+  <script src="../assets/quiz.js" defer></script>
+</head>
+<body>
+<main>
+  <nav><a href="index.html">Index</a><a href="0011-evaluate-like-an-engineer.html">Back</a><a href="0013-research-checkpoint.html">Next</a></nav>
+  <p class="kicker">Lesson 12</p>
+  <h1>Decode Crops</h1>
+  <p class="lede">Once boxes are good, decoding becomes a controlled crop problem.</p>
+
+  <h2>Crop preparation</h2>
+  <ol>
+    <li>Use the rotated quadrilateral, not just the axis-aligned rectangle.</li>
+    <li>Perspective-warp the barcode into a flat horizontal crop.</li>
+    <li>Add margin so quiet zones survive.</li>
+    <li>Try grayscale, Otsu threshold, and adaptive threshold variants.</li>
+    <li>Send the crop to ZXing, pyzbar, or OpenCV.</li>
+  </ol>
+
+  <pre><code>box points -> perspective transform -> normalized crop
+normalized crop -> decoder -> value, type, quality</code></pre>
+
+  <h2>Important</h2>
+  <p>An empty decode result is not proof that the box is wrong. It may mean blur, bad thresholding, clipped quiet zones, or unsupported symbology.</p>
+
+  <div class="quiz" data-answer="b">
+    <h2>Retrieval check</h2>
+    <p>Why add margin before decoding?</p>
+    <ol type="A">
+      <li>To hide false positives.</li>
+      <li>To preserve quiet zones.</li>
+    </ol>
+    <button data-choice="a">A</button><button data-choice="b">B</button>
+    <p class="result" aria-live="polite"></p>
+  </div>
+
+  <div class="source">
+    <p><strong>Primary source:</strong> pyzbar documents decoded data, type, rectangle, polygon, orientation, and quality in <a href="https://pypi.org/project/pyzbar/">its project page</a>.</p>
+  </div>
+</main>
+</body>
+</html>
