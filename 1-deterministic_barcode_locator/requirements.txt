@@ -1,0 +1,8 @@
+numpy>=2.0,<3
+opencv-contrib-python-headless>=4.10,<5
+zxing-cpp>=2.2,<4
+matplotlib>=3.10,<4
+pandas>=2.2,<4
+jupyterlab>=4.4,<5
+nbconvert>=7.16,<8
+jupytext>=1.16,<2
