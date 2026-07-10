@@ -1,0 +1,8 @@
+numpy>=2.0,<3
+opencv-contrib-python-headless>=4.10,<6
+zxing-cpp>=2.2,<4
+Pillow>=10,<13
+
+# Optional high-recall decoder. A DYNAMSOFT_LICENSE_KEY is required.
+dynamsoft-barcode-reader-bundle>=11.4,<12
+
