@@ -1,0 +1,5597 @@
+{
+  "schema_version": 2,
+  "run": {
+    "id": "20260711T155031Z-140738e1",
+    "started_at": "2026-07-11T15:50:31+00:00",
+    "completed_at": "2026-07-11T15:50:39+00:00",
+    "input": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/output/pdf/Synthetic Quality Dossier - 50 scanned 2D barcode pages.pdf",
+    "input_sha256": "1c083775b2261049b63b1a9aeb89f5fa03276d867bb6fa712f2761deea2e3152",
+    "pipeline_sha256": "7223e2e5944f2c0bfe7c1bd67e55a428c2d68411aceb1731498d23fa9a5cd7eb",
+    "output_root": "."
+  },
+  "method": "ZXing matrix scale search + error-guided recovery + format-routed linear fallback",
+  "configuration": {
+    "formats": "2d",
+    "render_dpi": 300,
+    "pages": null,
+    "save_crops": true,
+    "residual_proposals": false,
+    "include_review_candidates": true,
+    "minimum_linear_score": 0.52,
+    "minimum_linear_length": 100.0
+  },
+  "summary": {
+    "pages": 50,
+    "decoded": 86,
+    "localized_unresolved_matrix": 0,
+    "review_candidates": 0,
+    "extraction_seconds": 1.1636,
+    "processing_seconds": 6.1226,
+    "wall_seconds": 7.2988
+  },
+  "integrity": {
+    "expected_crops": 86,
+    "actual_crops": 86,
+    "orphan_crops": 0
+  },
+  "pages": [
+    {
+      "page": 1,
+      "source_image": "pages/page-0001.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "SYNTHETIC-QC-001-1-774086172",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              2144.0,
+              2910.0
+            ],
+            [
+              2151.0,
+              3109.0
+            ],
+            [
+              1952.0,
+              3117.0
+            ],
+            [
+              1945.0,
+              2916.0
+            ]
+          ],
+          "aabb": {
+            "x": 1945.0,
+            "y": 2910.0,
+            "width": 206.0,
+            "height": 207.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0001-decoded-001.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 1,
+            "global-histogram": 1
+          },
+          "invalid_errors": {},
+          "decoded_unique": 1,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0001.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0502,
+        "matrix_error_recovery_seconds": 0.0,
+        "total_seconds": 0.1204
+      }
+    },
+    {
+      "page": 2,
+      "source_image": "pages/page-0002.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "QR|SQ2D|PAGE=002|INDEX=1|LOT=109099",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1250.0,
+              1646.0
+            ],
+            [
+              1395.0,
+              1640.0
+            ],
+            [
+              1401.0,
+              1784.0
+            ],
+            [
+              1256.0,
+              1791.0
+            ]
+          ],
+          "aabb": {
+            "x": 1250.0,
+            "y": 1640.0,
+            "width": 151.0,
+            "height": 151.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0002-decoded-001.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 1,
+            "global-histogram": 1
+          },
+          "invalid_errors": {},
+          "decoded_unique": 1,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0002.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0444,
+        "matrix_error_recovery_seconds": 0.0,
+        "total_seconds": 0.1042
+      }
+    },
+    {
+      "page": 3,
+      "source_image": "pages/page-0003.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 2,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "(01)09506000160241(21)DM0031",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              264.0,
+              1660.0
+            ],
+            [
+              407.0,
+              1645.0
+            ],
+            [
+              422.0,
+              1789.0
+            ],
+            [
+              278.0,
+              1803.0
+            ]
+          ],
+          "aabb": {
+            "x": 264.0,
+            "y": 1645.0,
+            "width": 158.0,
+            "height": 158.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0003-decoded-001.png"
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "DM|SQ2D|P003|I2|L383147",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1475.0,
+              2681.0
+            ],
+            [
+              1595.0,
+              2671.0
+            ],
+            [
+              1605.0,
+              2790.0
+            ],
+            [
+              1486.0,
+              2801.0
+            ]
+          ],
+          "aabb": {
+            "x": 1475.0,
+            "y": 2671.0,
+            "width": 130.0,
+            "height": 130.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0003-decoded-002.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 2,
+            "global-histogram": 2
+          },
+          "invalid_errors": {},
+          "decoded_unique": 2,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0003.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0438,
+        "matrix_error_recovery_seconds": 0.0,
+        "total_seconds": 0.1667
+      }
+    },
+    {
+      "page": 4,
+      "source_image": "pages/page-0004.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "DM|SQ2D|P004|I1|L399885",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1131.0,
+              2309.0
+            ],
+            [
+              1271.0,
+              2310.0
+            ],
+            [
+              1270.0,
+              2450.0
+            ],
+            [
+              1130.0,
+              2449.0
+            ]
+          ],
+          "aabb": {
+            "x": 1130.0,
+            "y": 2309.0,
+            "width": 141.0,
+            "height": 141.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0004-decoded-001.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 1,
+            "global-histogram": 1
+          },
+          "invalid_errors": {},
+          "decoded_unique": 1,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0004.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0433,
+        "matrix_error_recovery_seconds": 0.0,
+        "total_seconds": 0.1402
+      }
+    },
+    {
+      "page": 5,
+      "source_image": "pages/page-0005.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "SN681924417630-P05",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              2130.0,
+              693.0
+            ],
+            [
+              2132.0,
+              565.0
+            ],
+            [
+              2261.0,
+              568.0
+            ],
+            [
+              2258.0,
+              696.0
+            ]
+          ],
+          "aabb": {
+            "x": 2130.0,
+            "y": 565.0,
+            "width": 131.0,
+            "height": 131.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0005-decoded-001.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 1,
+            "global-histogram": 1
+          },
+          "invalid_errors": {},
+          "decoded_unique": 1,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0005.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0459,
+        "matrix_error_recovery_seconds": 0.0,
+        "total_seconds": 0.1286
+      }
+    },
+    {
+      "page": 6,
+      "source_image": "pages/page-0006.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 3360,
+        "height": 2400
+      },
+      "decoded_count": 2,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "(01)09506000135967(21)DM0062",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              3018.0,
+              645.0
+            ],
+            [
+              3021.0,
+              753.0
+            ],
+            [
+              2912.0,
+              755.0
+            ],
+            [
+              2910.0,
+              647.0
+            ]
+          ],
+          "aabb": {
+            "x": 2910.0,
+            "y": 645.0,
+            "width": 111.0,
+            "height": 110.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0006-decoded-001.png"
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "SN140796773781-P06",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              2125.0,
+              1249.0
+            ],
+            [
+              2237.0,
+              1243.0
+            ],
+            [
+              2242.0,
+              1356.0
+            ],
+            [
+              2130.0,
+              1361.0
+            ]
+          ],
+          "aabb": {
+            "x": 2125.0,
+            "y": 1243.0,
+            "width": 117.0,
+            "height": 118.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0006-decoded-002.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 2,
+            "global-histogram": 2
+          },
+          "invalid_errors": {},
+          "decoded_unique": 2,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0006.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0443,
+        "matrix_error_recovery_seconds": 0.0,
+        "total_seconds": 0.0793
+      }
+    },
+    {
+      "page": 7,
+      "source_image": "pages/page-0007.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 3,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "(01)09506000198486(21)DM0071",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1268.0,
+              718.0
+            ],
+            [
+              1429.0,
+              706.0
+            ],
+            [
+              1441.0,
+              868.0
+            ],
+            [
+              1280.0,
+              880.0
+            ]
+          ],
+          "aabb": {
+            "x": 1268.0,
+            "y": 706.0,
+            "width": 173.0,
+            "height": 174.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0007-decoded-001.png"
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "(01)09506000121452(21)DM0072",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              607.0,
+              726.0
+            ],
+            [
+              607.0,
+              907.0
+            ],
+            [
+              426.0,
+              905.0
+            ],
+            [
+              427.0,
+              725.0
+            ]
+          ],
+          "aabb": {
+            "x": 426.0,
+            "y": 725.0,
+            "width": 181.0,
+            "height": 182.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0007-decoded-002.png"
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "(01)09506000137068(21)DM0073",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1823.0,
+              1500.0
+            ],
+            [
+              1825.0,
+              1355.0
+            ],
+            [
+              1969.0,
+              1357.0
+            ],
+            [
+              1967.0,
+              1501.0
+            ]
+          ],
+          "aabb": {
+            "x": 1823.0,
+            "y": 1355.0,
+            "width": 146.0,
+            "height": 146.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0007-decoded-003.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 3,
+            "global-histogram": 3
+          },
+          "invalid_errors": {},
+          "decoded_unique": 3,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0007.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0428,
+        "matrix_error_recovery_seconds": 0.0,
+        "total_seconds": 0.107
+      }
+    },
+    {
+      "page": 8,
+      "source_image": "pages/page-0008.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "https://example.invalid/synthetic/qc/008/1/10907",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1090.0,
+              634.0
+            ],
+            [
+              1235.0,
+              634.0
+            ],
+            [
+              1235.0,
+              779.0
+            ],
+            [
+              1090.0,
+              779.0
+            ]
+          ],
+          "aabb": {
+            "x": 1090.0,
+            "y": 634.0,
+            "width": 145.0,
+            "height": 145.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0008-decoded-001.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 1,
+            "global-histogram": 1
+          },
+          "invalid_errors": {},
+          "decoded_unique": 1,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0008.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0425,
+        "matrix_error_recovery_seconds": 0.0,
+        "total_seconds": 0.1316
+      }
+    },
+    {
+      "page": 9,
+      "source_image": "pages/page-0009.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 2,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "(01)09506000191536(21)DM0091",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1236.0,
+              391.0
+            ],
+            [
+              1380.0,
+              381.0
+            ],
+            [
+              1390.0,
+              525.0
+            ],
+            [
+              1246.0,
+              535.0
+            ]
+          ],
+          "aabb": {
+            "x": 1236.0,
+            "y": 381.0,
+            "width": 154.0,
+            "height": 154.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0009-decoded-001.png"
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "SN781696758819-P09",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              901.0,
+              1990.0
+            ],
+            [
+              1077.0,
+              1993.0
+            ],
+            [
+              1073.0,
+              2170.0
+            ],
+            [
+              897.0,
+              2166.0
+            ]
+          ],
+          "aabb": {
+            "x": 897.0,
+            "y": 1990.0,
+            "width": 180.0,
+            "height": 180.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0009-decoded-002.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 2,
+            "global-histogram": 2
+          },
+          "invalid_errors": {},
+          "decoded_unique": 2,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0009.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0393,
+        "matrix_error_recovery_seconds": 0.0,
+        "total_seconds": 0.0882
+      }
+    },
+    {
+      "page": 10,
+      "source_image": "pages/page-0010.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "SN196084580647-P10",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              922.0,
+              696.0
+            ],
+            [
+              1082.0,
+              683.0
+            ],
+            [
+              1094.0,
+              843.0
+            ],
+            [
+              935.0,
+              855.0
+            ]
+          ],
+          "aabb": {
+            "x": 922.0,
+            "y": 683.0,
+            "width": 172.0,
+            "height": 172.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0010-decoded-001.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 1,
+            "global-histogram": 1
+          },
+          "invalid_errors": {},
+          "decoded_unique": 1,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0010.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0314,
+        "matrix_error_recovery_seconds": 0.0,
+        "total_seconds": 0.158
+      }
+    },
+    {
+      "page": 11,
+      "source_image": "pages/page-0011.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "(01)09506000183175(21)DM0111",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:invalid-matrix:global-histogram:downscale",
+            "zxing:matrix-error-guided-recovery"
+          ],
+          "attempts": [
+            "whole-page:global-histogram:downscale:return-errors",
+            "invalid-anchor:context500-cubic15:local-average:downscale"
+          ],
+          "quad": [
+            [
+              1124.0,
+              431.0
+            ],
+            [
+              1250.0,
+              401.0
+            ],
+            [
+              1272.0,
+              525.0
+            ],
+            [
+              1154.0,
+              553.0
+            ]
+          ],
+          "aabb": {
+            "x": 1124.0,
+            "y": 401.0,
+            "width": 148.0,
+            "height": 152.0
+          },
+          "evidence": {
+            "prior_error": "ChecksumError @ DMDecoder.cpp:427"
+          },
+          "crop": "crops/decoded/page-0011-decoded-001.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 0,
+            "global-histogram": 1
+          },
+          "invalid_errors": {
+            "ChecksumError": 1
+          },
+          "decoded_unique": 0,
+          "invalid_unique_unexplained": 1,
+          "error_guided_recovered": 1,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0011.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0423,
+        "matrix_error_recovery_seconds": 0.0037,
+        "total_seconds": 0.1178
+      }
+    },
+    {
+      "page": 12,
+      "source_image": "pages/page-0012.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 2,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "https://example.invalid/synthetic/qc/012/2/48994",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1197.0,
+              759.0
+            ],
+            [
+              1458.0,
+              765.0
+            ],
+            [
+              1452.0,
+              1026.0
+            ],
+            [
+              1191.0,
+              1020.0
+            ]
+          ],
+          "aabb": {
+            "x": 1191.0,
+            "y": 759.0,
+            "width": 267.0,
+            "height": 267.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0012-decoded-001.png"
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "SYNTHETIC-QC-012-1-203218343",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              386.0,
+              1145.0
+            ],
+            [
+              611.0,
+              1145.0
+            ],
+            [
+              612.0,
+              1370.0
+            ],
+            [
+              387.0,
+              1370.0
+            ]
+          ],
+          "aabb": {
+            "x": 386.0,
+            "y": 1145.0,
+            "width": 226.0,
+            "height": 225.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0012-decoded-002.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 2,
+            "global-histogram": 2
+          },
+          "invalid_errors": {},
+          "decoded_unique": 2,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0012.png",
+      "timings": {
+        "matrix_fast_seconds": 0.041,
+        "matrix_error_recovery_seconds": 0.0,
+        "total_seconds": 0.1044
+      }
+    },
+    {
+      "page": 13,
+      "source_image": "pages/page-0013.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 4,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "DM|SQ2D|P013|I2|L512721",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1415.0,
+              690.0
+            ],
+            [
+              1615.0,
+              704.0
+            ],
+            [
+              1600.0,
+              904.0
+            ],
+            [
+              1401.0,
+              890.0
+            ]
+          ],
+          "aabb": {
+            "x": 1401.0,
+            "y": 690.0,
+            "width": 214.0,
+            "height": 214.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0013-decoded-001.png"
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "DM|SQ2D|P013|I3|L480763",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              450.0,
+              1603.0
+            ],
+            [
+              590.0,
+              1594.0
+            ],
+            [
+              598.0,
+              1734.0
+            ],
+            [
+              458.0,
+              1743.0
+            ]
+          ],
+          "aabb": {
+            "x": 450.0,
+            "y": 1594.0,
+            "width": 148.0,
+            "height": 149.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0013-decoded-002.png"
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "DM|SQ2D|P013|I4|L847008",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1471.0,
+              2147.0
+            ],
+            [
+              1590.0,
+              2160.0
+            ],
+            [
+              1577.0,
+              2280.0
+            ],
+            [
+              1457.0,
+              2266.0
+            ]
+          ],
+          "aabb": {
+            "x": 1457.0,
+            "y": 2147.0,
+            "width": 133.0,
+            "height": 133.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0013-decoded-003.png"
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "SN446560799499-P13",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              934.0,
+              2677.0
+            ],
+            [
+              1078.0,
+              2669.0
+            ],
+            [
+              1086.0,
+              2813.0
+            ],
+            [
+              943.0,
+              2821.0
+            ]
+          ],
+          "aabb": {
+            "x": 934.0,
+            "y": 2669.0,
+            "width": 152.0,
+            "height": 152.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0013-decoded-004.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 4,
+            "global-histogram": 4
+          },
+          "invalid_errors": {},
+          "decoded_unique": 4,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0013.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0393,
+        "matrix_error_recovery_seconds": 0.0,
+        "total_seconds": 0.1257
+      }
+    },
+    {
+      "page": 14,
+      "source_image": "pages/page-0014.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 3360,
+        "height": 2400
+      },
+      "decoded_count": 3,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "DM|SQ2D|P014|I3|L633687",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1448.0,
+              590.0
+            ],
+            [
+              1668.0,
+              603.0
+            ],
+            [
+              1656.0,
+              822.0
+            ],
+            [
+              1436.0,
+              810.0
+            ]
+          ],
+          "aabb": {
+            "x": 1436.0,
+            "y": 590.0,
+            "width": 232.0,
+            "height": 232.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0014-decoded-001.png"
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "https://example.invalid/synthetic/qc/014/1/58592",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              2678.0,
+              1460.0
+            ],
+            [
+              2939.0,
+              1480.0
+            ],
+            [
+              2919.0,
+              1740.0
+            ],
+            [
+              2658.0,
+              1720.0
+            ]
+          ],
+          "aabb": {
+            "x": 2658.0,
+            "y": 1460.0,
+            "width": 281.0,
+            "height": 280.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0014-decoded-002.png"
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "(01)09506000141629(21)DM0142",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1532.0,
+              1646.0
+            ],
+            [
+              1658.0,
+              1658.0
+            ],
+            [
+              1646.0,
+              1784.0
+            ],
+            [
+              1520.0,
+              1772.0
+            ]
+          ],
+          "aabb": {
+            "x": 1520.0,
+            "y": 1646.0,
+            "width": 138.0,
+            "height": 138.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0014-decoded-003.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 3,
+            "global-histogram": 3
+          },
+          "invalid_errors": {},
+          "decoded_unique": 3,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0014.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0429,
+        "matrix_error_recovery_seconds": 0.0,
+        "total_seconds": 0.0889
+      }
+    },
+    {
+      "page": 15,
+      "source_image": "pages/page-0015.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 2,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "(01)09506000158831(21)DM0151",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale"
+          ],
+          "attempts": [
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              630.0,
+              870.0
+            ],
+            [
+              624.0,
+              1050.0
+            ],
+            [
+              444.0,
+              1047.0
+            ],
+            [
+              447.0,
+              864.0
+            ]
+          ],
+          "aabb": {
+            "x": 444.0,
+            "y": 864.0,
+            "width": 186.0,
+            "height": 186.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0015-decoded-001.png"
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "SYNTHETIC-QC-015-2-128626108",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1060.0,
+              1805.0
+            ],
+            [
+              1210.0,
+              1795.0
+            ],
+            [
+              1220.0,
+              1944.0
+            ],
+            [
+              1071.0,
+              1955.0
+            ]
+          ],
+          "aabb": {
+            "x": 1060.0,
+            "y": 1795.0,
+            "width": 160.0,
+            "height": 160.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0015-decoded-002.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 2,
+            "global-histogram": 2
+          },
+          "invalid_errors": {
+            "ChecksumError": 1
+          },
+          "decoded_unique": 2,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0015.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0413,
+        "matrix_error_recovery_seconds": 0.0,
+        "total_seconds": 0.0931
+      }
+    },
+    {
+      "page": 16,
+      "source_image": "pages/page-0016.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "SYNTHETIC-QC-016-1-688431743",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale"
+          ],
+          "quad": [
+            [
+              408.0,
+              896.0
+            ],
+            [
+              401.0,
+              1020.0
+            ],
+            [
+              277.0,
+              1014.0
+            ],
+            [
+              284.0,
+              889.0
+            ]
+          ],
+          "aabb": {
+            "x": 277.0,
+            "y": 889.0,
+            "width": 131.0,
+            "height": 131.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0016-decoded-001.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 1,
+            "global-histogram": 0
+          },
+          "invalid_errors": {},
+          "decoded_unique": 1,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0016.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0325,
+        "matrix_error_recovery_seconds": 0.0,
+        "total_seconds": 0.1415
+      }
+    },
+    {
+      "page": 17,
+      "source_image": "pages/page-0017.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "SYNTHETIC-QC-017-1-118904558",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale"
+          ],
+          "quad": [
+            [
+              1984.0,
+              606.0
+            ],
+            [
+              2102.0,
+              562.0
+            ],
+            [
+              2145.0,
+              678.0
+            ],
+            [
+              2029.0,
+              723.0
+            ]
+          ],
+          "aabb": {
+            "x": 1984.0,
+            "y": 562.0,
+            "width": 161.0,
+            "height": 161.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0017-decoded-001.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 1,
+            "global-histogram": 0
+          },
+          "invalid_errors": {},
+          "decoded_unique": 1,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0017.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0333,
+        "matrix_error_recovery_seconds": 0.0,
+        "total_seconds": 0.1389
+      }
+    },
+    {
+      "page": 18,
+      "source_image": "pages/page-0018.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 2,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "SYNTHETIC-QC-018-1-382969573",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              854.0,
+              725.0
+            ],
+            [
+              979.0,
+              734.0
+            ],
+            [
+              970.0,
+              858.0
+            ],
+            [
+              845.0,
+              850.0
+            ]
+          ],
+          "aabb": {
+            "x": 845.0,
+            "y": 725.0,
+            "width": 134.0,
+            "height": 133.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0018-decoded-001.png"
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "QR|SQ2D|PAGE=018|INDEX=2|LOT=557798",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              714.0,
+              2941.0
+            ],
+            [
+              727.0,
+              2680.0
+            ],
+            [
+              987.0,
+              2693.0
+            ],
+            [
+              975.0,
+              2953.0
+            ]
+          ],
+          "aabb": {
+            "x": 714.0,
+            "y": 2680.0,
+            "width": 273.0,
+            "height": 273.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0018-decoded-002.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 2,
+            "global-histogram": 2
+          },
+          "invalid_errors": {},
+          "decoded_unique": 2,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0018.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0404,
+        "matrix_error_recovery_seconds": 0.0,
+        "total_seconds": 0.1515
+      }
+    },
+    {
+      "page": 19,
+      "source_image": "pages/page-0019.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "DM|SQ2D|P019|I1|L233373",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              2067.0,
+              2597.0
+            ],
+            [
+              2207.0,
+              2606.0
+            ],
+            [
+              2197.0,
+              2747.0
+            ],
+            [
+              2057.0,
+              2737.0
+            ]
+          ],
+          "aabb": {
+            "x": 2057.0,
+            "y": 2597.0,
+            "width": 150.0,
+            "height": 150.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0019-decoded-001.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 1,
+            "global-histogram": 1
+          },
+          "invalid_errors": {},
+          "decoded_unique": 1,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0019.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0457,
+        "matrix_error_recovery_seconds": 0.0,
+        "total_seconds": 0.1027
+      }
+    },
+    {
+      "page": 20,
+      "source_image": "pages/page-0020.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "DM|SQ2D|P020|I1|L427269",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1903.0,
+              1031.0
+            ],
+            [
+              1897.0,
+              911.0
+            ],
+            [
+              2017.0,
+              904.0
+            ],
+            [
+              2023.0,
+              1024.0
+            ]
+          ],
+          "aabb": {
+            "x": 1897.0,
+            "y": 904.0,
+            "width": 126.0,
+            "height": 127.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0020-decoded-001.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 1,
+            "global-histogram": 1
+          },
+          "invalid_errors": {},
+          "decoded_unique": 1,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0020.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0453,
+        "matrix_error_recovery_seconds": 0.0,
+        "total_seconds": 0.0898
+      }
+    },
+    {
+      "page": 21,
+      "source_image": "pages/page-0021.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 3360,
+        "height": 2400
+      },
+      "decoded_count": 3,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "SYNTHETIC-QC-021-3-336554227",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              278.0,
+              690.0
+            ],
+            [
+              403.0,
+              697.0
+            ],
+            [
+              395.0,
+              823.0
+            ],
+            [
+              270.0,
+              815.0
+            ]
+          ],
+          "aabb": {
+            "x": 270.0,
+            "y": 690.0,
+            "width": 133.0,
+            "height": 133.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0021-decoded-001.png"
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "DM|SQ2D|P021|I1|L570274",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1590.0,
+              1763.0
+            ],
+            [
+              1711.0,
+              1761.0
+            ],
+            [
+              1713.0,
+              1881.0
+            ],
+            [
+              1593.0,
+              1884.0
+            ]
+          ],
+          "aabb": {
+            "x": 1590.0,
+            "y": 1761.0,
+            "width": 123.0,
+            "height": 123.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0021-decoded-002.png"
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "(01)09506000179288(21)DM0212",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              2957.0,
+              2063.0
+            ],
+            [
+              2960.0,
+              1955.0
+            ],
+            [
+              3069.0,
+              1959.0
+            ],
+            [
+              3065.0,
+              2067.0
+            ]
+          ],
+          "aabb": {
+            "x": 2957.0,
+            "y": 1955.0,
+            "width": 112.0,
+            "height": 112.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0021-decoded-003.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 3,
+            "global-histogram": 3
+          },
+          "invalid_errors": {},
+          "decoded_unique": 3,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0021.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0428,
+        "matrix_error_recovery_seconds": 0.0,
+        "total_seconds": 0.1367
+      }
+    },
+    {
+      "page": 22,
+      "source_image": "pages/page-0022.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "SN725421941352-P22",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale"
+          ],
+          "quad": [
+            [
+              2046.0,
+              1119.0
+            ],
+            [
+              2046.0,
+              1023.0
+            ],
+            [
+              2142.0,
+              1023.0
+            ],
+            [
+              2142.0,
+              1119.0
+            ]
+          ],
+          "aabb": {
+            "x": 2046.0,
+            "y": 1023.0,
+            "width": 96.0,
+            "height": 96.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0022-decoded-001.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 1,
+            "global-histogram": 0
+          },
+          "invalid_errors": {},
+          "decoded_unique": 1,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0022.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0438,
+        "matrix_error_recovery_seconds": 0.0,
+        "total_seconds": 0.0812
+      }
+    },
+    {
+      "page": 23,
+      "source_image": "pages/page-0023.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "DM|SQ2D|P023|I1|L942737",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1624.0,
+              1747.0
+            ],
+            [
+              1764.0,
+              1759.0
+            ],
+            [
+              1753.0,
+              1899.0
+            ],
+            [
+              1613.0,
+              1887.0
+            ]
+          ],
+          "aabb": {
+            "x": 1613.0,
+            "y": 1747.0,
+            "width": 151.0,
+            "height": 152.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0023-decoded-001.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 1,
+            "global-histogram": 1
+          },
+          "invalid_errors": {},
+          "decoded_unique": 1,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0023.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0469,
+        "matrix_error_recovery_seconds": 0.0,
+        "total_seconds": 0.1848
+      }
+    },
+    {
+      "page": 24,
+      "source_image": "pages/page-0024.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 2,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "SYNTHETIC-QC-024-1-490710506",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              690.0,
+              942.0
+            ],
+            [
+              840.0,
+              950.0
+            ],
+            [
+              833.0,
+              1099.0
+            ],
+            [
+              683.0,
+              1092.0
+            ]
+          ],
+          "aabb": {
+            "x": 683.0,
+            "y": 942.0,
+            "width": 157.0,
+            "height": 157.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0024-decoded-001.png"
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "SYNTHETIC-QC-024-2-198684364",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1928.0,
+              2200.0
+            ],
+            [
+              2103.0,
+              2195.0
+            ],
+            [
+              2108.0,
+              2370.0
+            ],
+            [
+              1934.0,
+              2375.0
+            ]
+          ],
+          "aabb": {
+            "x": 1928.0,
+            "y": 2195.0,
+            "width": 180.0,
+            "height": 180.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0024-decoded-002.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 2,
+            "global-histogram": 2
+          },
+          "invalid_errors": {},
+          "decoded_unique": 2,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0024.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0416,
+        "matrix_error_recovery_seconds": 0.0,
+        "total_seconds": 0.1008
+      }
+    },
+    {
+      "page": 25,
+      "source_image": "pages/page-0025.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "(01)09506000145106(21)DM0251",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1839.0,
+              1668.0
+            ],
+            [
+              1966.0,
+              1671.0
+            ],
+            [
+              1962.0,
+              1797.0
+            ],
+            [
+              1836.0,
+              1794.0
+            ]
+          ],
+          "aabb": {
+            "x": 1836.0,
+            "y": 1668.0,
+            "width": 130.0,
+            "height": 129.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0025-decoded-001.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 1,
+            "global-histogram": 1
+          },
+          "invalid_errors": {},
+          "decoded_unique": 1,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0025.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0407,
+        "matrix_error_recovery_seconds": 0.0,
+        "total_seconds": 0.1286
+      }
+    },
+    {
+      "page": 26,
+      "source_image": "pages/page-0026.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 4,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "(01)09506000120390(21)DM0261",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              938.0,
+              789.0
+            ],
+            [
+              1137.0,
+              793.0
+            ],
+            [
+              1132.0,
+              991.0
+            ],
+            [
+              934.0,
+              987.0
+            ]
+          ],
+          "aabb": {
+            "x": 934.0,
+            "y": 789.0,
+            "width": 203.0,
+            "height": 202.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0026-decoded-001.png"
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "QR|SQ2D|PAGE=026|INDEX=2|LOT=540203",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1811.0,
+              2058.0
+            ],
+            [
+              1818.0,
+              1825.0
+            ],
+            [
+              2050.0,
+              1832.0
+            ],
+            [
+              2043.0,
+              2064.0
+            ]
+          ],
+          "aabb": {
+            "x": 1811.0,
+            "y": 1825.0,
+            "width": 239.0,
+            "height": 239.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0026-decoded-002.png"
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "SN141724318006-P26",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1035.0,
+              2264.0
+            ],
+            [
+              1179.0,
+              2258.0
+            ],
+            [
+              1185.0,
+              2403.0
+            ],
+            [
+              1041.0,
+              2408.0
+            ]
+          ],
+          "aabb": {
+            "x": 1035.0,
+            "y": 2258.0,
+            "width": 150.0,
+            "height": 150.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0026-decoded-003.png"
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "SN357002712252-P26",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              807.0,
+              2702.0
+            ],
+            [
+              935.0,
+              2694.0
+            ],
+            [
+              943.0,
+              2822.0
+            ],
+            [
+              815.0,
+              2830.0
+            ]
+          ],
+          "aabb": {
+            "x": 807.0,
+            "y": 2694.0,
+            "width": 136.0,
+            "height": 136.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0026-decoded-004.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 4,
+            "global-histogram": 4
+          },
+          "invalid_errors": {},
+          "decoded_unique": 4,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0026.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0428,
+        "matrix_error_recovery_seconds": 0.0,
+        "total_seconds": 0.1124
+      }
+    },
+    {
+      "page": 27,
+      "source_image": "pages/page-0027.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 2,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "SN429763409665-P27",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              2140.0,
+              2309.0
+            ],
+            [
+              2144.0,
+              2470.0
+            ],
+            [
+              1984.0,
+              2473.0
+            ],
+            [
+              1980.0,
+              2313.0
+            ]
+          ],
+          "aabb": {
+            "x": 1980.0,
+            "y": 2309.0,
+            "width": 164.0,
+            "height": 164.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0027-decoded-001.png"
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "SYNTHETIC-QC-027-2-893003720",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1474.0,
+              2611.0
+            ],
+            [
+              1649.0,
+              2597.0
+            ],
+            [
+              1663.0,
+              2771.0
+            ],
+            [
+              1488.0,
+              2785.0
+            ]
+          ],
+          "aabb": {
+            "x": 1474.0,
+            "y": 2597.0,
+            "width": 189.0,
+            "height": 188.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0027-decoded-002.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 2,
+            "global-histogram": 2
+          },
+          "invalid_errors": {},
+          "decoded_unique": 2,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0027.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0406,
+        "matrix_error_recovery_seconds": 0.0,
+        "total_seconds": 0.1045
+      }
+    },
+    {
+      "page": 28,
+      "source_image": "pages/page-0028.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 3360,
+        "height": 2400
+      },
+      "decoded_count": 3,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "SYNTHETIC-QC-028-1-312708744",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              480.0,
+              1339.0
+            ],
+            [
+              486.0,
+              1164.0
+            ],
+            [
+              661.0,
+              1170.0
+            ],
+            [
+              656.0,
+              1344.0
+            ]
+          ],
+          "aabb": {
+            "x": 480.0,
+            "y": 1164.0,
+            "width": 181.0,
+            "height": 180.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0028-decoded-001.png"
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "QR|SQ2D|PAGE=028|INDEX=3|LOT=783906",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1337.0,
+              1209.0
+            ],
+            [
+              1540.0,
+              1221.0
+            ],
+            [
+              1528.0,
+              1424.0
+            ],
+            [
+              1325.0,
+              1412.0
+            ]
+          ],
+          "aabb": {
+            "x": 1325.0,
+            "y": 1209.0,
+            "width": 215.0,
+            "height": 215.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0028-decoded-002.png"
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "SYNTHETIC-QC-028-2-791467124",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              2471.0,
+              1708.0
+            ],
+            [
+              2597.0,
+              1702.0
+            ],
+            [
+              2602.0,
+              1826.0
+            ],
+            [
+              2478.0,
+              1833.0
+            ]
+          ],
+          "aabb": {
+            "x": 2471.0,
+            "y": 1702.0,
+            "width": 131.0,
+            "height": 131.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0028-decoded-003.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 3,
+            "global-histogram": 3
+          },
+          "invalid_errors": {},
+          "decoded_unique": 3,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0028.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0446,
+        "matrix_error_recovery_seconds": 0.0,
+        "total_seconds": 0.09
+      }
+    },
+    {
+      "page": 29,
+      "source_image": "pages/page-0029.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "https://example.invalid/synthetic/qc/029/1/13708",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1415.0,
+              900.0
+            ],
+            [
+              1589.0,
+              901.0
+            ],
+            [
+              1588.0,
+              1075.0
+            ],
+            [
+              1414.0,
+              1074.0
+            ]
+          ],
+          "aabb": {
+            "x": 1414.0,
+            "y": 900.0,
+            "width": 175.0,
+            "height": 175.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0029-decoded-001.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 1,
+            "global-histogram": 1
+          },
+          "invalid_errors": {},
+          "decoded_unique": 1,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0029.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0435,
+        "matrix_error_recovery_seconds": 0.0,
+        "total_seconds": 0.1035
+      }
+    },
+    {
+      "page": 30,
+      "source_image": "pages/page-0030.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 2,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "SYNTHETIC-QC-030-1-573884916",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              234.0,
+              1097.0
+            ],
+            [
+              228.0,
+              922.0
+            ],
+            [
+              402.0,
+              916.0
+            ],
+            [
+              409.0,
+              1090.0
+            ]
+          ],
+          "aabb": {
+            "x": 228.0,
+            "y": 916.0,
+            "width": 181.0,
+            "height": 181.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0030-decoded-001.png"
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "(01)09506000174663(21)DM0302",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              515.0,
+              2937.0
+            ],
+            [
+              659.0,
+              2926.0
+            ],
+            [
+              669.0,
+              3070.0
+            ],
+            [
+              525.0,
+              3081.0
+            ]
+          ],
+          "aabb": {
+            "x": 515.0,
+            "y": 2926.0,
+            "width": 154.0,
+            "height": 155.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0030-decoded-002.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 2,
+            "global-histogram": 2
+          },
+          "invalid_errors": {},
+          "decoded_unique": 2,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0030.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0427,
+        "matrix_error_recovery_seconds": 0.0,
+        "total_seconds": 0.1085
+      }
+    },
+    {
+      "page": 31,
+      "source_image": "pages/page-0031.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "QR|SQ2D|PAGE=031|INDEX=1|LOT=956104",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1728.0,
+              1344.0
+            ],
+            [
+              1960.0,
+              1342.0
+            ],
+            [
+              1963.0,
+              1574.0
+            ],
+            [
+              1730.0,
+              1576.0
+            ]
+          ],
+          "aabb": {
+            "x": 1728.0,
+            "y": 1342.0,
+            "width": 235.0,
+            "height": 234.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0031-decoded-001.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 1,
+            "global-histogram": 1
+          },
+          "invalid_errors": {},
+          "decoded_unique": 1,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0031.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0459,
+        "matrix_error_recovery_seconds": 0.0,
+        "total_seconds": 0.1826
+      }
+    },
+    {
+      "page": 32,
+      "source_image": "pages/page-0032.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "SN939724549408-P32",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1700.0,
+              2405.0
+            ],
+            [
+              1860.0,
+              2399.0
+            ],
+            [
+              1865.0,
+              2560.0
+            ],
+            [
+              1705.0,
+              2565.0
+            ]
+          ],
+          "aabb": {
+            "x": 1700.0,
+            "y": 2399.0,
+            "width": 165.0,
+            "height": 166.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0032-decoded-001.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 1,
+            "global-histogram": 1
+          },
+          "invalid_errors": {},
+          "decoded_unique": 1,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0032.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0404,
+        "matrix_error_recovery_seconds": 0.0,
+        "total_seconds": 0.1439
+      }
+    },
+    {
+      "page": 33,
+      "source_image": "pages/page-0033.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 2,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "(01)09506000193314(21)DM0332",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              279.0,
+              688.0
+            ],
+            [
+              415.0,
+              640.0
+            ],
+            [
+              463.0,
+              776.0
+            ],
+            [
+              327.0,
+              824.0
+            ]
+          ],
+          "aabb": {
+            "x": 279.0,
+            "y": 640.0,
+            "width": 184.0,
+            "height": 184.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0033-decoded-001.png"
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "DM|SQ2D|P033|I1|L190815",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale"
+          ],
+          "quad": [
+            [
+              1152.0,
+              1707.0
+            ],
+            [
+              1323.0,
+              1647.0
+            ],
+            [
+              1383.0,
+              1818.0
+            ],
+            [
+              1212.0,
+              1878.0
+            ]
+          ],
+          "aabb": {
+            "x": 1152.0,
+            "y": 1647.0,
+            "width": 231.0,
+            "height": 231.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0033-decoded-002.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 2,
+            "global-histogram": 1
+          },
+          "invalid_errors": {},
+          "decoded_unique": 2,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0033.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0451,
+        "matrix_error_recovery_seconds": 0.0,
+        "total_seconds": 0.1101
+      }
+    },
+    {
+      "page": 34,
+      "source_image": "pages/page-0034.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "DM|SQ2D|P034|I1|L378638",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale"
+          ],
+          "quad": [
+            [
+              214.0,
+              604.0
+            ],
+            [
+              326.0,
+              560.0
+            ],
+            [
+              371.0,
+              672.0
+            ],
+            [
+              259.0,
+              716.0
+            ]
+          ],
+          "aabb": {
+            "x": 214.0,
+            "y": 560.0,
+            "width": 157.0,
+            "height": 156.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0034-decoded-001.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 1,
+            "global-histogram": 1
+          },
+          "invalid_errors": {
+            "ChecksumError": 1
+          },
+          "decoded_unique": 1,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0034.png",
+      "timings": {
+        "matrix_fast_seconds": 0.044,
+        "matrix_error_recovery_seconds": 0.0,
+        "total_seconds": 0.1208
+      }
+    },
+    {
+      "page": 35,
+      "source_image": "pages/page-0035.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 3360,
+        "height": 2400
+      },
+      "decoded_count": 3,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "SN241799092915-P35",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1520.0,
+              1127.0
+            ],
+            [
+              1648.0,
+              1120.0
+            ],
+            [
+              1655.0,
+              1248.0
+            ],
+            [
+              1527.0,
+              1255.0
+            ]
+          ],
+          "aabb": {
+            "x": 1520.0,
+            "y": 1120.0,
+            "width": 135.0,
+            "height": 135.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0035-decoded-001.png"
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "SN864364724899-P35",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              2934.0,
+              1813.0
+            ],
+            [
+              2930.0,
+              1717.0
+            ],
+            [
+              3027.0,
+              1713.0
+            ],
+            [
+              3030.0,
+              1809.0
+            ]
+          ],
+          "aabb": {
+            "x": 2930.0,
+            "y": 1713.0,
+            "width": 100.0,
+            "height": 100.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0035-decoded-002.png"
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "SN162903413793-P35",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              2236.0,
+              1889.0
+            ],
+            [
+              2348.0,
+              1884.0
+            ],
+            [
+              2353.0,
+              1996.0
+            ],
+            [
+              2241.0,
+              2002.0
+            ]
+          ],
+          "aabb": {
+            "x": 2236.0,
+            "y": 1884.0,
+            "width": 117.0,
+            "height": 118.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0035-decoded-003.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 3,
+            "global-histogram": 3
+          },
+          "invalid_errors": {},
+          "decoded_unique": 3,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0035.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0414,
+        "matrix_error_recovery_seconds": 0.0,
+        "total_seconds": 0.0812
+      }
+    },
+    {
+      "page": 36,
+      "source_image": "pages/page-0036.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 2,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "(01)09506000126385(21)DM0362",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              291.0,
+              559.0
+            ],
+            [
+              435.0,
+              559.0
+            ],
+            [
+              435.0,
+              703.0
+            ],
+            [
+              291.0,
+              703.0
+            ]
+          ],
+          "aabb": {
+            "x": 291.0,
+            "y": 559.0,
+            "width": 144.0,
+            "height": 144.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0036-decoded-001.png"
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "SN444821889557-P36",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1309.0,
+              1725.0
+            ],
+            [
+              1422.0,
+              1728.0
+            ],
+            [
+              1418.0,
+              1840.0
+            ],
+            [
+              1306.0,
+              1837.0
+            ]
+          ],
+          "aabb": {
+            "x": 1306.0,
+            "y": 1725.0,
+            "width": 116.0,
+            "height": 115.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0036-decoded-002.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 2,
+            "global-histogram": 2
+          },
+          "invalid_errors": {},
+          "decoded_unique": 2,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0036.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0399,
+        "matrix_error_recovery_seconds": 0.0,
+        "total_seconds": 0.1309
+      }
+    },
+    {
+      "page": 37,
+      "source_image": "pages/page-0037.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "DM|SQ2D|P037|I1|L237312",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1172.0,
+              1803.0
+            ],
+            [
+              1312.0,
+              1811.0
+            ],
+            [
+              1303.0,
+              1951.0
+            ],
+            [
+              1163.0,
+              1943.0
+            ]
+          ],
+          "aabb": {
+            "x": 1163.0,
+            "y": 1803.0,
+            "width": 149.0,
+            "height": 148.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0037-decoded-001.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 1,
+            "global-histogram": 1
+          },
+          "invalid_errors": {},
+          "decoded_unique": 1,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0037.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0428,
+        "matrix_error_recovery_seconds": 0.0,
+        "total_seconds": 0.114
+      }
+    },
+    {
+      "page": 38,
+      "source_image": "pages/page-0038.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "https://example.invalid/synthetic/qc/038/1/97318",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              515.0,
+              761.0
+            ],
+            [
+              718.0,
+              756.0
+            ],
+            [
+              724.0,
+              959.0
+            ],
+            [
+              521.0,
+              964.0
+            ]
+          ],
+          "aabb": {
+            "x": 515.0,
+            "y": 756.0,
+            "width": 209.0,
+            "height": 208.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0038-decoded-001.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 1,
+            "global-histogram": 1
+          },
+          "invalid_errors": {},
+          "decoded_unique": 1,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0038.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0493,
+        "matrix_error_recovery_seconds": 0.0,
+        "total_seconds": 0.1627
+      }
+    },
+    {
+      "page": 39,
+      "source_image": "pages/page-0039.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 4,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "QR|SQ2D|PAGE=039|INDEX=4|LOT=697334",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1368.0,
+              476.0
+            ],
+            [
+              1571.0,
+              459.0
+            ],
+            [
+              1587.0,
+              661.0
+            ],
+            [
+              1386.0,
+              678.0
+            ]
+          ],
+          "aabb": {
+            "x": 1368.0,
+            "y": 459.0,
+            "width": 219.0,
+            "height": 219.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0039-decoded-001.png"
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "SN323386764933-P39",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1740.0,
+              1309.0
+            ],
+            [
+              1737.0,
+              1197.0
+            ],
+            [
+              1849.0,
+              1194.0
+            ],
+            [
+              1852.0,
+              1306.0
+            ]
+          ],
+          "aabb": {
+            "x": 1737.0,
+            "y": 1194.0,
+            "width": 115.0,
+            "height": 115.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0039-decoded-002.png"
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "DM|SQ2D|P039|I2|L651206",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              821.0,
+              1716.0
+            ],
+            [
+              1021.0,
+              1723.0
+            ],
+            [
+              1014.0,
+              1923.0
+            ],
+            [
+              814.0,
+              1916.0
+            ]
+          ],
+          "aabb": {
+            "x": 814.0,
+            "y": 1716.0,
+            "width": 207.0,
+            "height": 207.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0039-decoded-003.png"
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "QR|SQ2D|PAGE=039|INDEX=3|LOT=449459",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              942.0,
+              2251.0
+            ],
+            [
+              1086.0,
+              2240.0
+            ],
+            [
+              1097.0,
+              2385.0
+            ],
+            [
+              953.0,
+              2396.0
+            ]
+          ],
+          "aabb": {
+            "x": 942.0,
+            "y": 2240.0,
+            "width": 155.0,
+            "height": 156.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0039-decoded-004.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 4,
+            "global-histogram": 4
+          },
+          "invalid_errors": {},
+          "decoded_unique": 4,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0039.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0412,
+        "matrix_error_recovery_seconds": 0.0,
+        "total_seconds": 0.1393
+      }
+    },
+    {
+      "page": 40,
+      "source_image": "pages/page-0040.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "DM|SQ2D|P040|I1|L448996",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              953.0,
+              2252.0
+            ],
+            [
+              1152.0,
+              2234.0
+            ],
+            [
+              1170.0,
+              2434.0
+            ],
+            [
+              970.0,
+              2451.0
+            ]
+          ],
+          "aabb": {
+            "x": 953.0,
+            "y": 2234.0,
+            "width": 217.0,
+            "height": 217.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0040-decoded-001.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 1,
+            "global-histogram": 1
+          },
+          "invalid_errors": {},
+          "decoded_unique": 1,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0040.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0408,
+        "matrix_error_recovery_seconds": 0.0,
+        "total_seconds": 0.1073
+      }
+    },
+    {
+      "page": 41,
+      "source_image": "pages/page-0041.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "QR|SQ2D|PAGE=041|INDEX=1|LOT=666447",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1053.0,
+              2128.0
+            ],
+            [
+              1226.0,
+              2147.0
+            ],
+            [
+              1206.0,
+              2320.0
+            ],
+            [
+              1034.0,
+              2301.0
+            ]
+          ],
+          "aabb": {
+            "x": 1034.0,
+            "y": 2128.0,
+            "width": 192.0,
+            "height": 192.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0041-decoded-001.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 1,
+            "global-histogram": 1
+          },
+          "invalid_errors": {},
+          "decoded_unique": 1,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0041.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0442,
+        "matrix_error_recovery_seconds": 0.0,
+        "total_seconds": 0.1477
+      }
+    },
+    {
+      "page": 42,
+      "source_image": "pages/page-0042.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 3360,
+        "height": 2400
+      },
+      "decoded_count": 3,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "DM|SQ2D|P042|I2|L111956",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1406.0,
+              589.0
+            ],
+            [
+              1607.0,
+              592.0
+            ],
+            [
+              1603.0,
+              792.0
+            ],
+            [
+              1403.0,
+              789.0
+            ]
+          ],
+          "aabb": {
+            "x": 1403.0,
+            "y": 589.0,
+            "width": 204.0,
+            "height": 203.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0042-decoded-001.png"
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "(01)09506000160822(21)DM0423",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              2871.0,
+              1293.0
+            ],
+            [
+              2879.0,
+              1474.0
+            ],
+            [
+              2699.0,
+              1482.0
+            ],
+            [
+              2691.0,
+              1302.0
+            ]
+          ],
+          "aabb": {
+            "x": 2691.0,
+            "y": 1293.0,
+            "width": 188.0,
+            "height": 189.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0042-decoded-002.png"
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "SN216708411714-P42",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              250.0,
+              1595.0
+            ],
+            [
+              248.0,
+              1435.0
+            ],
+            [
+              409.0,
+              1434.0
+            ],
+            [
+              410.0,
+              1594.0
+            ]
+          ],
+          "aabb": {
+            "x": 248.0,
+            "y": 1434.0,
+            "width": 162.0,
+            "height": 161.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0042-decoded-003.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 3,
+            "global-histogram": 3
+          },
+          "invalid_errors": {},
+          "decoded_unique": 3,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0042.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0449,
+        "matrix_error_recovery_seconds": 0.0,
+        "total_seconds": 0.1108
+      }
+    },
+    {
+      "page": 43,
+      "source_image": "pages/page-0043.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "SN416954559741-P43",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1638.0,
+              556.0
+            ],
+            [
+              1799.0,
+              562.0
+            ],
+            [
+              1793.0,
+              722.0
+            ],
+            [
+              1633.0,
+              716.0
+            ]
+          ],
+          "aabb": {
+            "x": 1633.0,
+            "y": 556.0,
+            "width": 166.0,
+            "height": 166.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0043-decoded-001.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 1,
+            "global-histogram": 1
+          },
+          "invalid_errors": {},
+          "decoded_unique": 1,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0043.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0396,
+        "matrix_error_recovery_seconds": 0.0,
+        "total_seconds": 0.0852
+      }
+    },
+    {
+      "page": 44,
+      "source_image": "pages/page-0044.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "DM|SQ2D|P044|I1|L160131",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale"
+          ],
+          "quad": [
+            [
+              172.0,
+              1103.0
+            ],
+            [
+              184.0,
+              902.0
+            ],
+            [
+              383.0,
+              914.0
+            ],
+            [
+              372.0,
+              1114.0
+            ]
+          ],
+          "aabb": {
+            "x": 172.0,
+            "y": 902.0,
+            "width": 211.0,
+            "height": 212.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0044-decoded-001.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 1,
+            "global-histogram": 1
+          },
+          "invalid_errors": {
+            "ChecksumError": 1
+          },
+          "decoded_unique": 1,
+          "invalid_unique_unexplained": 1,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0044.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0461,
+        "matrix_error_recovery_seconds": 0.0081,
+        "total_seconds": 0.1729
+      }
+    },
+    {
+      "page": 45,
+      "source_image": "pages/page-0045.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 2,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "(01)09506000187373(21)DM0452",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              488.0,
+              1027.0
+            ],
+            [
+              668.0,
+              1041.0
+            ],
+            [
+              654.0,
+              1221.0
+            ],
+            [
+              474.0,
+              1207.0
+            ]
+          ],
+          "aabb": {
+            "x": 474.0,
+            "y": 1027.0,
+            "width": 194.0,
+            "height": 194.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0045-decoded-001.png"
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "SYNTHETIC-QC-045-1-537915835",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              219.0,
+              1355.0
+            ],
+            [
+              394.0,
+              1355.0
+            ],
+            [
+              392.0,
+              1530.0
+            ],
+            [
+              218.0,
+              1530.0
+            ]
+          ],
+          "aabb": {
+            "x": 218.0,
+            "y": 1355.0,
+            "width": 176.0,
+            "height": 175.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0045-decoded-002.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 2,
+            "global-histogram": 2
+          },
+          "invalid_errors": {},
+          "decoded_unique": 2,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0045.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0446,
+        "matrix_error_recovery_seconds": 0.0,
+        "total_seconds": 0.1171
+      }
+    },
+    {
+      "page": 46,
+      "source_image": "pages/page-0046.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "DM|SQ2D|P046|I1|L444407",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              813.0,
+              1233.0
+            ],
+            [
+              953.0,
+              1244.0
+            ],
+            [
+              942.0,
+              1384.0
+            ],
+            [
+              802.0,
+              1374.0
+            ]
+          ],
+          "aabb": {
+            "x": 802.0,
+            "y": 1233.0,
+            "width": 151.0,
+            "height": 151.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0046-decoded-001.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 1,
+            "global-histogram": 1
+          },
+          "invalid_errors": {},
+          "decoded_unique": 1,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0046.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0403,
+        "matrix_error_recovery_seconds": 0.0,
+        "total_seconds": 0.1119
+      }
+    },
+    {
+      "page": 47,
+      "source_image": "pages/page-0047.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "https://example.invalid/synthetic/qc/047/1/75880",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              320.0,
+              2690.0
+            ],
+            [
+              465.0,
+              2697.0
+            ],
+            [
+              458.0,
+              2842.0
+            ],
+            [
+              313.0,
+              2835.0
+            ]
+          ],
+          "aabb": {
+            "x": 313.0,
+            "y": 2690.0,
+            "width": 152.0,
+            "height": 152.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0047-decoded-001.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 1,
+            "global-histogram": 1
+          },
+          "invalid_errors": {},
+          "decoded_unique": 1,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0047.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0424,
+        "matrix_error_recovery_seconds": 0.0,
+        "total_seconds": 0.1604
+      }
+    },
+    {
+      "page": 48,
+      "source_image": "pages/page-0048.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 2,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "SN190898910991-P48",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              732.0,
+              1166.0
+            ],
+            [
+              877.0,
+              1160.0
+            ],
+            [
+              882.0,
+              1305.0
+            ],
+            [
+              738.0,
+              1310.0
+            ]
+          ],
+          "aabb": {
+            "x": 732.0,
+            "y": 1160.0,
+            "width": 150.0,
+            "height": 150.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0048-decoded-001.png"
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "QR|SQ2D|PAGE=048|INDEX=1|LOT=951615",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1798.0,
+              2050.0
+            ],
+            [
+              2030.0,
+              2043.0
+            ],
+            [
+              2037.0,
+              2274.0
+            ],
+            [
+              1805.0,
+              2281.0
+            ]
+          ],
+          "aabb": {
+            "x": 1798.0,
+            "y": 2043.0,
+            "width": 239.0,
+            "height": 238.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0048-decoded-002.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 2,
+            "global-histogram": 2
+          },
+          "invalid_errors": {},
+          "decoded_unique": 2,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0048.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0444,
+        "matrix_error_recovery_seconds": 0.0,
+        "total_seconds": 0.1307
+      }
+    },
+    {
+      "page": 49,
+      "source_image": "pages/page-0049.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 3360,
+        "height": 2400
+      },
+      "decoded_count": 3,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "DM|SQ2D|P049|I2|L587070",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1369.0,
+              564.0
+            ],
+            [
+              1589.0,
+              583.0
+            ],
+            [
+              1570.0,
+              802.0
+            ],
+            [
+              1351.0,
+              783.0
+            ]
+          ],
+          "aabb": {
+            "x": 1351.0,
+            "y": 564.0,
+            "width": 238.0,
+            "height": 238.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0049-decoded-001.png"
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "https://example.invalid/synthetic/qc/049/1/92867",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              696.0,
+              1391.0
+            ],
+            [
+              692.0,
+              1565.0
+            ],
+            [
+              518.0,
+              1561.0
+            ],
+            [
+              523.0,
+              1387.0
+            ]
+          ],
+          "aabb": {
+            "x": 518.0,
+            "y": 1387.0,
+            "width": 178.0,
+            "height": 178.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0049-decoded-002.png"
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "DM|SQ2D|P049|I3|L921992",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1926.0,
+              1569.0
+            ],
+            [
+              2121.0,
+              1522.0
+            ],
+            [
+              2168.0,
+              1717.0
+            ],
+            [
+              1973.0,
+              1764.0
+            ]
+          ],
+          "aabb": {
+            "x": 1926.0,
+            "y": 1522.0,
+            "width": 242.0,
+            "height": 242.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0049-decoded-003.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 3,
+            "global-histogram": 3
+          },
+          "invalid_errors": {},
+          "decoded_unique": 3,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0049.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0452,
+        "matrix_error_recovery_seconds": 0.0,
+        "total_seconds": 0.1554
+      }
+    },
+    {
+      "page": 50,
+      "source_image": "pages/page-0050.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "(01)09506000174755(21)DM0501",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              772.0,
+              2720.0
+            ],
+            [
+              916.0,
+              2715.0
+            ],
+            [
+              921.0,
+              2859.0
+            ],
+            [
+              777.0,
+              2864.0
+            ]
+          ],
+          "aabb": {
+            "x": 772.0,
+            "y": 2715.0,
+            "width": 149.0,
+            "height": 149.0
+          },
+          "evidence": {},
+          "crop": "crops/decoded/page-0050-decoded-001.png"
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 1,
+            "global-histogram": 1
+          },
+          "invalid_errors": {},
+          "decoded_unique": 1,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        }
+      },
+      "overlay": "overlays/page-0050.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0423,
+        "matrix_error_recovery_seconds": 0.0,
+        "total_seconds": 0.1082
+      }
+    }
+  ]
+}
