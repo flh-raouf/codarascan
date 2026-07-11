@@ -1,0 +1,5758 @@
+{
+  "input": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/output/pdf/Synthetic Quality Dossier - 50 scanned barcode pages.pdf",
+  "method": "ZXing-only native raster + deterministic 1-D proposals + adaptive linear and matrix recovery",
+  "uses_commercial_decoder": false,
+  "engines": {
+    "zxing_cpp": true
+  },
+  "configuration": {
+    "render_dpi": 300,
+    "angle_step": 0,
+    "minimum_score": 0.52,
+    "minimum_linear_length": 100.0,
+    "tensor_fallback": false,
+    "matrix_recovery": true,
+    "matrix_proposal_limit": 14,
+    "deep_matrix_recovery": false
+  },
+  "summary": {
+    "pages": 50,
+    "decoded": 86,
+    "unresolved": 0,
+    "extraction_seconds": 1.1424,
+    "processing_seconds": 50.8376
+  },
+  "pages": [
+    {
+      "page": 1,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0001.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "RF9107933870Q1",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              1756.0,
+              1434.0
+            ],
+            [
+              1756.0,
+              966.0
+            ],
+            [
+              1677.0,
+              964.0
+            ],
+            [
+              1677.0,
+              1432.0
+            ]
+          ],
+          "aabb": {
+            "x": 1677.0,
+            "y": 964.0,
+            "width": 79.0,
+            "height": 470.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 1,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 0,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0001.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.0383,
+        "linear_localization_seconds": 0.5439,
+        "linear_decode_seconds": 0.0007,
+        "matrix_recovery_seconds": 0.3945,
+        "total_seconds": 1.0649
+      }
+    },
+    {
+      "page": 2,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0002.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "RF6053807608Q1",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              1414.0,
+              2123.0
+            ],
+            [
+              1881.0,
+              2123.0
+            ],
+            [
+              1884.0,
+              2220.0
+            ],
+            [
+              1416.0,
+              2220.0
+            ]
+          ],
+          "aabb": {
+            "x": 1414.0,
+            "y": 2123.0,
+            "width": 470.0,
+            "height": 97.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 1,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 0,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0002.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.0384,
+        "linear_localization_seconds": 0.4945,
+        "linear_decode_seconds": 0.0008,
+        "matrix_recovery_seconds": 0.4115,
+        "total_seconds": 0.9982
+      }
+    },
+    {
+      "page": 3,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0003.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 2,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "SYN003245818572",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              464.0,
+              642.0
+            ],
+            [
+              754.0,
+              642.0
+            ],
+            [
+              751.0,
+              749.0
+            ],
+            [
+              462.0,
+              749.0
+            ]
+          ],
+          "aabb": {
+            "x": 462.0,
+            "y": 642.0,
+            "width": 292.0,
+            "height": 107.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "RF1166544630Q1",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              253.0,
+              1040.0
+            ],
+            [
+              253.0,
+              1507.0
+            ],
+            [
+              172.0,
+              1508.0
+            ],
+            [
+              172.0,
+              1041.0
+            ]
+          ],
+          "aabb": {
+            "x": 172.0,
+            "y": 1040.0,
+            "width": 81.0,
+            "height": 468.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 2,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 0,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0003.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.035,
+        "linear_localization_seconds": 0.398,
+        "linear_decode_seconds": 0.0013,
+        "matrix_recovery_seconds": 0.3996,
+        "total_seconds": 0.8862
+      }
+    },
+    {
+      "page": 4,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0004.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "PO82529051114",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              1476.0,
+              654.0
+            ],
+            [
+              1744.0,
+              654.0
+            ],
+            [
+              1746.0,
+              740.0
+            ],
+            [
+              1479.0,
+              740.0
+            ]
+          ],
+          "aabb": {
+            "x": 1476.0,
+            "y": 654.0,
+            "width": 270.0,
+            "height": 86.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 1,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 0,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0004.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.0348,
+        "linear_localization_seconds": 0.7395,
+        "linear_decode_seconds": 0.0005,
+        "matrix_recovery_seconds": 0.3752,
+        "total_seconds": 1.2823
+      }
+    },
+    {
+      "page": 5,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0005.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "PO24079823943",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate"
+          ],
+          "quad": [
+            [
+              857.04,
+              1716.09
+            ],
+            [
+              870.56,
+              1643.1
+            ],
+            [
+              1518.56,
+              1763.11
+            ],
+            [
+              1505.04,
+              1836.1
+            ]
+          ],
+          "aabb": {
+            "x": 857.04,
+            "y": 1643.1,
+            "width": 661.51,
+            "height": 193.01
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {
+            "score": 0.985,
+            "orientation": 0.9407,
+            "persistence": 0.2777,
+            "support_strength": 0.9736,
+            "scanline_agreement": 0.9879,
+            "transitions": 74.0,
+            "transition_rate": 0.1123,
+            "dark_fraction": 0.4294,
+            "aspect": 8.9054
+          }
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 1,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 0,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0005.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.0359,
+        "linear_localization_seconds": 0.558,
+        "linear_decode_seconds": 0.0008,
+        "matrix_recovery_seconds": 0.3864,
+        "total_seconds": 1.0768
+      }
+    },
+    {
+      "page": 6,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0006.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 2,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "PO33446261219",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              365.0,
+              2504.0
+            ],
+            [
+              365.0,
+              2103.0
+            ],
+            [
+              272.0,
+              2103.0
+            ],
+            [
+              272.0,
+              2504.0
+            ]
+          ],
+          "aabb": {
+            "x": 272.0,
+            "y": 2103.0,
+            "width": 93.0,
+            "height": 401.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "RF9635825412Q1",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate"
+          ],
+          "quad": [
+            [
+              1390.14,
+              2678.5
+            ],
+            [
+              1372.76,
+              2592.55
+            ],
+            [
+              1934.67,
+              2478.91
+            ],
+            [
+              1952.06,
+              2564.87
+            ]
+          ],
+          "aabb": {
+            "x": 1372.76,
+            "y": 2478.91,
+            "width": 579.3,
+            "height": 199.6
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {
+            "score": 0.984,
+            "orientation": 0.944,
+            "persistence": 0.2827,
+            "support_strength": 0.959,
+            "scanline_agreement": 0.9826,
+            "transitions": 86.0,
+            "transition_rate": 0.1501,
+            "dark_fraction": 0.4433,
+            "aspect": 6.5114
+          }
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 2,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 0,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0006.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.0351,
+        "linear_localization_seconds": 0.4179,
+        "linear_decode_seconds": 0.0014,
+        "matrix_recovery_seconds": 0.4126,
+        "total_seconds": 0.9103
+      }
+    },
+    {
+      "page": 7,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0007.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 3,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "PO73862380946",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              424.0,
+              1185.0
+            ],
+            [
+              424.0,
+              1720.0
+            ],
+            [
+              304.0,
+              1719.0
+            ],
+            [
+              304.0,
+              1183.0
+            ]
+          ],
+          "aabb": {
+            "x": 304.0,
+            "y": 1183.0,
+            "width": 120.0,
+            "height": 537.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "LOT-951555-07",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              2084.0,
+              1350.0
+            ],
+            [
+              2084.0,
+              1683.0
+            ],
+            [
+              1969.0,
+              1682.0
+            ],
+            [
+              1969.0,
+              1349.0
+            ]
+          ],
+          "aabb": {
+            "x": 1969.0,
+            "y": 1349.0,
+            "width": 115.0,
+            "height": 334.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "SYN007347154125",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:advanced:wide-parent-cubic",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              645.0,
+              2717.0
+            ],
+            [
+              1088.0,
+              2717.0
+            ],
+            [
+              1095.0,
+              2754.0
+            ],
+            [
+              653.0,
+              2754.0
+            ]
+          ],
+          "aabb": {
+            "x": 645.0,
+            "y": 2717.0,
+            "width": 450.0,
+            "height": 37.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10",
+            "zxing:cubic15-p08-s10",
+            "zxing:cubic20-p18-s18",
+            "zxing:nearest15-fixed",
+            "zxing:lanczos30-wide",
+            "zxing:clahe15",
+            "zxing:otsu15",
+            "zxing-advanced:angle-nearest-otsu:a-4:phase0.0:Binarizer.LocalAverage",
+            "zxing-advanced:angle-nearest-otsu:a-4:phase0.0:Binarizer.GlobalHistogram",
+            "zxing-advanced:angle-nearest-otsu:a-4:phase0.0:Binarizer.FixedThreshold",
+            "zxing-advanced:angle-nearest-otsu:a-2:phase0.0:Binarizer.LocalAverage",
+            "zxing-advanced:angle-nearest-otsu:a-2:phase0.0:Binarizer.GlobalHistogram",
+            "zxing-advanced:angle-nearest-otsu:a-2:phase0.0:Binarizer.FixedThreshold",
+            "zxing-advanced:angle-nearest-otsu:a2:phase0.0:Binarizer.LocalAverage",
+            "zxing-advanced:angle-nearest-otsu:a2:phase0.0:Binarizer.GlobalHistogram",
+            "zxing-advanced:angle-nearest-otsu:a2:phase0.0:Binarizer.FixedThreshold",
+            "zxing-advanced:angle-nearest-otsu:a4:phase0.0:Binarizer.LocalAverage",
+            "zxing-advanced:angle-nearest-otsu:a4:phase0.0:Binarizer.GlobalHistogram",
+            "zxing-advanced:angle-nearest-otsu:a4:phase0.0:Binarizer.FixedThreshold",
+            "zxing-advanced:horizontal-lanczos-otsu:a0:phase0.0:Binarizer.LocalAverage",
+            "zxing-advanced:horizontal-lanczos-otsu:a0:phase0.0:Binarizer.GlobalHistogram",
+            "zxing-advanced:horizontal-lanczos-otsu:a0:phase0.0:Binarizer.FixedThreshold",
+            "zxing-advanced:horizontal-lanczos-otsu:a0:phase0.25:Binarizer.LocalAverage",
+            "zxing-advanced:horizontal-lanczos-otsu:a0:phase0.25:Binarizer.GlobalHistogram",
+            "zxing-advanced:horizontal-lanczos-otsu:a0:phase0.25:Binarizer.FixedThreshold",
+            "zxing-advanced:horizontal-lanczos-otsu:a0:phase0.5:Binarizer.LocalAverage",
+            "zxing-advanced:horizontal-lanczos-otsu:a0:phase0.5:Binarizer.GlobalHistogram",
+            "zxing-advanced:horizontal-lanczos-otsu:a0:phase0.5:Binarizer.FixedThreshold",
+            "zxing-advanced:horizontal-lanczos-otsu:a0:phase0.75:Binarizer.LocalAverage",
+            "zxing-advanced:horizontal-lanczos-otsu:a0:phase0.75:Binarizer.GlobalHistogram",
+            "zxing-advanced:horizontal-lanczos-otsu:a0:phase0.75:Binarizer.FixedThreshold",
+            "zxing-advanced:wide-parent-cubic:a-4:phase0.0:Binarizer.LocalAverage"
+          ],
+          "structural_metrics": {}
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 3,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 1,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0007.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.0385,
+        "linear_localization_seconds": 0.4546,
+        "linear_decode_seconds": 0.0261,
+        "matrix_recovery_seconds": 0.3559,
+        "total_seconds": 0.9448
+      }
+    },
+    {
+      "page": 8,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0008.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 3360,
+        "height": 2400
+      },
+      "decoded_count": 1,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "RF5350847625Q1",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              2400.0,
+              1411.0
+            ],
+            [
+              2867.0,
+              1411.0
+            ],
+            [
+              2866.0,
+              1480.0
+            ],
+            [
+              2398.0,
+              1480.0
+            ]
+          ],
+          "aabb": {
+            "x": 2398.0,
+            "y": 1411.0,
+            "width": 469.0,
+            "height": 69.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 1,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 0,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0008.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.0376,
+        "linear_localization_seconds": 0.5537,
+        "linear_decode_seconds": 0.0006,
+        "matrix_recovery_seconds": 0.4927,
+        "total_seconds": 1.1643
+      }
+    },
+    {
+      "page": 9,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0009.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 2,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "LOT-664081-09",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate"
+          ],
+          "quad": [
+            [
+              613.2,
+              1886.9
+            ],
+            [
+              636.77,
+              1798.85
+            ],
+            [
+              1228.11,
+              1957.14
+            ],
+            [
+              1204.54,
+              2045.18
+            ]
+          ],
+          "aabb": {
+            "x": 613.2,
+            "y": 1798.85,
+            "width": 614.91,
+            "height": 246.33
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {
+            "score": 0.9843,
+            "orientation": 0.9417,
+            "persistence": 0.2843,
+            "support_strength": 0.958,
+            "scanline_agreement": 0.984,
+            "transitions": 92.0,
+            "transition_rate": 0.1503,
+            "dark_fraction": 0.4346,
+            "aspect": 6.7253
+          }
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "SYN009229497479",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              951.0,
+              2561.0
+            ],
+            [
+              1530.0,
+              2561.0
+            ],
+            [
+              1531.0,
+              2658.0
+            ],
+            [
+              952.0,
+              2658.0
+            ]
+          ],
+          "aabb": {
+            "x": 951.0,
+            "y": 2561.0,
+            "width": 580.0,
+            "height": 97.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 2,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 0,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0009.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.0355,
+        "linear_localization_seconds": 0.5584,
+        "linear_decode_seconds": 0.0016,
+        "matrix_recovery_seconds": 0.4002,
+        "total_seconds": 1.1073
+      }
+    },
+    {
+      "page": 10,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0010.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "SYN010112342112",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              1680.0,
+              2360.0
+            ],
+            [
+              1680.0,
+              1926.0
+            ],
+            [
+              1599.0,
+              1927.0
+            ],
+            [
+              1599.0,
+              2362.0
+            ]
+          ],
+          "aabb": {
+            "x": 1599.0,
+            "y": 1926.0,
+            "width": 81.0,
+            "height": 436.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 1,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 0,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0010.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.0356,
+        "linear_localization_seconds": 0.4923,
+        "linear_decode_seconds": 0.0007,
+        "matrix_recovery_seconds": 0.4013,
+        "total_seconds": 1.0122
+      }
+    },
+    {
+      "page": 11,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0011.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "PO98660742283",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate"
+          ],
+          "quad": [
+            [
+              1346.29,
+              2517.69
+            ],
+            [
+              1368.57,
+              2431.45
+            ],
+            [
+              1844.62,
+              2554.45
+            ],
+            [
+              1822.34,
+              2640.69
+            ]
+          ],
+          "aabb": {
+            "x": 1346.29,
+            "y": 2431.45,
+            "width": 498.33,
+            "height": 209.24
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {
+            "score": 0.9837,
+            "orientation": 0.9325,
+            "persistence": 0.2967,
+            "support_strength": 0.9393,
+            "scanline_agreement": 1.0,
+            "transitions": 74.0,
+            "transition_rate": 0.1504,
+            "dark_fraction": 0.4512,
+            "aspect": 5.5281
+          }
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 1,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 0,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0011.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.034,
+        "linear_localization_seconds": 0.3904,
+        "linear_decode_seconds": 0.0007,
+        "matrix_recovery_seconds": 0.4091,
+        "total_seconds": 0.8815
+      }
+    },
+    {
+      "page": 12,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0012.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 2,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "SYN012142341108",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              2084.0,
+              1231.0
+            ],
+            [
+              2084.0,
+              1810.0
+            ],
+            [
+              2015.0,
+              1809.0
+            ],
+            [
+              2015.0,
+              1230.0
+            ]
+          ],
+          "aabb": {
+            "x": 2015.0,
+            "y": 1230.0,
+            "width": 69.0,
+            "height": 580.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "SYN012289012935",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              711.0,
+              1626.0
+            ],
+            [
+              1290.0,
+              1626.0
+            ],
+            [
+              1289.0,
+              1698.0
+            ],
+            [
+              709.0,
+              1698.0
+            ]
+          ],
+          "aabb": {
+            "x": 709.0,
+            "y": 1626.0,
+            "width": 581.0,
+            "height": 72.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 2,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 0,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0012.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.0364,
+        "linear_localization_seconds": 0.623,
+        "linear_decode_seconds": 0.0013,
+        "matrix_recovery_seconds": 0.3908,
+        "total_seconds": 1.1472
+      }
+    },
+    {
+      "page": 13,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0013.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 4,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "SYN013489278109",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              651.0,
+              1020.0
+            ],
+            [
+              1231.0,
+              1020.0
+            ],
+            [
+              1229.0,
+              1069.0
+            ],
+            [
+              649.0,
+              1069.0
+            ]
+          ],
+          "aabb": {
+            "x": 649.0,
+            "y": 1020.0,
+            "width": 582.0,
+            "height": 49.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "PO80203056370",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              1205.0,
+              2201.0
+            ],
+            [
+              1741.0,
+              2201.0
+            ],
+            [
+              1737.0,
+              2298.0
+            ],
+            [
+              1201.0,
+              2298.0
+            ]
+          ],
+          "aabb": {
+            "x": 1201.0,
+            "y": 2201.0,
+            "width": 540.0,
+            "height": 97.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "LOT-289774-13",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              480.0,
+              2549.0
+            ],
+            [
+              1147.0,
+              2549.0
+            ],
+            [
+              1146.0,
+              2664.0
+            ],
+            [
+              478.0,
+              2664.0
+            ]
+          ],
+          "aabb": {
+            "x": 478.0,
+            "y": 2549.0,
+            "width": 669.0,
+            "height": 115.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "LOT-638306-13",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              1541.0,
+              2993.0
+            ],
+            [
+              2041.0,
+              2993.0
+            ],
+            [
+              2040.0,
+              3078.0
+            ],
+            [
+              1540.0,
+              3078.0
+            ]
+          ],
+          "aabb": {
+            "x": 1540.0,
+            "y": 2993.0,
+            "width": 501.0,
+            "height": 85.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 4,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 0,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0013.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.0374,
+        "linear_localization_seconds": 0.7709,
+        "linear_decode_seconds": 0.0032,
+        "matrix_recovery_seconds": 0.3943,
+        "total_seconds": 1.3517
+      }
+    },
+    {
+      "page": 14,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0014.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 3,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "RF5260226319Q3",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              896.0,
+              612.0
+            ],
+            [
+              1364.0,
+              612.0
+            ],
+            [
+              1362.0,
+              685.0
+            ],
+            [
+              895.0,
+              685.0
+            ]
+          ],
+          "aabb": {
+            "x": 895.0,
+            "y": 612.0,
+            "width": 469.0,
+            "height": 73.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "PO11526640842",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              369.0,
+              804.0
+            ],
+            [
+              369.0,
+              1339.0
+            ],
+            [
+              288.0,
+              1337.0
+            ],
+            [
+              288.0,
+              802.0
+            ]
+          ],
+          "aabb": {
+            "x": 288.0,
+            "y": 802.0,
+            "width": 81.0,
+            "height": 537.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "LOT-586263-14",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:lanczos30-wide",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              379.0,
+              2915.0
+            ],
+            [
+              1049.0,
+              2915.0
+            ],
+            [
+              1053.0,
+              2958.0
+            ],
+            [
+              383.0,
+              2958.0
+            ]
+          ],
+          "aabb": {
+            "x": 379.0,
+            "y": 2915.0,
+            "width": 674.0,
+            "height": 43.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10",
+            "zxing:cubic15-p08-s10",
+            "zxing:cubic20-p18-s18",
+            "zxing:nearest15-fixed",
+            "zxing:lanczos30-wide"
+          ],
+          "structural_metrics": {}
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 3,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 0,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0014.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.0339,
+        "linear_localization_seconds": 0.4213,
+        "linear_decode_seconds": 0.0084,
+        "matrix_recovery_seconds": 0.376,
+        "total_seconds": 0.9084
+      }
+    },
+    {
+      "page": 15,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0015.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 3360,
+        "height": 2400
+      },
+      "decoded_count": 2,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "LOT-951494-15",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              3042.0,
+              561.0
+            ],
+            [
+              3042.0,
+              1062.0
+            ],
+            [
+              2933.0,
+              1060.0
+            ],
+            [
+              2933.0,
+              560.0
+            ]
+          ],
+          "aabb": {
+            "x": 2933.0,
+            "y": 560.0,
+            "width": 109.0,
+            "height": 502.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "RF6547709749Q1",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              658.0,
+              1863.0
+            ],
+            [
+              969.0,
+              1863.0
+            ],
+            [
+              970.0,
+              1968.0
+            ],
+            [
+              659.0,
+              1968.0
+            ]
+          ],
+          "aabb": {
+            "x": 658.0,
+            "y": 1863.0,
+            "width": 312.0,
+            "height": 105.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 2,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 0,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0015.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.0355,
+        "linear_localization_seconds": 0.4307,
+        "linear_decode_seconds": 0.0016,
+        "matrix_recovery_seconds": 0.3673,
+        "total_seconds": 0.9034
+      }
+    },
+    {
+      "page": 16,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0016.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "SYN016164354516",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              389.0,
+              1200.0
+            ],
+            [
+              389.0,
+              1780.0
+            ],
+            [
+              296.0,
+              1782.0
+            ],
+            [
+              296.0,
+              1203.0
+            ]
+          ],
+          "aabb": {
+            "x": 296.0,
+            "y": 1200.0,
+            "width": 93.0,
+            "height": 582.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 1,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 0,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0016.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.0366,
+        "linear_localization_seconds": 0.4958,
+        "linear_decode_seconds": 0.0009,
+        "matrix_recovery_seconds": 0.3686,
+        "total_seconds": 0.9854
+      }
+    },
+    {
+      "page": 17,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0017.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "SYN017116060259",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              2096.0,
+              662.0
+            ],
+            [
+              2096.0,
+              1241.0
+            ],
+            [
+              2019.0,
+              1241.0
+            ],
+            [
+              2019.0,
+              661.0
+            ]
+          ],
+          "aabb": {
+            "x": 2019.0,
+            "y": 661.0,
+            "width": 77.0,
+            "height": 580.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 1,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 0,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0017.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.0349,
+        "linear_localization_seconds": 0.4375,
+        "linear_decode_seconds": 0.0008,
+        "matrix_recovery_seconds": 0.3761,
+        "total_seconds": 0.9085
+      }
+    },
+    {
+      "page": 18,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0018.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 2,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "RF1523552857Q1",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              926.0,
+              1596.0
+            ],
+            [
+              1395.0,
+              1596.0
+            ],
+            [
+              1390.0,
+              1657.0
+            ],
+            [
+              922.0,
+              1657.0
+            ]
+          ],
+          "aabb": {
+            "x": 922.0,
+            "y": 1596.0,
+            "width": 473.0,
+            "height": 61.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "PO15135608313",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate"
+          ],
+          "quad": [
+            [
+              1051.2,
+              2581.7
+            ],
+            [
+              1070.44,
+              2491.54
+            ],
+            [
+              1712.94,
+              2628.65
+            ],
+            [
+              1693.7,
+              2718.81
+            ]
+          ],
+          "aabb": {
+            "x": 1051.2,
+            "y": 2491.54,
+            "width": 661.74,
+            "height": 227.27
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {
+            "score": 0.9835,
+            "orientation": 0.9353,
+            "persistence": 0.2801,
+            "support_strength": 0.9637,
+            "scanline_agreement": 1.0,
+            "transitions": 74.0,
+            "transition_rate": 0.1126,
+            "dark_fraction": 0.4627,
+            "aspect": 7.1413
+          }
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 2,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 0,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0018.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.0334,
+        "linear_localization_seconds": 0.539,
+        "linear_decode_seconds": 0.0014,
+        "matrix_recovery_seconds": 0.4119,
+        "total_seconds": 1.0641
+      }
+    },
+    {
+      "page": 19,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0019.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "SYN019160739657",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              1064.0,
+              420.0
+            ],
+            [
+              1499.0,
+              420.0
+            ],
+            [
+              1502.0,
+              511.0
+            ],
+            [
+              1067.0,
+              511.0
+            ]
+          ],
+          "aabb": {
+            "x": 1064.0,
+            "y": 420.0,
+            "width": 438.0,
+            "height": 91.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 1,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 0,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0019.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.0359,
+        "linear_localization_seconds": 0.503,
+        "linear_decode_seconds": 0.0007,
+        "matrix_recovery_seconds": 0.4025,
+        "total_seconds": 1.0108
+      }
+    },
+    {
+      "page": 20,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0020.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "SYN020140036461",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "geometry:deterministic-quad-repair",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              2140.0,
+              1164.5
+            ],
+            [
+              1698.0,
+              1164.5
+            ],
+            [
+              1698.0,
+              1156.5
+            ],
+            [
+              2140.0,
+              1156.5
+            ]
+          ],
+          "aabb": {
+            "x": 1698.0,
+            "y": 1156.5,
+            "width": 442.0,
+            "height": 8.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10",
+            "zxing:cubic15-p08-s10",
+            "zxing:cubic20-p18-s18",
+            "zxing:nearest15-fixed",
+            "zxing:lanczos30-wide",
+            "zxing:clahe15",
+            "zxing:otsu15",
+            "zxing-advanced:angle-nearest-otsu:a-4:phase0.0:Binarizer.LocalAverage",
+            "zxing-advanced:angle-nearest-otsu:a-4:phase0.0:Binarizer.GlobalHistogram",
+            "zxing-advanced:angle-nearest-otsu:a-4:phase0.0:Binarizer.FixedThreshold",
+            "zxing-advanced:angle-nearest-otsu:a-2:phase0.0:Binarizer.LocalAverage",
+            "zxing-advanced:angle-nearest-otsu:a-2:phase0.0:Binarizer.GlobalHistogram",
+            "zxing-advanced:angle-nearest-otsu:a-2:phase0.0:Binarizer.FixedThreshold",
+            "zxing-advanced:angle-nearest-otsu:a2:phase0.0:Binarizer.LocalAverage",
+            "zxing-advanced:angle-nearest-otsu:a2:phase0.0:Binarizer.GlobalHistogram",
+            "zxing-advanced:angle-nearest-otsu:a2:phase0.0:Binarizer.FixedThreshold",
+            "zxing-advanced:angle-nearest-otsu:a4:phase0.0:Binarizer.LocalAverage",
+            "zxing-advanced:angle-nearest-otsu:a4:phase0.0:Binarizer.GlobalHistogram",
+            "zxing-advanced:angle-nearest-otsu:a4:phase0.0:Binarizer.FixedThreshold",
+            "zxing-advanced:horizontal-lanczos-otsu:a0:phase0.0:Binarizer.LocalAverage",
+            "zxing-advanced:horizontal-lanczos-otsu:a0:phase0.0:Binarizer.GlobalHistogram",
+            "zxing-advanced:horizontal-lanczos-otsu:a0:phase0.0:Binarizer.FixedThreshold",
+            "zxing-advanced:horizontal-lanczos-otsu:a0:phase0.25:Binarizer.LocalAverage",
+            "zxing-advanced:horizontal-lanczos-otsu:a0:phase0.25:Binarizer.GlobalHistogram",
+            "zxing-advanced:horizontal-lanczos-otsu:a0:phase0.25:Binarizer.FixedThreshold",
+            "zxing-advanced:horizontal-lanczos-otsu:a0:phase0.5:Binarizer.LocalAverage",
+            "zxing-advanced:horizontal-lanczos-otsu:a0:phase0.5:Binarizer.GlobalHistogram",
+            "zxing-advanced:horizontal-lanczos-otsu:a0:phase0.5:Binarizer.FixedThreshold",
+            "zxing-advanced:horizontal-lanczos-otsu:a0:phase0.75:Binarizer.LocalAverage",
+            "zxing-advanced:horizontal-lanczos-otsu:a0:phase0.75:Binarizer.GlobalHistogram",
+            "zxing-advanced:horizontal-lanczos-otsu:a0:phase0.75:Binarizer.FixedThreshold",
+            "zxing-advanced:wide-parent-cubic:a-4:phase0.0:Binarizer.LocalAverage",
+            "zxing-advanced:wide-parent-cubic:a-4:phase0.0:Binarizer.GlobalHistogram",
+            "zxing-advanced:wide-parent-cubic:a-4:phase0.0:Binarizer.FixedThreshold",
+            "zxing-advanced:wide-parent-cubic:a-4:phase0.5:Binarizer.LocalAverage",
+            "zxing-advanced:wide-parent-cubic:a-4:phase0.5:Binarizer.GlobalHistogram",
+            "zxing-advanced:wide-parent-cubic:a-4:phase0.5:Binarizer.FixedThreshold",
+            "zxing-advanced:wide-parent-cubic:a-3:phase0.0:Binarizer.LocalAverage",
+            "zxing-advanced:wide-parent-cubic:a-3:phase0.0:Binarizer.GlobalHistogram",
+            "zxing-advanced:wide-parent-cubic:a-3:phase0.0:Binarizer.FixedThreshold",
+            "zxing-advanced:wide-parent-cubic:a-3:phase0.5:Binarizer.LocalAverage",
+            "zxing-advanced:wide-parent-cubic:a-3:phase0.5:Binarizer.GlobalHistogram",
+            "zxing-advanced:wide-parent-cubic:a-3:phase0.5:Binarizer.FixedThreshold",
+            "zxing-advanced:wide-parent-cubic:a-2:phase0.0:Binarizer.LocalAverage",
+            "zxing-advanced:wide-parent-cubic:a-2:phase0.0:Binarizer.GlobalHistogram",
+            "zxing-advanced:wide-parent-cubic:a-2:phase0.0:Binarizer.FixedThreshold",
+            "zxing-advanced:wide-parent-cubic:a-2:phase0.5:Binarizer.LocalAverage",
+            "zxing-advanced:wide-parent-cubic:a-2:phase0.5:Binarizer.GlobalHistogram",
+            "zxing-advanced:wide-parent-cubic:a-2:phase0.5:Binarizer.FixedThreshold",
+            "zxing-advanced:wide-parent-cubic:a0:phase0.0:Binarizer.LocalAverage",
+            "zxing-advanced:wide-parent-cubic:a0:phase0.0:Binarizer.GlobalHistogram",
+            "zxing-advanced:wide-parent-cubic:a0:phase0.0:Binarizer.FixedThreshold",
+            "zxing-advanced:wide-parent-cubic:a0:phase0.5:Binarizer.LocalAverage",
+            "zxing-advanced:wide-parent-cubic:a0:phase0.5:Binarizer.GlobalHistogram",
+            "zxing-advanced:wide-parent-cubic:a0:phase0.5:Binarizer.FixedThreshold",
+            "zxing-advanced:wide-parent-cubic:a2:phase0.0:Binarizer.LocalAverage",
+            "zxing-advanced:wide-parent-cubic:a2:phase0.0:Binarizer.GlobalHistogram",
+            "zxing-advanced:wide-parent-cubic:a2:phase0.0:Binarizer.FixedThreshold",
+            "zxing-advanced:wide-parent-cubic:a2:phase0.5:Binarizer.LocalAverage",
+            "zxing-advanced:wide-parent-cubic:a2:phase0.5:Binarizer.GlobalHistogram",
+            "zxing-advanced:wide-parent-cubic:a2:phase0.5:Binarizer.FixedThreshold",
+            "zxing-advanced:wide-parent-cubic:a3:phase0.0:Binarizer.LocalAverage",
+            "zxing-advanced:wide-parent-cubic:a3:phase0.0:Binarizer.GlobalHistogram",
+            "zxing-advanced:wide-parent-cubic:a3:phase0.0:Binarizer.FixedThreshold",
+            "zxing-advanced:wide-parent-cubic:a3:phase0.5:Binarizer.LocalAverage",
+            "zxing-advanced:wide-parent-cubic:a3:phase0.5:Binarizer.GlobalHistogram",
+            "zxing-advanced:wide-parent-cubic:a3:phase0.5:Binarizer.FixedThreshold",
+            "zxing-advanced:wide-parent-cubic:a4:phase0.0:Binarizer.LocalAverage",
+            "zxing-advanced:wide-parent-cubic:a4:phase0.0:Binarizer.GlobalHistogram",
+            "zxing-advanced:wide-parent-cubic:a4:phase0.0:Binarizer.FixedThreshold",
+            "zxing-advanced:wide-parent-cubic:a4:phase0.5:Binarizer.LocalAverage",
+            "zxing-advanced:wide-parent-cubic:a4:phase0.5:Binarizer.GlobalHistogram",
+            "zxing-advanced:wide-parent-cubic:a4:phase0.5:Binarizer.FixedThreshold",
+            "zxing-advanced:wide-parent-clahe:a-3:phase0.0:Binarizer.LocalAverage",
+            "zxing-advanced:wide-parent-clahe:a-3:phase0.0:Binarizer.GlobalHistogram",
+            "zxing-advanced:wide-parent-clahe:a-3:phase0.0:Binarizer.FixedThreshold",
+            "zxing-advanced:wide-parent-clahe:a-3:phase0.5:Binarizer.LocalAverage",
+            "zxing-advanced:wide-parent-clahe:a-3:phase0.5:Binarizer.GlobalHistogram",
+            "zxing-advanced:wide-parent-clahe:a-3:phase0.5:Binarizer.FixedThreshold",
+            "zxing-advanced:wide-parent-clahe:a0:phase0.0:Binarizer.LocalAverage",
+            "zxing-advanced:wide-parent-clahe:a0:phase0.0:Binarizer.GlobalHistogram",
+            "zxing-advanced:wide-parent-clahe:a0:phase0.0:Binarizer.FixedThreshold",
+            "zxing-advanced:wide-parent-clahe:a0:phase0.5:Binarizer.LocalAverage",
+            "zxing-advanced:wide-parent-clahe:a0:phase0.5:Binarizer.GlobalHistogram",
+            "zxing-advanced:wide-parent-clahe:a0:phase0.5:Binarizer.FixedThreshold",
+            "zxing-advanced:wide-parent-clahe:a3:phase0.0:Binarizer.LocalAverage",
+            "zxing-advanced:wide-parent-clahe:a3:phase0.0:Binarizer.GlobalHistogram",
+            "zxing-advanced:wide-parent-clahe:a3:phase0.0:Binarizer.FixedThreshold",
+            "zxing-advanced:wide-parent-clahe:a3:phase0.5:Binarizer.LocalAverage",
+            "zxing-advanced:wide-parent-clahe:a3:phase0.5:Binarizer.GlobalHistogram",
+            "zxing-advanced:wide-parent-clahe:a3:phase0.5:Binarizer.FixedThreshold",
+            "zxing-advanced:consensus-median-cubic3",
+            "zxing-advanced:consensus-median-cubic3-otsu",
+            "zxing-advanced:consensus-median-lanczos4",
+            "zxing-advanced:consensus-median-lanczos4-otsu",
+            "zxing-advanced:consensus-mean-cubic3",
+            "zxing-advanced:consensus-mean-cubic3-otsu",
+            "zxing-advanced:consensus-mean-lanczos4",
+            "zxing-advanced:consensus-mean-lanczos4-otsu"
+          ],
+          "structural_metrics": {}
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 1,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 1,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0020.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.0356,
+        "linear_localization_seconds": 0.4275,
+        "linear_decode_seconds": 0.0287,
+        "matrix_recovery_seconds": 0.3868,
+        "total_seconds": 0.9248
+      }
+    },
+    {
+      "page": 21,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0021.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 3360,
+        "height": 2400
+      },
+      "decoded_count": 3,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "LOT-339628-21",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              3126.0,
+              1455.0
+            ],
+            [
+              3126.0,
+              955.0
+            ],
+            [
+              3053.0,
+              954.0
+            ],
+            [
+              3053.0,
+              1455.0
+            ]
+          ],
+          "aabb": {
+            "x": 3053.0,
+            "y": 954.0,
+            "width": 73.0,
+            "height": 501.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "LOT-851094-21",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              1204.0,
+              1371.0
+            ],
+            [
+              1872.0,
+              1371.0
+            ],
+            [
+              1869.0,
+              1468.0
+            ],
+            [
+              1201.0,
+              1468.0
+            ]
+          ],
+          "aabb": {
+            "x": 1201.0,
+            "y": 1371.0,
+            "width": 671.0,
+            "height": 97.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "PO77238513191",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              499.0,
+              1631.0
+            ],
+            [
+              1033.0,
+              1631.0
+            ],
+            [
+              1031.0,
+              1716.0
+            ],
+            [
+              495.0,
+              1716.0
+            ]
+          ],
+          "aabb": {
+            "x": 495.0,
+            "y": 1631.0,
+            "width": 538.0,
+            "height": 85.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 3,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 0,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0021.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.0367,
+        "linear_localization_seconds": 0.705,
+        "linear_decode_seconds": 0.0023,
+        "matrix_recovery_seconds": 0.3764,
+        "total_seconds": 1.252
+      }
+    },
+    {
+      "page": 22,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0022.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "PO77012421260",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              428.0,
+              2814.0
+            ],
+            [
+              963.0,
+              2814.0
+            ],
+            [
+              964.0,
+              2892.0
+            ],
+            [
+              429.0,
+              2892.0
+            ]
+          ],
+          "aabb": {
+            "x": 428.0,
+            "y": 2814.0,
+            "width": 536.0,
+            "height": 78.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 1,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 0,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0022.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.0343,
+        "linear_localization_seconds": 0.3751,
+        "linear_decode_seconds": 0.0008,
+        "matrix_recovery_seconds": 0.3484,
+        "total_seconds": 0.799
+      }
+    },
+    {
+      "page": 23,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0023.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "LOT-908329-23",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              609.0,
+              2258.0
+            ],
+            [
+              609.0,
+              1758.0
+            ],
+            [
+              540.0,
+              1759.0
+            ],
+            [
+              540.0,
+              2259.0
+            ]
+          ],
+          "aabb": {
+            "x": 540.0,
+            "y": 1758.0,
+            "width": 69.0,
+            "height": 501.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 1,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 0,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0023.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.0343,
+        "linear_localization_seconds": 0.4053,
+        "linear_decode_seconds": 0.0007,
+        "matrix_recovery_seconds": 0.3775,
+        "total_seconds": 0.8689
+      }
+    },
+    {
+      "page": 24,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0024.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 2,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "LOT-389448-24",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              1784.0,
+              1129.0
+            ],
+            [
+              1784.0,
+              1629.0
+            ],
+            [
+              1689.0,
+              1629.0
+            ],
+            [
+              1689.0,
+              1129.0
+            ]
+          ],
+          "aabb": {
+            "x": 1689.0,
+            "y": 1129.0,
+            "width": 95.0,
+            "height": 500.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "SYN024116828815",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              272.0,
+              1466.0
+            ],
+            [
+              272.0,
+              1899.0
+            ],
+            [
+              168.0,
+              1899.0
+            ],
+            [
+              168.0,
+              1465.0
+            ]
+          ],
+          "aabb": {
+            "x": 168.0,
+            "y": 1465.0,
+            "width": 104.0,
+            "height": 434.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 2,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 0,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0024.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.0372,
+        "linear_localization_seconds": 0.5396,
+        "linear_decode_seconds": 0.0015,
+        "matrix_recovery_seconds": 0.395,
+        "total_seconds": 1.0433
+      }
+    },
+    {
+      "page": 25,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0025.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "PO64545322687",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              763.0,
+              2783.0
+            ],
+            [
+              1298.0,
+              2783.0
+            ],
+            [
+              1299.0,
+              2874.0
+            ],
+            [
+              764.0,
+              2874.0
+            ]
+          ],
+          "aabb": {
+            "x": 763.0,
+            "y": 2783.0,
+            "width": 536.0,
+            "height": 91.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 1,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 0,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0025.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.0321,
+        "linear_localization_seconds": 0.3959,
+        "linear_decode_seconds": 0.0008,
+        "matrix_recovery_seconds": 0.3835,
+        "total_seconds": 0.8676
+      }
+    },
+    {
+      "page": 26,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0026.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 4,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "LOT-651645-26",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              666.0,
+              1278.0
+            ],
+            [
+              1334.0,
+              1278.0
+            ],
+            [
+              1337.0,
+              1351.0
+            ],
+            [
+              669.0,
+              1351.0
+            ]
+          ],
+          "aabb": {
+            "x": 666.0,
+            "y": 1278.0,
+            "width": 671.0,
+            "height": 73.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "PO81788026680",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              1209.0,
+              2075.0
+            ],
+            [
+              1610.0,
+              2075.0
+            ],
+            [
+              1611.0,
+              2184.0
+            ],
+            [
+              1209.0,
+              2184.0
+            ]
+          ],
+          "aabb": {
+            "x": 1209.0,
+            "y": 2075.0,
+            "width": 402.0,
+            "height": 109.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "LOT-434484-26",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              269.0,
+              2473.0
+            ],
+            [
+              269.0,
+              1805.0
+            ],
+            [
+              184.0,
+              1807.0
+            ],
+            [
+              184.0,
+              2474.0
+            ]
+          ],
+          "aabb": {
+            "x": 184.0,
+            "y": 1805.0,
+            "width": 85.0,
+            "height": 669.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "LOT-193952-26",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              1199.0,
+              2808.0
+            ],
+            [
+              1700.0,
+              2808.0
+            ],
+            [
+              1701.0,
+              2910.0
+            ],
+            [
+              1200.0,
+              2910.0
+            ]
+          ],
+          "aabb": {
+            "x": 1199.0,
+            "y": 2808.0,
+            "width": 502.0,
+            "height": 102.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 4,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 0,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0026.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.0344,
+        "linear_localization_seconds": 0.6289,
+        "linear_decode_seconds": 0.0032,
+        "matrix_recovery_seconds": 0.3922,
+        "total_seconds": 1.1694
+      }
+    },
+    {
+      "page": 27,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0027.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 2,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "SYN027173767095",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              825.0,
+              540.0
+            ],
+            [
+              1405.0,
+              540.0
+            ],
+            [
+              1406.0,
+              619.0
+            ],
+            [
+              826.0,
+              619.0
+            ]
+          ],
+          "aabb": {
+            "x": 825.0,
+            "y": 540.0,
+            "width": 581.0,
+            "height": 79.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "PO86433101231",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:lanczos30-wide",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              1480.0,
+              1302.0
+            ],
+            [
+              2019.0,
+              1302.0
+            ],
+            [
+              2024.0,
+              1333.0
+            ],
+            [
+              1483.0,
+              1333.0
+            ]
+          ],
+          "aabb": {
+            "x": 1480.0,
+            "y": 1302.0,
+            "width": 544.0,
+            "height": 31.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10",
+            "zxing:cubic15-p08-s10",
+            "zxing:cubic20-p18-s18",
+            "zxing:nearest15-fixed",
+            "zxing:lanczos30-wide"
+          ],
+          "structural_metrics": {}
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 2,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 0,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0027.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.0355,
+        "linear_localization_seconds": 0.4928,
+        "linear_decode_seconds": 0.0059,
+        "matrix_recovery_seconds": 0.3919,
+        "total_seconds": 0.992
+      }
+    },
+    {
+      "page": 28,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0028.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 3,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "RF1263308501Q3",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              1566.0,
+              1224.0
+            ],
+            [
+              2189.0,
+              1224.0
+            ],
+            [
+              2189.0,
+              1309.0
+            ],
+            [
+              1565.0,
+              1309.0
+            ]
+          ],
+          "aabb": {
+            "x": 1565.0,
+            "y": 1224.0,
+            "width": 624.0,
+            "height": 85.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "PO46467339013",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              1313.0,
+              1733.0
+            ],
+            [
+              1849.0,
+              1733.0
+            ],
+            [
+              1852.0,
+              1788.0
+            ],
+            [
+              1316.0,
+              1788.0
+            ]
+          ],
+          "aabb": {
+            "x": 1313.0,
+            "y": 1733.0,
+            "width": 539.0,
+            "height": 55.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "PO13609359820",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              390.0,
+              2963.0
+            ],
+            [
+              791.0,
+              2963.0
+            ],
+            [
+              791.0,
+              3072.0
+            ],
+            [
+              389.0,
+              3072.0
+            ]
+          ],
+          "aabb": {
+            "x": 389.0,
+            "y": 2963.0,
+            "width": 402.0,
+            "height": 109.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 3,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 0,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0028.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.0347,
+        "linear_localization_seconds": 0.5064,
+        "linear_decode_seconds": 0.0021,
+        "matrix_recovery_seconds": 0.39,
+        "total_seconds": 1.0209
+      }
+    },
+    {
+      "page": 29,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0029.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 3360,
+        "height": 2400
+      },
+      "decoded_count": 1,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "SYN029111140195",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate"
+          ],
+          "quad": [
+            [
+              1447.29,
+              1118.72
+            ],
+            [
+              1429.54,
+              1041.11
+            ],
+            [
+              1947.12,
+              922.74
+            ],
+            [
+              1964.86,
+              1000.35
+            ]
+          ],
+          "aabb": {
+            "x": 1429.54,
+            "y": 922.74,
+            "width": 535.32,
+            "height": 195.98
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {
+            "score": 0.9826,
+            "orientation": 0.9417,
+            "persistence": 0.2844,
+            "support_strength": 0.9458,
+            "scanline_agreement": 0.9787,
+            "transitions": 80.0,
+            "transition_rate": 0.1507,
+            "dark_fraction": 0.4463,
+            "aspect": 6.6375
+          }
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 1,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 0,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0029.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.0389,
+        "linear_localization_seconds": 0.5392,
+        "linear_decode_seconds": 0.0007,
+        "matrix_recovery_seconds": 0.3974,
+        "total_seconds": 1.0564
+      }
+    },
+    {
+      "page": 30,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0030.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 2,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "SYN030117185706",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              2012.0,
+              844.0
+            ],
+            [
+              2012.0,
+              410.0
+            ],
+            [
+              1903.0,
+              412.0
+            ],
+            [
+              1903.0,
+              847.0
+            ]
+          ],
+          "aabb": {
+            "x": 1903.0,
+            "y": 410.0,
+            "width": 109.0,
+            "height": 437.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "RF9440653407Q2",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate"
+          ],
+          "quad": [
+            [
+              1225.93,
+              1476.14
+            ],
+            [
+              1203.93,
+              1382.38
+            ],
+            [
+              1764.99,
+              1250.74
+            ],
+            [
+              1786.99,
+              1344.5
+            ]
+          ],
+          "aabb": {
+            "x": 1203.93,
+            "y": 1250.74,
+            "width": 583.05,
+            "height": 225.4
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {
+            "score": 0.9819,
+            "orientation": 0.9411,
+            "persistence": 0.2847,
+            "support_strength": 0.9487,
+            "scanline_agreement": 0.9765,
+            "transitions": 86.0,
+            "transition_rate": 0.1493,
+            "dark_fraction": 0.4097,
+            "aspect": 6.0
+          }
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 2,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 0,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0030.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.0374,
+        "linear_localization_seconds": 0.4828,
+        "linear_decode_seconds": 0.0017,
+        "matrix_recovery_seconds": 0.3735,
+        "total_seconds": 0.9551
+      }
+    },
+    {
+      "page": 31,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0031.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "RF9631210457Q1",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              385.0,
+              2195.0
+            ],
+            [
+              385.0,
+              1572.0
+            ],
+            [
+              284.0,
+              1570.0
+            ],
+            [
+              284.0,
+              2193.0
+            ]
+          ],
+          "aabb": {
+            "x": 284.0,
+            "y": 1570.0,
+            "width": 101.0,
+            "height": 625.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 1,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 0,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0031.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.0341,
+        "linear_localization_seconds": 0.4338,
+        "linear_decode_seconds": 0.001,
+        "matrix_recovery_seconds": 0.3904,
+        "total_seconds": 0.9339
+      }
+    },
+    {
+      "page": 32,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0032.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "LOT-225561-32",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              537.0,
+              2045.0
+            ],
+            [
+              537.0,
+              2712.0
+            ],
+            [
+              432.0,
+              2712.0
+            ],
+            [
+              432.0,
+              2044.0
+            ]
+          ],
+          "aabb": {
+            "x": 432.0,
+            "y": 2044.0,
+            "width": 105.0,
+            "height": 668.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 1,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 0,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0032.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.0381,
+        "linear_localization_seconds": 0.7193,
+        "linear_decode_seconds": 0.0011,
+        "matrix_recovery_seconds": 0.3844,
+        "total_seconds": 1.2561
+      }
+    },
+    {
+      "page": 33,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0033.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 2,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "PO16202004263",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              838.0,
+              528.0
+            ],
+            [
+              1241.0,
+              528.0
+            ],
+            [
+              1248.0,
+              589.0
+            ],
+            [
+              844.0,
+              589.0
+            ]
+          ],
+          "aabb": {
+            "x": 838.0,
+            "y": 528.0,
+            "width": 410.0,
+            "height": 61.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "RF4593805462Q1",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              2108.0,
+              2151.0
+            ],
+            [
+              2108.0,
+              1528.0
+            ],
+            [
+              2031.0,
+              1526.0
+            ],
+            [
+              2031.0,
+              2149.0
+            ]
+          ],
+          "aabb": {
+            "x": 2031.0,
+            "y": 1526.0,
+            "width": 77.0,
+            "height": 625.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 2,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 0,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0033.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.0354,
+        "linear_localization_seconds": 0.3995,
+        "linear_decode_seconds": 0.0013,
+        "matrix_recovery_seconds": 0.3966,
+        "total_seconds": 0.8766
+      }
+    },
+    {
+      "page": 34,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0034.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "RF5679157361Q1",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              1944.0,
+              3056.0
+            ],
+            [
+              1944.0,
+              2432.0
+            ],
+            [
+              1867.0,
+              2433.0
+            ],
+            [
+              1867.0,
+              3056.0
+            ]
+          ],
+          "aabb": {
+            "x": 1867.0,
+            "y": 2432.0,
+            "width": 77.0,
+            "height": 624.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 1,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 0,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0034.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.0343,
+        "linear_localization_seconds": 0.491,
+        "linear_decode_seconds": 0.0008,
+        "matrix_recovery_seconds": 0.3689,
+        "total_seconds": 0.9657
+      }
+    },
+    {
+      "page": 35,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0035.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 3,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "SYN035225133076",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              667.0,
+              654.0
+            ],
+            [
+              1246.0,
+              654.0
+            ],
+            [
+              1249.0,
+              715.0
+            ],
+            [
+              669.0,
+              715.0
+            ]
+          ],
+          "aabb": {
+            "x": 667.0,
+            "y": 654.0,
+            "width": 582.0,
+            "height": 61.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "SYN035127928748",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              986.0,
+              1428.0
+            ],
+            [
+              1421.0,
+              1428.0
+            ],
+            [
+              1422.0,
+              1543.0
+            ],
+            [
+              987.0,
+              1543.0
+            ]
+          ],
+          "aabb": {
+            "x": 986.0,
+            "y": 1428.0,
+            "width": 436.0,
+            "height": 115.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "SYN035336673794",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              1010.0,
+              2687.0
+            ],
+            [
+              1300.0,
+              2687.0
+            ],
+            [
+              1300.0,
+              2718.0
+            ],
+            [
+              1010.0,
+              2718.0
+            ]
+          ],
+          "aabb": {
+            "x": 1010.0,
+            "y": 2687.0,
+            "width": 290.0,
+            "height": 31.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 3,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 0,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0035.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.0377,
+        "linear_localization_seconds": 0.83,
+        "linear_decode_seconds": 0.0017,
+        "matrix_recovery_seconds": 0.3982,
+        "total_seconds": 1.3973
+      }
+    },
+    {
+      "page": 36,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0036.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 3360,
+        "height": 2400
+      },
+      "decoded_count": 2,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "SYN036218870108",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              1769.0,
+              1259.0
+            ],
+            [
+              2203.0,
+              1259.0
+            ],
+            [
+              2203.0,
+              1340.0
+            ],
+            [
+              1769.0,
+              1340.0
+            ]
+          ],
+          "aabb": {
+            "x": 1769.0,
+            "y": 1259.0,
+            "width": 434.0,
+            "height": 81.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "PO18354365100",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              2716.0,
+              1455.0
+            ],
+            [
+              3116.0,
+              1455.0
+            ],
+            [
+              3117.0,
+              1572.0
+            ],
+            [
+              2716.0,
+              1572.0
+            ]
+          ],
+          "aabb": {
+            "x": 2716.0,
+            "y": 1455.0,
+            "width": 401.0,
+            "height": 117.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 2,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 0,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0036.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.0348,
+        "linear_localization_seconds": 0.3913,
+        "linear_decode_seconds": 0.0014,
+        "matrix_recovery_seconds": 0.3755,
+        "total_seconds": 0.8445
+      }
+    },
+    {
+      "page": 37,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0037.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "SYN037113285693",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate"
+          ],
+          "quad": [
+            [
+              871.81,
+              2918.99
+            ],
+            [
+              902.36,
+              2819.16
+            ],
+            [
+              1580.49,
+              3026.7
+            ],
+            [
+              1549.93,
+              3126.53
+            ]
+          ],
+          "aabb": {
+            "x": 871.81,
+            "y": 2819.16,
+            "width": 708.68,
+            "height": 307.37
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {
+            "score": 0.9829,
+            "orientation": 0.9366,
+            "persistence": 0.2849,
+            "support_strength": 0.9574,
+            "scanline_agreement": 0.9833,
+            "transitions": 80.0,
+            "transition_rate": 0.1128,
+            "dark_fraction": 0.4231,
+            "aspect": 6.8173
+          }
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 1,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 0,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0037.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.0339,
+        "linear_localization_seconds": 0.4167,
+        "linear_decode_seconds": 0.0011,
+        "matrix_recovery_seconds": 0.3894,
+        "total_seconds": 0.8841
+      }
+    },
+    {
+      "page": 38,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0038.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "LOT-614662-38",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              814.0,
+              612.0
+            ],
+            [
+              1482.0,
+              612.0
+            ],
+            [
+              1482.0,
+              691.0
+            ],
+            [
+              814.0,
+              691.0
+            ]
+          ],
+          "aabb": {
+            "x": 814.0,
+            "y": 612.0,
+            "width": 668.0,
+            "height": 79.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 1,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 0,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0038.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.0342,
+        "linear_localization_seconds": 0.4959,
+        "linear_decode_seconds": 0.0009,
+        "matrix_recovery_seconds": 0.4133,
+        "total_seconds": 1.0217
+      }
+    },
+    {
+      "page": 39,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0039.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 4,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "LOT-876876-39",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate"
+          ],
+          "quad": [
+            [
+              441.76,
+              1227.79
+            ],
+            [
+              462.69,
+              1140.53
+            ],
+            [
+              1055.6,
+              1282.8
+            ],
+            [
+              1034.66,
+              1370.06
+            ]
+          ],
+          "aabb": {
+            "x": 441.76,
+            "y": 1140.53,
+            "width": 613.84,
+            "height": 229.53
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {
+            "score": 0.9848,
+            "orientation": 0.953,
+            "persistence": 0.2885,
+            "support_strength": 0.9412,
+            "scanline_agreement": 0.9732,
+            "transitions": 92.0,
+            "transition_rate": 0.1508,
+            "dark_fraction": 0.4377,
+            "aspect": 6.7778
+          }
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "PO23067062058",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              725.0,
+              1703.0
+            ],
+            [
+              1261.0,
+              1703.0
+            ],
+            [
+              1262.0,
+              1776.0
+            ],
+            [
+              727.0,
+              1776.0
+            ]
+          ],
+          "aabb": {
+            "x": 725.0,
+            "y": 1703.0,
+            "width": 537.0,
+            "height": 73.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "LOT-353170-39",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              298.0,
+              1969.0
+            ],
+            [
+              298.0,
+              2303.0
+            ],
+            [
+              216.0,
+              2303.0
+            ],
+            [
+              216.0,
+              1970.0
+            ]
+          ],
+          "aabb": {
+            "x": 216.0,
+            "y": 1969.0,
+            "width": 82.0,
+            "height": 334.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "RF7210446057Q3",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              2108.0,
+              2169.0
+            ],
+            [
+              2108.0,
+              2481.0
+            ],
+            [
+              2031.0,
+              2481.0
+            ],
+            [
+              2031.0,
+              2170.0
+            ]
+          ],
+          "aabb": {
+            "x": 2031.0,
+            "y": 2169.0,
+            "width": 77.0,
+            "height": 312.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 4,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 0,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0039.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.0365,
+        "linear_localization_seconds": 0.4543,
+        "linear_decode_seconds": 0.0026,
+        "matrix_recovery_seconds": 0.3921,
+        "total_seconds": 0.9476
+      }
+    },
+    {
+      "page": 40,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0040.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "LOT-818891-40",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate"
+          ],
+          "quad": [
+            [
+              1044.06,
+              1327.22
+            ],
+            [
+              1030.82,
+              1258.38
+            ],
+            [
+              1538.19,
+              1160.77
+            ],
+            [
+              1551.44,
+              1229.61
+            ]
+          ],
+          "aabb": {
+            "x": 1030.82,
+            "y": 1160.77,
+            "width": 520.62,
+            "height": 166.46
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {
+            "score": 0.9696,
+            "orientation": 0.9013,
+            "persistence": 0.2998,
+            "support_strength": 0.9093,
+            "scanline_agreement": 0.9856,
+            "transitions": 86.0,
+            "transition_rate": 0.1663,
+            "dark_fraction": 0.5222,
+            "aspect": 7.3857
+          }
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 1,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 0,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0040.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.037,
+        "linear_localization_seconds": 0.6076,
+        "linear_decode_seconds": 0.0007,
+        "matrix_recovery_seconds": 0.3929,
+        "total_seconds": 1.1387
+      }
+    },
+    {
+      "page": 41,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0041.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "RF5982224052Q1",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              1014.0,
+              1392.0
+            ],
+            [
+              1482.0,
+              1392.0
+            ],
+            [
+              1477.0,
+              1489.0
+            ],
+            [
+              1010.0,
+              1489.0
+            ]
+          ],
+          "aabb": {
+            "x": 1010.0,
+            "y": 1392.0,
+            "width": 472.0,
+            "height": 97.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 1,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 0,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0041.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.0327,
+        "linear_localization_seconds": 0.4583,
+        "linear_decode_seconds": 0.0007,
+        "matrix_recovery_seconds": 0.3903,
+        "total_seconds": 0.9456
+      }
+    },
+    {
+      "page": 42,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0042.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 3,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "SYN042298023378",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              353.0,
+              2194.0
+            ],
+            [
+              353.0,
+              1615.0
+            ],
+            [
+              284.0,
+              1616.0
+            ],
+            [
+              284.0,
+              2196.0
+            ]
+          ],
+          "aabb": {
+            "x": 284.0,
+            "y": 1615.0,
+            "width": 69.0,
+            "height": 581.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "PO76925568982",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate"
+          ],
+          "quad": [
+            [
+              1053.41,
+              1866.06
+            ],
+            [
+              1072.8,
+              1777.03
+            ],
+            [
+              1713.77,
+              1916.65
+            ],
+            [
+              1694.38,
+              2005.67
+            ]
+          ],
+          "aabb": {
+            "x": 1053.41,
+            "y": 1777.03,
+            "width": 660.36,
+            "height": 228.64
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {
+            "score": 0.9798,
+            "orientation": 0.9334,
+            "persistence": 0.2835,
+            "support_strength": 0.9626,
+            "scanline_agreement": 0.9819,
+            "transitions": 74.0,
+            "transition_rate": 0.1128,
+            "dark_fraction": 0.468,
+            "aspect": 7.2088
+          }
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "RF3818717055Q3",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              1066.0,
+              2921.0
+            ],
+            [
+              1377.0,
+              2921.0
+            ],
+            [
+              1378.0,
+              2994.0
+            ],
+            [
+              1067.0,
+              2994.0
+            ]
+          ],
+          "aabb": {
+            "x": 1066.0,
+            "y": 2921.0,
+            "width": 312.0,
+            "height": 73.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 3,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 0,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0042.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.0351,
+        "linear_localization_seconds": 0.5102,
+        "linear_decode_seconds": 0.002,
+        "matrix_recovery_seconds": 0.4086,
+        "total_seconds": 1.0407
+      }
+    },
+    {
+      "page": 43,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0043.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 3360,
+        "height": 2400
+      },
+      "decoded_count": 1,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "SYN043172040149",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate"
+          ],
+          "quad": [
+            [
+              786.24,
+              840.06
+            ],
+            [
+              806.32,
+              752.11
+            ],
+            [
+              1494.31,
+              909.14
+            ],
+            [
+              1474.24,
+              997.09
+            ]
+          ],
+          "aabb": {
+            "x": 786.24,
+            "y": 752.11,
+            "width": 708.06,
+            "height": 244.98
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {
+            "score": 0.9839,
+            "orientation": 0.9302,
+            "persistence": 0.2819,
+            "support_strength": 0.9481,
+            "scanline_agreement": 1.0,
+            "transitions": 80.0,
+            "transition_rate": 0.1133,
+            "dark_fraction": 0.4193,
+            "aspect": 7.8444
+          }
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 1,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 0,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0043.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.0367,
+        "linear_localization_seconds": 0.6318,
+        "linear_decode_seconds": 0.001,
+        "matrix_recovery_seconds": 0.393,
+        "total_seconds": 1.1562
+      }
+    },
+    {
+      "page": 44,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0044.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "PO33112500453",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:lanczos30-wide",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              1772.0,
+              870.0
+            ],
+            [
+              2044.0,
+              870.0
+            ],
+            [
+              2049.0,
+              900.0
+            ],
+            [
+              1777.0,
+              900.0
+            ]
+          ],
+          "aabb": {
+            "x": 1772.0,
+            "y": 870.0,
+            "width": 277.0,
+            "height": 30.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10",
+            "zxing:cubic15-p08-s10",
+            "zxing:cubic20-p18-s18",
+            "zxing:nearest15-fixed",
+            "zxing:lanczos30-wide"
+          ],
+          "structural_metrics": {}
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 1,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 0,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0044.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.0344,
+        "linear_localization_seconds": 0.3858,
+        "linear_decode_seconds": 0.0035,
+        "matrix_recovery_seconds": 0.3852,
+        "total_seconds": 0.8486
+      }
+    },
+    {
+      "page": 45,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0045.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 2,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "RF7955053201Q2",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              485.0,
+              2130.0
+            ],
+            [
+              485.0,
+              1663.0
+            ],
+            [
+              396.0,
+              1662.0
+            ],
+            [
+              396.0,
+              2129.0
+            ]
+          ],
+          "aabb": {
+            "x": 396.0,
+            "y": 1662.0,
+            "width": 89.0,
+            "height": 468.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "RF5637107025Q1",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              545.0,
+              2670.0
+            ],
+            [
+              1168.0,
+              2670.0
+            ],
+            [
+              1167.0,
+              2736.0
+            ],
+            [
+              543.0,
+              2736.0
+            ]
+          ],
+          "aabb": {
+            "x": 543.0,
+            "y": 2670.0,
+            "width": 625.0,
+            "height": 66.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 2,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 0,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0045.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.0339,
+        "linear_localization_seconds": 0.4303,
+        "linear_decode_seconds": 0.0014,
+        "matrix_recovery_seconds": 0.3951,
+        "total_seconds": 0.9212
+      }
+    },
+    {
+      "page": 46,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0046.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "PO80497900391",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              911.0,
+              1739.0
+            ],
+            [
+              1446.0,
+              1739.0
+            ],
+            [
+              1449.0,
+              1830.0
+            ],
+            [
+              913.0,
+              1830.0
+            ]
+          ],
+          "aabb": {
+            "x": 911.0,
+            "y": 1739.0,
+            "width": 538.0,
+            "height": 91.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 1,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 0,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0046.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.0347,
+        "linear_localization_seconds": 0.4581,
+        "linear_decode_seconds": 0.0008,
+        "matrix_recovery_seconds": 0.3688,
+        "total_seconds": 0.9124
+      }
+    },
+    {
+      "page": 47,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0047.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "LOT-129878-47",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              848.0,
+              2166.0
+            ],
+            [
+              1348.0,
+              2166.0
+            ],
+            [
+              1348.0,
+              2256.0
+            ],
+            [
+              848.0,
+              2256.0
+            ]
+          ],
+          "aabb": {
+            "x": 848.0,
+            "y": 2166.0,
+            "width": 500.0,
+            "height": 90.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 1,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 0,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0047.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.0341,
+        "linear_localization_seconds": 0.4987,
+        "linear_decode_seconds": 0.0008,
+        "matrix_recovery_seconds": 0.4107,
+        "total_seconds": 1.0431
+      }
+    },
+    {
+      "page": 48,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0048.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 2,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "LOT-149138-48",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              1100.0,
+              1620.0
+            ],
+            [
+              1600.0,
+              1620.0
+            ],
+            [
+              1601.0,
+              1698.0
+            ],
+            [
+              1101.0,
+              1698.0
+            ]
+          ],
+          "aabb": {
+            "x": 1100.0,
+            "y": 1620.0,
+            "width": 501.0,
+            "height": 78.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "RF5473448170Q2",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              1430.0,
+              2783.0
+            ],
+            [
+              1898.0,
+              2783.0
+            ],
+            [
+              1901.0,
+              2838.0
+            ],
+            [
+              1433.0,
+              2838.0
+            ]
+          ],
+          "aabb": {
+            "x": 1430.0,
+            "y": 2783.0,
+            "width": 471.0,
+            "height": 55.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 2,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 0,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0048.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.0327,
+        "linear_localization_seconds": 0.6824,
+        "linear_decode_seconds": 0.0012,
+        "matrix_recovery_seconds": 0.3922,
+        "total_seconds": 1.2313
+      }
+    },
+    {
+      "page": 49,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0049.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 3360,
+        "height": 2400
+      },
+      "decoded_count": 3,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "PO69961523109",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              1535.0,
+              560.0
+            ],
+            [
+              1936.0,
+              560.0
+            ],
+            [
+              1938.0,
+              657.0
+            ],
+            [
+              1537.0,
+              657.0
+            ]
+          ],
+          "aabb": {
+            "x": 1535.0,
+            "y": 560.0,
+            "width": 403.0,
+            "height": 97.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "RF9318000538Q1",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              1472.0,
+              924.0
+            ],
+            [
+              1783.0,
+              924.0
+            ],
+            [
+              1783.0,
+              997.0
+            ],
+            [
+              1472.0,
+              997.0
+            ]
+          ],
+          "aabb": {
+            "x": 1472.0,
+            "y": 924.0,
+            "width": 311.0,
+            "height": 73.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "RF7399563002Q2",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate"
+          ],
+          "quad": [
+            [
+              2506.65,
+              1748.25
+            ],
+            [
+              2534.89,
+              1637.12
+            ],
+            [
+              3091.53,
+              1778.6
+            ],
+            [
+              3063.28,
+              1889.73
+            ]
+          ],
+          "aabb": {
+            "x": 2506.65,
+            "y": 1637.12,
+            "width": 584.88,
+            "height": 252.6
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {
+            "score": 0.9832,
+            "orientation": 0.9375,
+            "persistence": 0.2857,
+            "support_strength": 0.9578,
+            "scanline_agreement": 0.9856,
+            "transitions": 86.0,
+            "transition_rate": 0.1498,
+            "dark_fraction": 0.4408,
+            "aspect": 4.9913
+          }
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 3,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 0,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0049.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.0378,
+        "linear_localization_seconds": 0.4941,
+        "linear_decode_seconds": 0.002,
+        "matrix_recovery_seconds": 0.3901,
+        "total_seconds": 0.9867
+      }
+    },
+    {
+      "page": 50,
+      "source_image": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/pages/page-0050.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "unresolved_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "RF2870384792Q1",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate",
+            "zxing:whole-page"
+          ],
+          "quad": [
+            [
+              780.0,
+              1605.0
+            ],
+            [
+              780.0,
+              2072.0
+            ],
+            [
+              672.0,
+              2070.0
+            ],
+            [
+              672.0,
+              1603.0
+            ]
+          ],
+          "aabb": {
+            "x": 672.0,
+            "y": 1603.0,
+            "width": 108.0,
+            "height": 469.0
+          },
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "structural_metrics": {}
+        }
+      ],
+      "diagnostics": {
+        "accepted_linear_proposals": 1,
+        "rejected_linear_proposals": 0,
+        "advanced_linear_candidates": 0,
+        "matrix_proposals": 14
+      },
+      "overlay": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/zxing_only_barcode_pipeline/output/syntehtic-dossier/overlays/page-0050.png",
+      "timings": {
+        "whole_page_decode_seconds": 0.0356,
+        "linear_localization_seconds": 0.4475,
+        "linear_decode_seconds": 0.0009,
+        "matrix_recovery_seconds": 0.3961,
+        "total_seconds": 0.9279
+      }
+    }
+  ]
+}
