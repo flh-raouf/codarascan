@@ -1,0 +1,7432 @@
+{
+  "schema_version": 2,
+  "run": {
+    "id": "20260712T000220Z-1f0aa122",
+    "started_at": "2026-07-12T00:02:20+00:00",
+    "completed_at": "2026-07-12T00:02:50+00:00",
+    "input": "/Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection/output/pdf/Synthetic Mixed Barcode Dossier - 50 balanced scanned pages.pdf",
+    "input_sha256": "395921ae21c850cf4e0c0e6616fdc2d36991be4b7088ba4000c41666abe61bc4",
+    "pipeline_sha256": "7223e2e5944f2c0bfe7c1bd67e55a428c2d68411aceb1731498d23fa9a5cd7eb",
+    "output_root": "."
+  },
+  "method": "ZXing matrix scale search + error-guided recovery + format-routed linear fallback",
+  "configuration": {
+    "formats": "all",
+    "render_dpi": 300,
+    "pages": null,
+    "save_crops": false,
+    "residual_proposals": false,
+    "include_review_candidates": true,
+    "minimum_linear_score": 0.52,
+    "minimum_linear_length": 100.0
+  },
+  "summary": {
+    "pages": 50,
+    "decoded": 120,
+    "localized_unresolved_matrix": 1,
+    "review_candidates": 0,
+    "extraction_seconds": 1.1471,
+    "processing_seconds": 28.5355,
+    "wall_seconds": 29.6927
+  },
+  "integrity": {
+    "expected_crops": 0,
+    "actual_crops": 0,
+    "orphan_crops": 0
+  },
+  "pages": [
+    {
+      "page": 1,
+      "source_image": "pages/page-0001.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 3,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "(01)09506000362478(21)BM0103",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              508.0,
+              1958.0
+            ],
+            [
+              652.0,
+              1946.0
+            ],
+            [
+              663.0,
+              2090.0
+            ],
+            [
+              520.0,
+              2101.0
+            ]
+          ],
+          "aabb": {
+            "x": 508.0,
+            "y": 1946.0,
+            "width": 155.0,
+            "height": 155.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "(01)09506000396446(21)BM0102",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1373.0,
+              2294.0
+            ],
+            [
+              1553.0,
+              2283.0
+            ],
+            [
+              1563.0,
+              2463.0
+            ],
+            [
+              1384.0,
+              2474.0
+            ]
+          ],
+          "aabb": {
+            "x": 1373.0,
+            "y": 2283.0,
+            "width": 190.0,
+            "height": 191.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "BM-01-01-8089",
+          "format": "Code 39",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate"
+          ],
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "quad": [
+            [
+              618.22,
+              2770.51
+            ],
+            [
+              650.93,
+              2677.1
+            ],
+            [
+              1098.39,
+              2833.84
+            ],
+            [
+              1065.67,
+              2927.25
+            ]
+          ],
+          "aabb": {
+            "x": 618.22,
+            "y": 2677.1,
+            "width": 480.18,
+            "height": 250.15
+          },
+          "evidence": {
+            "structural_metrics": {
+              "score": 0.984114326834816,
+              "orientation": 0.9599507875815599,
+              "persistence": 0.2869198312236287,
+              "support_strength": 0.882456503728252,
+              "scanline_agreement": 0.9706666666666667,
+              "transitions": 140.0,
+              "transition_rate": 0.29535864978902954,
+              "dark_fraction": 0.4641350210970464,
+              "aspect": 4.787878787878788
+            }
+          }
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 2,
+            "global-histogram": 2
+          },
+          "invalid_errors": {},
+          "decoded_unique": 2,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 3,
+          "linear_located": 1,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 0,
+          "linear_decoded": 1,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 0
+        }
+      },
+      "overlay": "overlays/page-0001.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0459,
+        "matrix_error_recovery_seconds": 0.0,
+        "linear_seconds": 0.5773,
+        "total_seconds": 0.7203
+      }
+    },
+    {
+      "page": 2,
+      "source_image": "pages/page-0002.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 2,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "BM0020151968405",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              1076.0,
+              972.0
+            ],
+            [
+              1510.0,
+              972.0
+            ],
+            [
+              1508.0,
+              1111.0
+            ],
+            [
+              1074.0,
+              1111.0
+            ]
+          ],
+          "aabb": {
+            "x": 1074.0,
+            "y": 972.0,
+            "width": 436.0,
+            "height": 139.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "PO49327686098",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              311.0,
+              1248.0
+            ],
+            [
+              847.0,
+              1248.0
+            ],
+            [
+              851.0,
+              1429.0
+            ],
+            [
+              315.0,
+              1429.0
+            ]
+          ],
+          "aabb": {
+            "x": 311.0,
+            "y": 1248.0,
+            "width": 540.0,
+            "height": 181.0
+          },
+          "evidence": {}
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 0,
+            "global-histogram": 0
+          },
+          "invalid_errors": {},
+          "decoded_unique": 0,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 2,
+          "linear_located": 2,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 2,
+          "linear_decoded": 2,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 2
+        }
+      },
+      "overlay": "overlays/page-0002.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0372,
+        "matrix_error_recovery_seconds": 0.0,
+        "linear_seconds": 0.4189,
+        "total_seconds": 0.4958
+      }
+    },
+    {
+      "page": 3,
+      "source_image": "pages/page-0003.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 3,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "https://example.invalid/balanced/003/02",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              642.0,
+              1657.0
+            ],
+            [
+              845.0,
+              1647.0
+            ],
+            [
+              855.0,
+              1849.0
+            ],
+            [
+              652.0,
+              1860.0
+            ]
+          ],
+          "aabb": {
+            "x": 642.0,
+            "y": 1647.0,
+            "width": 213.0,
+            "height": 213.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "(01)09506000330965(21)BM0303",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              690.0,
+              2581.0
+            ],
+            [
+              816.0,
+              2584.0
+            ],
+            [
+              812.0,
+              2711.0
+            ],
+            [
+              686.0,
+              2707.0
+            ]
+          ],
+          "aabb": {
+            "x": 686.0,
+            "y": 2581.0,
+            "width": 130.0,
+            "height": 130.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "(01)09506000382036(21)BM0301",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1572.0,
+              2764.0
+            ],
+            [
+              1734.0,
+              2760.0
+            ],
+            [
+              1739.0,
+              2922.0
+            ],
+            [
+              1576.0,
+              2926.0
+            ]
+          ],
+          "aabb": {
+            "x": 1572.0,
+            "y": 2760.0,
+            "width": 167.0,
+            "height": 166.0
+          },
+          "evidence": {}
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 3,
+            "global-histogram": 3
+          },
+          "invalid_errors": {},
+          "decoded_unique": 3,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 3,
+          "linear_located": 0,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 0,
+          "linear_decoded": 0,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 0
+        }
+      },
+      "overlay": "overlays/page-0003.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0454,
+        "matrix_error_recovery_seconds": 0.0,
+        "linear_seconds": 0.5287,
+        "total_seconds": 0.6601
+      }
+    },
+    {
+      "page": 4,
+      "source_image": "pages/page-0004.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "(01)09506000352467(21)BM0401",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              992.0,
+              1002.0
+            ],
+            [
+              1118.0,
+              1010.0
+            ],
+            [
+              1110.0,
+              1136.0
+            ],
+            [
+              984.0,
+              1128.0
+            ]
+          ],
+          "aabb": {
+            "x": 984.0,
+            "y": 1002.0,
+            "width": 134.0,
+            "height": 134.0
+          },
+          "evidence": {}
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 1,
+            "global-histogram": 1
+          },
+          "invalid_errors": {},
+          "decoded_unique": 1,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 1,
+          "linear_located": 0,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 0,
+          "linear_decoded": 0,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 0
+        }
+      },
+      "overlay": "overlays/page-0004.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0372,
+        "matrix_error_recovery_seconds": 0.0,
+        "linear_seconds": 0.3984,
+        "total_seconds": 0.485
+      }
+    },
+    {
+      "page": 5,
+      "source_image": "pages/page-0005.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "BM0050129347924",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              1034.0,
+              1997.0
+            ],
+            [
+              1325.0,
+              1997.0
+            ],
+            [
+              1319.0,
+              2070.0
+            ],
+            [
+              1029.0,
+              2070.0
+            ]
+          ],
+          "aabb": {
+            "x": 1029.0,
+            "y": 1997.0,
+            "width": 296.0,
+            "height": 73.0
+          },
+          "evidence": {}
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 0,
+            "global-histogram": 0
+          },
+          "invalid_errors": {},
+          "decoded_unique": 0,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 1,
+          "linear_located": 1,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 1,
+          "linear_decoded": 1,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 1
+        }
+      },
+      "overlay": "overlays/page-0005.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0395,
+        "matrix_error_recovery_seconds": 0.0,
+        "linear_seconds": 0.4486,
+        "total_seconds": 0.5381
+      }
+    },
+    {
+      "page": 6,
+      "source_image": "pages/page-0006.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 2,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "BM-06-01-2338",
+          "format": "Code 39",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              904.0,
+              1320.0
+            ],
+            [
+              1486.0,
+              1320.0
+            ],
+            [
+              1492.0,
+              1433.0
+            ],
+            [
+              910.0,
+              1433.0
+            ]
+          ],
+          "aabb": {
+            "x": 904.0,
+            "y": 1320.0,
+            "width": 588.0,
+            "height": 113.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "BM0060212376692",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              1410.0,
+              3017.0
+            ],
+            [
+              1699.0,
+              3017.0
+            ],
+            [
+              1700.0,
+              3108.0
+            ],
+            [
+              1411.0,
+              3108.0
+            ]
+          ],
+          "aabb": {
+            "x": 1410.0,
+            "y": 3017.0,
+            "width": 290.0,
+            "height": 91.0
+          },
+          "evidence": {}
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 0,
+            "global-histogram": 1
+          },
+          "invalid_errors": {
+            "FormatError (invalid 0 code word)": 1
+          },
+          "decoded_unique": 0,
+          "invalid_unique_unexplained": 1,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 2,
+          "linear_located": 2,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 2,
+          "linear_decoded": 2,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 2
+        }
+      },
+      "overlay": "overlays/page-0006.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0388,
+        "matrix_error_recovery_seconds": 0.0194,
+        "linear_seconds": 0.4048,
+        "total_seconds": 0.4972
+      }
+    },
+    {
+      "page": 7,
+      "source_image": "pages/page-0007.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 0,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 0,
+            "global-histogram": 0
+          },
+          "invalid_errors": {},
+          "decoded_unique": 0,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 0,
+          "linear_located": 0,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 0,
+          "linear_decoded": 0,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 0
+        }
+      },
+      "overlay": "overlays/page-0007.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0367,
+        "matrix_error_recovery_seconds": 0.0,
+        "linear_seconds": 0.4364,
+        "total_seconds": 0.5486
+      }
+    },
+    {
+      "page": 8,
+      "source_image": "pages/page-0008.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 3,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "QR|BM|PAGE=008|INDEX=02|LOT=284127",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1491.0,
+              1050.0
+            ],
+            [
+              1640.0,
+              1058.0
+            ],
+            [
+              1633.0,
+              1208.0
+            ],
+            [
+              1484.0,
+              1200.0
+            ]
+          ],
+          "aabb": {
+            "x": 1484.0,
+            "y": 1050.0,
+            "width": 156.0,
+            "height": 158.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "QR|BM|PAGE=008|INDEX=03|LOT=468729",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1833.0,
+              1147.0
+            ],
+            [
+              2033.0,
+              1159.0
+            ],
+            [
+              2021.0,
+              1359.0
+            ],
+            [
+              1821.0,
+              1346.0
+            ]
+          ],
+          "aabb": {
+            "x": 1821.0,
+            "y": 1147.0,
+            "width": 212.0,
+            "height": 212.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "PO50709324066",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              1075.0,
+              2189.0
+            ],
+            [
+              1476.0,
+              2189.0
+            ],
+            [
+              1471.0,
+              2316.0
+            ],
+            [
+              1069.0,
+              2316.0
+            ]
+          ],
+          "aabb": {
+            "x": 1069.0,
+            "y": 2189.0,
+            "width": 407.0,
+            "height": 127.0
+          },
+          "evidence": {}
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 2,
+            "global-histogram": 2
+          },
+          "invalid_errors": {},
+          "decoded_unique": 2,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 3,
+          "linear_located": 1,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 1,
+          "linear_decoded": 1,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 1
+        }
+      },
+      "overlay": "overlays/page-0008.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0391,
+        "matrix_error_recovery_seconds": 0.0,
+        "linear_seconds": 0.4519,
+        "total_seconds": 0.5386
+      }
+    },
+    {
+      "page": 9,
+      "source_image": "pages/page-0009.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 3360,
+        "height": 2400
+      },
+      "decoded_count": 2,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "PO34596789606",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              1120.0,
+              928.0
+            ],
+            [
+              1671.0,
+              928.0
+            ],
+            [
+              1655.0,
+              993.0
+            ],
+            [
+              1104.0,
+              993.0
+            ]
+          ],
+          "aabb": {
+            "x": 1104.0,
+            "y": 928.0,
+            "width": 567.0,
+            "height": 65.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "DM|BM|P009|I01|L334602",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              612.0,
+              1408.0
+            ],
+            [
+              775.0,
+              1413.0
+            ],
+            [
+              769.0,
+              1575.0
+            ],
+            [
+              607.0,
+              1570.0
+            ]
+          ],
+          "aabb": {
+            "x": 607.0,
+            "y": 1408.0,
+            "width": 168.0,
+            "height": 167.0
+          },
+          "evidence": {}
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 1,
+            "global-histogram": 1
+          },
+          "invalid_errors": {},
+          "decoded_unique": 1,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 2,
+          "linear_located": 1,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 1,
+          "linear_decoded": 1,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 1
+        }
+      },
+      "overlay": "overlays/page-0009.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0414,
+        "matrix_error_recovery_seconds": 0.0,
+        "linear_seconds": 0.4642,
+        "total_seconds": 0.549
+      }
+    },
+    {
+      "page": 10,
+      "source_image": "pages/page-0010.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 8,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "(01)09506000375259(21)BM1005",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              844.0,
+              481.0
+            ],
+            [
+              988.0,
+              484.0
+            ],
+            [
+              985.0,
+              629.0
+            ],
+            [
+              841.0,
+              625.0
+            ]
+          ],
+          "aabb": {
+            "x": 841.0,
+            "y": 481.0,
+            "width": 147.0,
+            "height": 148.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "PO55449362251",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              1719.0,
+              642.0
+            ],
+            [
+              2120.0,
+              642.0
+            ],
+            [
+              2123.0,
+              775.0
+            ],
+            [
+              1722.0,
+              775.0
+            ]
+          ],
+          "aabb": {
+            "x": 1719.0,
+            "y": 642.0,
+            "width": 404.0,
+            "height": 133.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "LOT-465242-B10",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              1901.0,
+              1182.0
+            ],
+            [
+              2256.0,
+              1182.0
+            ],
+            [
+              2259.0,
+              1267.0
+            ],
+            [
+              1903.0,
+              1267.0
+            ]
+          ],
+          "aabb": {
+            "x": 1901.0,
+            "y": 1182.0,
+            "width": 358.0,
+            "height": 85.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "BM-10-01-3754",
+          "format": "Code 39",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              812.0,
+              1176.0
+            ],
+            [
+              1590.0,
+              1176.0
+            ],
+            [
+              1579.0,
+              1309.0
+            ],
+            [
+              801.0,
+              1309.0
+            ]
+          ],
+          "aabb": {
+            "x": 801.0,
+            "y": 1176.0,
+            "width": 789.0,
+            "height": 133.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "(01)09506000375733(21)BM1003",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1978.0,
+              1464.0
+            ],
+            [
+              2105.0,
+              1463.0
+            ],
+            [
+              2105.0,
+              1590.0
+            ],
+            [
+              1979.0,
+              1590.0
+            ]
+          ],
+          "aabb": {
+            "x": 1978.0,
+            "y": 1463.0,
+            "width": 127.0,
+            "height": 127.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "BM-10-02-4238",
+          "format": "Code 39",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              1556.0,
+              1919.0
+            ],
+            [
+              2138.0,
+              1919.0
+            ],
+            [
+              2131.0,
+              2034.0
+            ],
+            [
+              1550.0,
+              2034.0
+            ]
+          ],
+          "aabb": {
+            "x": 1550.0,
+            "y": 1919.0,
+            "width": 588.0,
+            "height": 115.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "LOT-298212-B10",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              1323.0,
+              2519.0
+            ],
+            [
+              2034.0,
+              2519.0
+            ],
+            [
+              2031.0,
+              2700.0
+            ],
+            [
+              1320.0,
+              2700.0
+            ]
+          ],
+          "aabb": {
+            "x": 1320.0,
+            "y": 2519.0,
+            "width": 714.0,
+            "height": 181.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "BM-10-07-5378",
+          "format": "Code 39",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              254.0,
+              2759.0
+            ],
+            [
+              641.0,
+              2759.0
+            ],
+            [
+              640.0,
+              2850.0
+            ],
+            [
+              253.0,
+              2850.0
+            ]
+          ],
+          "aabb": {
+            "x": 253.0,
+            "y": 2759.0,
+            "width": 388.0,
+            "height": 91.0
+          },
+          "evidence": {}
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 2,
+            "global-histogram": 2
+          },
+          "invalid_errors": {},
+          "decoded_unique": 2,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 8,
+          "linear_located": 6,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 6,
+          "linear_decoded": 6,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 6
+        }
+      },
+      "overlay": "overlays/page-0010.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0438,
+        "matrix_error_recovery_seconds": 0.0,
+        "linear_seconds": 0.5751,
+        "total_seconds": 0.6923
+      }
+    },
+    {
+      "page": 11,
+      "source_image": "pages/page-0011.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 3,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "BM0110322930502",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              1954.0,
+              1751.0
+            ],
+            [
+              2243.0,
+              1751.0
+            ],
+            [
+              2243.0,
+              1836.0
+            ],
+            [
+              1953.0,
+              1836.0
+            ]
+          ],
+          "aabb": {
+            "x": 1953.0,
+            "y": 1751.0,
+            "width": 290.0,
+            "height": 85.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "BM0110185623283",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              1152.0,
+              1955.0
+            ],
+            [
+              1731.0,
+              1955.0
+            ],
+            [
+              1737.0,
+              2130.0
+            ],
+            [
+              1158.0,
+              2130.0
+            ]
+          ],
+          "aabb": {
+            "x": 1152.0,
+            "y": 1955.0,
+            "width": 585.0,
+            "height": 175.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "DM|BM|P011|I02|L614372",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1913.0,
+              2134.0
+            ],
+            [
+              2058.0,
+              2131.0
+            ],
+            [
+              2061.0,
+              2275.0
+            ],
+            [
+              1916.0,
+              2279.0
+            ]
+          ],
+          "aabb": {
+            "x": 1913.0,
+            "y": 2131.0,
+            "width": 148.0,
+            "height": 148.0
+          },
+          "evidence": {}
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 1,
+            "global-histogram": 1
+          },
+          "invalid_errors": {},
+          "decoded_unique": 1,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 3,
+          "linear_located": 2,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 2,
+          "linear_decoded": 2,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 2
+        }
+      },
+      "overlay": "overlays/page-0011.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0399,
+        "matrix_error_recovery_seconds": 0.0,
+        "linear_seconds": 0.4852,
+        "total_seconds": 0.5907
+      }
+    },
+    {
+      "page": 12,
+      "source_image": "pages/page-0012.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 3,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "https://example.invalid/balanced/012/02",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              589.0,
+              1034.0
+            ],
+            [
+              734.0,
+              1033.0
+            ],
+            [
+              734.0,
+              1178.0
+            ],
+            [
+              590.0,
+              1179.0
+            ]
+          ],
+          "aabb": {
+            "x": 589.0,
+            "y": 1033.0,
+            "width": 145.0,
+            "height": 146.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "DM|BM|P012|I03|L611562",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              563.0,
+              1482.0
+            ],
+            [
+              726.0,
+              1484.0
+            ],
+            [
+              724.0,
+              1646.0
+            ],
+            [
+              562.0,
+              1644.0
+            ]
+          ],
+          "aabb": {
+            "x": 562.0,
+            "y": 1482.0,
+            "width": 164.0,
+            "height": 164.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "BM-12-01-1498",
+          "format": "Code 39",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              945.0,
+              2670.0
+            ],
+            [
+              1333.0,
+              2670.0
+            ],
+            [
+              1331.0,
+              2694.0
+            ],
+            [
+              943.0,
+              2694.0
+            ]
+          ],
+          "aabb": {
+            "x": 943.0,
+            "y": 2670.0,
+            "width": 390.0,
+            "height": 24.0
+          },
+          "evidence": {}
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 2,
+            "global-histogram": 2
+          },
+          "invalid_errors": {},
+          "decoded_unique": 2,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 3,
+          "linear_located": 1,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 1,
+          "linear_decoded": 1,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 1
+        }
+      },
+      "overlay": "overlays/page-0012.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0374,
+        "matrix_error_recovery_seconds": 0.0,
+        "linear_seconds": 0.4616,
+        "total_seconds": 0.5775
+      }
+    },
+    {
+      "page": 13,
+      "source_image": "pages/page-0013.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 3,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "https://example.invalid/balanced/013/01",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1353.0,
+              1612.0
+            ],
+            [
+              1527.0,
+              1606.0
+            ],
+            [
+              1532.0,
+              1780.0
+            ],
+            [
+              1358.0,
+              1786.0
+            ]
+          ],
+          "aabb": {
+            "x": 1353.0,
+            "y": 1606.0,
+            "width": 179.0,
+            "height": 180.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "LOT-633077-B13",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              1602.0,
+              2093.0
+            ],
+            [
+              2136.0,
+              2093.0
+            ],
+            [
+              2132.0,
+              2220.0
+            ],
+            [
+              1599.0,
+              2220.0
+            ]
+          ],
+          "aabb": {
+            "x": 1599.0,
+            "y": 2093.0,
+            "width": 537.0,
+            "height": 127.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "QR|BM|PAGE=013|INDEX=03|LOT=274136",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1138.0,
+              2378.0
+            ],
+            [
+              1288.0,
+              2389.0
+            ],
+            [
+              1277.0,
+              2537.0
+            ],
+            [
+              1128.0,
+              2528.0
+            ]
+          ],
+          "aabb": {
+            "x": 1128.0,
+            "y": 2378.0,
+            "width": 160.0,
+            "height": 159.0
+          },
+          "evidence": {}
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 2,
+            "global-histogram": 3
+          },
+          "invalid_errors": {
+            "FormatError (invalid 0 code word)": 1
+          },
+          "decoded_unique": 2,
+          "invalid_unique_unexplained": 1,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 3,
+          "linear_located": 1,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 1,
+          "linear_decoded": 1,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 1
+        }
+      },
+      "overlay": "overlays/page-0013.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0411,
+        "matrix_error_recovery_seconds": 0.009,
+        "linear_seconds": 0.4884,
+        "total_seconds": 0.5979
+      }
+    },
+    {
+      "page": 14,
+      "source_image": "pages/page-0014.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 3,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "(01)09506000331359(21)BM1402",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              521.0,
+              1495.0
+            ],
+            [
+              701.0,
+              1495.0
+            ],
+            [
+              700.0,
+              1676.0
+            ],
+            [
+              520.0,
+              1675.0
+            ]
+          ],
+          "aabb": {
+            "x": 520.0,
+            "y": 1495.0,
+            "width": 181.0,
+            "height": 181.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "PO59714895583",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              1441.0,
+              1871.0
+            ],
+            [
+              1708.0,
+              1871.0
+            ],
+            [
+              1709.0,
+              1956.0
+            ],
+            [
+              1442.0,
+              1956.0
+            ]
+          ],
+          "aabb": {
+            "x": 1441.0,
+            "y": 1871.0,
+            "width": 268.0,
+            "height": 85.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "DM|BM|P014|I01|L775632",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              331.0,
+              2205.0
+            ],
+            [
+              457.0,
+              2199.0
+            ],
+            [
+              463.0,
+              2325.0
+            ],
+            [
+              337.0,
+              2331.0
+            ]
+          ],
+          "aabb": {
+            "x": 331.0,
+            "y": 2199.0,
+            "width": 132.0,
+            "height": 132.0
+          },
+          "evidence": {}
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 2,
+            "global-histogram": 2
+          },
+          "invalid_errors": {},
+          "decoded_unique": 2,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 3,
+          "linear_located": 1,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 1,
+          "linear_decoded": 1,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 1
+        }
+      },
+      "overlay": "overlays/page-0014.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0385,
+        "matrix_error_recovery_seconds": 0.0,
+        "linear_seconds": 0.4287,
+        "total_seconds": 0.5138
+      }
+    },
+    {
+      "page": 15,
+      "source_image": "pages/page-0015.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 2,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "(01)09506000328615(21)BM1502",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1199.0,
+              1425.0
+            ],
+            [
+              1318.0,
+              1384.0
+            ],
+            [
+              1359.0,
+              1504.0
+            ],
+            [
+              1240.0,
+              1544.0
+            ]
+          ],
+          "aabb": {
+            "x": 1199.0,
+            "y": 1384.0,
+            "width": 160.0,
+            "height": 160.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "QR|BM|PAGE=015|INDEX=01|LOT=407770",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              720.0,
+              2239.0
+            ],
+            [
+              860.0,
+              2186.0
+            ],
+            [
+              914.0,
+              2325.0
+            ],
+            [
+              774.0,
+              2379.0
+            ]
+          ],
+          "aabb": {
+            "x": 720.0,
+            "y": 2186.0,
+            "width": 194.0,
+            "height": 193.0
+          },
+          "evidence": {}
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 2,
+            "global-histogram": 2
+          },
+          "invalid_errors": {},
+          "decoded_unique": 2,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 2,
+          "linear_located": 0,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 0,
+          "linear_decoded": 0,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 0
+        }
+      },
+      "overlay": "overlays/page-0015.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0436,
+        "matrix_error_recovery_seconds": 0.0,
+        "linear_seconds": 0.4454,
+        "total_seconds": 0.5474
+      }
+    },
+    {
+      "page": 16,
+      "source_image": "pages/page-0016.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 0,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 0,
+            "global-histogram": 0
+          },
+          "invalid_errors": {},
+          "decoded_unique": 0,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 0,
+          "linear_located": 0,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 0,
+          "linear_decoded": 0,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 0
+        }
+      },
+      "overlay": "overlays/page-0016.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0382,
+        "matrix_error_recovery_seconds": 0.0,
+        "linear_seconds": 0.4468,
+        "total_seconds": 0.5409
+      }
+    },
+    {
+      "page": 17,
+      "source_image": "pages/page-0017.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 2,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "DM|BM|P017|I01|L153798",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              915.0,
+              913.0
+            ],
+            [
+              1041.0,
+              910.0
+            ],
+            [
+              1044.0,
+              1036.0
+            ],
+            [
+              918.0,
+              1039.0
+            ]
+          ],
+          "aabb": {
+            "x": 915.0,
+            "y": 910.0,
+            "width": 129.0,
+            "height": 129.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "BM-17-02-9005",
+          "format": "Code 39",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              467.0,
+              1578.0
+            ],
+            [
+              1242.0,
+              1578.0
+            ],
+            [
+              1244.0,
+              1764.0
+            ],
+            [
+              469.0,
+              1764.0
+            ]
+          ],
+          "aabb": {
+            "x": 467.0,
+            "y": 1578.0,
+            "width": 777.0,
+            "height": 186.0
+          },
+          "evidence": {}
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 1,
+            "global-histogram": 1
+          },
+          "invalid_errors": {},
+          "decoded_unique": 1,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 2,
+          "linear_located": 1,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 1,
+          "linear_decoded": 1,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 1
+        }
+      },
+      "overlay": "overlays/page-0017.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0388,
+        "matrix_error_recovery_seconds": 0.0,
+        "linear_seconds": 0.4178,
+        "total_seconds": 0.4982
+      }
+    },
+    {
+      "page": 18,
+      "source_image": "pages/page-0018.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 3360,
+        "height": 2400
+      },
+      "decoded_count": 1,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "BM-18-01-5428",
+          "format": "Code 39",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              1746.0,
+              752.0
+            ],
+            [
+              2523.0,
+              752.0
+            ],
+            [
+              2513.0,
+              885.0
+            ],
+            [
+              1735.0,
+              885.0
+            ]
+          ],
+          "aabb": {
+            "x": 1735.0,
+            "y": 752.0,
+            "width": 788.0,
+            "height": 133.0
+          },
+          "evidence": {}
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 0,
+            "global-histogram": 0
+          },
+          "invalid_errors": {},
+          "decoded_unique": 0,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 1,
+          "linear_located": 1,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 1,
+          "linear_decoded": 1,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 1
+        }
+      },
+      "overlay": "overlays/page-0018.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0421,
+        "matrix_error_recovery_seconds": 0.0,
+        "linear_seconds": 0.4773,
+        "total_seconds": 0.5697
+      }
+    },
+    {
+      "page": 19,
+      "source_image": "pages/page-0019.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 2,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "DM|BM|P019|I01|L854681",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              922.0,
+              578.0
+            ],
+            [
+              1083.0,
+              591.0
+            ],
+            [
+              1070.0,
+              753.0
+            ],
+            [
+              909.0,
+              740.0
+            ]
+          ],
+          "aabb": {
+            "x": 909.0,
+            "y": 578.0,
+            "width": 174.0,
+            "height": 175.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "BM0190248659903",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              751.0,
+              852.0
+            ],
+            [
+              1330.0,
+              852.0
+            ],
+            [
+              1335.0,
+              1033.0
+            ],
+            [
+              756.0,
+              1033.0
+            ]
+          ],
+          "aabb": {
+            "x": 751.0,
+            "y": 852.0,
+            "width": 584.0,
+            "height": 181.0
+          },
+          "evidence": {}
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 1,
+            "global-histogram": 1
+          },
+          "invalid_errors": {},
+          "decoded_unique": 1,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 2,
+          "linear_located": 1,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 1,
+          "linear_decoded": 1,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 1
+        }
+      },
+      "overlay": "overlays/page-0019.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0397,
+        "matrix_error_recovery_seconds": 0.0,
+        "linear_seconds": 0.5291,
+        "total_seconds": 0.6559
+      }
+    },
+    {
+      "page": 20,
+      "source_image": "pages/page-0020.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 2,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "PO76361423099",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              138.0,
+              1632.0
+            ],
+            [
+              540.0,
+              1632.0
+            ],
+            [
+              547.0,
+              1758.0
+            ],
+            [
+              145.0,
+              1758.0
+            ]
+          ],
+          "aabb": {
+            "x": 138.0,
+            "y": 1632.0,
+            "width": 409.0,
+            "height": 126.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "DM|BM|P020|I01|L680914",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              2015.0,
+              2092.0
+            ],
+            [
+              2018.0,
+              2218.0
+            ],
+            [
+              1892.0,
+              2221.0
+            ],
+            [
+              1889.0,
+              2095.0
+            ]
+          ],
+          "aabb": {
+            "x": 1889.0,
+            "y": 2092.0,
+            "width": 129.0,
+            "height": 129.0
+          },
+          "evidence": {}
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 1,
+            "global-histogram": 1
+          },
+          "invalid_errors": {},
+          "decoded_unique": 1,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 2,
+          "linear_located": 1,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 1,
+          "linear_decoded": 1,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 1
+        }
+      },
+      "overlay": "overlays/page-0020.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0455,
+        "matrix_error_recovery_seconds": 0.0,
+        "linear_seconds": 0.5098,
+        "total_seconds": 0.6258
+      }
+    },
+    {
+      "page": 21,
+      "source_image": "pages/page-0021.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 4,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "QR|BM|PAGE=021|INDEX=02|LOT=401944",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1419.0,
+              1129.0
+            ],
+            [
+              1568.0,
+              1122.0
+            ],
+            [
+              1576.0,
+              1272.0
+            ],
+            [
+              1426.0,
+              1279.0
+            ]
+          ],
+          "aabb": {
+            "x": 1419.0,
+            "y": 1122.0,
+            "width": 157.0,
+            "height": 157.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "(01)09506000352320(21)BM2103",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              2273.0,
+              1622.0
+            ],
+            [
+              2276.0,
+              1748.0
+            ],
+            [
+              2150.0,
+              1751.0
+            ],
+            [
+              2147.0,
+              1625.0
+            ]
+          ],
+          "aabb": {
+            "x": 2147.0,
+            "y": 1622.0,
+            "width": 129.0,
+            "height": 129.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "PO32177176967",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              1287.0,
+              2285.0
+            ],
+            [
+              1688.0,
+              2285.0
+            ],
+            [
+              1683.0,
+              2418.0
+            ],
+            [
+              1282.0,
+              2418.0
+            ]
+          ],
+          "aabb": {
+            "x": 1282.0,
+            "y": 2285.0,
+            "width": 406.0,
+            "height": 133.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "https://example.invalid/balanced/021/04",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1907.0,
+              2538.0
+            ],
+            [
+              2133.0,
+              2591.0
+            ],
+            [
+              2079.0,
+              2817.0
+            ],
+            [
+              1853.0,
+              2764.0
+            ]
+          ],
+          "aabb": {
+            "x": 1853.0,
+            "y": 2538.0,
+            "width": 280.0,
+            "height": 279.0
+          },
+          "evidence": {}
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 3,
+            "global-histogram": 3
+          },
+          "invalid_errors": {},
+          "decoded_unique": 3,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 4,
+          "linear_located": 1,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 1,
+          "linear_decoded": 1,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 1
+        }
+      },
+      "overlay": "overlays/page-0021.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0389,
+        "matrix_error_recovery_seconds": 0.0,
+        "linear_seconds": 0.4577,
+        "total_seconds": 0.5516
+      }
+    },
+    {
+      "page": 22,
+      "source_image": "pages/page-0022.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "QR|BM|PAGE=022|INDEX=01|LOT=736432",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              375.0,
+              1961.0
+            ],
+            [
+              375.0,
+              2086.0
+            ],
+            [
+              250.0,
+              2087.0
+            ],
+            [
+              250.0,
+              1961.0
+            ]
+          ],
+          "aabb": {
+            "x": 250.0,
+            "y": 1961.0,
+            "width": 125.0,
+            "height": 126.0
+          },
+          "evidence": {}
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 1,
+            "global-histogram": 1
+          },
+          "invalid_errors": {},
+          "decoded_unique": 1,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 1,
+          "linear_located": 0,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 0,
+          "linear_decoded": 0,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 0
+        }
+      },
+      "overlay": "overlays/page-0022.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0378,
+        "matrix_error_recovery_seconds": 0.0,
+        "linear_seconds": 0.3751,
+        "total_seconds": 0.4465
+      }
+    },
+    {
+      "page": 23,
+      "source_image": "pages/page-0023.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 3,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "DM|BM|P023|I02|L180739",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              711.0,
+              1006.0
+            ],
+            [
+              892.0,
+              1004.0
+            ],
+            [
+              894.0,
+              1185.0
+            ],
+            [
+              714.0,
+              1186.0
+            ]
+          ],
+          "aabb": {
+            "x": 711.0,
+            "y": 1004.0,
+            "width": 183.0,
+            "height": 182.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "PO16864297086",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              1491.0,
+              2093.0
+            ],
+            [
+              1758.0,
+              2093.0
+            ],
+            [
+              1754.0,
+              2172.0
+            ],
+            [
+              1487.0,
+              2172.0
+            ]
+          ],
+          "aabb": {
+            "x": 1487.0,
+            "y": 2093.0,
+            "width": 271.0,
+            "height": 79.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "DM|BM|P023|I03|L747004",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              879.0,
+              2465.0
+            ],
+            [
+              1024.0,
+              2471.0
+            ],
+            [
+              1018.0,
+              2615.0
+            ],
+            [
+              874.0,
+              2609.0
+            ]
+          ],
+          "aabb": {
+            "x": 874.0,
+            "y": 2465.0,
+            "width": 150.0,
+            "height": 150.0
+          },
+          "evidence": {}
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 2,
+            "global-histogram": 2
+          },
+          "invalid_errors": {},
+          "decoded_unique": 2,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 3,
+          "linear_located": 1,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 1,
+          "linear_decoded": 1,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 1
+        }
+      },
+      "overlay": "overlays/page-0023.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0424,
+        "matrix_error_recovery_seconds": 0.0,
+        "linear_seconds": 0.4715,
+        "total_seconds": 0.5689
+      }
+    },
+    {
+      "page": 24,
+      "source_image": "pages/page-0024.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "BM-24-01-1642",
+          "format": "Code 39",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              1008.0,
+              1050.0
+            ],
+            [
+              1590.0,
+              1050.0
+            ],
+            [
+              1597.0,
+              1135.0
+            ],
+            [
+              1014.0,
+              1135.0
+            ]
+          ],
+          "aabb": {
+            "x": 1008.0,
+            "y": 1050.0,
+            "width": 589.0,
+            "height": 85.0
+          },
+          "evidence": {}
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 0,
+            "global-histogram": 0
+          },
+          "invalid_errors": {},
+          "decoded_unique": 0,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 1,
+          "linear_located": 1,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 1,
+          "linear_decoded": 1,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 1
+        }
+      },
+      "overlay": "overlays/page-0024.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0389,
+        "matrix_error_recovery_seconds": 0.0,
+        "linear_seconds": 0.4163,
+        "total_seconds": 0.4942
+      }
+    },
+    {
+      "page": 25,
+      "source_image": "pages/page-0025.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 3360,
+        "height": 2400
+      },
+      "decoded_count": 6,
+      "localized_unresolved_matrix_count": 1,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "LOT-750851-B25",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              307.0,
+              864.0
+            ],
+            [
+              663.0,
+              864.0
+            ],
+            [
+              662.0,
+              934.0
+            ],
+            [
+              307.0,
+              934.0
+            ]
+          ],
+          "aabb": {
+            "x": 307.0,
+            "y": 864.0,
+            "width": 356.0,
+            "height": 70.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "DM|BM|P025|I04|L354440",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1049.0,
+              850.0
+            ],
+            [
+              1193.0,
+              855.0
+            ],
+            [
+              1188.0,
+              999.0
+            ],
+            [
+              1044.0,
+              994.0
+            ]
+          ],
+          "aabb": {
+            "x": 1044.0,
+            "y": 850.0,
+            "width": 149.0,
+            "height": 149.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "BM0250630954567",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              1781.0,
+              1056.0
+            ],
+            [
+              2361.0,
+              1056.0
+            ],
+            [
+              2368.0,
+              1228.0
+            ],
+            [
+              1788.0,
+              1228.0
+            ]
+          ],
+          "aabb": {
+            "x": 1781.0,
+            "y": 1056.0,
+            "width": 587.0,
+            "height": 172.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "https://example.invalid/balanced/025/03",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              382.0,
+              1206.0
+            ],
+            [
+              585.0,
+              1201.0
+            ],
+            [
+              590.0,
+              1405.0
+            ],
+            [
+              386.0,
+              1409.0
+            ]
+          ],
+          "aabb": {
+            "x": 382.0,
+            "y": 1201.0,
+            "width": 208.0,
+            "height": 208.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "BM-25-05-3401",
+          "format": "Code 39",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              2393.0,
+              1771.0
+            ],
+            [
+              3169.0,
+              1771.0
+            ],
+            [
+              3166.0,
+              1955.0
+            ],
+            [
+              2390.0,
+              1955.0
+            ]
+          ],
+          "aabb": {
+            "x": 2390.0,
+            "y": 1771.0,
+            "width": 779.0,
+            "height": 184.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "LOT-986386-B25",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              1335.0,
+              1956.0
+            ],
+            [
+              2058.0,
+              1956.0
+            ],
+            [
+              2053.0,
+              2000.0
+            ],
+            [
+              1325.0,
+              2000.0
+            ]
+          ],
+          "aabb": {
+            "x": 1325.0,
+            "y": 1956.0,
+            "width": 733.0,
+            "height": 44.0
+          },
+          "evidence": {}
+        }
+      ],
+      "unresolved_matrix": [
+        {
+          "status": "localized_unresolved_matrix",
+          "kind": "matrix",
+          "decoded": false,
+          "text": null,
+          "format": "Data Matrix",
+          "confidence": 0.9513,
+          "sources": [
+            "verification:matrix-structure",
+            "zxing:invalid-matrix:global-histogram:downscale",
+            "zxing:invalid-matrix:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale:return-errors",
+            "whole-page:global-histogram:downscale:return-errors"
+          ],
+          "quad": [
+            [
+              1191.0,
+              1062.0
+            ],
+            [
+              1320.0,
+              1047.0
+            ],
+            [
+              1320.0,
+              1179.0
+            ],
+            [
+              1194.0,
+              1179.0
+            ]
+          ],
+          "aabb": {
+            "x": 1191.0,
+            "y": 1047.0,
+            "width": 129.0,
+            "height": 132.0
+          },
+          "evidence": {
+            "decoder_error": "ChecksumError @ DMDecoder.cpp:427",
+            "structure": {
+              "score": 0.9513,
+              "edge_balance": 0.9232,
+              "dark_fraction": 0.5043,
+              "square_score": 0.9699,
+              "transition_score": 1.0,
+              "width": 128.0,
+              "height": 125.0
+            }
+          }
+        }
+      ],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 3,
+            "global-histogram": 3
+          },
+          "invalid_errors": {
+            "ChecksumError": 2
+          },
+          "decoded_unique": 2,
+          "invalid_unique_unexplained": 1,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 1,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 6,
+          "linear_located": 4,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 4,
+          "linear_decoded": 4,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 4
+        }
+      },
+      "overlay": "overlays/page-0025.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0434,
+        "matrix_error_recovery_seconds": 0.0081,
+        "linear_seconds": 0.5343,
+        "total_seconds": 0.634
+      }
+    },
+    {
+      "page": 26,
+      "source_image": "pages/page-0026.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 3,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "BM0260259679472",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              244.0,
+              474.0
+            ],
+            [
+              678.0,
+              474.0
+            ],
+            [
+              675.0,
+              613.0
+            ],
+            [
+              241.0,
+              613.0
+            ]
+          ],
+          "aabb": {
+            "x": 241.0,
+            "y": 474.0,
+            "width": 437.0,
+            "height": 139.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "DM|BM|P026|I01|L775261",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              224.0,
+              1211.0
+            ],
+            [
+              386.0,
+              1224.0
+            ],
+            [
+              373.0,
+              1386.0
+            ],
+            [
+              212.0,
+              1373.0
+            ]
+          ],
+          "aabb": {
+            "x": 212.0,
+            "y": 1211.0,
+            "width": 174.0,
+            "height": 175.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "BM-26-03-8911",
+          "format": "Code 39",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              299.0,
+              2075.0
+            ],
+            [
+              1074.0,
+              2075.0
+            ],
+            [
+              1070.0,
+              2250.0
+            ],
+            [
+              294.0,
+              2250.0
+            ]
+          ],
+          "aabb": {
+            "x": 294.0,
+            "y": 2075.0,
+            "width": 780.0,
+            "height": 175.0
+          },
+          "evidence": {}
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 1,
+            "global-histogram": 1
+          },
+          "invalid_errors": {},
+          "decoded_unique": 1,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 3,
+          "linear_located": 2,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 2,
+          "linear_decoded": 2,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 2
+        }
+      },
+      "overlay": "overlays/page-0026.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0414,
+        "matrix_error_recovery_seconds": 0.0,
+        "linear_seconds": 0.4689,
+        "total_seconds": 0.5856
+      }
+    },
+    {
+      "page": 27,
+      "source_image": "pages/page-0027.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 2,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "https://example.invalid/balanced/027/01",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              882.0,
+              825.0
+            ],
+            [
+              1084.0,
+              841.0
+            ],
+            [
+              1068.0,
+              1044.0
+            ],
+            [
+              865.0,
+              1027.0
+            ]
+          ],
+          "aabb": {
+            "x": 865.0,
+            "y": 825.0,
+            "width": 219.0,
+            "height": 219.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "BM0270292095476",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              501.0,
+              1542.0
+            ],
+            [
+              936.0,
+              1542.0
+            ],
+            [
+              931.0,
+              1669.0
+            ],
+            [
+              497.0,
+              1669.0
+            ]
+          ],
+          "aabb": {
+            "x": 497.0,
+            "y": 1542.0,
+            "width": 439.0,
+            "height": 127.0
+          },
+          "evidence": {}
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 1,
+            "global-histogram": 1
+          },
+          "invalid_errors": {},
+          "decoded_unique": 1,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 2,
+          "linear_located": 1,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 1,
+          "linear_decoded": 1,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 1
+        }
+      },
+      "overlay": "overlays/page-0027.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0394,
+        "matrix_error_recovery_seconds": 0.0,
+        "linear_seconds": 0.5629,
+        "total_seconds": 0.6817
+      }
+    },
+    {
+      "page": 28,
+      "source_image": "pages/page-0028.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 0,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 0,
+            "global-histogram": 0
+          },
+          "invalid_errors": {},
+          "decoded_unique": 0,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 0,
+          "linear_located": 0,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 0,
+          "linear_decoded": 0,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 0
+        }
+      },
+      "overlay": "overlays/page-0028.png",
+      "timings": {
+        "matrix_fast_seconds": 0.041,
+        "matrix_error_recovery_seconds": 0.0,
+        "linear_seconds": 0.4435,
+        "total_seconds": 0.5367
+      }
+    },
+    {
+      "page": 29,
+      "source_image": "pages/page-0029.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 2,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "DM|BM|P029|I01|L228874",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1555.0,
+              786.0
+            ],
+            [
+              1699.0,
+              784.0
+            ],
+            [
+              1700.0,
+              929.0
+            ],
+            [
+              1556.0,
+              930.0
+            ]
+          ],
+          "aabb": {
+            "x": 1555.0,
+            "y": 784.0,
+            "width": 145.0,
+            "height": 146.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "BM-29-02-8872",
+          "format": "Code 39",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              1288.0,
+              1200.0
+            ],
+            [
+              1869.0,
+              1200.0
+            ],
+            [
+              1865.0,
+              1325.0
+            ],
+            [
+              1284.0,
+              1325.0
+            ]
+          ],
+          "aabb": {
+            "x": 1284.0,
+            "y": 1200.0,
+            "width": 585.0,
+            "height": 125.0
+          },
+          "evidence": {}
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 1,
+            "global-histogram": 1
+          },
+          "invalid_errors": {},
+          "decoded_unique": 1,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 2,
+          "linear_located": 1,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 1,
+          "linear_decoded": 1,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 1
+        }
+      },
+      "overlay": "overlays/page-0029.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0398,
+        "matrix_error_recovery_seconds": 0.0,
+        "linear_seconds": 0.4405,
+        "total_seconds": 0.5354
+      }
+    },
+    {
+      "page": 30,
+      "source_image": "pages/page-0030.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "DM|BM|P030|I01|L864698",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1045.0,
+              1861.0
+            ],
+            [
+              1190.0,
+              1862.0
+            ],
+            [
+              1188.0,
+              2007.0
+            ],
+            [
+              1044.0,
+              2005.0
+            ]
+          ],
+          "aabb": {
+            "x": 1044.0,
+            "y": 1861.0,
+            "width": 146.0,
+            "height": 146.0
+          },
+          "evidence": {}
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 1,
+            "global-histogram": 1
+          },
+          "invalid_errors": {},
+          "decoded_unique": 1,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 1,
+          "linear_located": 0,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 0,
+          "linear_decoded": 0,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 0
+        }
+      },
+      "overlay": "overlays/page-0030.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0403,
+        "matrix_error_recovery_seconds": 0.0,
+        "linear_seconds": 0.5098,
+        "total_seconds": 0.6271
+      }
+    },
+    {
+      "page": 31,
+      "source_image": "pages/page-0031.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 2,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "BM-31-02-9594",
+          "format": "Code 39",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              1007.0,
+              528.0
+            ],
+            [
+              1588.0,
+              528.0
+            ],
+            [
+              1592.0,
+              655.0
+            ],
+            [
+              1011.0,
+              655.0
+            ]
+          ],
+          "aabb": {
+            "x": 1007.0,
+            "y": 528.0,
+            "width": 585.0,
+            "height": 127.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "BM-31-01-8295",
+          "format": "Code 39",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              975.0,
+              1452.0
+            ],
+            [
+              1362.0,
+              1452.0
+            ],
+            [
+              1364.0,
+              1529.0
+            ],
+            [
+              977.0,
+              1529.0
+            ]
+          ],
+          "aabb": {
+            "x": 975.0,
+            "y": 1452.0,
+            "width": 389.0,
+            "height": 77.0
+          },
+          "evidence": {}
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 0,
+            "global-histogram": 0
+          },
+          "invalid_errors": {},
+          "decoded_unique": 0,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 2,
+          "linear_located": 2,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 2,
+          "linear_decoded": 2,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 2
+        }
+      },
+      "overlay": "overlays/page-0031.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0397,
+        "matrix_error_recovery_seconds": 0.0,
+        "linear_seconds": 0.429,
+        "total_seconds": 0.5089
+      }
+    },
+    {
+      "page": 32,
+      "source_image": "pages/page-0032.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 2,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "BM-32-01-7579",
+          "format": "Code 39",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              625.0,
+              864.0
+            ],
+            [
+              1206.0,
+              864.0
+            ],
+            [
+              1210.0,
+              985.0
+            ],
+            [
+              629.0,
+              985.0
+            ]
+          ],
+          "aabb": {
+            "x": 625.0,
+            "y": 864.0,
+            "width": 585.0,
+            "height": 121.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "BM-32-02-4086",
+          "format": "Code 39",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              1274.0,
+              1278.0
+            ],
+            [
+              2049.0,
+              1278.0
+            ],
+            [
+              2047.0,
+              1465.0
+            ],
+            [
+              1272.0,
+              1465.0
+            ]
+          ],
+          "aabb": {
+            "x": 1272.0,
+            "y": 1278.0,
+            "width": 777.0,
+            "height": 187.0
+          },
+          "evidence": {}
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 1,
+            "global-histogram": 0
+          },
+          "invalid_errors": {
+            "FormatError (Invalid matrix dimension)": 1
+          },
+          "decoded_unique": 0,
+          "invalid_unique_unexplained": 1,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 2,
+          "linear_located": 2,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 2,
+          "linear_decoded": 2,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 2
+        }
+      },
+      "overlay": "overlays/page-0032.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0382,
+        "matrix_error_recovery_seconds": 0.0148,
+        "linear_seconds": 0.5211,
+        "total_seconds": 0.647
+      }
+    },
+    {
+      "page": 33,
+      "source_image": "pages/page-0033.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 3,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "LOT-295789-B33",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              989.0,
+              1128.0
+            ],
+            [
+              1702.0,
+              1128.0
+            ],
+            [
+              1692.0,
+              1267.0
+            ],
+            [
+              978.0,
+              1267.0
+            ]
+          ],
+          "aabb": {
+            "x": 978.0,
+            "y": 1128.0,
+            "width": 724.0,
+            "height": 139.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "DM|BM|P033|I01|L392981",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1020.0,
+              1397.0
+            ],
+            [
+              1200.0,
+              1391.0
+            ],
+            [
+              1206.0,
+              1571.0
+            ],
+            [
+              1026.0,
+              1577.0
+            ]
+          ],
+          "aabb": {
+            "x": 1020.0,
+            "y": 1391.0,
+            "width": 186.0,
+            "height": 186.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "BM-33-02-9196",
+          "format": "Code 39",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              1052.0,
+              2363.0
+            ],
+            [
+              1634.0,
+              2363.0
+            ],
+            [
+              1627.0,
+              2460.0
+            ],
+            [
+              1045.0,
+              2460.0
+            ]
+          ],
+          "aabb": {
+            "x": 1045.0,
+            "y": 2363.0,
+            "width": 589.0,
+            "height": 97.0
+          },
+          "evidence": {}
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 1,
+            "global-histogram": 1
+          },
+          "invalid_errors": {},
+          "decoded_unique": 1,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 3,
+          "linear_located": 2,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 2,
+          "linear_decoded": 2,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 2
+        }
+      },
+      "overlay": "overlays/page-0033.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0423,
+        "matrix_error_recovery_seconds": 0.0,
+        "linear_seconds": 0.4739,
+        "total_seconds": 0.565
+      }
+    },
+    {
+      "page": 34,
+      "source_image": "pages/page-0034.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 3360,
+        "height": 2400
+      },
+      "decoded_count": 1,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "DM|BM|P034|I01|L532310",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              543.0,
+              1643.0
+            ],
+            [
+              542.0,
+              1787.0
+            ],
+            [
+              398.0,
+              1787.0
+            ],
+            [
+              398.0,
+              1643.0
+            ]
+          ],
+          "aabb": {
+            "x": 398.0,
+            "y": 1643.0,
+            "width": 145.0,
+            "height": 144.0
+          },
+          "evidence": {}
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 1,
+            "global-histogram": 1
+          },
+          "invalid_errors": {},
+          "decoded_unique": 1,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 1,
+          "linear_located": 0,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 0,
+          "linear_decoded": 0,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 0
+        }
+      },
+      "overlay": "overlays/page-0034.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0401,
+        "matrix_error_recovery_seconds": 0.0,
+        "linear_seconds": 0.3958,
+        "total_seconds": 0.4745
+      }
+    },
+    {
+      "page": 35,
+      "source_image": "pages/page-0035.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "BM-35-01-4872",
+          "format": "Code 39",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              1430.0,
+              1805.0
+            ],
+            [
+              2206.0,
+              1805.0
+            ],
+            [
+              2214.0,
+              1962.0
+            ],
+            [
+              1438.0,
+              1962.0
+            ]
+          ],
+          "aabb": {
+            "x": 1430.0,
+            "y": 1805.0,
+            "width": 784.0,
+            "height": 157.0
+          },
+          "evidence": {}
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 0,
+            "global-histogram": 0
+          },
+          "invalid_errors": {},
+          "decoded_unique": 0,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 1,
+          "linear_located": 1,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 1,
+          "linear_decoded": 1,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 1
+        }
+      },
+      "overlay": "overlays/page-0035.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0345,
+        "matrix_error_recovery_seconds": 0.0,
+        "linear_seconds": 0.5872,
+        "total_seconds": 0.7084
+      }
+    },
+    {
+      "page": 36,
+      "source_image": "pages/page-0036.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 4,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "(01)09506000361568(21)BM3602",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1580.0,
+              833.0
+            ],
+            [
+              1724.0,
+              837.0
+            ],
+            [
+              1721.0,
+              981.0
+            ],
+            [
+              1576.0,
+              977.0
+            ]
+          ],
+          "aabb": {
+            "x": 1576.0,
+            "y": 833.0,
+            "width": 148.0,
+            "height": 148.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "PO94640036224",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              851.0,
+              1548.0
+            ],
+            [
+              1387.0,
+              1548.0
+            ],
+            [
+              1377.0,
+              1710.0
+            ],
+            [
+              841.0,
+              1710.0
+            ]
+          ],
+          "aabb": {
+            "x": 841.0,
+            "y": 1548.0,
+            "width": 546.0,
+            "height": 162.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "BM-36-03-5397",
+          "format": "Code 39",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              1532.0,
+              1596.0
+            ],
+            [
+              2115.0,
+              1596.0
+            ],
+            [
+              2108.0,
+              1686.0
+            ],
+            [
+              1525.0,
+              1686.0
+            ]
+          ],
+          "aabb": {
+            "x": 1525.0,
+            "y": 1596.0,
+            "width": 590.0,
+            "height": 90.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "(01)09506000353909(21)BM3604",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1180.0,
+              1871.0
+            ],
+            [
+              1306.0,
+              1871.0
+            ],
+            [
+              1305.0,
+              1997.0
+            ],
+            [
+              1179.0,
+              1997.0
+            ]
+          ],
+          "aabb": {
+            "x": 1179.0,
+            "y": 1871.0,
+            "width": 127.0,
+            "height": 126.0
+          },
+          "evidence": {}
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 2,
+            "global-histogram": 2
+          },
+          "invalid_errors": {},
+          "decoded_unique": 2,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 4,
+          "linear_located": 2,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 2,
+          "linear_decoded": 2,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 2
+        }
+      },
+      "overlay": "overlays/page-0036.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0434,
+        "matrix_error_recovery_seconds": 0.0,
+        "linear_seconds": 0.4962,
+        "total_seconds": 0.5996
+      }
+    },
+    {
+      "page": 37,
+      "source_image": "pages/page-0037.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "BM0370126977372",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              338.0,
+              2406.0
+            ],
+            [
+              919.0,
+              2406.0
+            ],
+            [
+              909.0,
+              2568.0
+            ],
+            [
+              329.0,
+              2568.0
+            ]
+          ],
+          "aabb": {
+            "x": 329.0,
+            "y": 2406.0,
+            "width": 590.0,
+            "height": 162.0
+          },
+          "evidence": {}
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 0,
+            "global-histogram": 0
+          },
+          "invalid_errors": {},
+          "decoded_unique": 0,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 1,
+          "linear_located": 1,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 1,
+          "linear_decoded": 1,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 1
+        }
+      },
+      "overlay": "overlays/page-0037.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0381,
+        "matrix_error_recovery_seconds": 0.0,
+        "linear_seconds": 0.4043,
+        "total_seconds": 0.4792
+      }
+    },
+    {
+      "page": 38,
+      "source_image": "pages/page-0038.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 9,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "DM|BM|P038|I07|L785001",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              176.0,
+              1371.0
+            ],
+            [
+              320.0,
+              1363.0
+            ],
+            [
+              328.0,
+              1507.0
+            ],
+            [
+              184.0,
+              1515.0
+            ]
+          ],
+          "aabb": {
+            "x": 176.0,
+            "y": 1363.0,
+            "width": 152.0,
+            "height": 152.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "DM|BM|P038|I08|L254802",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              411.0,
+              1406.0
+            ],
+            [
+              556.0,
+              1412.0
+            ],
+            [
+              550.0,
+              1556.0
+            ],
+            [
+              405.0,
+              1550.0
+            ]
+          ],
+          "aabb": {
+            "x": 405.0,
+            "y": 1406.0,
+            "width": 151.0,
+            "height": 150.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "(01)09506000396327(21)BM3806",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              332.0,
+              1652.0
+            ],
+            [
+              477.0,
+              1645.0
+            ],
+            [
+              482.0,
+              1790.0
+            ],
+            [
+              338.0,
+              1796.0
+            ]
+          ],
+          "aabb": {
+            "x": 332.0,
+            "y": 1645.0,
+            "width": 150.0,
+            "height": 151.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "QR|BM|PAGE=038|INDEX=01|LOT=300160",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              553.0,
+              1788.0
+            ],
+            [
+              678.0,
+              1782.0
+            ],
+            [
+              685.0,
+              1907.0
+            ],
+            [
+              560.0,
+              1913.0
+            ]
+          ],
+          "aabb": {
+            "x": 553.0,
+            "y": 1782.0,
+            "width": 132.0,
+            "height": 131.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "(01)09506000336735(21)BM3803",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1049.0,
+              1784.0
+            ],
+            [
+              1212.0,
+              1778.0
+            ],
+            [
+              1217.0,
+              1940.0
+            ],
+            [
+              1055.0,
+              1946.0
+            ]
+          ],
+          "aabb": {
+            "x": 1049.0,
+            "y": 1778.0,
+            "width": 168.0,
+            "height": 168.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "QR|BM|PAGE=038|INDEX=02|LOT=966754",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              823.0,
+              1814.0
+            ],
+            [
+              973.0,
+              1809.0
+            ],
+            [
+              977.0,
+              1959.0
+            ],
+            [
+              828.0,
+              1964.0
+            ]
+          ],
+          "aabb": {
+            "x": 823.0,
+            "y": 1809.0,
+            "width": 154.0,
+            "height": 155.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "DM|BM|P038|I04|L558489",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1384.0,
+              1822.0
+            ],
+            [
+              1547.0,
+              1815.0
+            ],
+            [
+              1553.0,
+              1977.0
+            ],
+            [
+              1391.0,
+              1984.0
+            ]
+          ],
+          "aabb": {
+            "x": 1384.0,
+            "y": 1815.0,
+            "width": 169.0,
+            "height": 169.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "DM|BM|P038|I09|L657671",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              189.0,
+              2157.0
+            ],
+            [
+              323.0,
+              2209.0
+            ],
+            [
+              271.0,
+              2344.0
+            ],
+            [
+              136.0,
+              2291.0
+            ]
+          ],
+          "aabb": {
+            "x": 136.0,
+            "y": 2157.0,
+            "width": 187.0,
+            "height": 187.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "PO81621798430",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              716.0,
+              2622.0
+            ],
+            [
+              984.0,
+              2622.0
+            ],
+            [
+              981.0,
+              2706.0
+            ],
+            [
+              714.0,
+              2706.0
+            ]
+          ],
+          "aabb": {
+            "x": 714.0,
+            "y": 2622.0,
+            "width": 270.0,
+            "height": 84.0
+          },
+          "evidence": {}
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 8,
+            "global-histogram": 8
+          },
+          "invalid_errors": {},
+          "decoded_unique": 8,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 9,
+          "linear_located": 1,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 1,
+          "linear_decoded": 1,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 1
+        }
+      },
+      "overlay": "overlays/page-0038.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0426,
+        "matrix_error_recovery_seconds": 0.0,
+        "linear_seconds": 0.4802,
+        "total_seconds": 0.582
+      }
+    },
+    {
+      "page": 39,
+      "source_image": "pages/page-0039.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 0,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 0,
+            "global-histogram": 0
+          },
+          "invalid_errors": {},
+          "decoded_unique": 0,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 0,
+          "linear_located": 0,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 0,
+          "linear_decoded": 0,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 0
+        }
+      },
+      "overlay": "overlays/page-0039.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0384,
+        "matrix_error_recovery_seconds": 0.0,
+        "linear_seconds": 0.5087,
+        "total_seconds": 0.6321
+      }
+    },
+    {
+      "page": 40,
+      "source_image": "pages/page-0040.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 4,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "LOT-488954-B40",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              201.0,
+              864.0
+            ],
+            [
+              914.0,
+              864.0
+            ],
+            [
+              904.0,
+              1015.0
+            ],
+            [
+              192.0,
+              1015.0
+            ]
+          ],
+          "aabb": {
+            "x": 192.0,
+            "y": 864.0,
+            "width": 722.0,
+            "height": 151.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "https://example.invalid/balanced/040/03",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1682.0,
+              1139.0
+            ],
+            [
+              1857.0,
+              1132.0
+            ],
+            [
+              1864.0,
+              1305.0
+            ],
+            [
+              1690.0,
+              1313.0
+            ]
+          ],
+          "aabb": {
+            "x": 1682.0,
+            "y": 1132.0,
+            "width": 182.0,
+            "height": 181.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "QR|BM|PAGE=040|INDEX=04|LOT=715643",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale"
+          ],
+          "quad": [
+            [
+              585.0,
+              2233.0
+            ],
+            [
+              710.0,
+              2240.0
+            ],
+            [
+              703.0,
+              2365.0
+            ],
+            [
+              579.0,
+              2358.0
+            ]
+          ],
+          "aabb": {
+            "x": 579.0,
+            "y": 2233.0,
+            "width": 131.0,
+            "height": 132.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "BM-40-01-8172",
+          "format": "Code 39",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              1568.0,
+              2261.0
+            ],
+            [
+              1956.0,
+              2261.0
+            ],
+            [
+              1952.0,
+              2322.0
+            ],
+            [
+              1564.0,
+              2322.0
+            ]
+          ],
+          "aabb": {
+            "x": 1564.0,
+            "y": 2261.0,
+            "width": 392.0,
+            "height": 61.0
+          },
+          "evidence": {}
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 2,
+            "global-histogram": 4
+          },
+          "invalid_errors": {
+            "ChecksumError": 3
+          },
+          "decoded_unique": 2,
+          "invalid_unique_unexplained": 1,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 4,
+          "linear_located": 2,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 2,
+          "linear_decoded": 2,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 2
+        }
+      },
+      "overlay": "overlays/page-0040.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0448,
+        "matrix_error_recovery_seconds": 0.0058,
+        "linear_seconds": 0.4745,
+        "total_seconds": 0.5791
+      }
+    },
+    {
+      "page": 41,
+      "source_image": "pages/page-0041.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 4,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "BM0410450794128",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              641.0,
+              1290.0
+            ],
+            [
+              1076.0,
+              1290.0
+            ],
+            [
+              1082.0,
+              1411.0
+            ],
+            [
+              647.0,
+              1411.0
+            ]
+          ],
+          "aabb": {
+            "x": 641.0,
+            "y": 1290.0,
+            "width": 441.0,
+            "height": 121.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "BM0410143665968",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              293.0,
+              1158.0
+            ],
+            [
+              293.0,
+              1737.0
+            ],
+            [
+              112.0,
+              1732.0
+            ],
+            [
+              112.0,
+              1152.0
+            ]
+          ],
+          "aabb": {
+            "x": 112.0,
+            "y": 1152.0,
+            "width": 181.0,
+            "height": 585.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "PO93583198716",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              1944.0,
+              1218.0
+            ],
+            [
+              1944.0,
+              1753.0
+            ],
+            [
+              1755.0,
+              1751.0
+            ],
+            [
+              1755.0,
+              1216.0
+            ]
+          ],
+          "aabb": {
+            "x": 1755.0,
+            "y": 1216.0,
+            "width": 189.0,
+            "height": 537.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "PO27649430947",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              312.0,
+              1883.0
+            ],
+            [
+              713.0,
+              1883.0
+            ],
+            [
+              708.0,
+              2010.0
+            ],
+            [
+              306.0,
+              2010.0
+            ]
+          ],
+          "aabb": {
+            "x": 306.0,
+            "y": 1883.0,
+            "width": 407.0,
+            "height": 127.0
+          },
+          "evidence": {}
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 0,
+            "global-histogram": 0
+          },
+          "invalid_errors": {},
+          "decoded_unique": 0,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 4,
+          "linear_located": 4,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 4,
+          "linear_decoded": 4,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 4
+        }
+      },
+      "overlay": "overlays/page-0041.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0404,
+        "matrix_error_recovery_seconds": 0.0,
+        "linear_seconds": 0.4734,
+        "total_seconds": 0.5589
+      }
+    },
+    {
+      "page": 42,
+      "source_image": "pages/page-0042.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "QR|BM|PAGE=042|INDEX=01|LOT=408560",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1984.0,
+              1390.0
+            ],
+            [
+              2101.0,
+              1346.0
+            ],
+            [
+              2145.0,
+              1463.0
+            ],
+            [
+              2028.0,
+              1507.0
+            ]
+          ],
+          "aabb": {
+            "x": 1984.0,
+            "y": 1346.0,
+            "width": 161.0,
+            "height": 161.0
+          },
+          "evidence": {}
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 1,
+            "global-histogram": 1
+          },
+          "invalid_errors": {},
+          "decoded_unique": 1,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 1,
+          "linear_located": 0,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 0,
+          "linear_decoded": 0,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 0
+        }
+      },
+      "overlay": "overlays/page-0042.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0369,
+        "matrix_error_recovery_seconds": 0.0,
+        "linear_seconds": 0.377,
+        "total_seconds": 0.4523
+      }
+    },
+    {
+      "page": 43,
+      "source_image": "pages/page-0043.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 3360,
+        "height": 2400
+      },
+      "decoded_count": 3,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "QR|BM|PAGE=043|INDEX=01|LOT=795540",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              2562.0,
+              1318.0
+            ],
+            [
+              2712.0,
+              1315.0
+            ],
+            [
+              2715.0,
+              1464.0
+            ],
+            [
+              2566.0,
+              1468.0
+            ]
+          ],
+          "aabb": {
+            "x": 2562.0,
+            "y": 1315.0,
+            "width": 153.0,
+            "height": 153.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "BM0430351093599",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              1159.0,
+              1475.0
+            ],
+            [
+              1448.0,
+              1475.0
+            ],
+            [
+              1444.0,
+              1552.0
+            ],
+            [
+              1154.0,
+              1552.0
+            ]
+          ],
+          "aabb": {
+            "x": 1154.0,
+            "y": 1475.0,
+            "width": 294.0,
+            "height": 77.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "BM-43-02-9980",
+          "format": "Code 39",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              542.0,
+              1663.0
+            ],
+            [
+              1123.0,
+              1663.0
+            ],
+            [
+              1119.0,
+              1788.0
+            ],
+            [
+              537.0,
+              1788.0
+            ]
+          ],
+          "aabb": {
+            "x": 537.0,
+            "y": 1663.0,
+            "width": 586.0,
+            "height": 125.0
+          },
+          "evidence": {}
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 1,
+            "global-histogram": 1
+          },
+          "invalid_errors": {},
+          "decoded_unique": 1,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 3,
+          "linear_located": 2,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 2,
+          "linear_decoded": 2,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 2
+        }
+      },
+      "overlay": "overlays/page-0043.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0404,
+        "matrix_error_recovery_seconds": 0.0,
+        "linear_seconds": 0.4449,
+        "total_seconds": 0.5258
+      }
+    },
+    {
+      "page": 44,
+      "source_image": "pages/page-0044.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "https://example.invalid/balanced/044/01",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1474.0,
+              672.0
+            ],
+            [
+              1648.0,
+              666.0
+            ],
+            [
+              1653.0,
+              840.0
+            ],
+            [
+              1480.0,
+              845.0
+            ]
+          ],
+          "aabb": {
+            "x": 1474.0,
+            "y": 666.0,
+            "width": 179.0,
+            "height": 179.0
+          },
+          "evidence": {}
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 1,
+            "global-histogram": 1
+          },
+          "invalid_errors": {},
+          "decoded_unique": 1,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 1,
+          "linear_located": 0,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 0,
+          "linear_decoded": 0,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 0
+        }
+      },
+      "overlay": "overlays/page-0044.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0385,
+        "matrix_error_recovery_seconds": 0.0,
+        "linear_seconds": 0.4193,
+        "total_seconds": 0.5035
+      }
+    },
+    {
+      "page": 45,
+      "source_image": "pages/page-0045.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "PO25436874830",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              1053.0,
+              2513.0
+            ],
+            [
+              1320.0,
+              2513.0
+            ],
+            [
+              1324.0,
+              2598.0
+            ],
+            [
+              1057.0,
+              2598.0
+            ]
+          ],
+          "aabb": {
+            "x": 1053.0,
+            "y": 2513.0,
+            "width": 271.0,
+            "height": 85.0
+          },
+          "evidence": {}
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 0,
+            "global-histogram": 0
+          },
+          "invalid_errors": {},
+          "decoded_unique": 0,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 1,
+          "linear_located": 1,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 1,
+          "linear_decoded": 1,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 1
+        }
+      },
+      "overlay": "overlays/page-0045.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0418,
+        "matrix_error_recovery_seconds": 0.0,
+        "linear_seconds": 0.5303,
+        "total_seconds": 0.641
+      }
+    },
+    {
+      "page": 46,
+      "source_image": "pages/page-0046.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 3360,
+        "height": 2400
+      },
+      "decoded_count": 9,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "(01)09506000371940(21)BM4603",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1649.0,
+              593.0
+            ],
+            [
+              1829.0,
+              595.0
+            ],
+            [
+              1826.0,
+              776.0
+            ],
+            [
+              1645.0,
+              773.0
+            ]
+          ],
+          "aabb": {
+            "x": 1645.0,
+            "y": 593.0,
+            "width": 184.0,
+            "height": 183.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "QR|BM|PAGE=046|INDEX=07|LOT=541546",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              2000.0,
+              650.0
+            ],
+            [
+              2124.0,
+              658.0
+            ],
+            [
+              2116.0,
+              783.0
+            ],
+            [
+              1991.0,
+              774.0
+            ]
+          ],
+          "aabb": {
+            "x": 1991.0,
+            "y": 650.0,
+            "width": 133.0,
+            "height": 133.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "BM-46-01-4331",
+          "format": "Code 39",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              1346.0,
+              872.0
+            ],
+            [
+              1927.0,
+              872.0
+            ],
+            [
+              1923.0,
+              993.0
+            ],
+            [
+              1341.0,
+              993.0
+            ]
+          ],
+          "aabb": {
+            "x": 1341.0,
+            "y": 872.0,
+            "width": 586.0,
+            "height": 121.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "https://example.invalid/balanced/046/04",
+          "format": "QR Code",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              2283.0,
+              905.0
+            ],
+            [
+              2456.0,
+              913.0
+            ],
+            [
+              2449.0,
+              1087.0
+            ],
+            [
+              2275.0,
+              1079.0
+            ]
+          ],
+          "aabb": {
+            "x": 2275.0,
+            "y": 905.0,
+            "width": 181.0,
+            "height": 182.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "BM0460924022380",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "deterministic:linear-proposal",
+            "opencv:native:document:g48",
+            "opencv:native:document:g64",
+            "opencv:native:tiny:g48",
+            "opencv:native:tiny:g64",
+            "opencv:native:wide:g48",
+            "opencv:native:wide:g64",
+            "zxing:candidate:native-p08-s10",
+            "zxing:deskewed-candidate"
+          ],
+          "attempts": [
+            "zxing:native-p08-s10"
+          ],
+          "quad": [
+            [
+              396.28,
+              1151.45
+            ],
+            [
+              465.21,
+              971.05
+            ],
+            [
+              1129.23,
+              1224.75
+            ],
+            [
+              1060.31,
+              1405.16
+            ]
+          ],
+          "aabb": {
+            "x": 396.28,
+            "y": 971.05,
+            "width": 732.95,
+            "height": 434.11
+          },
+          "evidence": {
+            "structural_metrics": {
+              "score": 0.9805274936117836,
+              "orientation": 0.9247212288897908,
+              "persistence": 0.28270042194092826,
+              "support_strength": 0.9336769390457783,
+              "scanline_agreement": 0.9862637362637363,
+              "transitions": 80.0,
+              "transition_rate": 0.11251758087201125,
+              "dark_fraction": 0.44022503516174405,
+              "aspect": 3.683937823834197
+            }
+          }
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "BM-46-08-2222",
+          "format": "Code 39",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              1957.0,
+              1356.0
+            ],
+            [
+              2344.0,
+              1356.0
+            ],
+            [
+              2342.0,
+              1428.0
+            ],
+            [
+              1955.0,
+              1428.0
+            ]
+          ],
+          "aabb": {
+            "x": 1955.0,
+            "y": 1356.0,
+            "width": 389.0,
+            "height": 72.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "(01)09506000355892(21)BM4602",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1679.0,
+              1613.0
+            ],
+            [
+              1805.0,
+              1618.0
+            ],
+            [
+              1800.0,
+              1745.0
+            ],
+            [
+              1673.0,
+              1739.0
+            ]
+          ],
+          "aabb": {
+            "x": 1673.0,
+            "y": 1613.0,
+            "width": 132.0,
+            "height": 132.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "BM0461014409873",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              813.0,
+              1680.0
+            ],
+            [
+              1102.0,
+              1680.0
+            ],
+            [
+              1100.0,
+              1768.0
+            ],
+            [
+              811.0,
+              1768.0
+            ]
+          ],
+          "aabb": {
+            "x": 811.0,
+            "y": 1680.0,
+            "width": 291.0,
+            "height": 88.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "BM-46-06-9479",
+          "format": "Code 39",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              2054.0,
+              1816.0
+            ],
+            [
+              2830.0,
+              1816.0
+            ],
+            [
+              2837.0,
+              1980.0
+            ],
+            [
+              2061.0,
+              1980.0
+            ]
+          ],
+          "aabb": {
+            "x": 2054.0,
+            "y": 1816.0,
+            "width": 783.0,
+            "height": 164.0
+          },
+          "evidence": {}
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 4,
+            "global-histogram": 4
+          },
+          "invalid_errors": {},
+          "decoded_unique": 4,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 9,
+          "linear_located": 5,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 4,
+          "linear_decoded": 5,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 4
+        }
+      },
+      "overlay": "overlays/page-0046.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0469,
+        "matrix_error_recovery_seconds": 0.0,
+        "linear_seconds": 0.5701,
+        "total_seconds": 0.6744
+      }
+    },
+    {
+      "page": 47,
+      "source_image": "pages/page-0047.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 1,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "PO33962621203",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              415.0,
+              900.0
+            ],
+            [
+              682.0,
+              900.0
+            ],
+            [
+              679.0,
+              979.0
+            ],
+            [
+              411.0,
+              979.0
+            ]
+          ],
+          "aabb": {
+            "x": 411.0,
+            "y": 900.0,
+            "width": 271.0,
+            "height": 79.0
+          },
+          "evidence": {}
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 0,
+            "global-histogram": 0
+          },
+          "invalid_errors": {},
+          "decoded_unique": 0,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 1,
+          "linear_located": 1,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 1,
+          "linear_decoded": 1,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 1
+        }
+      },
+      "overlay": "overlays/page-0047.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0378,
+        "matrix_error_recovery_seconds": 0.0,
+        "linear_seconds": 0.3799,
+        "total_seconds": 0.451
+      }
+    },
+    {
+      "page": 48,
+      "source_image": "pages/page-0048.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 0,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 0,
+            "global-histogram": 0
+          },
+          "invalid_errors": {},
+          "decoded_unique": 0,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 0,
+          "linear_located": 0,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 0,
+          "linear_decoded": 0,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 0
+        }
+      },
+      "overlay": "overlays/page-0048.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0428,
+        "matrix_error_recovery_seconds": 0.0,
+        "linear_seconds": 0.6088,
+        "total_seconds": 0.7516
+      }
+    },
+    {
+      "page": 49,
+      "source_image": "pages/page-0049.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 2,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "BM-49-02-3201",
+          "format": "Code 39",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              1148.0,
+              2153.0
+            ],
+            [
+              1535.0,
+              2153.0
+            ],
+            [
+              1538.0,
+              2214.0
+            ],
+            [
+              1150.0,
+              2214.0
+            ]
+          ],
+          "aabb": {
+            "x": 1148.0,
+            "y": 2153.0,
+            "width": 390.0,
+            "height": 61.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "(01)09506000353873(21)BM4901",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              777.0,
+              2345.0
+            ],
+            [
+              773.0,
+              2526.0
+            ],
+            [
+              593.0,
+              2522.0
+            ],
+            [
+              597.0,
+              2341.0
+            ]
+          ],
+          "aabb": {
+            "x": 593.0,
+            "y": 2341.0,
+            "width": 184.0,
+            "height": 185.0
+          },
+          "evidence": {}
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 1,
+            "global-histogram": 1
+          },
+          "invalid_errors": {},
+          "decoded_unique": 1,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 2,
+          "linear_located": 1,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 1,
+          "linear_decoded": 1,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 1
+        }
+      },
+      "overlay": "overlays/page-0049.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0392,
+        "matrix_error_recovery_seconds": 0.0,
+        "linear_seconds": 0.4633,
+        "total_seconds": 0.5604
+      }
+    },
+    {
+      "page": 50,
+      "source_image": "pages/page-0050.jpg",
+      "source_mode": "native-embedded-raster",
+      "image_size": {
+        "width": 2400,
+        "height": 3360
+      },
+      "decoded_count": 2,
+      "localized_unresolved_matrix_count": 0,
+      "review_candidate_count": 0,
+      "results": [
+        {
+          "status": "decoded",
+          "kind": "linear",
+          "decoded": true,
+          "text": "PO17643518436",
+          "format": "Code 128",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:linear-whole-page"
+          ],
+          "attempts": [
+            "whole-page:linear:local-average"
+          ],
+          "quad": [
+            [
+              788.0,
+              2055.0
+            ],
+            [
+              788.0,
+              1520.0
+            ],
+            [
+              592.0,
+              1520.0
+            ],
+            [
+              592.0,
+              2055.0
+            ]
+          ],
+          "aabb": {
+            "x": 592.0,
+            "y": 1520.0,
+            "width": 196.0,
+            "height": 535.0
+          },
+          "evidence": {}
+        },
+        {
+          "status": "decoded",
+          "kind": "matrix",
+          "decoded": true,
+          "text": "DM|BM|P050|I02|L886712",
+          "format": "Data Matrix",
+          "confidence": 1.0,
+          "sources": [
+            "zxing:matrix-whole-page:global-histogram:downscale",
+            "zxing:matrix-whole-page:local-average:downscale"
+          ],
+          "attempts": [
+            "whole-page:local-average:downscale",
+            "whole-page:global-histogram:downscale"
+          ],
+          "quad": [
+            [
+              1644.0,
+              2602.0
+            ],
+            [
+              1769.0,
+              2592.0
+            ],
+            [
+              1780.0,
+              2717.0
+            ],
+            [
+              1654.0,
+              2727.0
+            ]
+          ],
+          "aabb": {
+            "x": 1644.0,
+            "y": 2592.0,
+            "width": 136.0,
+            "height": 135.0
+          },
+          "evidence": {}
+        }
+      ],
+      "unresolved_matrix": [],
+      "review_candidates": [],
+      "diagnostics": {
+        "matrix": {
+          "reads": {
+            "local-average": 1,
+            "global-histogram": 1
+          },
+          "invalid_errors": {},
+          "decoded_unique": 1,
+          "invalid_unique_unexplained": 0,
+          "error_guided_recovered": 0,
+          "localized_unresolved": 0,
+          "residual_proposals_enabled": false,
+          "residual_proposals": 0,
+          "residual_decoded": 0,
+          "residual_unresolved": 0
+        },
+        "linear": {
+          "located_total": 2,
+          "linear_located": 1,
+          "locator_rejected": 0,
+          "linear_whole_page_decoded": 1,
+          "linear_decoded": 1,
+          "linear_review": 0,
+          "linear_rejected_by_physics": 0,
+          "linear_proposals_explained_by_anchor": 1
+        }
+      },
+      "overlay": "overlays/page-0050.png",
+      "timings": {
+        "matrix_fast_seconds": 0.0399,
+        "matrix_error_recovery_seconds": 0.0,
+        "linear_seconds": 0.4511,
+        "total_seconds": 0.5363
+      }
+    }
+  ]
+}

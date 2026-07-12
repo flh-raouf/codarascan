@@ -1,0 +1,6095 @@
+{
+  "dataset": "Synthetic Mixed Barcode Dossier - balanced",
+  "seed": 260714,
+  "pages": 50,
+  "zero_code_pages": [
+    7,
+    16,
+    28,
+    39,
+    48
+  ],
+  "busy_pages": {
+    "10": 8,
+    "25": 7,
+    "38": 9,
+    "46": 10
+  },
+  "format_counts": {
+    "CODE_39": 25,
+    "DATA_MATRIX": 38,
+    "CODE_128": 38,
+    "QR_CODE": 21
+  },
+  "difficulty_counts": {
+    "easy": 59,
+    "hard": 10,
+    "medium": 53
+  },
+  "page_manifest": [
+    {
+      "page": 1,
+      "code_count": 3,
+      "orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 1.41,
+      "jpeg_quality_stage": 61,
+      "blur_radius": 0.337
+    },
+    {
+      "page": 2,
+      "code_count": 2,
+      "orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 0.98,
+      "jpeg_quality_stage": 61,
+      "blur_radius": 0.457
+    },
+    {
+      "page": 3,
+      "code_count": 3,
+      "orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.02,
+      "jpeg_quality_stage": 70,
+      "blur_radius": 0.452
+    },
+    {
+      "page": 4,
+      "code_count": 1,
+      "orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.77,
+      "jpeg_quality_stage": 62,
+      "blur_radius": 0.269
+    },
+    {
+      "page": 5,
+      "code_count": 1,
+      "orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -1.29,
+      "jpeg_quality_stage": 57,
+      "blur_radius": 0.379
+    },
+    {
+      "page": 6,
+      "code_count": 2,
+      "orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 0.34,
+      "jpeg_quality_stage": 62,
+      "blur_radius": 0.475
+    },
+    {
+      "page": 7,
+      "code_count": 0,
+      "orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -1.7,
+      "jpeg_quality_stage": 61,
+      "blur_radius": 0.338
+    },
+    {
+      "page": 8,
+      "code_count": 3,
+      "orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 0.32,
+      "jpeg_quality_stage": 51,
+      "blur_radius": 0.26
+    },
+    {
+      "page": 9,
+      "code_count": 2,
+      "orientation": "landscape",
+      "noise_level": "heavy",
+      "page_skew_deg": -1.16,
+      "jpeg_quality_stage": 42,
+      "blur_radius": 0.663
+    },
+    {
+      "page": 10,
+      "code_count": 8,
+      "orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -1.62,
+      "jpeg_quality_stage": 67,
+      "blur_radius": 0.41
+    },
+    {
+      "page": 11,
+      "code_count": 3,
+      "orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 0.96,
+      "jpeg_quality_stage": 68,
+      "blur_radius": 0.359
+    },
+    {
+      "page": 12,
+      "code_count": 3,
+      "orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -1.11,
+      "jpeg_quality_stage": 67,
+      "blur_radius": 0.461
+    },
+    {
+      "page": 13,
+      "code_count": 3,
+      "orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.69,
+      "jpeg_quality_stage": 49,
+      "blur_radius": 0.353
+    },
+    {
+      "page": 14,
+      "code_count": 3,
+      "orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.95,
+      "jpeg_quality_stage": 57,
+      "blur_radius": 0.303
+    },
+    {
+      "page": 15,
+      "code_count": 2,
+      "orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 0.61,
+      "jpeg_quality_stage": 65,
+      "blur_radius": 0.496
+    },
+    {
+      "page": 16,
+      "code_count": 0,
+      "orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.34,
+      "jpeg_quality_stage": 54,
+      "blur_radius": 0.276
+    },
+    {
+      "page": 17,
+      "code_count": 2,
+      "orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.47,
+      "jpeg_quality_stage": 57,
+      "blur_radius": 0.444
+    },
+    {
+      "page": 18,
+      "code_count": 1,
+      "orientation": "landscape",
+      "noise_level": "heavy",
+      "page_skew_deg": -1.09,
+      "jpeg_quality_stage": 52,
+      "blur_radius": 0.685
+    },
+    {
+      "page": 19,
+      "code_count": 2,
+      "orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -1.55,
+      "jpeg_quality_stage": 65,
+      "blur_radius": 0.367
+    },
+    {
+      "page": 20,
+      "code_count": 2,
+      "orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 1.41,
+      "jpeg_quality_stage": 64,
+      "blur_radius": 0.385
+    },
+    {
+      "page": 21,
+      "code_count": 4,
+      "orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 1.03,
+      "jpeg_quality_stage": 62,
+      "blur_radius": 0.496
+    },
+    {
+      "page": 22,
+      "code_count": 1,
+      "orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.69,
+      "jpeg_quality_stage": 51,
+      "blur_radius": 0.299
+    },
+    {
+      "page": 23,
+      "code_count": 3,
+      "orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.65,
+      "jpeg_quality_stage": 49,
+      "blur_radius": 0.432
+    },
+    {
+      "page": 24,
+      "code_count": 1,
+      "orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 0.89,
+      "jpeg_quality_stage": 53,
+      "blur_radius": 0.442
+    },
+    {
+      "page": 25,
+      "code_count": 7,
+      "orientation": "landscape",
+      "noise_level": "heavy",
+      "page_skew_deg": 1.66,
+      "jpeg_quality_stage": 55,
+      "blur_radius": 0.692
+    },
+    {
+      "page": 26,
+      "code_count": 3,
+      "orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -1.4,
+      "jpeg_quality_stage": 70,
+      "blur_radius": 0.439
+    },
+    {
+      "page": 27,
+      "code_count": 2,
+      "orientation": "portrait",
+      "noise_level": "heavy",
+      "page_skew_deg": -2.39,
+      "jpeg_quality_stage": 51,
+      "blur_radius": 0.47
+    },
+    {
+      "page": 28,
+      "code_count": 0,
+      "orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 0.31,
+      "jpeg_quality_stage": 60,
+      "blur_radius": 0.354
+    },
+    {
+      "page": 29,
+      "code_count": 2,
+      "orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 0.55,
+      "jpeg_quality_stage": 61,
+      "blur_radius": 0.41
+    },
+    {
+      "page": 30,
+      "code_count": 1,
+      "orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -1.34,
+      "jpeg_quality_stage": 68,
+      "blur_radius": 0.441
+    },
+    {
+      "page": 31,
+      "code_count": 2,
+      "orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 0.83,
+      "jpeg_quality_stage": 51,
+      "blur_radius": 0.466
+    },
+    {
+      "page": 32,
+      "code_count": 2,
+      "orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.98,
+      "jpeg_quality_stage": 57,
+      "blur_radius": 0.505
+    },
+    {
+      "page": 33,
+      "code_count": 3,
+      "orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -1.41,
+      "jpeg_quality_stage": 53,
+      "blur_radius": 0.283
+    },
+    {
+      "page": 34,
+      "code_count": 1,
+      "orientation": "landscape",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.73,
+      "jpeg_quality_stage": 59,
+      "blur_radius": 0.42
+    },
+    {
+      "page": 35,
+      "code_count": 1,
+      "orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 0.24,
+      "jpeg_quality_stage": 59,
+      "blur_radius": 0.369
+    },
+    {
+      "page": 36,
+      "code_count": 4,
+      "orientation": "portrait",
+      "noise_level": "heavy",
+      "page_skew_deg": -0.98,
+      "jpeg_quality_stage": 44,
+      "blur_radius": 0.492
+    },
+    {
+      "page": 37,
+      "code_count": 1,
+      "orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.58,
+      "jpeg_quality_stage": 51,
+      "blur_radius": 0.328
+    },
+    {
+      "page": 38,
+      "code_count": 9,
+      "orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.44,
+      "jpeg_quality_stage": 66,
+      "blur_radius": 0.479
+    },
+    {
+      "page": 39,
+      "code_count": 0,
+      "orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -1.04,
+      "jpeg_quality_stage": 61,
+      "blur_radius": 0.287
+    },
+    {
+      "page": 40,
+      "code_count": 4,
+      "orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.7,
+      "jpeg_quality_stage": 57,
+      "blur_radius": 0.394
+    },
+    {
+      "page": 41,
+      "code_count": 4,
+      "orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.35,
+      "jpeg_quality_stage": 59,
+      "blur_radius": 0.256
+    },
+    {
+      "page": 42,
+      "code_count": 1,
+      "orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 0.73,
+      "jpeg_quality_stage": 56,
+      "blur_radius": 0.294
+    },
+    {
+      "page": 43,
+      "code_count": 3,
+      "orientation": "landscape",
+      "noise_level": "moderate",
+      "page_skew_deg": -1.45,
+      "jpeg_quality_stage": 57,
+      "blur_radius": 0.483
+    },
+    {
+      "page": 44,
+      "code_count": 1,
+      "orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 0.78,
+      "jpeg_quality_stage": 56,
+      "blur_radius": 0.272
+    },
+    {
+      "page": 45,
+      "code_count": 1,
+      "orientation": "portrait",
+      "noise_level": "heavy",
+      "page_skew_deg": -0.03,
+      "jpeg_quality_stage": 55,
+      "blur_radius": 0.462
+    },
+    {
+      "page": 46,
+      "code_count": 10,
+      "orientation": "landscape",
+      "noise_level": "heavy",
+      "page_skew_deg": -0.14,
+      "jpeg_quality_stage": 46,
+      "blur_radius": 0.54
+    },
+    {
+      "page": 47,
+      "code_count": 1,
+      "orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -1.02,
+      "jpeg_quality_stage": 49,
+      "blur_radius": 0.391
+    },
+    {
+      "page": 48,
+      "code_count": 0,
+      "orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.1,
+      "jpeg_quality_stage": 64,
+      "blur_radius": 0.422
+    },
+    {
+      "page": 49,
+      "code_count": 2,
+      "orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 0.08,
+      "jpeg_quality_stage": 57,
+      "blur_radius": 0.502
+    },
+    {
+      "page": 50,
+      "code_count": 2,
+      "orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 1.01,
+      "jpeg_quality_stage": 48,
+      "blur_radius": 0.253
+    }
+  ],
+  "symbols": [
+    {
+      "id": 1,
+      "page": 1,
+      "index": 1,
+      "format": "CODE_39",
+      "value": "BM-01-01-8089",
+      "difficulty": "easy",
+      "scenario": "oblique",
+      "close_group": null,
+      "scale": 2,
+      "rotation_deg": -20.97,
+      "filename": "symbol-0001.png",
+      "label_box": [
+        429,
+        2440,
+        923,
+        2764
+      ],
+      "page_quad": [
+        [
+          673.8,
+          2683.65
+        ],
+        [
+          1077.11,
+          2826.94
+        ],
+        [
+          1043.63,
+          2921.17
+        ],
+        [
+          640.33,
+          2777.88
+        ]
+      ],
+      "page_aabb": {
+        "x": 640.33,
+        "y": 2683.65,
+        "width": 436.78,
+        "height": 237.52
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 1.41
+    },
+    {
+      "id": 2,
+      "page": 1,
+      "index": 2,
+      "format": "DATA_MATRIX",
+      "value": "(01)09506000396446(21)BM0102",
+      "difficulty": "easy",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 10,
+      "rotation_deg": 2.0,
+      "filename": "symbol-0002.png",
+      "label_box": [
+        1172,
+        2048,
+        1432,
+        2340
+      ],
+      "page_quad": [
+        [
+          1362.4,
+          2284.35
+        ],
+        [
+          1562.05,
+          2272.46
+        ],
+        [
+          1573.95,
+          2472.1
+        ],
+        [
+          1374.3,
+          2484.0
+        ]
+      ],
+      "page_aabb": {
+        "x": 1362.4,
+        "y": 2272.46,
+        "width": 211.54,
+        "height": 211.54
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 1.41
+    },
+    {
+      "id": 3,
+      "page": 1,
+      "index": 3,
+      "format": "DATA_MATRIX",
+      "value": "(01)09506000362478(21)BM0103",
+      "difficulty": "hard",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 8,
+      "rotation_deg": 3.05,
+      "filename": "symbol-0003.png",
+      "label_box": [
+        321,
+        1695,
+        537,
+        1941
+      ],
+      "page_quad": [
+        [
+          499.91,
+          1950.32
+        ],
+        [
+          659.42,
+          1937.88
+        ],
+        [
+          671.87,
+          2097.39
+        ],
+        [
+          512.35,
+          2109.84
+        ]
+      ],
+      "page_aabb": {
+        "x": 499.91,
+        "y": 1937.88,
+        "width": 171.96,
+        "height": 171.96
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 1.41
+    },
+    {
+      "id": 4,
+      "page": 2,
+      "index": 1,
+      "format": "CODE_128",
+      "value": "BM0020151968405",
+      "difficulty": "medium",
+      "scenario": "close",
+      "close_group": 2,
+      "scale": 3,
+      "rotation_deg": -1.63,
+      "filename": "symbol-0004.png",
+      "label_box": [
+        918,
+        750,
+        1469,
+        996
+      ],
+      "page_quad": [
+        [
+          1045.9,
+          965.08
+        ],
+        [
+          1540.87,
+          970.72
+        ],
+        [
+          1539.15,
+          1120.72
+        ],
+        [
+          1044.19,
+          1115.07
+        ]
+      ],
+      "page_aabb": {
+        "x": 1044.19,
+        "y": 965.08,
+        "width": 496.68,
+        "height": 155.64
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 0.98
+    },
+    {
+      "id": 5,
+      "page": 2,
+      "index": 2,
+      "format": "CODE_128",
+      "value": "PO49327686098",
+      "difficulty": "easy",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 4,
+      "rotation_deg": 0.35,
+      "filename": "symbol-0005.png",
+      "label_box": [
+        148,
+        1017,
+        808,
+        1297
+      ],
+      "page_quad": [
+        [
+          271.18,
+          1246.21
+        ],
+        [
+          887.02,
+          1231.95
+        ],
+        [
+          891.65,
+          1431.9
+        ],
+        [
+          275.81,
+          1446.16
+        ]
+      ],
+      "page_aabb": {
+        "x": 271.18,
+        "y": 1231.95,
+        "width": 620.46,
+        "height": 214.21
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 0.98
+    },
+    {
+      "id": 6,
+      "page": 3,
+      "index": 1,
+      "format": "DATA_MATRIX",
+      "value": "(01)09506000382036(21)BM0301",
+      "difficulty": "medium",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 9,
+      "rotation_deg": 1.59,
+      "filename": "symbol-0006.png",
+      "label_box": [
+        1176,
+        2270,
+        1412,
+        2538
+      ],
+      "page_quad": [
+        [
+          1562.77,
+          2755.61
+        ],
+        [
+          1742.7,
+          2750.68
+        ],
+        [
+          1747.64,
+          2930.61
+        ],
+        [
+          1567.71,
+          2935.54
+        ]
+      ],
+      "page_aabb": {
+        "x": 1562.77,
+        "y": 2750.68,
+        "width": 184.87,
+        "height": 184.87
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.02
+    },
+    {
+      "id": 7,
+      "page": 3,
+      "index": 2,
+      "format": "QR_CODE",
+      "value": "https://example.invalid/balanced/003/02",
+      "difficulty": "easy",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 7,
+      "rotation_deg": 2.84,
+      "filename": "symbol-0007.png",
+      "label_box": [
+        228,
+        1140,
+        547,
+        1489
+      ],
+      "page_quad": [
+        [
+          613.01,
+          1630.35
+        ],
+        [
+          871.7,
+          1617.6
+        ],
+        [
+          884.44,
+          1876.29
+        ],
+        [
+          625.75,
+          1889.03
+        ]
+      ],
+      "page_aabb": {
+        "x": 613.01,
+        "y": 1617.6,
+        "width": 271.43,
+        "height": 271.43
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.02
+    },
+    {
+      "id": 8,
+      "page": 3,
+      "index": 3,
+      "format": "DATA_MATRIX",
+      "value": "(01)09506000330965(21)BM0303",
+      "difficulty": "hard",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 7,
+      "rotation_deg": -1.61,
+      "filename": "symbol-0008.png",
+      "label_box": [
+        300,
+        2102,
+        478,
+        2312
+      ],
+      "page_quad": [
+        [
+          683.18,
+          2573.84
+        ],
+        [
+          823.13,
+          2577.82
+        ],
+        [
+          819.15,
+          2717.77
+        ],
+        [
+          679.2,
+          2713.79
+        ]
+      ],
+      "page_aabb": {
+        "x": 679.2,
+        "y": 2573.84,
+        "width": 143.92,
+        "height": 143.92
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.02
+    },
+    {
+      "id": 9,
+      "page": 4,
+      "index": 1,
+      "format": "DATA_MATRIX",
+      "value": "(01)09506000352467(21)BM0401",
+      "difficulty": "easy",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 7,
+      "rotation_deg": -3.02,
+      "filename": "symbol-0009.png",
+      "label_box": [
+        664,
+        301,
+        860,
+        527
+      ],
+      "page_quad": [
+        [
+          985.89,
+          994.31
+        ],
+        [
+          1125.58,
+          1003.55
+        ],
+        [
+          1116.33,
+          1143.25
+        ],
+        [
+          976.64,
+          1134.0
+        ]
+      ],
+      "page_aabb": {
+        "x": 976.64,
+        "y": 994.31,
+        "width": 148.94,
+        "height": 148.94
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.77
+    },
+    {
+      "id": 10,
+      "page": 5,
+      "index": 1,
+      "format": "CODE_128",
+      "value": "BM0050129347924",
+      "difficulty": "easy",
+      "scenario": "close",
+      "close_group": 2,
+      "scale": 2,
+      "rotation_deg": -3.36,
+      "filename": "symbol-0010.png",
+      "label_box": [
+        778,
+        1519,
+        1160,
+        1715
+      ],
+      "page_quad": [
+        [
+          1016.86,
+          1969.05
+        ],
+        [
+          1345.78,
+          1995.8
+        ],
+        [
+          1337.67,
+          2095.47
+        ],
+        [
+          1008.76,
+          2068.72
+        ]
+      ],
+      "page_aabb": {
+        "x": 1008.76,
+        "y": 1969.05,
+        "width": 337.02,
+        "height": 126.42
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -1.29
+    },
+    {
+      "id": 11,
+      "page": 6,
+      "index": 1,
+      "format": "CODE_39",
+      "value": "BM-06-01-2338",
+      "difficulty": "medium",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 3,
+      "rotation_deg": 2.93,
+      "filename": "symbol-0011.png",
+      "label_box": [
+        806,
+        558,
+        1496,
+        812
+      ],
+      "page_quad": [
+        [
+          873.79,
+          1319.37
+        ],
+        [
+          1514.74,
+          1282.73
+        ],
+        [
+          1523.31,
+          1432.48
+        ],
+        [
+          882.35,
+          1469.12
+        ]
+      ],
+      "page_aabb": {
+        "x": 873.79,
+        "y": 1282.73,
+        "width": 649.51,
+        "height": 186.4
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 0.34
+    },
+    {
+      "id": 12,
+      "page": 6,
+      "index": 2,
+      "format": "CODE_128",
+      "value": "BM0060212376692",
+      "difficulty": "easy",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 2,
+      "rotation_deg": 0.52,
+      "filename": "symbol-0012.png",
+      "label_box": [
+        1309,
+        2285,
+        1685,
+        2465
+      ],
+      "page_quad": [
+        [
+          1389.56,
+          3016.29
+        ],
+        [
+          1719.53,
+          3011.33
+        ],
+        [
+          1721.03,
+          3111.32
+        ],
+        [
+          1391.07,
+          3116.28
+        ]
+      ],
+      "page_aabb": {
+        "x": 1389.56,
+        "y": 3011.33,
+        "width": 331.47,
+        "height": 104.95
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 0.34
+    },
+    {
+      "id": 13,
+      "page": 8,
+      "index": 1,
+      "format": "CODE_128",
+      "value": "PO50709324066",
+      "difficulty": "easy",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 3,
+      "rotation_deg": -2.88,
+      "filename": "symbol-0013.png",
+      "label_box": [
+        773,
+        1805,
+        1279,
+        2045
+      ],
+      "page_quad": [
+        [
+          1045.74,
+          2169.29
+        ],
+        [
+          1507.28,
+          2189.91
+        ],
+        [
+          1500.58,
+          2339.76
+        ],
+        [
+          1039.04,
+          2319.14
+        ]
+      ],
+      "page_aabb": {
+        "x": 1039.04,
+        "y": 2169.29,
+        "width": 468.23,
+        "height": 170.47
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 0.32
+    },
+    {
+      "id": 14,
+      "page": 8,
+      "index": 2,
+      "format": "QR_CODE",
+      "value": "QR|BM|PAGE=008|INDEX=02|LOT=284127",
+      "difficulty": "easy",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 6,
+      "rotation_deg": -3.31,
+      "filename": "symbol-0014.png",
+      "label_box": [
+        1190,
+        655,
+        1452,
+        947
+      ],
+      "page_quad": [
+        [
+          1468.26,
+          1024.86
+        ],
+        [
+          1665.99,
+          1035.19
+        ],
+        [
+          1655.67,
+          1232.92
+        ],
+        [
+          1457.94,
+          1222.59
+        ]
+      ],
+      "page_aabb": {
+        "x": 1457.94,
+        "y": 1024.86,
+        "width": 208.05,
+        "height": 208.05
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 0.32
+    },
+    {
+      "id": 15,
+      "page": 8,
+      "index": 3,
+      "format": "QR_CODE",
+      "value": "QR|BM|PAGE=008|INDEX=03|LOT=468729",
+      "difficulty": "easy",
+      "scenario": "edge",
+      "close_group": null,
+      "scale": 8,
+      "rotation_deg": -3.95,
+      "filename": "symbol-0015.png",
+      "label_box": [
+        1518,
+        745,
+        1852,
+        1109
+      ],
+      "page_quad": [
+        [
+          1803.46,
+          1112.77
+        ],
+        [
+          2066.93,
+          1129.47
+        ],
+        [
+          2050.23,
+          1392.94
+        ],
+        [
+          1786.76,
+          1376.24
+        ]
+      ],
+      "page_aabb": {
+        "x": 1786.76,
+        "y": 1112.77,
+        "width": 280.18,
+        "height": 280.18
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 0.32
+    },
+    {
+      "id": 16,
+      "page": 9,
+      "index": 1,
+      "format": "DATA_MATRIX",
+      "value": "DM|BM|P009|I01|L334602",
+      "difficulty": "easy",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 9,
+      "rotation_deg": -0.86,
+      "filename": "symbol-0016.png",
+      "label_box": [
+        71,
+        933,
+        303,
+        1197
+      ],
+      "page_quad": [
+        [
+          603.95,
+          1398.49
+        ],
+        [
+          783.84,
+          1404.82
+        ],
+        [
+          777.51,
+          1584.71
+        ],
+        [
+          597.62,
+          1578.38
+        ]
+      ],
+      "page_aabb": {
+        "x": 597.62,
+        "y": 1398.49,
+        "width": 186.22,
+        "height": 186.22
+      },
+      "page_orientation": "landscape",
+      "noise_level": "heavy",
+      "page_skew_deg": -1.16
+    },
+    {
+      "id": 17,
+      "page": 9,
+      "index": 2,
+      "format": "CODE_128",
+      "value": "PO34596789606",
+      "difficulty": "easy",
+      "scenario": "oblique",
+      "close_group": null,
+      "scale": 4,
+      "rotation_deg": -12.61,
+      "filename": "symbol-0017.png",
+      "label_box": [
+        520,
+        315,
+        1220,
+        725
+      ],
+      "page_quad": [
+        [
+          1112.48,
+          790.52
+        ],
+        [
+          1710.78,
+          937.1
+        ],
+        [
+          1663.19,
+          1131.36
+        ],
+        [
+          1064.88,
+          984.77
+        ]
+      ],
+      "page_aabb": {
+        "x": 1064.88,
+        "y": 790.52,
+        "width": 645.9,
+        "height": 340.84
+      },
+      "page_orientation": "landscape",
+      "noise_level": "heavy",
+      "page_skew_deg": -1.16
+    },
+    {
+      "id": 18,
+      "page": 10,
+      "index": 1,
+      "format": "CODE_39",
+      "value": "BM-10-01-3754",
+      "difficulty": "hard",
+      "scenario": "close",
+      "close_group": 1,
+      "scale": 4,
+      "rotation_deg": -2.95,
+      "filename": "symbol-0018.png",
+      "label_box": [
+        564,
+        948,
+        1482,
+        1276
+      ],
+      "page_quad": [
+        [
+          777.16,
+          1111.22
+        ],
+        [
+          1630.44,
+          1179.41
+        ],
+        [
+          1614.51,
+          1378.77
+        ],
+        [
+          761.23,
+          1310.59
+        ]
+      ],
+      "page_aabb": {
+        "x": 761.23,
+        "y": 1111.22,
+        "width": 869.21,
+        "height": 267.55
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -1.62
+    },
+    {
+      "id": 19,
+      "page": 10,
+      "index": 2,
+      "format": "CODE_39",
+      "value": "BM-10-02-4238",
+      "difficulty": "medium",
+      "scenario": "close",
+      "close_group": 1,
+      "scale": 3,
+      "rotation_deg": -1.78,
+      "filename": "symbol-0019.png",
+      "label_box": [
+        1350,
+        1706,
+        2034,
+        1944
+      ],
+      "page_quad": [
+        [
+          1528.11,
+          1882.69
+        ],
+        [
+          2168.98,
+          1920.75
+        ],
+        [
+          2160.09,
+          2070.49
+        ],
+        [
+          1519.22,
+          2032.43
+        ]
+      ],
+      "page_aabb": {
+        "x": 1519.22,
+        "y": 1882.69,
+        "width": 649.76,
+        "height": 187.8
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -1.62
+    },
+    {
+      "id": 20,
+      "page": 10,
+      "index": 3,
+      "format": "DATA_MATRIX",
+      "value": "(01)09506000375733(21)BM1003",
+      "difficulty": "easy",
+      "scenario": "close",
+      "close_group": 1,
+      "scale": 7,
+      "rotation_deg": 2.15,
+      "filename": "symbol-0020.png",
+      "label_box": [
+        1790,
+        1266,
+        1966,
+        1474
+      ],
+      "page_quad": [
+        [
+          1971.14,
+          1457.65
+        ],
+        [
+          2111.13,
+          1456.35
+        ],
+        [
+          2112.43,
+          1596.35
+        ],
+        [
+          1972.43,
+          1597.65
+        ]
+      ],
+      "page_aabb": {
+        "x": 1971.14,
+        "y": 1456.35,
+        "width": 141.29,
+        "height": 141.29
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -1.62
+    },
+    {
+      "id": 21,
+      "page": 10,
+      "index": 4,
+      "format": "CODE_128",
+      "value": "LOT-465242-B10",
+      "difficulty": "easy",
+      "scenario": "close",
+      "close_group": 1,
+      "scale": 2,
+      "rotation_deg": 3.07,
+      "filename": "symbol-0021.png",
+      "label_box": [
+        1688,
+        971,
+        2128,
+        1161
+      ],
+      "page_quad": [
+        [
+          1880.9,
+          1179.0
+        ],
+        [
+          2276.77,
+          1168.98
+        ],
+        [
+          2279.3,
+          1268.94
+        ],
+        [
+          1883.43,
+          1278.97
+        ]
+      ],
+      "page_aabb": {
+        "x": 1880.9,
+        "y": 1168.98,
+        "width": 398.41,
+        "height": 110.0
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -1.62
+    },
+    {
+      "id": 22,
+      "page": 10,
+      "index": 5,
+      "format": "DATA_MATRIX",
+      "value": "(01)09506000375259(21)BM1005",
+      "difficulty": "medium",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 8,
+      "rotation_deg": 0.13,
+      "filename": "symbol-0022.png",
+      "label_box": [
+        619,
+        310,
+        827,
+        550
+      ],
+      "page_quad": [
+        [
+          836.47,
+          472.7
+        ],
+        [
+          996.41,
+          476.86
+        ],
+        [
+          992.26,
+          636.8
+        ],
+        [
+          832.31,
+          632.65
+        ]
+      ],
+      "page_aabb": {
+        "x": 832.31,
+        "y": 472.7,
+        "width": 164.1,
+        "height": 164.1
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -1.62
+    },
+    {
+      "id": 23,
+      "page": 10,
+      "index": 6,
+      "format": "CODE_128",
+      "value": "LOT-298212-B10",
+      "difficulty": "easy",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 4,
+      "rotation_deg": 0.72,
+      "filename": "symbol-0023.png",
+      "label_box": [
+        1123,
+        2319,
+        1965,
+        2609
+      ],
+      "page_quad": [
+        [
+          1283.03,
+          2504.93
+        ],
+        [
+          2074.93,
+          2517.35
+        ],
+        [
+          2071.79,
+          2717.33
+        ],
+        [
+          1279.89,
+          2704.9
+        ]
+      ],
+      "page_aabb": {
+        "x": 1279.89,
+        "y": 2504.93,
+        "width": 795.04,
+        "height": 212.4
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -1.62
+    },
+    {
+      "id": 24,
+      "page": 10,
+      "index": 7,
+      "format": "CODE_39",
+      "value": "BM-10-07-5378",
+      "difficulty": "easy",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 2,
+      "rotation_deg": 1.05,
+      "filename": "symbol-0024.png",
+      "label_box": [
+        77,
+        2595,
+        563,
+        2791
+      ],
+      "page_quad": [
+        [
+          233.84,
+          2753.34
+        ],
+        [
+          661.82,
+          2757.58
+        ],
+        [
+          660.83,
+          2857.58
+        ],
+        [
+          232.85,
+          2853.33
+        ]
+      ],
+      "page_aabb": {
+        "x": 232.85,
+        "y": 2753.34,
+        "width": 428.97,
+        "height": 104.24
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -1.62
+    },
+    {
+      "id": 25,
+      "page": 10,
+      "index": 8,
+      "format": "CODE_128",
+      "value": "PO55449362251",
+      "difficulty": "easy",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 3,
+      "rotation_deg": 3.14,
+      "filename": "symbol-0025.png",
+      "label_box": [
+        1475,
+        428,
+        1995,
+        684
+      ],
+      "page_quad": [
+        [
+          1688.65,
+          640.45
+        ],
+        [
+          2150.49,
+          628.18
+        ],
+        [
+          2154.47,
+          778.13
+        ],
+        [
+          1692.63,
+          790.4
+        ]
+      ],
+      "page_aabb": {
+        "x": 1688.65,
+        "y": 628.18,
+        "width": 465.82,
+        "height": 162.21
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -1.62
+    },
+    {
+      "id": 26,
+      "page": 11,
+      "index": 1,
+      "format": "CODE_128",
+      "value": "BM0110185623283",
+      "difficulty": "easy",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 4,
+      "rotation_deg": 1.13,
+      "filename": "symbol-0026.png",
+      "label_box": [
+        864,
+        1694,
+        1572,
+        1982
+      ],
+      "page_quad": [
+        [
+          1111.57,
+          1957.09
+        ],
+        [
+          1771.13,
+          1932.96
+        ],
+        [
+          1778.44,
+          2132.83
+        ],
+        [
+          1118.88,
+          2156.95
+        ]
+      ],
+      "page_aabb": {
+        "x": 1111.57,
+        "y": 1932.96,
+        "width": 666.87,
+        "height": 223.99
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 0.96
+    },
+    {
+      "id": 27,
+      "page": 11,
+      "index": 2,
+      "format": "DATA_MATRIX",
+      "value": "DM|BM|P011|I02|L614372",
+      "difficulty": "medium",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 8,
+      "rotation_deg": 0.31,
+      "filename": "symbol-0027.png",
+      "label_box": [
+        1654,
+        1888,
+        1860,
+        2126
+      ],
+      "page_quad": [
+        [
+          1905.24,
+          2126.65
+        ],
+        [
+          2065.2,
+          2123.09
+        ],
+        [
+          2068.76,
+          2283.05
+        ],
+        [
+          1908.8,
+          2286.61
+        ]
+      ],
+      "page_aabb": {
+        "x": 1905.24,
+        "y": 2123.09,
+        "width": 163.52,
+        "height": 163.52
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 0.96
+    },
+    {
+      "id": 28,
+      "page": 11,
+      "index": 3,
+      "format": "CODE_128",
+      "value": "BM0110322930502",
+      "difficulty": "easy",
+      "scenario": "edge",
+      "close_group": null,
+      "scale": 2,
+      "rotation_deg": -1.23,
+      "filename": "symbol-0028.png",
+      "label_box": [
+        1690,
+        1515,
+        2060,
+        1691
+      ],
+      "page_quad": [
+        [
+          1933.84,
+          1748.15
+        ],
+        [
+          2263.84,
+          1749.68
+        ],
+        [
+          2263.38,
+          1849.68
+        ],
+        [
+          1933.38,
+          1848.15
+        ]
+      ],
+      "page_aabb": {
+        "x": 1933.38,
+        "y": 1748.15,
+        "width": 330.46,
+        "height": 101.53
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 0.96
+    },
+    {
+      "id": 29,
+      "page": 12,
+      "index": 1,
+      "format": "CODE_39",
+      "value": "BM-12-01-1498",
+      "difficulty": "medium",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 2,
+      "rotation_deg": -2.66,
+      "filename": "symbol-0029.png",
+      "label_box": [
+        513,
+        2183,
+        977,
+        2365
+      ],
+      "page_quad": [
+        [
+          928.73,
+          2615.0
+        ],
+        [
+          1355.8,
+          2643.16
+        ],
+        [
+          1349.22,
+          2742.95
+        ],
+        [
+          922.15,
+          2714.78
+        ]
+      ],
+      "page_aabb": {
+        "x": 922.15,
+        "y": 2615.0,
+        "width": 433.65,
+        "height": 127.95
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -1.11
+    },
+    {
+      "id": 30,
+      "page": 12,
+      "index": 2,
+      "format": "QR_CODE",
+      "value": "https://example.invalid/balanced/012/02",
+      "difficulty": "medium",
+      "scenario": "close",
+      "close_group": 2,
+      "scale": 5,
+      "rotation_deg": 1.24,
+      "filename": "symbol-0030.png",
+      "label_box": [
+        120,
+        576,
+        357,
+        845
+      ],
+      "page_quad": [
+        [
+          569.15,
+          1013.6
+        ],
+        [
+          754.15,
+          1013.19
+        ],
+        [
+          754.56,
+          1198.19
+        ],
+        [
+          569.56,
+          1198.6
+        ]
+      ],
+      "page_aabb": {
+        "x": 569.15,
+        "y": 1013.19,
+        "width": 185.41,
+        "height": 185.41
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -1.11
+    },
+    {
+      "id": 31,
+      "page": 12,
+      "index": 3,
+      "format": "DATA_MATRIX",
+      "value": "DM|BM|P012|I03|L611562",
+      "difficulty": "easy",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 9,
+      "rotation_deg": 0.54,
+      "filename": "symbol-0031.png",
+      "label_box": [
+        115,
+        1039,
+        343,
+        1299
+      ],
+      "page_quad": [
+        [
+          554.55,
+          1473.23
+        ],
+        [
+          734.54,
+          1475.03
+        ],
+        [
+          732.74,
+          1655.02
+        ],
+        [
+          552.75,
+          1653.22
+        ]
+      ],
+      "page_aabb": {
+        "x": 552.75,
+        "y": 1473.23,
+        "width": 181.79,
+        "height": 181.79
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -1.11
+    },
+    {
+      "id": 32,
+      "page": 13,
+      "index": 1,
+      "format": "QR_CODE",
+      "value": "https://example.invalid/balanced/013/01",
+      "difficulty": "medium",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 6,
+      "rotation_deg": 2.53,
+      "filename": "symbol-0032.png",
+      "label_box": [
+        934,
+        1353,
+        1210,
+        1659
+      ],
+      "page_quad": [
+        [
+          1327.9,
+          1588.44
+        ],
+        [
+          1549.79,
+          1581.31
+        ],
+        [
+          1556.92,
+          1803.2
+        ],
+        [
+          1335.03,
+          1810.33
+        ]
+      ],
+      "page_aabb": {
+        "x": 1327.9,
+        "y": 1581.31,
+        "width": 229.01,
+        "height": 229.01
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.69
+    },
+    {
+      "id": 33,
+      "page": 13,
+      "index": 2,
+      "format": "CODE_128",
+      "value": "LOT-633077-B13",
+      "difficulty": "medium",
+      "scenario": "edge",
+      "close_group": null,
+      "scale": 3,
+      "rotation_deg": -1.02,
+      "filename": "symbol-0033.png",
+      "label_box": [
+        1186,
+        1849,
+        1818,
+        2077
+      ],
+      "page_quad": [
+        [
+          1573.23,
+          2074.14
+        ],
+        [
+          2166.97,
+          2091.86
+        ],
+        [
+          2162.49,
+          2241.8
+        ],
+        [
+          1568.76,
+          2224.07
+        ]
+      ],
+      "page_aabb": {
+        "x": 1568.76,
+        "y": 2074.14,
+        "width": 598.21,
+        "height": 167.66
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.69
+    },
+    {
+      "id": 34,
+      "page": 13,
+      "index": 3,
+      "format": "QR_CODE",
+      "value": "QR|BM|PAGE=013|INDEX=03|LOT=274136",
+      "difficulty": "easy",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 6,
+      "rotation_deg": -3.2,
+      "filename": "symbol-0034.png",
+      "label_box": [
+        712,
+        2123,
+        978,
+        2419
+      ],
+      "page_quad": [
+        [
+          1115.75,
+          2352.57
+        ],
+        [
+          1313.3,
+          2366.0
+        ],
+        [
+          1299.86,
+          2563.55
+        ],
+        [
+          1102.32,
+          2550.11
+        ]
+      ],
+      "page_aabb": {
+        "x": 1102.32,
+        "y": 2352.57,
+        "width": 210.98,
+        "height": 210.98
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.69
+    },
+    {
+      "id": 35,
+      "page": 14,
+      "index": 1,
+      "format": "DATA_MATRIX",
+      "value": "DM|BM|P014|I01|L775632",
+      "difficulty": "medium",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 7,
+      "rotation_deg": 3.72,
+      "filename": "symbol-0035.png",
+      "label_box": [
+        222,
+        1997,
+        410,
+        2215
+      ],
+      "page_quad": [
+        [
+          323.83,
+          2198.45
+        ],
+        [
+          463.66,
+          2191.68
+        ],
+        [
+          470.44,
+          2331.51
+        ],
+        [
+          330.6,
+          2338.29
+        ]
+      ],
+      "page_aabb": {
+        "x": 323.83,
+        "y": 2191.68,
+        "width": 146.61,
+        "height": 146.61
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.95
+    },
+    {
+      "id": 36,
+      "page": 14,
+      "index": 2,
+      "format": "DATA_MATRIX",
+      "value": "(01)09506000331359(21)BM1402",
+      "difficulty": "medium",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 10,
+      "rotation_deg": 0.75,
+      "filename": "symbol-0036.png",
+      "label_box": [
+        400,
+        1290,
+        634,
+        1556
+      ],
+      "page_quad": [
+        [
+          510.57,
+          1485.04
+        ],
+        [
+          710.57,
+          1485.72
+        ],
+        [
+          709.88,
+          1685.72
+        ],
+        [
+          509.88,
+          1685.03
+        ]
+      ],
+      "page_aabb": {
+        "x": 509.88,
+        "y": 1485.04,
+        "width": 200.69,
+        "height": 200.69
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.95
+    },
+    {
+      "id": 37,
+      "page": 14,
+      "index": 3,
+      "format": "CODE_128",
+      "value": "PO59714895583",
+      "difficulty": "medium",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 2,
+      "rotation_deg": 2.23,
+      "filename": "symbol-0037.png",
+      "label_box": [
+        1304,
+        1632,
+        1672,
+        1830
+      ],
+      "page_quad": [
+        [
+          1420.51,
+          1862.85
+        ],
+        [
+          1728.43,
+          1855.96
+        ],
+        [
+          1730.67,
+          1955.93
+        ],
+        [
+          1422.75,
+          1962.83
+        ]
+      ],
+      "page_aabb": {
+        "x": 1420.51,
+        "y": 1855.96,
+        "width": 310.16,
+        "height": 106.87
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.95
+    },
+    {
+      "id": 38,
+      "page": 15,
+      "index": 1,
+      "format": "QR_CODE",
+      "value": "QR|BM|PAGE=015|INDEX=01|LOT=407770",
+      "difficulty": "easy",
+      "scenario": "oblique",
+      "close_group": null,
+      "scale": 6,
+      "rotation_deg": 20.5,
+      "filename": "symbol-0038.png",
+      "label_box": [
+        599,
+        1673,
+        935,
+        2029
+      ],
+      "page_quad": [
+        [
+          689.05,
+          2225.79
+        ],
+        [
+          873.76,
+          2154.47
+        ],
+        [
+          945.07,
+          2339.18
+        ],
+        [
+          760.36,
+          2410.5
+        ]
+      ],
+      "page_aabb": {
+        "x": 689.05,
+        "y": 2154.47,
+        "width": 256.03,
+        "height": 256.03
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 0.61
+    },
+    {
+      "id": 39,
+      "page": 15,
+      "index": 2,
+      "format": "DATA_MATRIX",
+      "value": "(01)09506000328615(21)BM1502",
+      "difficulty": "medium",
+      "scenario": "oblique",
+      "close_group": null,
+      "scale": 7,
+      "rotation_deg": 18.3,
+      "filename": "symbol-0039.png",
+      "label_box": [
+        1122,
+        912,
+        1352,
+        1164
+      ],
+      "page_quad": [
+        [
+          1190.02,
+          1420.77
+        ],
+        [
+          1322.46,
+          1375.39
+        ],
+        [
+          1367.84,
+          1507.83
+        ],
+        [
+          1235.4,
+          1553.21
+        ]
+      ],
+      "page_aabb": {
+        "x": 1190.02,
+        "y": 1375.39,
+        "width": 177.82,
+        "height": 177.82
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 0.61
+    },
+    {
+      "id": 40,
+      "page": 17,
+      "index": 1,
+      "format": "DATA_MATRIX",
+      "value": "DM|BM|P017|I01|L153798",
+      "difficulty": "easy",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 7,
+      "rotation_deg": 1.92,
+      "filename": "symbol-0040.png",
+      "label_box": [
+        806,
+        782,
+        982,
+        988
+      ],
+      "page_quad": [
+        [
+          907.72,
+          906.47
+        ],
+        [
+          1047.68,
+          902.92
+        ],
+        [
+          1051.22,
+          1042.88
+        ],
+        [
+          911.27,
+          1046.42
+        ]
+      ],
+      "page_aabb": {
+        "x": 907.72,
+        "y": 902.92,
+        "width": 143.5,
+        "height": 143.5
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.47
+    },
+    {
+      "id": 41,
+      "page": 17,
+      "index": 2,
+      "format": "CODE_39",
+      "value": "BM-17-02-9005",
+      "difficulty": "medium",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 4,
+      "rotation_deg": 1.25,
+      "filename": "symbol-0041.png",
+      "label_box": [
+        323,
+        1435,
+        1229,
+        1731
+      ],
+      "page_quad": [
+        [
+          426.63,
+          1577.53
+        ],
+        [
+          1282.55,
+          1565.85
+        ],
+        [
+          1285.28,
+          1765.83
+        ],
+        [
+          429.36,
+          1777.51
+        ]
+      ],
+      "page_aabb": {
+        "x": 426.63,
+        "y": 1565.85,
+        "width": 858.65,
+        "height": 211.66
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.47
+    },
+    {
+      "id": 42,
+      "page": 18,
+      "index": 1,
+      "format": "CODE_39",
+      "value": "BM-18-01-5428",
+      "difficulty": "easy",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 4,
+      "rotation_deg": -3.67,
+      "filename": "symbol-0042.png",
+      "label_box": [
+        1563,
+        611,
+        2481,
+        947
+      ],
+      "page_quad": [
+        [
+          1711.59,
+          684.61
+        ],
+        [
+          2564.64,
+          755.64
+        ],
+        [
+          2548.05,
+          954.95
+        ],
+        [
+          1695.0,
+          883.92
+        ]
+      ],
+      "page_aabb": {
+        "x": 1695.0,
+        "y": 684.61,
+        "width": 869.64,
+        "height": 270.34
+      },
+      "page_orientation": "landscape",
+      "noise_level": "heavy",
+      "page_skew_deg": -1.09
+    },
+    {
+      "id": 43,
+      "page": 19,
+      "index": 1,
+      "format": "DATA_MATRIX",
+      "value": "DM|BM|P019|I01|L854681",
+      "difficulty": "medium",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 9,
+      "rotation_deg": -3.07,
+      "filename": "symbol-0043.png",
+      "label_box": [
+        811,
+        472,
+        1047,
+        738
+      ],
+      "page_quad": [
+        [
+          913.41,
+          568.4
+        ],
+        [
+          1092.83,
+          582.91
+        ],
+        [
+          1078.32,
+          762.32
+        ],
+        [
+          898.9,
+          747.81
+        ]
+      ],
+      "page_aabb": {
+        "x": 898.9,
+        "y": 568.4,
+        "width": 193.93,
+        "height": 193.93
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -1.55
+    },
+    {
+      "id": 44,
+      "page": 19,
+      "index": 2,
+      "format": "CODE_128",
+      "value": "BM0190248659903",
+      "difficulty": "easy",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 4,
+      "rotation_deg": 3.09,
+      "filename": "symbol-0044.png",
+      "label_box": [
+        633,
+        732,
+        1339,
+        1034
+      ],
+      "page_quad": [
+        [
+          711.02,
+          853.64
+        ],
+        [
+          1370.79,
+          835.95
+        ],
+        [
+          1376.15,
+          1035.88
+        ],
+        [
+          716.38,
+          1053.56
+        ]
+      ],
+      "page_aabb": {
+        "x": 711.02,
+        "y": 835.95,
+        "width": 665.12,
+        "height": 217.62
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -1.55
+    },
+    {
+      "id": 45,
+      "page": 20,
+      "index": 1,
+      "format": "DATA_MATRIX",
+      "value": "DM|BM|P020|I01|L680914",
+      "difficulty": "medium",
+      "scenario": "edge",
+      "close_group": null,
+      "scale": 7,
+      "rotation_deg": -90.03,
+      "filename": "symbol-0045.png",
+      "label_box": [
+        1756,
+        1960,
+        1978,
+        2150
+      ],
+      "page_quad": [
+        [
+          2021.52,
+          2084.71
+        ],
+        [
+          2024.89,
+          2224.67
+        ],
+        [
+          1884.93,
+          2228.04
+        ],
+        [
+          1881.56,
+          2088.08
+        ]
+      ],
+      "page_aabb": {
+        "x": 1881.56,
+        "y": 2084.71,
+        "width": 143.33,
+        "height": 143.33
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 1.41
+    },
+    {
+      "id": 46,
+      "page": 20,
+      "index": 2,
+      "format": "CODE_128",
+      "value": "PO76361423099",
+      "difficulty": "medium",
+      "scenario": "edge",
+      "close_group": null,
+      "scale": 3,
+      "rotation_deg": 1.8,
+      "filename": "symbol-0046.png",
+      "label_box": [
+        31,
+        1453,
+        539,
+        1689
+      ],
+      "page_quad": [
+        [
+          108.09,
+          1633.83
+        ],
+        [
+          569.36,
+          1607.98
+        ],
+        [
+          577.76,
+          1757.75
+        ],
+        [
+          116.48,
+          1783.6
+        ]
+      ],
+      "page_aabb": {
+        "x": 108.09,
+        "y": 1607.98,
+        "width": 469.67,
+        "height": 175.62
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 1.41
+    },
+    {
+      "id": 47,
+      "page": 21,
+      "index": 1,
+      "format": "CODE_128",
+      "value": "PO32177176967",
+      "difficulty": "hard",
+      "scenario": "close",
+      "close_group": 2,
+      "scale": 3,
+      "rotation_deg": -3.45,
+      "filename": "symbol-0047.png",
+      "label_box": [
+        1040,
+        1716,
+        1546,
+        1960
+      ],
+      "page_quad": [
+        [
+          1257.66,
+          2267.3
+        ],
+        [
+          1719.25,
+          2286.85
+        ],
+        [
+          1712.9,
+          2436.71
+        ],
+        [
+          1251.32,
+          2417.17
+        ]
+      ],
+      "page_aabb": {
+        "x": 1251.32,
+        "y": 2267.3,
+        "width": 467.93,
+        "height": 169.41
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 1.03
+    },
+    {
+      "id": 48,
+      "page": 21,
+      "index": 2,
+      "format": "QR_CODE",
+      "value": "QR|BM|PAGE=021|INDEX=02|LOT=401944",
+      "difficulty": "medium",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 6,
+      "rotation_deg": 1.71,
+      "filename": "symbol-0048.png",
+      "label_box": [
+        1206,
+        550,
+        1448,
+        824
+      ],
+      "page_quad": [
+        [
+          1393.62,
+          1106.43
+        ],
+        [
+          1591.39,
+          1096.98
+        ],
+        [
+          1600.84,
+          1294.75
+        ],
+        [
+          1403.07,
+          1304.2
+        ]
+      ],
+      "page_aabb": {
+        "x": 1393.62,
+        "y": 1096.98,
+        "width": 207.22,
+        "height": 207.22
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 1.03
+    },
+    {
+      "id": 49,
+      "page": 21,
+      "index": 3,
+      "format": "DATA_MATRIX",
+      "value": "(01)09506000352320(21)BM2103",
+      "difficulty": "medium",
+      "scenario": "edge",
+      "close_group": null,
+      "scale": 7,
+      "rotation_deg": -89.64,
+      "filename": "symbol-0049.png",
+      "label_box": [
+        1913,
+        1083,
+        2119,
+        1257
+      ],
+      "page_quad": [
+        [
+          2279.81,
+          1615.1
+        ],
+        [
+          2283.2,
+          1755.06
+        ],
+        [
+          2143.24,
+          1758.44
+        ],
+        [
+          2139.85,
+          1618.48
+        ]
+      ],
+      "page_aabb": {
+        "x": 2139.85,
+        "y": 1615.1,
+        "width": 143.34,
+        "height": 143.34
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 1.03
+    },
+    {
+      "id": 50,
+      "page": 21,
+      "index": 4,
+      "format": "QR_CODE",
+      "value": "https://example.invalid/balanced/021/04",
+      "difficulty": "medium",
+      "scenario": "oblique",
+      "close_group": null,
+      "scale": 8,
+      "rotation_deg": -14.38,
+      "filename": "symbol-0050.png",
+      "label_box": [
+        1576,
+        1944,
+        2008,
+        2400
+      ],
+      "page_quad": [
+        [
+          1883.38,
+          2499.26
+        ],
+        [
+          2171.38,
+          2567.63
+        ],
+        [
+          2103.01,
+          2855.62
+        ],
+        [
+          1815.02,
+          2787.25
+        ]
+      ],
+      "page_aabb": {
+        "x": 1815.02,
+        "y": 2499.26,
+        "width": 356.36,
+        "height": 356.36
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 1.03
+    },
+    {
+      "id": 51,
+      "page": 22,
+      "index": 1,
+      "format": "QR_CODE",
+      "value": "QR|BM|PAGE=022|INDEX=01|LOT=736432",
+      "difficulty": "medium",
+      "scenario": "edge",
+      "close_group": null,
+      "scale": 5,
+      "rotation_deg": -89.22,
+      "filename": "symbol-0051.png",
+      "label_box": [
+        25,
+        1823,
+        258,
+        2024
+      ],
+      "page_quad": [
+        [
+          395.26,
+          1941.28
+        ],
+        [
+          395.51,
+          2106.28
+        ],
+        [
+          230.51,
+          2106.53
+        ],
+        [
+          230.26,
+          1941.53
+        ]
+      ],
+      "page_aabb": {
+        "x": 230.26,
+        "y": 1941.28,
+        "width": 165.25,
+        "height": 165.25
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.69
+    },
+    {
+      "id": 52,
+      "page": 23,
+      "index": 1,
+      "format": "CODE_128",
+      "value": "PO16864297086",
+      "difficulty": "medium",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 2,
+      "rotation_deg": -2.2,
+      "filename": "symbol-0052.png",
+      "label_box": [
+        951,
+        1891,
+        1303,
+        2073
+      ],
+      "page_quad": [
+        [
+          1471.53,
+          2076.09
+        ],
+        [
+          1779.15,
+          2091.4
+        ],
+        [
+          1774.18,
+          2191.28
+        ],
+        [
+          1466.56,
+          2175.97
+        ]
+      ],
+      "page_aabb": {
+        "x": 1466.56,
+        "y": 2076.09,
+        "width": 312.59,
+        "height": 115.18
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.65
+    },
+    {
+      "id": 53,
+      "page": 23,
+      "index": 2,
+      "format": "DATA_MATRIX",
+      "value": "DM|BM|P023|I02|L180739",
+      "difficulty": "easy",
+      "scenario": "close",
+      "close_group": 2,
+      "scale": 10,
+      "rotation_deg": 1.41,
+      "filename": "symbol-0053.png",
+      "label_box": [
+        174,
+        816,
+        418,
+        1090
+      ],
+      "page_quad": [
+        [
+          701.23,
+          996.67
+        ],
+        [
+          901.21,
+          994.01
+        ],
+        [
+          903.87,
+          1193.99
+        ],
+        [
+          703.88,
+          1196.65
+        ]
+      ],
+      "page_aabb": {
+        "x": 701.23,
+        "y": 994.01,
+        "width": 202.64,
+        "height": 202.64
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.65
+    },
+    {
+      "id": 54,
+      "page": 23,
+      "index": 3,
+      "format": "DATA_MATRIX",
+      "value": "DM|BM|P023|I03|L747004",
+      "difficulty": "easy",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 8,
+      "rotation_deg": -1.49,
+      "filename": "symbol-0054.png",
+      "label_box": [
+        346,
+        2269,
+        570,
+        2523
+      ],
+      "page_quad": [
+        [
+          872.06,
+          2457.15
+        ],
+        [
+          1031.95,
+          2463.12
+        ],
+        [
+          1025.98,
+          2623.01
+        ],
+        [
+          866.09,
+          2617.04
+        ]
+      ],
+      "page_aabb": {
+        "x": 866.09,
+        "y": 2457.15,
+        "width": 165.86,
+        "height": 165.86
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.65
+    },
+    {
+      "id": 55,
+      "page": 24,
+      "index": 1,
+      "format": "CODE_39",
+      "value": "BM-24-01-1642",
+      "difficulty": "medium",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 3,
+      "rotation_deg": 3.59,
+      "filename": "symbol-0055.png",
+      "label_box": [
+        822,
+        799,
+        1526,
+        1073
+      ],
+      "page_quad": [
+        [
+          976.52,
+          1037.63
+        ],
+        [
+          1616.56,
+          987.49
+        ],
+        [
+          1628.28,
+          1137.03
+        ],
+        [
+          988.24,
+          1187.18
+        ]
+      ],
+      "page_aabb": {
+        "x": 976.52,
+        "y": 987.49,
+        "width": 651.75,
+        "height": 199.68
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 0.89
+    },
+    {
+      "id": 56,
+      "page": 25,
+      "index": 1,
+      "format": "CODE_128",
+      "value": "LOT-750851-B25",
+      "difficulty": "medium",
+      "scenario": "close",
+      "close_group": 1,
+      "scale": 2,
+      "rotation_deg": -2.29,
+      "filename": "symbol-0056.png",
+      "label_box": [
+        153,
+        489,
+        585,
+        667
+      ],
+      "page_quad": [
+        [
+          287.7,
+          846.44
+        ],
+        [
+          683.67,
+          850.81
+        ],
+        [
+          682.57,
+          950.8
+        ],
+        [
+          286.59,
+          946.43
+        ]
+      ],
+      "page_aabb": {
+        "x": 286.59,
+        "y": 846.44,
+        "width": 397.08,
+        "height": 104.36
+      },
+      "page_orientation": "landscape",
+      "noise_level": "heavy",
+      "page_skew_deg": 1.66
+    },
+    {
+      "id": 57,
+      "page": 25,
+      "index": 2,
+      "format": "DATA_MATRIX",
+      "value": "DM|BM|P025|I02|L407733",
+      "difficulty": "hard",
+      "scenario": "close",
+      "close_group": 1,
+      "scale": 7,
+      "rotation_deg": -0.62,
+      "filename": "symbol-0057.png",
+      "label_box": [
+        1046,
+        714,
+        1222,
+        920
+      ],
+      "page_quad": [
+        [
+          1185.01,
+          1046.67
+        ],
+        [
+          1324.98,
+          1044.14
+        ],
+        [
+          1327.52,
+          1184.11
+        ],
+        [
+          1187.54,
+          1186.65
+        ]
+      ],
+      "page_aabb": {
+        "x": 1185.01,
+        "y": 1044.14,
+        "width": 142.51,
+        "height": 142.51
+      },
+      "page_orientation": "landscape",
+      "noise_level": "heavy",
+      "page_skew_deg": 1.66
+    },
+    {
+      "id": 58,
+      "page": 25,
+      "index": 3,
+      "format": "QR_CODE",
+      "value": "https://example.invalid/balanced/025/03",
+      "difficulty": "medium",
+      "scenario": "close",
+      "close_group": 1,
+      "scale": 7,
+      "rotation_deg": -0.43,
+      "filename": "symbol-0058.png",
+      "label_box": [
+        206,
+        816,
+        511,
+        1153
+      ],
+      "page_quad": [
+        [
+          353.63,
+          1178.56
+        ],
+        [
+          612.57,
+          1173.01
+        ],
+        [
+          618.12,
+          1431.95
+        ],
+        [
+          359.18,
+          1437.5
+        ]
+      ],
+      "page_aabb": {
+        "x": 353.63,
+        "y": 1173.01,
+        "width": 264.49,
+        "height": 264.49
+      },
+      "page_orientation": "landscape",
+      "noise_level": "heavy",
+      "page_skew_deg": 1.66
+    },
+    {
+      "id": 59,
+      "page": 25,
+      "index": 4,
+      "format": "DATA_MATRIX",
+      "value": "DM|BM|P025|I04|L354440",
+      "difficulty": "medium",
+      "scenario": "close",
+      "close_group": 1,
+      "scale": 8,
+      "rotation_deg": -3.76,
+      "filename": "symbol-0059.png",
+      "label_box": [
+        891,
+        497,
+        1111,
+        747
+      ],
+      "page_quad": [
+        [
+          1041.54,
+          841.45
+        ],
+        [
+          1201.43,
+          847.32
+        ],
+        [
+          1195.56,
+          1007.21
+        ],
+        [
+          1035.67,
+          1001.34
+        ]
+      ],
+      "page_aabb": {
+        "x": 1035.67,
+        "y": 841.45,
+        "width": 165.76,
+        "height": 165.76
+      },
+      "page_orientation": "landscape",
+      "noise_level": "heavy",
+      "page_skew_deg": 1.66
+    },
+    {
+      "id": 60,
+      "page": 25,
+      "index": 5,
+      "format": "CODE_39",
+      "value": "BM-25-05-3401",
+      "difficulty": "easy",
+      "scenario": "edge",
+      "close_group": null,
+      "scale": 4,
+      "rotation_deg": -2.62,
+      "filename": "symbol-0060.png",
+      "label_box": [
+        2174,
+        1446,
+        3096,
+        1772
+      ],
+      "page_quad": [
+        [
+          2353.84,
+          1756.47
+        ],
+        [
+          3209.72,
+          1770.84
+        ],
+        [
+          3206.36,
+          1970.81
+        ],
+        [
+          2350.48,
+          1956.44
+        ]
+      ],
+      "page_aabb": {
+        "x": 2350.48,
+        "y": 1756.47,
+        "width": 859.24,
+        "height": 214.35
+      },
+      "page_orientation": "landscape",
+      "noise_level": "heavy",
+      "page_skew_deg": 1.66
+    },
+    {
+      "id": 61,
+      "page": 25,
+      "index": 6,
+      "format": "CODE_128",
+      "value": "BM0250630954567",
+      "difficulty": "easy",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 4,
+      "rotation_deg": 0.61,
+      "filename": "symbol-0061.png",
+      "label_box": [
+        1599,
+        728,
+        2305,
+        1010
+      ],
+      "page_quad": [
+        [
+          1741.38,
+          1056.85
+        ],
+        [
+          2400.86,
+          1030.74
+        ],
+        [
+          2408.78,
+          1230.58
+        ],
+        [
+          1749.3,
+          1256.7
+        ]
+      ],
+      "page_aabb": {
+        "x": 1741.38,
+        "y": 1030.74,
+        "width": 667.4,
+        "height": 225.96
+      },
+      "page_orientation": "landscape",
+      "noise_level": "heavy",
+      "page_skew_deg": 1.66
+    },
+    {
+      "id": 62,
+      "page": 25,
+      "index": 7,
+      "format": "CODE_128",
+      "value": "LOT-986386-B25",
+      "difficulty": "hard",
+      "scenario": "oblique",
+      "close_group": null,
+      "scale": 4,
+      "rotation_deg": -13.81,
+      "filename": "symbol-0062.png",
+      "label_box": [
+        1108,
+        1465,
+        1978,
+        1923
+      ],
+      "page_quad": [
+        [
+          1328.04,
+          1799.43
+        ],
+        [
+          2102.3,
+          1966.15
+        ],
+        [
+          2060.19,
+          2161.67
+        ],
+        [
+          1285.94,
+          1994.95
+        ]
+      ],
+      "page_aabb": {
+        "x": 1285.94,
+        "y": 1799.43,
+        "width": 816.35,
+        "height": 362.24
+      },
+      "page_orientation": "landscape",
+      "noise_level": "heavy",
+      "page_skew_deg": 1.66
+    },
+    {
+      "id": 63,
+      "page": 26,
+      "index": 1,
+      "format": "DATA_MATRIX",
+      "value": "DM|BM|P026|I01|L775261",
+      "difficulty": "easy",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 9,
+      "rotation_deg": -3.13,
+      "filename": "symbol-0063.png",
+      "label_box": [
+        65,
+        1115,
+        317,
+        1397
+      ],
+      "page_quad": [
+        [
+          216.19,
+          1201.66
+        ],
+        [
+          395.63,
+          1215.88
+        ],
+        [
+          381.41,
+          1395.32
+        ],
+        [
+          201.97,
+          1381.1
+        ]
+      ],
+      "page_aabb": {
+        "x": 201.97,
+        "y": 1201.66,
+        "width": 193.66,
+        "height": 193.66
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -1.4
+    },
+    {
+      "id": 64,
+      "page": 26,
+      "index": 2,
+      "format": "CODE_128",
+      "value": "BM0260259679472",
+      "difficulty": "easy",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 3,
+      "rotation_deg": 0.24,
+      "filename": "symbol-0064.png",
+      "label_box": [
+        67,
+        385,
+        602,
+        609
+      ],
+      "page_quad": [
+        [
+          213.95,
+          463.18
+        ],
+        [
+          708.85,
+          473.21
+        ],
+        [
+          705.81,
+          623.18
+        ],
+        [
+          210.91,
+          613.15
+        ]
+      ],
+      "page_aabb": {
+        "x": 210.91,
+        "y": 463.18,
+        "width": 497.94,
+        "height": 160.0
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -1.4
+    },
+    {
+      "id": 65,
+      "page": 26,
+      "index": 3,
+      "format": "CODE_39",
+      "value": "BM-26-03-8911",
+      "difficulty": "easy",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 4,
+      "rotation_deg": -0.09,
+      "filename": "symbol-0065.png",
+      "label_box": [
+        143,
+        1969,
+        1055,
+        2257
+      ],
+      "page_quad": [
+        [
+          259.63,
+          2054.06
+        ],
+        [
+          1115.34,
+          2076.33
+        ],
+        [
+          1110.13,
+          2276.27
+        ],
+        [
+          254.42,
+          2253.99
+        ]
+      ],
+      "page_aabb": {
+        "x": 254.42,
+        "y": 2054.06,
+        "width": 860.91,
+        "height": 222.21
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -1.4
+    },
+    {
+      "id": 66,
+      "page": 27,
+      "index": 1,
+      "format": "QR_CODE",
+      "value": "https://example.invalid/balanced/027/01",
+      "difficulty": "easy",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 7,
+      "rotation_deg": -2.21,
+      "filename": "symbol-0066.png",
+      "label_box": [
+        655,
+        679,
+        976,
+        1030
+      ],
+      "page_quad": [
+        [
+          855.91,
+          794.94
+        ],
+        [
+          1114.08,
+          815.7
+        ],
+        [
+          1093.32,
+          1073.87
+        ],
+        [
+          835.15,
+          1053.11
+        ]
+      ],
+      "page_aabb": {
+        "x": 835.15,
+        "y": 794.94,
+        "width": 278.92,
+        "height": 278.92
+      },
+      "page_orientation": "portrait",
+      "noise_level": "heavy",
+      "page_skew_deg": -2.39
+    },
+    {
+      "id": 67,
+      "page": 27,
+      "index": 2,
+      "format": "CODE_128",
+      "value": "BM0270292095476",
+      "difficulty": "easy",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 3,
+      "rotation_deg": 0.34,
+      "filename": "symbol-0067.png",
+      "label_box": [
+        311,
+        1417,
+        862,
+        1657
+      ],
+      "page_quad": [
+        [
+          472.02,
+          1522.94
+        ],
+        [
+          966.7,
+          1540.62
+        ],
+        [
+          961.35,
+          1690.53
+        ],
+        [
+          466.66,
+          1672.85
+        ]
+      ],
+      "page_aabb": {
+        "x": 466.66,
+        "y": 1522.94,
+        "width": 500.04,
+        "height": 167.58
+      },
+      "page_orientation": "portrait",
+      "noise_level": "heavy",
+      "page_skew_deg": -2.39
+    },
+    {
+      "id": 68,
+      "page": 29,
+      "index": 1,
+      "format": "DATA_MATRIX",
+      "value": "DM|BM|P029|I01|L228874",
+      "difficulty": "medium",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 8,
+      "rotation_deg": 0.22,
+      "filename": "symbol-0068.png",
+      "label_box": [
+        918,
+        464,
+        1128,
+        706
+      ],
+      "page_quad": [
+        [
+          1546.37,
+          778.55
+        ],
+        [
+          1706.35,
+          776.4
+        ],
+        [
+          1708.5,
+          936.39
+        ],
+        [
+          1548.51,
+          938.53
+        ]
+      ],
+      "page_aabb": {
+        "x": 1546.37,
+        "y": 776.4,
+        "width": 162.13,
+        "height": 162.13
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 0.55
+    },
+    {
+      "id": 69,
+      "page": 29,
+      "index": 2,
+      "format": "CODE_39",
+      "value": "BM-29-02-8872",
+      "difficulty": "medium",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 3,
+      "rotation_deg": -2.41,
+      "filename": "symbol-0069.png",
+      "label_box": [
+        618,
+        858,
+        1318,
+        1118
+      ],
+      "page_quad": [
+        [
+          1258.63,
+          1175.59
+        ],
+        [
+          1900.29,
+          1196.46
+        ],
+        [
+          1895.41,
+          1346.38
+        ],
+        [
+          1253.75,
+          1325.51
+        ]
+      ],
+      "page_aabb": {
+        "x": 1253.75,
+        "y": 1175.59,
+        "width": 646.54,
+        "height": 170.79
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 0.55
+    },
+    {
+      "id": 70,
+      "page": 30,
+      "index": 1,
+      "format": "DATA_MATRIX",
+      "value": "DM|BM|P030|I01|L864698",
+      "difficulty": "medium",
+      "scenario": "close",
+      "close_group": 2,
+      "scale": 8,
+      "rotation_deg": 0.8,
+      "filename": "symbol-0070.png",
+      "label_box": [
+        970,
+        1351,
+        1176,
+        1589
+      ],
+      "page_quad": [
+        [
+          1037.6,
+          1853.07
+        ],
+        [
+          1197.59,
+          1854.57
+        ],
+        [
+          1196.09,
+          2014.56
+        ],
+        [
+          1036.1,
+          2013.06
+        ]
+      ],
+      "page_aabb": {
+        "x": 1036.1,
+        "y": 1853.07,
+        "width": 161.49,
+        "height": 161.49
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -1.34
+    },
+    {
+      "id": 71,
+      "page": 31,
+      "index": 1,
+      "format": "CODE_39",
+      "value": "BM-31-01-8295",
+      "difficulty": "easy",
+      "scenario": "close",
+      "close_group": 2,
+      "scale": 2,
+      "rotation_deg": 0.99,
+      "filename": "symbol-0071.png",
+      "label_box": [
+        700,
+        1364,
+        1186,
+        1560
+      ],
+      "page_quad": [
+        [
+          954.64,
+          1450.93
+        ],
+        [
+          1382.43,
+          1437.32
+        ],
+        [
+          1385.61,
+          1537.27
+        ],
+        [
+          957.83,
+          1550.88
+        ]
+      ],
+      "page_aabb": {
+        "x": 954.64,
+        "y": 1437.32,
+        "width": 430.96,
+        "height": 113.56
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 0.83
+    },
+    {
+      "id": 72,
+      "page": 31,
+      "index": 2,
+      "format": "CODE_39",
+      "value": "BM-31-02-9594",
+      "difficulty": "easy",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 3,
+      "rotation_deg": 0.92,
+      "filename": "symbol-0072.png",
+      "label_box": [
+        749,
+        452,
+        1423,
+        674
+      ],
+      "page_quad": [
+        [
+          976.92,
+          527.97
+        ],
+        [
+          1618.62,
+          508.33
+        ],
+        [
+          1623.21,
+          658.26
+        ],
+        [
+          981.51,
+          677.9
+        ]
+      ],
+      "page_aabb": {
+        "x": 976.92,
+        "y": 508.33,
+        "width": 646.29,
+        "height": 169.57
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 0.83
+    },
+    {
+      "id": 73,
+      "page": 32,
+      "index": 1,
+      "format": "CODE_39",
+      "value": "BM-32-01-7579",
+      "difficulty": "medium",
+      "scenario": "close",
+      "close_group": 2,
+      "scale": 3,
+      "rotation_deg": 2.9,
+      "filename": "symbol-0073.png",
+      "label_box": [
+        255,
+        513,
+        945,
+        767
+      ],
+      "page_quad": [
+        [
+          594.59,
+          860.29
+        ],
+        [
+          1236.23,
+          838.79
+        ],
+        [
+          1241.26,
+          988.71
+        ],
+        [
+          599.62,
+          1010.21
+        ]
+      ],
+      "page_aabb": {
+        "x": 594.59,
+        "y": 838.79,
+        "width": 646.66,
+        "height": 171.42
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.98
+    },
+    {
+      "id": 74,
+      "page": 32,
+      "index": 2,
+      "format": "CODE_39",
+      "value": "BM-32-02-4086",
+      "difficulty": "medium",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 4,
+      "rotation_deg": 0.33,
+      "filename": "symbol-0074.png",
+      "label_box": [
+        907,
+        940,
+        1793,
+        1206
+      ],
+      "page_quad": [
+        [
+          1234.29,
+          1265.41
+        ],
+        [
+          2090.23,
+          1275.13
+        ],
+        [
+          2087.96,
+          1475.12
+        ],
+        [
+          1232.02,
+          1465.4
+        ]
+      ],
+      "page_aabb": {
+        "x": 1232.02,
+        "y": 1265.41,
+        "width": 858.22,
+        "height": 209.71
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.98
+    },
+    {
+      "id": 75,
+      "page": 33,
+      "index": 1,
+      "format": "DATA_MATRIX",
+      "value": "DM|BM|P033|I01|L392981",
+      "difficulty": "medium",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 10,
+      "rotation_deg": 3.13,
+      "filename": "symbol-0075.png",
+      "label_box": [
+        776,
+        1154,
+        1024,
+        1432
+      ],
+      "page_quad": [
+        [
+          1009.96,
+          1387.12
+        ],
+        [
+          1209.87,
+          1381.11
+        ],
+        [
+          1215.88,
+          1581.02
+        ],
+        [
+          1015.97,
+          1587.03
+        ]
+      ],
+      "page_aabb": {
+        "x": 1009.96,
+        "y": 1381.11,
+        "width": 205.91,
+        "height": 205.91
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -1.41
+    },
+    {
+      "id": 76,
+      "page": 33,
+      "index": 2,
+      "format": "CODE_39",
+      "value": "BM-33-02-9196",
+      "difficulty": "easy",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 3,
+      "rotation_deg": -2.61,
+      "filename": "symbol-0076.png",
+      "label_box": [
+        808,
+        2099,
+        1488,
+        2341
+      ],
+      "page_quad": [
+        [
+          1024.68,
+          2319.6
+        ],
+        [
+          1665.1,
+          2364.62
+        ],
+        [
+          1654.58,
+          2514.25
+        ],
+        [
+          1014.16,
+          2469.24
+        ]
+      ],
+      "page_aabb": {
+        "x": 1014.16,
+        "y": 2319.6,
+        "width": 650.94,
+        "height": 194.64
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -1.41
+    },
+    {
+      "id": 77,
+      "page": 33,
+      "index": 3,
+      "format": "CODE_128",
+      "value": "LOT-295789-B33",
+      "difficulty": "easy",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 4,
+      "rotation_deg": -2.81,
+      "filename": "symbol-0077.png",
+      "label_box": [
+        689,
+        837,
+        1549,
+        1165
+      ],
+      "page_quad": [
+        [
+          953.13,
+          1068.71
+        ],
+        [
+          1742.98,
+          1127.0
+        ],
+        [
+          1728.26,
+          1326.46
+        ],
+        [
+          938.41,
+          1268.17
+        ]
+      ],
+      "page_aabb": {
+        "x": 938.41,
+        "y": 1068.71,
+        "width": 804.57,
+        "height": 257.74
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -1.41
+    },
+    {
+      "id": 78,
+      "page": 34,
+      "index": 1,
+      "format": "DATA_MATRIX",
+      "value": "DM|BM|P034|I01|L532310",
+      "difficulty": "easy",
+      "scenario": "edge",
+      "close_group": null,
+      "scale": 8,
+      "rotation_deg": -89.55,
+      "filename": "symbol-0078.png",
+      "label_box": [
+        44,
+        1437,
+        290,
+        1651
+      ],
+      "page_quad": [
+        [
+          550.61,
+          1635.52
+        ],
+        [
+          549.83,
+          1795.52
+        ],
+        [
+          389.83,
+          1794.74
+        ],
+        [
+          390.61,
+          1634.74
+        ]
+      ],
+      "page_aabb": {
+        "x": 389.83,
+        "y": 1634.74,
+        "width": 160.78,
+        "height": 160.78
+      },
+      "page_orientation": "landscape",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.73
+    },
+    {
+      "id": 79,
+      "page": 35,
+      "index": 1,
+      "format": "CODE_39",
+      "value": "BM-35-01-4872",
+      "difficulty": "easy",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 4,
+      "rotation_deg": 2.65,
+      "filename": "symbol-0079.png",
+      "label_box": [
+        1099,
+        1457,
+        1995,
+        1759
+      ],
+      "page_quad": [
+        [
+          1389.93,
+          1803.65
+        ],
+        [
+          2244.84,
+          1760.46
+        ],
+        [
+          2254.93,
+          1960.21
+        ],
+        [
+          1400.02,
+          2003.4
+        ]
+      ],
+      "page_aabb": {
+        "x": 1389.93,
+        "y": 1760.46,
+        "width": 865.0,
+        "height": 242.94
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 0.24
+    },
+    {
+      "id": 80,
+      "page": 36,
+      "index": 1,
+      "format": "CODE_128",
+      "value": "PO94640036224",
+      "difficulty": "medium",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 4,
+      "rotation_deg": -2.44,
+      "filename": "symbol-0080.png",
+      "label_box": [
+        290,
+        1263,
+        956,
+        1561
+      ],
+      "page_quad": [
+        [
+          812.85,
+          1513.8
+        ],
+        [
+          1427.75,
+          1550.53
+        ],
+        [
+          1415.83,
+          1750.17
+        ],
+        [
+          800.93,
+          1713.45
+        ]
+      ],
+      "page_aabb": {
+        "x": 800.93,
+        "y": 1513.8,
+        "width": 626.83,
+        "height": 236.37
+      },
+      "page_orientation": "portrait",
+      "noise_level": "heavy",
+      "page_skew_deg": -0.98
+    },
+    {
+      "id": 81,
+      "page": 36,
+      "index": 2,
+      "format": "DATA_MATRIX",
+      "value": "(01)09506000361568(21)BM3602",
+      "difficulty": "easy",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 8,
+      "rotation_deg": -0.54,
+      "filename": "symbol-0081.png",
+      "label_box": [
+        1048,
+        564,
+        1246,
+        792
+      ],
+      "page_quad": [
+        [
+          1572.41,
+          824.92
+        ],
+        [
+          1732.35,
+          829.16
+        ],
+        [
+          1728.11,
+          989.11
+        ],
+        [
+          1568.17,
+          984.87
+        ]
+      ],
+      "page_aabb": {
+        "x": 1568.17,
+        "y": 824.92,
+        "width": 164.18,
+        "height": 164.18
+      },
+      "page_orientation": "portrait",
+      "noise_level": "heavy",
+      "page_skew_deg": -0.98
+    },
+    {
+      "id": 82,
+      "page": 36,
+      "index": 3,
+      "format": "CODE_39",
+      "value": "BM-36-03-5397",
+      "difficulty": "hard",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 3,
+      "rotation_deg": -3.53,
+      "filename": "symbol-0082.png",
+      "label_box": [
+        978,
+        1270,
+        1680,
+        1540
+      ],
+      "page_quad": [
+        [
+          1506.55,
+          1537.06
+        ],
+        [
+          2146.56,
+          1587.52
+        ],
+        [
+          2134.77,
+          1737.06
+        ],
+        [
+          1494.76,
+          1686.6
+        ]
+      ],
+      "page_aabb": {
+        "x": 1494.76,
+        "y": 1537.06,
+        "width": 651.8,
+        "height": 200.0
+      },
+      "page_orientation": "portrait",
+      "noise_level": "heavy",
+      "page_skew_deg": -0.98
+    },
+    {
+      "id": 83,
+      "page": 36,
+      "index": 4,
+      "format": "DATA_MATRIX",
+      "value": "(01)09506000353909(21)BM3604",
+      "difficulty": "medium",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 7,
+      "rotation_deg": 0.62,
+      "filename": "symbol-0083.png",
+      "label_box": [
+        657,
+        1596,
+        857,
+        1828
+      ],
+      "page_quad": [
+        [
+          1172.78,
+          1863.77
+        ],
+        [
+          1312.78,
+          1864.64
+        ],
+        [
+          1311.91,
+          2004.64
+        ],
+        [
+          1171.91,
+          2003.76
+        ]
+      ],
+      "page_aabb": {
+        "x": 1171.91,
+        "y": 1863.77,
+        "width": 140.87,
+        "height": 140.87
+      },
+      "page_orientation": "portrait",
+      "noise_level": "heavy",
+      "page_skew_deg": -0.98
+    },
+    {
+      "id": 84,
+      "page": 37,
+      "index": 1,
+      "format": "CODE_128",
+      "value": "BM0370126977372",
+      "difficulty": "easy",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 4,
+      "rotation_deg": -2.83,
+      "filename": "symbol-0084.png",
+      "label_box": [
+        119,
+        2195,
+        835,
+        2505
+      ],
+      "page_quad": [
+        [
+          300.6,
+          2369.21
+        ],
+        [
+          959.44,
+          2408.43
+        ],
+        [
+          947.55,
+          2608.08
+        ],
+        [
+          288.72,
+          2568.86
+        ]
+      ],
+      "page_aabb": {
+        "x": 288.72,
+        "y": 2369.21,
+        "width": 670.72,
+        "height": 238.86
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.58
+    },
+    {
+      "id": 85,
+      "page": 38,
+      "index": 1,
+      "format": "QR_CODE",
+      "value": "QR|BM|PAGE=038|INDEX=01|LOT=300160",
+      "difficulty": "medium",
+      "scenario": "close",
+      "close_group": 1,
+      "scale": 5,
+      "rotation_deg": 3.52,
+      "filename": "symbol-0085.png",
+      "label_box": [
+        479,
+        1688,
+        688,
+        1927
+      ],
+      "page_quad": [
+        [
+          531.75,
+          1769.79
+        ],
+        [
+          696.51,
+          1760.92
+        ],
+        [
+          705.37,
+          1925.68
+        ],
+        [
+          540.61,
+          1934.55
+        ]
+      ],
+      "page_aabb": {
+        "x": 531.75,
+        "y": 1760.92,
+        "width": 173.63,
+        "height": 173.63
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.44
+    },
+    {
+      "id": 86,
+      "page": 38,
+      "index": 2,
+      "format": "QR_CODE",
+      "value": "QR|BM|PAGE=038|INDEX=02|LOT=966754",
+      "difficulty": "easy",
+      "scenario": "close",
+      "close_group": 1,
+      "scale": 6,
+      "rotation_deg": 2.28,
+      "filename": "symbol-0086.png",
+      "label_box": [
+        746,
+        1710,
+        984,
+        1978
+      ],
+      "page_quad": [
+        [
+          797.99,
+          1790.61
+        ],
+        [
+          995.89,
+          1784.25
+        ],
+        [
+          1002.25,
+          1982.15
+        ],
+        [
+          804.35,
+          1988.51
+        ]
+      ],
+      "page_aabb": {
+        "x": 797.99,
+        "y": 1784.25,
+        "width": 204.26,
+        "height": 204.26
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.44
+    },
+    {
+      "id": 87,
+      "page": 38,
+      "index": 3,
+      "format": "DATA_MATRIX",
+      "value": "(01)09506000336735(21)BM3803",
+      "difficulty": "easy",
+      "scenario": "close",
+      "close_group": 1,
+      "scale": 9,
+      "rotation_deg": 2.53,
+      "filename": "symbol-0087.png",
+      "label_box": [
+        983,
+        1688,
+        1213,
+        1948
+      ],
+      "page_quad": [
+        [
+          1040.02,
+          1775.51
+        ],
+        [
+          1219.9,
+          1768.95
+        ],
+        [
+          1226.46,
+          1948.83
+        ],
+        [
+          1046.58,
+          1955.39
+        ]
+      ],
+      "page_aabb": {
+        "x": 1040.02,
+        "y": 1768.95,
+        "width": 186.45,
+        "height": 186.45
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.44
+    },
+    {
+      "id": 88,
+      "page": 38,
+      "index": 4,
+      "format": "DATA_MATRIX",
+      "value": "DM|BM|P038|I04|L558489",
+      "difficulty": "easy",
+      "scenario": "close",
+      "close_group": 1,
+      "scale": 9,
+      "rotation_deg": 2.89,
+      "filename": "symbol-0088.png",
+      "label_box": [
+        1310,
+        1714,
+        1558,
+        1992
+      ],
+      "page_quad": [
+        [
+          1375.1,
+          1813.68
+        ],
+        [
+          1554.93,
+          1805.99
+        ],
+        [
+          1562.63,
+          1985.82
+        ],
+        [
+          1382.79,
+          1993.52
+        ]
+      ],
+      "page_aabb": {
+        "x": 1375.1,
+        "y": 1805.99,
+        "width": 187.53,
+        "height": 187.53
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.44
+    },
+    {
+      "id": 89,
+      "page": 38,
+      "index": 5,
+      "format": "CODE_128",
+      "value": "PO81621798430",
+      "difficulty": "medium",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 2,
+      "rotation_deg": -1.4,
+      "filename": "symbol-0089.png",
+      "label_box": [
+        638,
+        2528,
+        1000,
+        2718
+      ],
+      "page_quad": [
+        [
+          696.86,
+          2610.09
+        ],
+        [
+          1004.7,
+          2619.97
+        ],
+        [
+          1001.49,
+          2719.92
+        ],
+        [
+          693.65,
+          2710.04
+        ]
+      ],
+      "page_aabb": {
+        "x": 693.65,
+        "y": 2610.09,
+        "width": 311.05,
+        "height": 109.84
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.44
+    },
+    {
+      "id": 90,
+      "page": 38,
+      "index": 6,
+      "format": "DATA_MATRIX",
+      "value": "(01)09506000396327(21)BM3806",
+      "difficulty": "medium",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 8,
+      "rotation_deg": 2.76,
+      "filename": "symbol-0090.png",
+      "label_box": [
+        269,
+        1565,
+        473,
+        1799
+      ],
+      "page_quad": [
+        [
+          324.07,
+          1643.91
+        ],
+        [
+          483.94,
+          1637.43
+        ],
+        [
+          490.42,
+          1797.3
+        ],
+        [
+          330.55,
+          1803.77
+        ]
+      ],
+      "page_aabb": {
+        "x": 324.07,
+        "y": 1637.43,
+        "width": 166.35,
+        "height": 166.35
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.44
+    },
+    {
+      "id": 91,
+      "page": 38,
+      "index": 7,
+      "format": "DATA_MATRIX",
+      "value": "DM|BM|P038|I07|L785001",
+      "difficulty": "medium",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 8,
+      "rotation_deg": 3.64,
+      "filename": "symbol-0091.png",
+      "label_box": [
+        107,
+        1280,
+        321,
+        1524
+      ],
+      "page_quad": [
+        [
+          167.81,
+          1364.01
+        ],
+        [
+          327.56,
+          1355.08
+        ],
+        [
+          336.49,
+          1514.83
+        ],
+        [
+          176.74,
+          1523.76
+        ]
+      ],
+      "page_aabb": {
+        "x": 167.81,
+        "y": 1355.08,
+        "width": 168.68,
+        "height": 168.68
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.44
+    },
+    {
+      "id": 92,
+      "page": 38,
+      "index": 8,
+      "format": "DATA_MATRIX",
+      "value": "DM|BM|P038|I08|L254802",
+      "difficulty": "easy",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 8,
+      "rotation_deg": -1.89,
+      "filename": "symbol-0092.png",
+      "label_box": [
+        334,
+        1319,
+        548,
+        1565
+      ],
+      "page_quad": [
+        [
+          403.7,
+          1397.96
+        ],
+        [
+          563.56,
+          1404.46
+        ],
+        [
+          557.06,
+          1564.33
+        ],
+        [
+          397.19,
+          1557.83
+        ]
+      ],
+      "page_aabb": {
+        "x": 397.19,
+        "y": 1397.96,
+        "width": 166.37,
+        "height": 166.37
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.44
+    },
+    {
+      "id": 93,
+      "page": 38,
+      "index": 9,
+      "format": "DATA_MATRIX",
+      "value": "DM|BM|P038|I09|L657671",
+      "difficulty": "medium",
+      "scenario": "oblique",
+      "close_group": null,
+      "scale": 8,
+      "rotation_deg": -20.82,
+      "filename": "symbol-0093.png",
+      "label_box": [
+        60,
+        2071,
+        322,
+        2353
+      ],
+      "page_quad": [
+        [
+          184.08,
+          2146.72
+        ],
+        [
+          333.19,
+          2204.73
+        ],
+        [
+          275.18,
+          2353.84
+        ],
+        [
+          126.07,
+          2295.83
+        ]
+      ],
+      "page_aabb": {
+        "x": 126.07,
+        "y": 2146.72,
+        "width": 207.13,
+        "height": 207.13
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.44
+    },
+    {
+      "id": 94,
+      "page": 40,
+      "index": 1,
+      "format": "CODE_39",
+      "value": "BM-40-01-8172",
+      "difficulty": "easy",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 2,
+      "rotation_deg": -3.2,
+      "filename": "symbol-0094.png",
+      "label_box": [
+        1423,
+        1713,
+        1903,
+        1913
+      ],
+      "page_quad": [
+        [
+          1549.9,
+          2229.95
+        ],
+        [
+          1976.91,
+          2259.05
+        ],
+        [
+          1970.11,
+          2358.82
+        ],
+        [
+          1543.1,
+          2329.72
+        ]
+      ],
+      "page_aabb": {
+        "x": 1543.1,
+        "y": 2229.95,
+        "width": 433.81,
+        "height": 128.87
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.7
+    },
+    {
+      "id": 95,
+      "page": 40,
+      "index": 2,
+      "format": "CODE_128",
+      "value": "LOT-488954-B40",
+      "difficulty": "medium",
+      "scenario": "edge",
+      "close_group": null,
+      "scale": 4,
+      "rotation_deg": -3.08,
+      "filename": "symbol-0095.png",
+      "label_box": [
+        14,
+        312,
+        866,
+        636
+      ],
+      "page_quad": [
+        [
+          164.86,
+          814.67
+        ],
+        [
+          955.14,
+          866.87
+        ],
+        [
+          941.95,
+          1066.44
+        ],
+        [
+          151.68,
+          1014.24
+        ]
+      ],
+      "page_aabb": {
+        "x": 151.68,
+        "y": 814.67,
+        "width": 803.46,
+        "height": 251.77
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.7
+    },
+    {
+      "id": 96,
+      "page": 40,
+      "index": 3,
+      "format": "QR_CODE",
+      "value": "https://example.invalid/balanced/040/03",
+      "difficulty": "medium",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 6,
+      "rotation_deg": 3.16,
+      "filename": "symbol-0096.png",
+      "label_box": [
+        1522,
+        583,
+        1808,
+        899
+      ],
+      "page_quad": [
+        [
+          1657.65,
+          1116.33
+        ],
+        [
+          1879.45,
+          1106.8
+        ],
+        [
+          1888.98,
+          1328.6
+        ],
+        [
+          1667.18,
+          1338.13
+        ]
+      ],
+      "page_aabb": {
+        "x": 1657.65,
+        "y": 1106.8,
+        "width": 231.33,
+        "height": 231.33
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.7
+    },
+    {
+      "id": 97,
+      "page": 40,
+      "index": 4,
+      "format": "QR_CODE",
+      "value": "QR|BM|PAGE=040|INDEX=04|LOT=715643",
+      "difficulty": "easy",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 5,
+      "rotation_deg": -2.35,
+      "filename": "symbol-0097.png",
+      "label_box": [
+        438,
+        1706,
+        657,
+        1957
+      ],
+      "page_quad": [
+        [
+          566.13,
+          2212.48
+        ],
+        [
+          730.9,
+          2221.26
+        ],
+        [
+          722.12,
+          2386.03
+        ],
+        [
+          557.36,
+          2377.25
+        ]
+      ],
+      "page_aabb": {
+        "x": 557.36,
+        "y": 2212.48,
+        "width": 173.54,
+        "height": 173.54
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.7
+    },
+    {
+      "id": 98,
+      "page": 41,
+      "index": 1,
+      "format": "CODE_128",
+      "value": "BM0410143665968",
+      "difficulty": "easy",
+      "scenario": "edge",
+      "close_group": null,
+      "scale": 4,
+      "rotation_deg": -91.36,
+      "filename": "symbol-0098.png",
+      "label_box": [
+        11,
+        848,
+        297,
+        1552
+      ],
+      "page_quad": [
+        [
+          312.55,
+          1118.52
+        ],
+        [
+          292.83,
+          1778.23
+        ],
+        [
+          92.92,
+          1772.25
+        ],
+        [
+          112.64,
+          1112.55
+        ]
+      ],
+      "page_aabb": {
+        "x": 92.92,
+        "y": 1112.55,
+        "width": 219.63,
+        "height": 665.68
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.35
+    },
+    {
+      "id": 99,
+      "page": 41,
+      "index": 2,
+      "format": "CODE_128",
+      "value": "PO27649430947",
+      "difficulty": "easy",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 3,
+      "rotation_deg": -2.07,
+      "filename": "symbol-0099.png",
+      "label_box": [
+        219,
+        1590,
+        741,
+        1842
+      ],
+      "page_quad": [
+        [
+          282.62,
+          1862.22
+        ],
+        [
+          744.21,
+          1881.75
+        ],
+        [
+          737.87,
+          2031.61
+        ],
+        [
+          276.28,
+          2012.09
+        ]
+      ],
+      "page_aabb": {
+        "x": 276.28,
+        "y": 1862.22,
+        "width": 467.93,
+        "height": 169.39
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.35
+    },
+    {
+      "id": 100,
+      "page": 41,
+      "index": 3,
+      "format": "CODE_128",
+      "value": "PO93583198716",
+      "difficulty": "medium",
+      "scenario": "edge",
+      "close_group": null,
+      "scale": 4,
+      "rotation_deg": -90.31,
+      "filename": "symbol-0100.png",
+      "label_box": [
+        1669,
+        906,
+        1935,
+        1554
+      ],
+      "page_quad": [
+        [
+          1954.08,
+          1178.4
+        ],
+        [
+          1946.96,
+          1794.36
+        ],
+        [
+          1746.98,
+          1792.05
+        ],
+        [
+          1754.1,
+          1176.09
+        ]
+      ],
+      "page_aabb": {
+        "x": 1746.98,
+        "y": 1176.09,
+        "width": 207.11,
+        "height": 618.27
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.35
+    },
+    {
+      "id": 101,
+      "page": 41,
+      "index": 4,
+      "format": "CODE_128",
+      "value": "BM0410450794128",
+      "difficulty": "medium",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 3,
+      "rotation_deg": 3.43,
+      "filename": "symbol-0101.png",
+      "label_box": [
+        551,
+        986,
+        1108,
+        1250
+      ],
+      "page_quad": [
+        [
+          610.71,
+          1289.48
+        ],
+        [
+          1104.99,
+          1262.91
+        ],
+        [
+          1113.05,
+          1412.69
+        ],
+        [
+          618.76,
+          1439.27
+        ]
+      ],
+      "page_aabb": {
+        "x": 610.71,
+        "y": 1262.91,
+        "width": 502.34,
+        "height": 176.36
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -0.35
+    },
+    {
+      "id": 102,
+      "page": 42,
+      "index": 1,
+      "format": "QR_CODE",
+      "value": "QR|BM|PAGE=042|INDEX=01|LOT=408560",
+      "difficulty": "medium",
+      "scenario": "oblique",
+      "close_group": null,
+      "scale": 5,
+      "rotation_deg": 19.85,
+      "filename": "symbol-0102.png",
+      "label_box": [
+        1727,
+        1033,
+        2006,
+        1332
+      ],
+      "page_quad": [
+        [
+          1958.13,
+          1378.0
+        ],
+        [
+          2112.6,
+          1320.0
+        ],
+        [
+          2170.6,
+          1474.47
+        ],
+        [
+          2016.13,
+          1532.47
+        ]
+      ],
+      "page_aabb": {
+        "x": 1958.13,
+        "y": 1320.0,
+        "width": 212.47,
+        "height": 212.47
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 0.73
+    },
+    {
+      "id": 103,
+      "page": 43,
+      "index": 1,
+      "format": "QR_CODE",
+      "value": "QR|BM|PAGE=043|INDEX=01|LOT=795540",
+      "difficulty": "easy",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 6,
+      "rotation_deg": 2.87,
+      "filename": "symbol-0103.png",
+      "label_box": [
+        2392,
+        945,
+        2634,
+        1217
+      ],
+      "page_quad": [
+        [
+          2537.38,
+          1294.7
+        ],
+        [
+          2735.32,
+          1289.8
+        ],
+        [
+          2740.22,
+          1487.73
+        ],
+        [
+          2542.28,
+          1492.64
+        ]
+      ],
+      "page_aabb": {
+        "x": 2537.38,
+        "y": 1289.8,
+        "width": 202.84,
+        "height": 202.84
+      },
+      "page_orientation": "landscape",
+      "noise_level": "moderate",
+      "page_skew_deg": -1.45
+    },
+    {
+      "id": 104,
+      "page": 43,
+      "index": 2,
+      "format": "CODE_39",
+      "value": "BM-43-02-9980",
+      "difficulty": "medium",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 3,
+      "rotation_deg": -0.63,
+      "filename": "symbol-0104.png",
+      "label_box": [
+        373,
+        1351,
+        1053,
+        1575
+      ],
+      "page_quad": [
+        [
+          512.62,
+          1640.92
+        ],
+        [
+          1154.2,
+          1664.23
+        ],
+        [
+          1148.75,
+          1814.13
+        ],
+        [
+          507.17,
+          1790.82
+        ]
+      ],
+      "page_aabb": {
+        "x": 507.17,
+        "y": 1640.92,
+        "width": 647.02,
+        "height": 173.21
+      },
+      "page_orientation": "landscape",
+      "noise_level": "moderate",
+      "page_skew_deg": -1.45
+    },
+    {
+      "id": 105,
+      "page": 43,
+      "index": 3,
+      "format": "CODE_128",
+      "value": "BM0430351093599",
+      "difficulty": "medium",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 2,
+      "rotation_deg": -2.11,
+      "filename": "symbol-0105.png",
+      "label_box": [
+        990,
+        1146,
+        1366,
+        1330
+      ],
+      "page_quad": [
+        [
+          1140.07,
+          1454.24
+        ],
+        [
+          1469.43,
+          1474.74
+        ],
+        [
+          1463.22,
+          1574.54
+        ],
+        [
+          1133.86,
+          1554.05
+        ]
+      ],
+      "page_aabb": {
+        "x": 1133.86,
+        "y": 1454.24,
+        "width": 335.57,
+        "height": 120.3
+      },
+      "page_orientation": "landscape",
+      "noise_level": "moderate",
+      "page_skew_deg": -1.45
+    },
+    {
+      "id": 106,
+      "page": 44,
+      "index": 1,
+      "format": "QR_CODE",
+      "value": "https://example.invalid/balanced/044/01",
+      "difficulty": "medium",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 6,
+      "rotation_deg": 1.07,
+      "filename": "symbol-0106.png",
+      "label_box": [
+        1061,
+        395,
+        1321,
+        687
+      ],
+      "page_quad": [
+        [
+          1449.03,
+          648.43
+        ],
+        [
+          1670.92,
+          641.25
+        ],
+        [
+          1678.1,
+          863.13
+        ],
+        [
+          1456.22,
+          870.32
+        ]
+      ],
+      "page_aabb": {
+        "x": 1449.03,
+        "y": 641.25,
+        "width": 229.07,
+        "height": 229.07
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 0.78
+    },
+    {
+      "id": 107,
+      "page": 45,
+      "index": 1,
+      "format": "CODE_128",
+      "value": "PO25436874830",
+      "difficulty": "medium",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 2,
+      "rotation_deg": 2.64,
+      "filename": "symbol-0107.png",
+      "label_box": [
+        816,
+        2292,
+        1160,
+        2468
+      ],
+      "page_quad": [
+        [
+          1032.67,
+          2513.12
+        ],
+        [
+          1340.35,
+          2499.11
+        ],
+        [
+          1344.9,
+          2599.01
+        ],
+        [
+          1037.22,
+          2613.02
+        ]
+      ],
+      "page_aabb": {
+        "x": 1032.67,
+        "y": 2499.11,
+        "width": 312.23,
+        "height": 113.91
+      },
+      "page_orientation": "portrait",
+      "noise_level": "heavy",
+      "page_skew_deg": -0.03
+    },
+    {
+      "id": 108,
+      "page": 46,
+      "index": 1,
+      "format": "CODE_39",
+      "value": "BM-46-01-4331",
+      "difficulty": "medium",
+      "scenario": "close",
+      "close_group": 1,
+      "scale": 3,
+      "rotation_deg": -1.9,
+      "filename": "symbol-0108.png",
+      "label_box": [
+        1134,
+        763,
+        1816,
+        1001
+      ],
+      "page_quad": [
+        [
+          1316.85,
+          845.43
+        ],
+        [
+          1958.44,
+          868.31
+        ],
+        [
+          1953.09,
+          1018.21
+        ],
+        [
+          1311.5,
+          995.33
+        ]
+      ],
+      "page_aabb": {
+        "x": 1311.5,
+        "y": 845.43,
+        "width": 646.94,
+        "height": 172.79
+      },
+      "page_orientation": "landscape",
+      "noise_level": "heavy",
+      "page_skew_deg": -0.14
+    },
+    {
+      "id": 109,
+      "page": 46,
+      "index": 2,
+      "format": "DATA_MATRIX",
+      "value": "(01)09506000355892(21)BM4602",
+      "difficulty": "easy",
+      "scenario": "close",
+      "close_group": 1,
+      "scale": 7,
+      "rotation_deg": -2.31,
+      "filename": "symbol-0109.png",
+      "label_box": [
+        1487,
+        1520,
+        1675,
+        1738
+      ],
+      "page_quad": [
+        [
+          1672.28,
+          1606.15
+        ],
+        [
+          1812.16,
+          1612.15
+        ],
+        [
+          1806.17,
+          1752.02
+        ],
+        [
+          1666.29,
+          1746.03
+        ]
+      ],
+      "page_aabb": {
+        "x": 1666.29,
+        "y": 1606.15,
+        "width": 145.86,
+        "height": 145.86
+      },
+      "page_orientation": "landscape",
+      "noise_level": "heavy",
+      "page_skew_deg": -0.14
+    },
+    {
+      "id": 110,
+      "page": 46,
+      "index": 3,
+      "format": "DATA_MATRIX",
+      "value": "(01)09506000371940(21)BM4603",
+      "difficulty": "easy",
+      "scenario": "close",
+      "close_group": 1,
+      "scale": 10,
+      "rotation_deg": -0.84,
+      "filename": "symbol-0110.png",
+      "label_box": [
+        1450,
+        492,
+        1704,
+        776
+      ],
+      "page_quad": [
+        [
+          1639.02,
+          582.37
+        ],
+        [
+          1838.99,
+          585.8
+        ],
+        [
+          1835.56,
+          785.77
+        ],
+        [
+          1635.59,
+          782.34
+        ]
+      ],
+      "page_aabb": {
+        "x": 1635.59,
+        "y": 582.37,
+        "width": 203.4,
+        "height": 203.4
+      },
+      "page_orientation": "landscape",
+      "noise_level": "heavy",
+      "page_skew_deg": -0.14
+    },
+    {
+      "id": 111,
+      "page": 46,
+      "index": 4,
+      "format": "QR_CODE",
+      "value": "https://example.invalid/balanced/046/04",
+      "difficulty": "medium",
+      "scenario": "close",
+      "close_group": 1,
+      "scale": 6,
+      "rotation_deg": -2.42,
+      "filename": "symbol-0111.png",
+      "label_box": [
+        2061,
+        784,
+        2351,
+        1104
+      ],
+      "page_quad": [
+        [
+          2260.03,
+          879.79
+        ],
+        [
+          2481.81,
+          889.72
+        ],
+        [
+          2471.88,
+          1111.5
+        ],
+        [
+          2250.11,
+          1101.57
+        ]
+      ],
+      "page_aabb": {
+        "x": 2250.11,
+        "y": 879.79,
+        "width": 231.7,
+        "height": 231.7
+      },
+      "page_orientation": "landscape",
+      "noise_level": "heavy",
+      "page_skew_deg": -0.14
+    },
+    {
+      "id": 112,
+      "page": 46,
+      "index": 5,
+      "format": "CODE_128",
+      "value": "PO94714438391",
+      "difficulty": "hard",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 3,
+      "rotation_deg": -2.8,
+      "filename": "symbol-0112.png",
+      "label_box": [
+        293,
+        1138,
+        817,
+        1396
+      ],
+      "page_quad": [
+        [
+          487.42,
+          1227.78
+        ],
+        [
+          948.81,
+          1251.5
+        ],
+        [
+          941.11,
+          1401.3
+        ],
+        [
+          479.72,
+          1377.58
+        ]
+      ],
+      "page_aabb": {
+        "x": 479.72,
+        "y": 1227.78,
+        "width": 469.09,
+        "height": 173.52
+      },
+      "page_orientation": "landscape",
+      "noise_level": "heavy",
+      "page_skew_deg": -0.14
+    },
+    {
+      "id": 113,
+      "page": 46,
+      "index": 6,
+      "format": "CODE_39",
+      "value": "BM-46-06-9479",
+      "difficulty": "easy",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 4,
+      "rotation_deg": 2.7,
+      "filename": "symbol-0113.png",
+      "label_box": [
+        1829,
+        1683,
+        2751,
+        2011
+      ],
+      "page_quad": [
+        [
+          2014.25,
+          1818.05
+        ],
+        [
+          2869.39,
+          1779.85
+        ],
+        [
+          2878.32,
+          1979.65
+        ],
+        [
+          2023.17,
+          2017.85
+        ]
+      ],
+      "page_aabb": {
+        "x": 2014.25,
+        "y": 1779.85,
+        "width": 864.07,
+        "height": 238.0
+      },
+      "page_orientation": "landscape",
+      "noise_level": "heavy",
+      "page_skew_deg": -0.14
+    },
+    {
+      "id": 114,
+      "page": 46,
+      "index": 7,
+      "format": "QR_CODE",
+      "value": "QR|BM|PAGE=046|INDEX=07|LOT=541546",
+      "difficulty": "medium",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 5,
+      "rotation_deg": -3.56,
+      "filename": "symbol-0114.png",
+      "label_box": [
+        1785,
+        539,
+        2008,
+        792
+      ],
+      "page_quad": [
+        [
+          1980.47,
+          628.74
+        ],
+        [
+          2145.13,
+          639.39
+        ],
+        [
+          2134.47,
+          804.05
+        ],
+        [
+          1969.82,
+          793.39
+        ]
+      ],
+      "page_aabb": {
+        "x": 1969.82,
+        "y": 628.74,
+        "width": 175.31,
+        "height": 175.31
+      },
+      "page_orientation": "landscape",
+      "noise_level": "heavy",
+      "page_skew_deg": -0.14
+    },
+    {
+      "id": 115,
+      "page": 46,
+      "index": 8,
+      "format": "CODE_39",
+      "value": "BM-46-08-2222",
+      "difficulty": "easy",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 2,
+      "rotation_deg": -1.84,
+      "filename": "symbol-0115.png",
+      "label_box": [
+        1759,
+        1259,
+        2223,
+        1437
+      ],
+      "page_quad": [
+        [
+          1937.65,
+          1341.73
+        ],
+        [
+          2365.39,
+          1356.54
+        ],
+        [
+          2361.93,
+          1456.48
+        ],
+        [
+          1934.19,
+          1441.67
+        ]
+      ],
+      "page_aabb": {
+        "x": 1934.19,
+        "y": 1341.73,
+        "width": 431.2,
+        "height": 114.75
+      },
+      "page_orientation": "landscape",
+      "noise_level": "heavy",
+      "page_skew_deg": -0.14
+    },
+    {
+      "id": 116,
+      "page": 46,
+      "index": 9,
+      "format": "CODE_128",
+      "value": "BM0460924022380",
+      "difficulty": "easy",
+      "scenario": "oblique",
+      "close_group": null,
+      "scale": 4,
+      "rotation_deg": -21.02,
+      "filename": "symbol-0116.png",
+      "label_box": [
+        213,
+        877,
+        985,
+        1403
+      ],
+      "page_quad": [
+        [
+          491.89,
+          976.32
+        ],
+        [
+          1107.38,
+          1214.59
+        ],
+        [
+          1035.18,
+          1401.1
+        ],
+        [
+          419.69,
+          1162.83
+        ]
+      ],
+      "page_aabb": {
+        "x": 419.69,
+        "y": 976.32,
+        "width": 687.69,
+        "height": 424.78
+      },
+      "page_orientation": "landscape",
+      "noise_level": "heavy",
+      "page_skew_deg": -0.14
+    },
+    {
+      "id": 117,
+      "page": 46,
+      "index": 10,
+      "format": "CODE_128",
+      "value": "BM0461014409873",
+      "difficulty": "easy",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 2,
+      "rotation_deg": -1.2,
+      "filename": "symbol-0117.png",
+      "label_box": [
+        616,
+        1592,
+        982,
+        1764
+      ],
+      "page_quad": [
+        [
+          793.01,
+          1672.28
+        ],
+        [
+          1122.92,
+          1680.01
+        ],
+        [
+          1120.58,
+          1779.98
+        ],
+        [
+          790.67,
+          1772.25
+        ]
+      ],
+      "page_aabb": {
+        "x": 790.67,
+        "y": 1672.28,
+        "width": 332.25,
+        "height": 107.7
+      },
+      "page_orientation": "landscape",
+      "noise_level": "heavy",
+      "page_skew_deg": -0.14
+    },
+    {
+      "id": 118,
+      "page": 47,
+      "index": 1,
+      "format": "CODE_128",
+      "value": "PO33962621203",
+      "difficulty": "hard",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 2,
+      "rotation_deg": -1.52,
+      "filename": "symbol-0118.png",
+      "label_box": [
+        152,
+        673,
+        498,
+        847
+      ],
+      "page_quad": [
+        [
+          395.8,
+          883.86
+        ],
+        [
+          703.5,
+          897.5
+        ],
+        [
+          699.07,
+          997.4
+        ],
+        [
+          391.37,
+          983.76
+        ]
+      ],
+      "page_aabb": {
+        "x": 391.37,
+        "y": 883.86,
+        "width": 312.13,
+        "height": 113.54
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": -1.02
+    },
+    {
+      "id": 119,
+      "page": 49,
+      "index": 1,
+      "format": "DATA_MATRIX",
+      "value": "(01)09506000353873(21)BM4901",
+      "difficulty": "easy",
+      "scenario": "edge",
+      "close_group": null,
+      "scale": 10,
+      "rotation_deg": -91.25,
+      "filename": "symbol-0119.png",
+      "label_box": [
+        32,
+        2123,
+        318,
+        2379
+      ],
+      "page_quad": [
+        [
+          787.06,
+          2335.35
+        ],
+        [
+          782.97,
+          2535.31
+        ],
+        [
+          583.01,
+          2531.22
+        ],
+        [
+          587.1,
+          2331.26
+        ]
+      ],
+      "page_aabb": {
+        "x": 583.01,
+        "y": 2331.26,
+        "width": 204.05,
+        "height": 204.05
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 0.08
+    },
+    {
+      "id": 120,
+      "page": 49,
+      "index": 2,
+      "format": "CODE_39",
+      "value": "BM-49-02-3201",
+      "difficulty": "hard",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 2,
+      "rotation_deg": 2.17,
+      "filename": "symbol-0120.png",
+      "label_box": [
+        609,
+        1919,
+        1091,
+        2115
+      ],
+      "page_quad": [
+        [
+          1127.29,
+          2140.48
+        ],
+        [
+          1554.96,
+          2123.68
+        ],
+        [
+          1558.88,
+          2223.61
+        ],
+        [
+          1131.21,
+          2240.4
+        ]
+      ],
+      "page_aabb": {
+        "x": 1127.29,
+        "y": 2123.68,
+        "width": 431.59,
+        "height": 116.72
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 0.08
+    },
+    {
+      "id": 121,
+      "page": 50,
+      "index": 1,
+      "format": "CODE_128",
+      "value": "PO17643518436",
+      "difficulty": "easy",
+      "scenario": "edge",
+      "close_group": null,
+      "scale": 4,
+      "rotation_deg": 88.84,
+      "filename": "symbol-0121.png",
+      "label_box": [
+        39,
+        1289,
+        335,
+        1961
+      ],
+      "page_quad": [
+        [
+          588.4,
+          2095.73
+        ],
+        [
+          590.05,
+          1479.73
+        ],
+        [
+          790.05,
+          1480.27
+        ],
+        [
+          788.4,
+          2096.26
+        ]
+      ],
+      "page_aabb": {
+        "x": 588.4,
+        "y": 1479.73,
+        "width": 201.65,
+        "height": 616.53
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 1.01
+    },
+    {
+      "id": 122,
+      "page": 50,
+      "index": 2,
+      "format": "DATA_MATRIX",
+      "value": "DM|BM|P050|I02|L886712",
+      "difficulty": "medium",
+      "scenario": "standard",
+      "close_group": null,
+      "scale": 7,
+      "rotation_deg": 3.63,
+      "filename": "symbol-0122.png",
+      "label_box": [
+        1076,
+        2412,
+        1282,
+        2648
+      ],
+      "page_quad": [
+        [
+          1636.24,
+          2595.42
+        ],
+        [
+          1775.79,
+          2584.1
+        ],
+        [
+          1787.1,
+          2723.64
+        ],
+        [
+          1647.56,
+          2734.96
+        ]
+      ],
+      "page_aabb": {
+        "x": 1636.24,
+        "y": 2584.1,
+        "width": 150.86,
+        "height": 150.86
+      },
+      "page_orientation": "portrait",
+      "noise_level": "moderate",
+      "page_skew_deg": 1.01
+    }
+  ]
+}
