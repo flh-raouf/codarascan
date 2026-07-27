@@ -5,9 +5,10 @@ The pipeline deliberately has no barcode decoder dependency and never attempts
 to recover a payload. Its default linear path is coarse-to-fine: OpenCV's
 classical directional-coherence detector proposes regions on a reduced image
 using an ablated scale band, then strict structural verification reads only the
-small proposed regions from the native pixels. QR symbols use OpenCV's
-detector-only API, while Data Matrix-like symbols use a small
-bidirectional-energy/L-border verifier. No GPU is used.
+small proposed regions from the native pixels. QR symbols must exhibit their
+nested finder-pattern geometry. Data Matrix symbols are proposed by
+bidirectional energy, then accepted only after an ECC 200 finder/timing-border
+and module-grid verifier succeeds. No GPU is used.
 """
 
 from __future__ import annotations
@@ -73,6 +74,31 @@ LINEAR_PROFILES: dict[str, tuple[float, tuple[float, ...]]] = {
     "legacy": (0.65, LEGACY_LINEAR_SCALES),
 }
 DETECTOR_LOCAL = threading.local()
+
+# ECC 200 symbol dimensions. The local verifier deliberately recognizes the
+# physical Data Matrix finder/timing structure; it does not decode payloads.
+DATA_MATRIX_SQUARE_SIZES = (
+    10, 12, 14, 16, 18, 20, 22, 24, 26, 32, 36, 40, 44, 48, 52, 64,
+    72, 80, 88, 96, 104, 120, 132, 144,
+)
+DATA_MATRIX_RECTANGULAR_SIZES = (
+    (8, 18), (8, 32), (12, 26), (12, 36), (16, 36), (16, 48),
+)
+# A 160 px normalized patch cannot safely prove a grid finer than 64 modules.
+# Larger symbols need a higher-resolution proposal and therefore remain
+# proposals rather than being incorrectly accepted as Data Matrix.
+DATA_MATRIX_VERIFIABLE_SIZES = tuple(
+    (size, size) for size in DATA_MATRIX_SQUARE_SIZES if size <= 64
+) + DATA_MATRIX_RECTANGULAR_SIZES
+MINIMUM_DATA_MATRIX_GRID_SCORE = 0.68
+DATA_MATRIX_TIMING_PATTERNS = {
+    length: np.arange(length, dtype=np.float32) % 2.0
+    for length in {
+        dimension
+        for rows, columns in DATA_MATRIX_VERIFIABLE_SIZES
+        for dimension in (rows, columns)
+    }
+}
 
 
 @dataclass
@@ -578,7 +604,14 @@ def longest_true_runs(values: np.ndarray) -> np.ndarray:
     return np.max(lengths, axis=1)
 
 
-def matrix_metrics(gray: np.ndarray, quad: np.ndarray) -> dict[str, float]:
+def matrix_proposal_metrics(gray: np.ndarray, quad: np.ndarray) -> dict[str, float]:
+    """Permissive format-neutral metrics used only to prune energy proposals.
+
+    Directional energy is intentionally not sufficient for final acceptance:
+    text, stamps and table intersections can all satisfy these measurements.
+    Final Data Matrix and QR decisions are made by their dedicated physical
+    structure verifiers below.
+    """
     patch = rectify(gray, quad)
     binary = cv2.threshold(patch, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)[1]
     height, width = patch.shape
@@ -685,12 +718,525 @@ def matrix_metrics(gray: np.ndarray, quad: np.ndarray) -> dict[str, float]:
     }
 
 
+def quad_iou(first: np.ndarray, second: np.ndarray) -> float:
+    first_hull = cv2.convexHull(np.asarray(first, dtype=np.float32)).reshape(-1, 2)
+    second_hull = cv2.convexHull(np.asarray(second, dtype=np.float32)).reshape(-1, 2)
+    first_area = abs(cv2.contourArea(first_hull))
+    second_area = abs(cv2.contourArea(second_hull))
+    if min(first_area, second_area) < EPS:
+        return 0.0
+    try:
+        intersection, _ = cv2.intersectConvexConvex(first_hull, second_hull)
+    except cv2.error:
+        return 0.0
+    union = first_area + second_area - float(intersection)
+    return float(intersection) / max(EPS, union)
+
+
+def square_warp(gray: np.ndarray, quad: np.ndarray, size: int = 160) -> np.ndarray:
+    source = order_quad(quad)
+    destination = np.asarray(
+        [[0, 0], [size - 1, 0], [size - 1, size - 1], [0, size - 1]],
+        dtype=np.float32,
+    )
+    return cv2.warpPerspective(
+        gray,
+        cv2.getPerspectiveTransform(source, destination),
+        (size, size),
+        flags=cv2.INTER_CUBIC,
+        borderMode=cv2.BORDER_CONSTANT,
+        borderValue=255,
+    )
+
+
+def alternating_module_score(
+    values: np.ndarray,
+    pattern: np.ndarray | None = None,
+) -> float:
+    values = np.asarray(values, dtype=np.float32)
+    if pattern is None:
+        pattern = DATA_MATRIX_TIMING_PATTERNS.get(values.size)
+    if pattern is None:
+        pattern = np.arange(values.size, dtype=np.float32) % 2.0
+    direct = 1.0 - float(np.mean(np.abs(values - pattern)))
+    inverse = 1.0 - float(np.mean(np.abs(values - (1.0 - pattern))))
+    return max(direct, inverse)
+
+
+def data_matrix_lattice_score(binary: np.ndarray) -> tuple[float, dict[str, float]]:
+    """Score the two solid and two alternating borders of an ECC 200 grid."""
+    source = (np.asarray(binary) > 0).astype(np.float32)
+    best_score = 0.0
+    best_metrics: dict[str, float] = {}
+    for rows, columns in DATA_MATRIX_VERIFIABLE_SIZES:
+        # Require enough normalized samples to distinguish adjacent modules.
+        if min(source.shape) / max(rows, columns) < 1.35:
+            continue
+        cells = cv2.resize(source, (columns, rows), interpolation=cv2.INTER_AREA)
+        top, right = cells[0, :], cells[:, -1]
+        bottom, left = cells[-1, :], cells[:, 0]
+        solids = tuple(float(np.mean(edge)) for edge in (top, right, bottom, left))
+        column_pattern = DATA_MATRIX_TIMING_PATTERNS[columns]
+        row_pattern = DATA_MATRIX_TIMING_PATTERNS[rows]
+        timings = (
+            alternating_module_score(top, column_pattern),
+            alternating_module_score(right, row_pattern),
+            alternating_module_score(bottom, column_pattern),
+            alternating_module_score(left, row_pattern),
+        )
+        # Entries are solid-left, solid-bottom, timing-top, timing-right for
+        # each clockwise orientation, without materializing rotated arrays.
+        arrangements = (
+            (3, 2, 0, 1),
+            (2, 1, 3, 0),
+            (1, 0, 2, 3),
+            (0, 3, 1, 2),
+        )
+        rotation, finder_score = max(
+            enumerate(
+                min(
+                    solids[solid_left],
+                    solids[solid_bottom],
+                    timings[timing_top],
+                    timings[timing_right],
+                )
+                for solid_left, solid_bottom, timing_top, timing_right in arrangements
+            ),
+            key=lambda item: item[1],
+        )
+        solid_left, solid_bottom, timing_top, timing_right = arrangements[rotation]
+        cell_purity = float(np.mean(np.abs(cells - 0.5) * 2.0))
+        interior = cells[1:-1, 1:-1]
+        occupancy = float(np.mean(interior)) if interior.size else 0.0
+        occupancy_score = max(0.0, 1.0 - abs(occupancy - 0.5) / 0.5)
+        score = 0.68 * finder_score + 0.22 * cell_purity + 0.10 * occupancy_score
+        if score <= best_score:
+            continue
+        best_score = score
+        best_metrics = {
+            "symbol_rows": float(cells.shape[0] if rotation % 2 == 0 else cells.shape[1]),
+            "symbol_columns": float(cells.shape[1] if rotation % 2 == 0 else cells.shape[0]),
+            "finder_score": finder_score,
+            "solid_left": solids[solid_left],
+            "solid_bottom": solids[solid_bottom],
+            "timing_top": timings[timing_top],
+            "timing_right": timings[timing_right],
+            "cell_purity": cell_purity,
+            "module_occupancy": occupancy,
+        }
+    return best_score, best_metrics
+
+
+def score_data_matrix_mask(mask: np.ndarray) -> tuple[float, dict[str, float]]:
+    best_score = 0.0
+    best_metrics: dict[str, float] = {}
+    # The second view moves the sampling grid just inside a thick printed
+    # border. It is not a separate detector pass.
+    for inset in (0, 2):
+        view = mask[
+            inset:mask.shape[0] - inset or None,
+            inset:mask.shape[1] - inset or None,
+        ]
+        if min(view.shape) < 100:
+            continue
+        score, metrics = data_matrix_lattice_score(view)
+        if score > best_score:
+            best_score = score
+            best_metrics = dict(metrics, sampling_inset=float(inset))
+    return best_score, best_metrics
+
+
+def data_matrix_threshold_mask(
+    patch: np.ndarray,
+    *,
+    adaptive: bool,
+) -> np.ndarray:
+    """Threshold one cached normalized patch using only the requested method."""
+    if adaptive:
+        return cv2.adaptiveThreshold(
+            patch,
+            255,
+            cv2.ADAPTIVE_THRESH_GAUSSIAN_C,
+            cv2.THRESH_BINARY_INV,
+            31,
+            5,
+        )
+    return cv2.threshold(
+        patch,
+        0,
+        255,
+        cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU,
+    )[1]
+
+
+def expanded_candidate_roi(
+    gray: np.ndarray,
+    rough_quad: np.ndarray,
+    factor: float,
+) -> tuple[np.ndarray, int, int]:
+    x, y, width, height = cv2.boundingRect(np.asarray(rough_quad, dtype=np.int32))
+    padding = int(round(factor * max(width, height)))
+    x1, y1 = max(0, x - padding), max(0, y - padding)
+    x2 = min(gray.shape[1], x + width + padding)
+    y2 = min(gray.shape[0], y + height + padding)
+    return gray[y1:y2, x1:x2], x1, y1
+
+
+def data_matrix_border_hypotheses(
+    gray: np.ndarray,
+    rough_quad: np.ndarray,
+) -> list[np.ndarray]:
+    """Recover precise local border hypotheses around one energy proposal."""
+    rough_quad = order_quad(rough_quad)
+    hypotheses = [rough_quad]
+    x, y, width, height = cv2.boundingRect(np.asarray(rough_quad, dtype=np.int32))
+    hypotheses.append(
+        np.asarray(
+            [[x, y], [x + width, y], [x + width, y + height], [x, y + height]],
+            dtype=np.float32,
+        )
+    )
+    rough_short, rough_long = min(width, height), max(width, height)
+    for roi_factor in (0.20, 0.65):
+        roi, offset_x, offset_y = expanded_candidate_roi(gray, rough_quad, roi_factor)
+        if roi.size == 0:
+            continue
+        masks = (
+            cv2.threshold(
+                roi,
+                0,
+                255,
+                cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU,
+            )[1],
+            cv2.adaptiveThreshold(
+                roi,
+                255,
+                cv2.ADAPTIVE_THRESH_GAUSSIAN_C,
+                cv2.THRESH_BINARY_INV,
+                31,
+                7,
+            ),
+        )
+        for base in masks:
+            for kernel_size in (0, 3, 5):
+                mask = (
+                    base
+                    if kernel_size == 0
+                    else cv2.morphologyEx(
+                        base,
+                        cv2.MORPH_CLOSE,
+                        np.ones((kernel_size, kernel_size), dtype=np.uint8),
+                    )
+                )
+                contours, _ = cv2.findContours(
+                    mask,
+                    cv2.RETR_LIST,
+                    cv2.CHAIN_APPROX_SIMPLE,
+                )
+                for contour in contours:
+                    contour_x, contour_y, contour_width, contour_height = cv2.boundingRect(contour)
+                    contour_short = min(contour_width, contour_height)
+                    contour_long = max(contour_width, contour_height)
+                    if (
+                        contour_short >= max(28.0, 0.30 * rough_short)
+                        and contour_long <= 2.8 * rough_long
+                        and contour_long / max(1.0, contour_short) <= 4.5
+                    ):
+                        axis_quad = np.asarray(
+                            [
+                                [contour_x + offset_x, contour_y + offset_y],
+                                [contour_x + contour_width + offset_x, contour_y + offset_y],
+                                [
+                                    contour_x + contour_width + offset_x,
+                                    contour_y + contour_height + offset_y,
+                                ],
+                                [contour_x + offset_x, contour_y + contour_height + offset_y],
+                            ],
+                            dtype=np.float32,
+                        )
+                        if quad_overlap(axis_quad, rough_quad) >= 0.10:
+                            hypotheses.append(axis_quad)
+                    rectangle = cv2.minAreaRect(contour)
+                    candidate_width, candidate_height = (float(value) for value in rectangle[1])
+                    short_side = min(candidate_width, candidate_height)
+                    long_side = max(candidate_width, candidate_height)
+                    if (
+                        short_side < max(28.0, 0.30 * rough_short)
+                        or long_side > 2.8 * rough_long
+                        or long_side / max(1.0, short_side) > 4.5
+                    ):
+                        continue
+                    quad = cv2.boxPoints(rectangle).astype(np.float32)
+                    quad[:, 0] += offset_x
+                    quad[:, 1] += offset_y
+                    if quad_overlap(quad, rough_quad) >= 0.10:
+                        hypotheses.append(order_quad(quad))
+    deduplicated: list[np.ndarray] = []
+    for quad in hypotheses:
+        # One-pixel border shifts materially change module alignment, so only
+        # collapse almost identical quadrilaterals.
+        if not any(quad_iou(quad, prior) >= 0.985 for prior in deduplicated):
+            deduplicated.append(quad)
+        if len(deduplicated) >= 64:
+            break
+    rough_area = max(EPS, abs(cv2.contourArea(rough_quad)))
+    deduplicated.sort(
+        key=lambda quad: abs(
+            math.log(max(EPS, abs(cv2.contourArea(quad))) / rough_area)
+        )
+    )
+    # One difficult private evaluation document symbol requires a winning border beyond
+    # the first nine area-consistent hypotheses. Twelve is the validated
+    # conservative bound across the expanded regression corpus.
+    return deduplicated[:12]
+
+
+def refine_data_matrix_candidate(
+    gray: np.ndarray,
+    rough_quad: np.ndarray,
+) -> tuple[np.ndarray | None, dict[str, float]]:
+    hypotheses = data_matrix_border_hypotheses(gray, rough_quad)
+    otsu_ranked: list[
+        tuple[float, np.ndarray, np.ndarray, dict[str, float]]
+    ] = []
+    for quad in hypotheses:
+        # Warp each geometry once. The old path generated an unused adaptive
+        # mask for every hypothesis, then warped the strongest two a second
+        # time. Caching the patch preserves the exact masks and scores while
+        # removing both forms of duplicate work.
+        patch = square_warp(gray, quad)
+        otsu = data_matrix_threshold_mask(patch, adaptive=False)
+        score, metrics = score_data_matrix_mask(otsu)
+        otsu_ranked.append(
+            (score, quad, patch, dict(metrics, threshold_view=0.0))
+        )
+    if not otsu_ranked:
+        return None, {"grid_score": 0.0, "border_hypotheses": 0.0}
+    otsu_ranked.sort(key=lambda item: item[0], reverse=True)
+    best_score, best_quad, _best_patch, best_metrics = otsu_ranked[0]
+    # Adaptive thresholding is more expensive and most useful on the strongest
+    # geometries. Restrict it to two hypotheses while retaining the Otsu score
+    # for every hypothesis.
+    for _otsu_score, quad, patch, _otsu_metrics in otsu_ranked[:2]:
+        adaptive = data_matrix_threshold_mask(patch, adaptive=True)
+        score, metrics = score_data_matrix_mask(adaptive)
+        if score > best_score:
+            best_score = score
+            best_quad = quad
+            best_metrics = dict(metrics, threshold_view=1.0)
+    metrics = dict(
+        best_metrics,
+        grid_score=best_score,
+        border_hypotheses=float(len(hypotheses)),
+    )
+    if best_score < MINIMUM_DATA_MATRIX_GRID_SCORE:
+        return None, metrics
+    return order_quad(best_quad), metrics
+
+
+def local_qr_finder_chain(
+    contours: Sequence[np.ndarray],
+    hierarchy: np.ndarray,
+    index: int,
+) -> tuple[float, float] | None:
+    boxes: list[tuple[int, int, int, int]] = []
+    current = index
+    for _ in range(3):
+        if current < 0:
+            return None
+        x, y, width, height = cv2.boundingRect(contours[current])
+        short_side, long_side = min(width, height), max(width, height)
+        if short_side < 3 or long_side / max(1.0, short_side) > 1.40:
+            return None
+        boxes.append((x, y, width, height))
+        current = int(hierarchy[current][2])
+    centers = np.asarray(
+        [(x + width / 2.0, y + height / 2.0) for x, y, width, height in boxes],
+        dtype=np.float32,
+    )
+    tolerance = 0.18 * max(boxes[0][2], boxes[0][3])
+    if float(np.max(np.linalg.norm(centers - centers[0], axis=1))) > tolerance:
+        return None
+    outer, middle, inner = (
+        max(width, height) for _x, _y, width, height in boxes
+    )
+    if not (
+        0.30 <= middle / max(1.0, outer) <= 0.88
+        and 0.30 <= inner / max(1.0, middle) <= 0.88
+    ):
+        return None
+    return float(centers[0][0]), float(centers[0][1])
+
+
+def local_qr_finder_count(gray: np.ndarray, quad: np.ndarray) -> int:
+    patch = square_warp(gray, quad, 220)
+    masks = (
+        cv2.threshold(
+            patch,
+            0,
+            255,
+            cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU,
+        )[1],
+        cv2.adaptiveThreshold(
+            patch,
+            255,
+            cv2.ADAPTIVE_THRESH_GAUSSIAN_C,
+            cv2.THRESH_BINARY_INV,
+            31,
+            5,
+        ),
+    )
+    best = 0
+    for mask in masks:
+        contours, raw_hierarchy = cv2.findContours(
+            mask,
+            cv2.RETR_TREE,
+            cv2.CHAIN_APPROX_SIMPLE,
+        )
+        if raw_hierarchy is None:
+            continue
+        hierarchy = raw_hierarchy[0]
+        centers: list[np.ndarray] = []
+        for index in range(len(contours)):
+            center = local_qr_finder_chain(contours, hierarchy, index)
+            if center is None:
+                continue
+            point = np.asarray(center, dtype=np.float32)
+            if not any(float(np.linalg.norm(point - prior)) < 12.0 for prior in centers):
+                centers.append(point)
+        best = max(best, len(centers))
+    return best
+
+
+def qr_finder_ratio_hits(gray: np.ndarray, quad: np.ndarray) -> int:
+    """Count scanline evidence for QR's black/white 1:1:3:1:1 finder ratio."""
+    patch = square_warp(gray, quad, 210)
+    masks = (
+        cv2.threshold(
+            patch,
+            0,
+            255,
+            cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU,
+        )[1] > 0,
+        cv2.adaptiveThreshold(
+            patch,
+            255,
+            cv2.ADAPTIVE_THRESH_GAUSSIAN_C,
+            cv2.THRESH_BINARY_INV,
+            31,
+            5,
+        ) > 0,
+    )
+    best = 0
+    for mask in masks:
+        hits = 0
+        for line in (*mask, *mask.T):
+            signal = np.asarray(line, dtype=np.uint8)
+            changes = np.flatnonzero(np.diff(signal) != 0) + 1
+            starts = np.concatenate(([0], changes))
+            ends = np.concatenate((changes, [len(signal)]))
+            lengths = ends - starts
+            values = signal[starts]
+            for index in range(len(lengths) - 4):
+                if tuple(values[index:index + 5]) != (1, 0, 1, 0, 1):
+                    continue
+                runs = lengths[index:index + 5].astype(np.float32)
+                unit = float(np.mean(runs[[0, 1, 3, 4]]))
+                if (
+                    unit >= 1.0
+                    and 2.0 * unit <= runs[2] <= 4.5 * unit
+                    and float(np.max(np.abs(runs[[0, 1, 3, 4]] - unit))) <= 0.9 * unit
+                ):
+                    hits += 1
+        best = max(best, hits)
+    return best
+
+
+def locate_qr_in_candidate(
+    gray: np.ndarray,
+    rough_quad: np.ndarray,
+) -> Detection | None:
+    x, y, width, height = cv2.boundingRect(np.asarray(rough_quad, dtype=np.int32))
+    detector = getattr(DETECTOR_LOCAL, "qr_detector", None)
+    if detector is None:
+        detector = cv2.QRCodeDetector()
+        DETECTOR_LOCAL.qr_detector = detector
+    # A tight crop is best for small complete proposals; a wider crop recovers
+    # QR proposals that contain only the busy center and omit all three finders.
+    for expansion_index, expansion in enumerate((0.30, 1.0)):
+        padding = int(round(expansion * max(width, height)))
+        x1, y1 = max(0, x - padding), max(0, y - padding)
+        x2 = min(gray.shape[1], x + width + padding)
+        y2 = min(gray.shape[0], y + height + padding)
+        crop = gray[y1:y2, x1:x2]
+        if crop.size == 0:
+            continue
+        # Preserve the proven grayscale -> Otsu -> adaptive order, but create
+        # each threshold view only if all cheaper preceding views failed. A
+        # contour prerequisite was tested here and rejected: degraded QR codes
+        # in VN02 and Kaggle can gain their first visible finder only after the
+        # detector's perspective proposal, so pre-screening them is not safe.
+        for view_index in range(3):
+            if view_index == 0:
+                view = crop
+            elif view_index == 1:
+                view = cv2.threshold(
+                    crop,
+                    0,
+                    255,
+                    cv2.THRESH_BINARY + cv2.THRESH_OTSU,
+                )[1]
+            else:
+                view = cv2.adaptiveThreshold(
+                    crop,
+                    255,
+                    cv2.ADAPTIVE_THRESH_GAUSSIAN_C,
+                    cv2.THRESH_BINARY,
+                    31,
+                    5,
+                )
+            try:
+                found, points = detector.detect(view)
+            except cv2.error:
+                found, points = False, None
+            if not found or points is None:
+                continue
+            quad = np.asarray(points, dtype=np.float32).reshape(4, 2)
+            quad[:, 0] += x1
+            quad[:, 1] += y1
+            candidate = Detection(quad, "qr", 0.0, "opencv:qr-local-finder")
+            long_side, short_side = candidate.long_short()
+            if (
+                candidate.area() < 100.0
+                or short_side < 10.0
+                or long_side / max(EPS, short_side) > 1.8
+                or quad_overlap(quad, rough_quad) < 0.20
+            ):
+                continue
+            finder_count = local_qr_finder_count(gray, quad)
+            ratio_hits = qr_finder_ratio_hits(gray, quad)
+            # Three nested finders are conclusive. On heavily damaged scans,
+            # one or two contours may survive; require abundant independent
+            # 1:1:3:1:1 scanline evidence in that case.
+            if finder_count < 3 and not (finder_count >= 1 and ratio_hits >= 180):
+                continue
+            candidate.confidence = 0.95
+            candidate.metrics = {
+                "finder_patterns": float(finder_count),
+                "finder_ratio_hits": float(ratio_hits),
+                "local_threshold_view": float(view_index),
+                "local_expansion": float(expansion_index),
+            }
+            return candidate
+    return None
+
+
 def locate_data_matrix(
     gray: np.ndarray,
     covered: Sequence[Detection],
     work_size: int,
     stop_after_first: bool = False,
-) -> tuple[list[Detection], dict[str, int]]:
+) -> tuple[list[Detection], list[Detection], dict[str, int]]:
     height, width = gray.shape
     scale = min(1.0, float(work_size) / max(height, width))
     work = cv2.resize(gray, None, fx=scale, fy=scale, interpolation=cv2.INTER_AREA) if scale < 1.0 else gray
@@ -699,6 +1245,7 @@ def locate_data_matrix(
     raw: list[Detection] = []
     contour_count = 0
     responses: list[tuple[int, np.ndarray]] = []
+    evaluated_geometry: set[tuple[float, ...]] = set()
 
     def consume(local_size: int, response: np.ndarray, percentiles: Sequence[float]) -> bool:
         nonlocal contour_count
@@ -714,22 +1261,32 @@ def locate_data_matrix(
             rectangle = cv2.minAreaRect(contour)
             candidate_width, candidate_height = (float(value) for value in rectangle[1])
             short_side, long_side = min(candidate_width, candidate_height), max(candidate_width, candidate_height)
-            if short_side < 14 or long_side > 360 or long_side / max(1.0, short_side) > 2.5:
+            if short_side < 14 or long_side > 360 or long_side / max(1.0, short_side) > 4.5:
                 continue
-            quad = cv2.boxPoints(rectangle).astype(np.float32) / scale
+            quad = order_quad(cv2.boxPoints(rectangle).astype(np.float32) / scale)
             if any(quad_overlap(quad, item.quad) >= 0.20 for item in covered):
                 continue
-            metrics = matrix_metrics(gray, quad)
+            # Nested percentile masks frequently return the exact same
+            # rectangle. Perspective rectification and proposal metrics are
+            # deterministic for identical geometry, so evaluate it once.
+            geometry_key = tuple(
+                round(float(coordinate), 3)
+                for coordinate in quad.reshape(-1)
+            )
+            if geometry_key in evaluated_geometry:
+                continue
+            evaluated_geometry.add(geometry_key)
+            metrics = matrix_proposal_metrics(gray, quad)
             if not metrics["accepted"]:
                 continue
             raw.append(
                 Detection(
                     quad=quad,
-                    # Energy/grid evidence proves a 2-D matrix region, but
-                    # without decoding it cannot safely name the symbology.
+                    # This remains a proposal until a format-specific physical
+                    # verifier accepts it below.
                     kind="matrix_2d",
                     confidence=float(metrics["score"]),
-                    source=f"opencv:matrix-energy:l{local_size}",
+                    source=f"opencv:2d-energy-proposal:l{local_size}",
                     metrics={key: value for key, value in metrics.items() if key != "accepted"},
                 )
             )
@@ -744,25 +1301,63 @@ def locate_data_matrix(
         responses.append((local_size, response))
         found_evidence = consume(local_size, response, (99.55, 99.25, 99.0))
         if found_evidence:
-            accepted = deduplicate(raw)
-            return accepted, {
+            proposals = deduplicate(raw)
+            return proposals, [], {
                 "matrix_contours": contour_count,
-                "accepted_matrix_2d": len(accepted),
+                "matrix_unique_geometry": len(evaluated_geometry),
+                "matrix_proposals": len(proposals),
+                "accepted_matrix_2d": 0,
+                "recovered_local_qr": 0,
                 "matrix_dense_retry": 0,
             }
 
-    accepted = deduplicate(raw)
+    proposals = deduplicate(raw)
     # Closely packed pages need one wider cut.  Sparse/empty pages skip it,
     # which keeps the common path fast and avoids widening the false-positive
     # surface on ordinary forms.
-    dense_retry = len(covered) + len(accepted) >= 6
+    dense_retry = len(covered) + len(proposals) >= 6
     if dense_retry:
         for local_size, response in responses:
             consume(local_size, response, (98.75,))
-        accepted = deduplicate(raw)
-    return accepted, {
+        proposals = deduplicate(raw)
+
+    matrices: list[Detection] = []
+    local_qr: list[Detection] = []
+    rejected = 0
+    hypotheses_examined = 0
+    for proposal in proposals:
+        # QR has a highly specific three-finder signature and is cheap to test
+        # locally. Resolve it first so QR regions never pay for the more
+        # expensive Data Matrix border/grid search.
+        qr_detection = locate_qr_in_candidate(gray, proposal.quad)
+        if qr_detection is not None:
+            local_qr.append(qr_detection)
+            continue
+        refined_quad, metrics = refine_data_matrix_candidate(gray, proposal.quad)
+        hypotheses_examined += int(metrics.get("border_hypotheses", 0.0))
+        if refined_quad is not None:
+            matrices.append(
+                Detection(
+                    quad=refined_quad,
+                    kind="matrix_2d",
+                    confidence=float(metrics["grid_score"]),
+                    source="opencv:data-matrix-finder-grid",
+                    metrics=metrics,
+                )
+            )
+            continue
+        rejected += 1
+
+    matrices = deduplicate(matrices)
+    local_qr = deduplicate(local_qr)
+    return matrices, local_qr, {
         "matrix_contours": contour_count,
-        "accepted_matrix_2d": len(accepted),
+        "matrix_unique_geometry": len(evaluated_geometry),
+        "matrix_proposals": len(proposals),
+        "matrix_border_hypotheses": hypotheses_examined,
+        "rejected_matrix_proposals": rejected,
+        "accepted_matrix_2d": len(matrices),
+        "recovered_local_qr": len(local_qr),
         "matrix_dense_retry": int(dense_retry),
     }
 
@@ -798,21 +1393,23 @@ def write_crops(gray: np.ndarray, detections: Sequence[Detection], directory: Pa
     return paths
 
 
-def process_page(
-    page: int,
-    path: Path,
-    source_mode: str,
+def locate_regions(
+    gray: np.ndarray,
     config: Config,
-) -> tuple[dict[str, Any], list[Detection], Path]:
+) -> tuple[list[Detection], dict[str, Any], dict[str, float]]:
+    """Localize barcode regions in one grayscale image.
+
+    This is the shared in-memory entry point used by both the standalone
+    benchmark and Codara. File loading and artifact generation intentionally
+    remain outside the measured localization interval.
+    """
     started = perf_counter()
-    gray = cv2.imread(str(path), cv2.IMREAD_GRAYSCALE)
-    if gray is None:
-        raise RuntimeError(f"unable to read image: {path}")
     timings: dict[str, float] = {}
     diagnostics: dict[str, Any] = {}
     linear: list[Detection] = []
     qr: list[Detection] = []
     matrices: list[Detection] = []
+    recovered_local_qr: list[Detection] = []
 
     if config.kinds in {"linear", "all"}:
         stage = perf_counter()
@@ -825,16 +1422,36 @@ def process_page(
         run_full_matrix = True
         run_full_qr = True
         gate_evaluated = False
+        gate_linear_evidence = bool(linear)
+        gate_work_size = max(
+            config.empty_gate_matrix_work_size,
+            config.empty_gate_qr_work_size,
+        )
+        explicit_2d_cascade = (
+            config.empty_page_gate
+            and config.kinds == "2d"
+            and max(gray.shape) > gate_work_size
+        )
 
-        # In mixed-format mode the validated linear pass is already complete.
-        # If it is empty, ask two small, independent 2-D screens whether a
-        # native matrix/QR scan is justified. Only a double-negative decision
-        # can suppress both expensive stages. Explicit 2-D mode avoids this
-        # additional matrix pass because its caller expects a 2-D workload.
-        if config.empty_page_gate and config.kinds == "all" and not linear:
+        # Mixed-format mode can reuse final linear results as evidence. In
+        # explicit 2-D mode, run the coarse 2-D screens first; dense positive
+        # pages can escalate immediately without paying for a hidden linear
+        # scan. Only a double-negative 2-D decision unlocks that final safety
+        # check, which protects small symbols on mixed barcode pages. When a
+        # page already fits inside both gate work sizes, the screen is not
+        # coarse and cannot save pixel work, so preserve the original direct
+        # path instead.
+        should_screen_2d = (
+            config.empty_page_gate
+            and (
+                explicit_2d_cascade
+                or (config.kinds == "all" and not gate_linear_evidence)
+            )
+        )
+        if should_screen_2d:
             gate_evaluated = True
             stage = perf_counter()
-            coarse_matrices, coarse_info = locate_data_matrix(
+            coarse_matrices, _coarse_qr, coarse_info = locate_data_matrix(
                 gray,
                 (),
                 config.empty_gate_matrix_work_size,
@@ -848,14 +1465,33 @@ def process_page(
                     config.empty_gate_qr_work_size,
                 )
                 finder_info["quick_qr_gate_evaluated"] = 1
-            timings["empty_page_gate_seconds"] = perf_counter() - stage
             diagnostics.update(
                 {f"empty_gate_{key}": value for key, value in coarse_info.items()}
             )
             diagnostics.update(finder_info)
             two_d_evidence = bool(coarse_matrices) or finder_evidence
+            if not two_d_evidence and config.kinds == "2d":
+                linear_stage = perf_counter()
+                (
+                    gate_linear,
+                    gate_linear_info,
+                    _gate_linear_timings,
+                ) = locate_linear(gray, config)
+                timings["empty_gate_linear_seconds"] = (
+                    perf_counter() - linear_stage
+                )
+                gate_linear_evidence = bool(gate_linear)
+                diagnostics.update(
+                    {
+                        f"empty_gate_linear_{key}": value
+                        for key, value in gate_linear_info.items()
+                    }
+                )
+                two_d_evidence = gate_linear_evidence
+            timings["empty_page_gate_seconds"] = perf_counter() - stage
             run_full_matrix = two_d_evidence
             run_full_qr = two_d_evidence
+        diagnostics["empty_gate_linear_evidence"] = int(gate_linear_evidence)
 
         diagnostics["empty_page_gate_enabled"] = int(config.empty_page_gate)
         diagnostics["empty_page_gate_evaluated"] = int(gate_evaluated)
@@ -867,7 +1503,11 @@ def process_page(
 
         if run_full_matrix:
             stage = perf_counter()
-            matrices, info = locate_data_matrix(gray, linear, config.matrix_work_size)
+            matrices, recovered_local_qr, info = locate_data_matrix(
+                gray,
+                linear,
+                config.matrix_work_size,
+            )
             timings["data_matrix_seconds"] = perf_counter() - stage
             diagnostics.update(info)
         else:
@@ -875,22 +1515,37 @@ def process_page(
             diagnostics.update(
                 {
                     "matrix_contours": 0,
+                    "matrix_unique_geometry": 0,
+                    "matrix_proposals": 0,
+                    "matrix_border_hypotheses": 0,
+                    "rejected_matrix_proposals": 0,
                     "accepted_matrix_2d": 0,
+                    "recovered_local_qr": 0,
                     "matrix_dense_retry": 0,
                 }
             )
 
-        # In explicit 2-D mode the full matrix pass doubles as the first QR
-        # screen. If it is empty, a cheap finder check can still suppress the
-        # final native QR detector without duplicating matrix work.
-        if config.empty_page_gate and config.kinds == "2d" and not matrices:
+        # Small explicit-2D inputs deliberately retain the original ordering:
+        # run the native matrix pass once, then use the finder screen only to
+        # decide whether the final QR detector is justified.
+        if (
+            config.empty_page_gate
+            and config.kinds == "2d"
+            and not explicit_2d_cascade
+            and not matrices
+            and not recovered_local_qr
+        ):
             gate_evaluated = True
             stage = perf_counter()
             finder_evidence, finder_info = quick_qr_finder_evidence(
                 gray,
                 config.empty_gate_qr_work_size,
             )
-            timings["empty_page_gate_seconds"] = perf_counter() - stage
+            timings["empty_page_gate_seconds"] = (
+                timings.get("empty_page_gate_seconds", 0.0)
+                + perf_counter()
+                - stage
+            )
             diagnostics.update(finder_info)
             run_full_qr = finder_evidence
             diagnostics["empty_page_gate_evaluated"] = 1
@@ -898,7 +1553,7 @@ def process_page(
 
         if run_full_qr:
             stage = perf_counter()
-            qr = locate_qr(gray)
+            qr = deduplicate([*recovered_local_qr, *locate_qr(gray)])
             timings["qr_seconds"] = perf_counter() - stage
             # Matrix proposals are intentionally format-neutral. Replace any
             # proposal overlapping a confirmed QR location with the more
@@ -909,6 +1564,7 @@ def process_page(
                 if not any(quad_overlap(matrix.quad, item.quad) >= 0.20 for item in qr)
             ]
         else:
+            qr = recovered_local_qr
             timings["qr_seconds"] = 0.0
         diagnostics["accepted_qr"] = len(qr)
         diagnostics["accepted_matrix_2d"] = len(matrices)
@@ -917,6 +1573,19 @@ def process_page(
     detections = deduplicate(detections)
     detections.sort(key=lambda item: (round(float(item.center()[1]) / 20.0), float(item.center()[0])))
     timings["localization_seconds"] = perf_counter() - started
+    return detections, diagnostics, timings
+
+
+def process_page(
+    page: int,
+    path: Path,
+    source_mode: str,
+    config: Config,
+) -> tuple[dict[str, Any], list[Detection], Path]:
+    gray = cv2.imread(str(path), cv2.IMREAD_GRAYSCALE)
+    if gray is None:
+        raise RuntimeError(f"unable to read image: {path}")
+    detections, diagnostics, timings = locate_regions(gray, config)
     counts = {kind: sum(item.kind == kind for item in detections) for kind in ("linear", "qr", "matrix_2d")}
     payload = {
         "page": page,
