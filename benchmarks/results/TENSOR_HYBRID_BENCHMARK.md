@@ -1,16 +1,18 @@
 # Recommended fast mixed engines
 
-Codara exposes two recommended fast compositions:
+These measurements were made during the Codara application phase of the
+project. The final repository-owned registry exposes the same compositions as
+Tessera:
 
-- `tensor-adaptive-extractor`: Tensor 1-D proposals decoded by ZXing plus the
+- `tessera-extractor`: Tensor 1-D proposals decoded by ZXing plus the
   latest classical QR/Data Matrix extractor.
-- `tensor-p7-localizer`: Tensor 1-D geometry plus the latest classical
+- `tessera-localizer`: Tensor 1-D geometry plus the latest classical
   QR/Data Matrix geometry adapter.
 
-Their IDs are retained for API compatibility, but neither composition invokes
-the Adaptive extractor or Pipeline 7. Guarded v3 is the selected product Base
-for both extraction and separation; the older adaptive and Pipeline 7 engines
-remain available only for deliberate internal comparisons.
+The former IDs are retained as input aliases for API compatibility. Neither
+composition invokes the historical Adaptive extractor or Pipeline 7. Mosaic is
+the selected robust product line for both extraction and separation; the older
+engines remain historical comparisons only.
 
 ## Architecture
 
@@ -75,7 +77,7 @@ shared resize/preparation remain separately visible in diagnostics.
 
 The 1-D-only Tensor localizer remains approximately 6–9 ms median. The mixed
 figures are higher because they also execute validated QR/Data Matrix work and,
-for Extraction, candidate-level ZXing decoding.
+for extraction, candidate-level ZXing decoding.
 
 ## Selection guidance
 

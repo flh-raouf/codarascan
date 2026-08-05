@@ -1,10 +1,13 @@
 # Tessera
 
-Tessera is the recommended fast product line. Its current adapter snapshot combines tensor-based 1-D proposals with the validated classical 2-D route.
+Tessera is the recommended fast product line. It combines tensor-based 1-D
+proposals with the validated classical 2-D route.
 
-Source mapping:
+Implementation:
 
-- Detection: `src/barcode_detection/integrations/codara/engines/detection_tensor_p7.py`
-- Extraction: `src/barcode_detection/integrations/codara/engines/extraction_tensor_adaptive.py`
+- Detection: [`detection.py`](detection.py)
+- Extraction: [`extraction.py`](extraction.py)
+- Shared components: [`../common/`](../common/__init__.py)
 
-Move implementation code here only when the Codara-side `pipeline` and `localization` dependencies are part of the local package and covered by repository tests.
+The implementation and shared runtime are local to this repository. The
+compatibility imports under `integrations/codara/engines/` point back here.

@@ -1,8 +1,7 @@
 """Repository-local catalog of the current engine lineages.
 
 This module is intentionally dependency-free. It can be imported by tooling
-without importing the Codara runtime, whose application modules are not present
-in this checkout.
+without loading OpenCV, ZXing-C++, or the local engine implementation.
 """
 
 from __future__ import annotations
@@ -23,7 +22,7 @@ class EngineSpec:
     capability: CapabilityName
     role: Role
     source: str
-    runtime: str = "Codara"
+    runtime: str = "barcode_detection"
 
 
 ENGINE_CATALOG: tuple[EngineSpec, ...] = (
@@ -31,24 +30,24 @@ ENGINE_CATALOG: tuple[EngineSpec, ...] = (
         name="Tessera",
         capability="detect",
         role="recommended",
-        source="src/barcode_detection/integrations/codara/engines/detection_tensor_p7.py",
+        source="src/barcode_detection/engines/tessera/detection.py",
     ),
     EngineSpec(
         name="Tessera",
         capability="decode",
         role="recommended",
-        source="src/barcode_detection/integrations/codara/engines/extraction_tensor_adaptive.py",
+        source="src/barcode_detection/engines/tessera/extraction.py",
     ),
     EngineSpec(
         name="Mosaic",
         capability="detect",
         role="base",
-        source="src/barcode_detection/integrations/codara/engines/detection_guarded_v3.py",
+        source="src/barcode_detection/engines/mosaic/detection.py",
     ),
     EngineSpec(
         name="Mosaic",
         capability="decode",
         role="base",
-        source="src/barcode_detection/integrations/codara/engines/extraction_guarded_v3.py",
+        source="src/barcode_detection/engines/mosaic/extraction.py",
     ),
 )

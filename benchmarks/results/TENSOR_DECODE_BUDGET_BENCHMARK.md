@@ -86,6 +86,10 @@ linear decoding is therefore valid but cannot materially solve the independent
 
 ## Reproduction
 
+This is a historical Codara integration benchmark. Its original benchmark
+script and application runtime are not part of this repository; the migrated
+Tessera/Mosaic runtime is exercised through the public registry instead.
+
 ```bash
 # Run from the corresponding Codara backend checkout. The benchmark script
 # and its runtime dependencies are not included in this repository.

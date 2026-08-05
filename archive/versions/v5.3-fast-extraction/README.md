@@ -122,9 +122,9 @@ fast-direct-extractor
 It appears in Codara as **Fast extractor**. The existing
 `adaptive-extractor` remains the default and recommended engine.
 
-The application adapter is:
-
-[extraction_fast.py](../../../src/barcode_detection/integrations/codara/engines/extraction_fast.py)
+The former Codara application adapter was a compatibility-only integration
+snapshot and is not part of the installable source tree. The standalone
+implementation above is the reproducible reference for this version.
 
 ## Files
 
