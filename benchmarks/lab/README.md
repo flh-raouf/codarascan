@@ -33,6 +33,39 @@ Strict payload accuracy keeps those strings untouched. A separate semantic
 metric recognizes only the standards-defined equivalence between UPC-A and an
 EAN-13 value with number-system zero.
 
+## External benchmark data
+
+Large third-party datasets are intentionally not committed to this repository.
+Their provenance is tracked in [`datasets.json`](datasets.json), including the
+source page, license, pinned version or revision where available, local artifact
+path, and SHA-256 checksum. The registry is the single place to look when a
+benchmark input needs to be restored.
+
+List the registered sources and local artifact paths:
+
+```bash
+python3 benchmarks/lab/fetch_data.py list
+```
+
+Verify any artifacts that are currently present:
+
+```bash
+python3 benchmarks/lab/fetch_data.py verify
+```
+
+Fetch and extract a dataset when it is needed:
+
+```bash
+python3 benchmarks/lab/fetch_data.py fetch deal-kaist --extract
+python3 benchmarks/lab/fetch_data.py fetch kaggle-barcode-and-qr-v8 --extract
+```
+
+Kaggle sources require the Kaggle CLI and configured credentials. The QR-DN1.0
+record currently requires a manual download from Mendeley; save the downloaded
+archive at the registered path and run `verify`. UniqueData is retained only as
+a locally reproducible reference: its registry entry records the non-commercial,
+no-derivatives terms, so it must not be redistributed from this project.
+
 ## Commands
 
 Import a Pascal VOC image directory:
