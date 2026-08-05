@@ -1,10 +1,9 @@
-"""Expose numbered project folders under their original Python package names.
+"""Expose archived project folders under their original Python package names.
 
-The repository folders were prefixed with ``1-``, ``2-``, and so on after the
-pipelines were written.  Hyphens and leading digits are not valid in an import
-statement, while the pipeline modules still use their original package names.
-The CLI launchers call :func:`install` before importing a pipeline so the
-numbered layout remains usable without duplicate directories or symlinks.
+The historical pipeline modules still use import-safe package names even though
+their repository folders carry release prefixes. The CLI launchers call
+:func:`install` before importing a pipeline, so the archived layout remains
+usable without duplicate directories or symlinks.
 """
 
 from __future__ import annotations
@@ -16,10 +15,10 @@ from pathlib import Path
 
 
 PACKAGE_FOLDERS = {
-    "deterministic_barcode_locator": "1-deterministic_barcode_locator",
-    "hybrid_barcode_pipeline": "2-hybrid_barcode_pipeline",
-    "zxing_only_barcode_pipeline": "3-zxing_only_barcode_pipeline",
-    "zxing_2d_barcode_pipeline": "4-zxing_2d_barcode_pipeline",
+    "deterministic_barcode_locator": "archive/versions/v1-deterministic-locator",
+    "hybrid_barcode_pipeline": "archive/versions/v2-hybrid-pipeline",
+    "zxing_only_barcode_pipeline": "archive/versions/v3-zxing-only",
+    "zxing_2d_barcode_pipeline": "archive/versions/v4-zxing-2d",
 }
 
 
