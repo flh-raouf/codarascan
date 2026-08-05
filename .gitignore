@@ -1,5 +1,6 @@
 # macOS and editor artifacts
 .DS_Store
+**/.DS_Store
 .idea/
 .vscode/
 
@@ -17,25 +18,33 @@ __pycache__/
 node_modules/
 tmp/
 *.log
+*.egg-info/
+**/build/
+**/external/
+**/output/
+**/runs/
+**/data/
+**/.pytest_cache/
+**/__pycache__/
+
+# Local checkouts and generated model assets
+/codara-app/
+/models/generated/
 
 # Confidential company source documents (never commit)
 **/Quality Dossier.pdf
 **/quality dossier.pdf
 
 # Confidential outputs derived from Quality Dossier.pdf
-/bin/output/
-/notebooks/output/
 /output/opencv-detailed/
 /test/
 **/piero_yolov8s/output*/
-/1-deterministic_barcode_locator/output/
-/2-hybrid_barcode_pipeline/output/
-/3-zxing_only_barcode_pipeline/output/dossier/
-/3-zxing_only_barcode_pipeline/dossier_expected.json
+
+# Historical experiment/version diagnostics
+/archive/experiments/bin/notebooks/tests/
+/archive/versions/v3-zxing-only/dossier_expected.json
 
 # Dossier-derived diagnostic tests and images
-/bin/notebooks/tests/
 
 # The separately authored LaTeX report and its generated PDF
 /docs/barcode-report/
-/output/pdf/Barcode Detection and Decoding in Scanned Industrial Documents.pdf
