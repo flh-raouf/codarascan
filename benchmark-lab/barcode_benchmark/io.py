@@ -65,4 +65,3 @@ def image_index(value: dict[str, Any], source: str) -> dict[str, dict[str, Any]]
             raise ValueError(f"{source}: duplicate image id {identifier!r}")
         output[identifier] = image
     return output
-

@@ -95,4 +95,3 @@ def maximum_cardinality_matches(
         if truth_index >= 0
     ]
     return sorted(matches)
-
