@@ -1,232 +1,61 @@
-# Barcode pipeline run commands
+# Barcode Detection
 
-This file provides copy-paste commands for running every pipeline against the
-real `Quality Dossier.pdf`.
+This repository records the evolution of the barcode-detection work from exploratory experiments to the final Tessera and Mosaic engine lineages.
 
-The current evidence-selected implementation is
-[`5.2-evidence-guided-coarse-to-fine-pipeline`](5.2-evidence-guided-coarse-to-fine-pipeline/README.md).
-Its complete paper review, dataset audit, neutral benchmark, and
-reference-versus-deployable results are in
-[`benchmark-lab/RESEARCH_REPORT.md`](benchmark-lab/RESEARCH_REPORT.md).
+The repository is deliberately split into three layers:
 
-Run all commands from the repository root:
+1. `src/barcode_detection/` is the stable package boundary. It contains shared contracts, engine metadata, and the Codara integration snapshot used to document the current production lineages.
+2. `apps/` is reserved for user-facing applications. The API, CLI, and TUI boundaries are documented there; their runtime implementations remain in the Codara application until they are migrated here.
+3. `archive/` preserves experiments and numbered historical releases without presenting them as current production code.
 
-```bash
-cd /Users/fellahiabderraouf/Desktop/PROARCHIVE/code/barcode-detection
-```
+## Start here
 
-They use the existing repository virtual environment:
+- [Architecture](docs/architecture/README.md) — the boundaries and data flow.
+- [Lineage](docs/architecture/lineage.md) — how the experiments became versions, then Codara engines, Tessera, and Mosaic.
+- [Version archive](archive/versions/README.md) — the numbered releases in order.
+- [Codara integration](src/barcode_detection/integrations/codara/README.md) — what is copied here and what still lives in Codara.
+- [Benchmarks](benchmarks/README.md) — reproducible evaluation code and committed fixtures.
+- [Reports](reports/README.md) — authored reports and their provenance.
+
+## Repository map
 
 ```text
-venv/bin/python
+src/barcode_detection/
+├── core/                         shared contracts and domain vocabulary
+├── engines/                      stable engine catalog and Tessera/Mosaic boundaries
+└── integrations/codara/          copied adapters whose runtime dependencies are in Codara
+
+apps/                             API, CLI, and TUI application boundaries
+archive/
+├── experiments/                  bin/ and notebook experiments
+├── versions/                     official releases 1 through 8
+└── codara/                       lineage notes for the external application
+benchmarks/                       benchmark lab, fixtures, and committed results
+docs/                             architecture and product documentation
+models/                           model provenance and promotion notes
+reports/                          authored technical reports
+tests/                            repository-level architecture checks
+third_party/                      vendored dependencies and Git submodules
 ```
 
-Projects 2, 3, and 4 use `numbered_project_aliases.py` automatically. This is
-required because their original Python package names are not the same as their
-new numbered folder names.
+## Local setup
 
-## 1. Deterministic barcode locator
-
-Classical localization, structural verification, optional ZXing decoding,
-deskewed crops, overlays, JSON, and rejected-candidate diagnostics:
+The historical pipelines and the Codara adapters have their own dependency sets. The root package intentionally has no heavyweight dependency list because the current runtime is not self-contained in this checkout.
 
 ```bash
-venv/bin/python '1-deterministic_barcode_locator/barcode_locator.py' \
-  'notebooks/data/pdfs/Quality Dossier.pdf' \
-  --output '1-deterministic_barcode_locator/output/quality-dossier' \
-  --dpi 200 \
-  --angle-step 15 \
-  --include-rejected
+python3 -m venv .venv
+.venv/bin/python -m pip install -U pip
+.venv/bin/python -m pip install -e .
 ```
 
-For a slower high-recall review run, add `--high-recall`.
-
-## 2. Hybrid barcode pipeline
-
-Candidate-driven localization and decoding. This command explicitly selects
-ZXing so it does not require a Dynamsoft license:
+Run the repository-level checks with:
 
 ```bash
-venv/bin/python '2-hybrid_barcode_pipeline/run.py' \
-  'notebooks/data/pdfs/Quality Dossier.pdf' \
-  --output '2-hybrid_barcode_pipeline/output/quality-dossier' \
-  --engine zxing \
-  --angle-step 0
+.venv/bin/python -m pytest
 ```
 
-To omit rectified crops, add `--no-crops`.
+For a historical pipeline, use its local README and requirements file under `archive/versions/`. For the current Tessera/Mosaic runtime, use the Codara checkout and follow the integration notes; this repository does not contain the missing Codara-side `pipeline` and `localization` packages.
 
-## 3. ZXing-only barcode pipeline
+## Data and confidentiality
 
-Open-source ZXing-C++ decoding with deterministic 1D localization, advanced
-linear retries, and matrix recovery:
-
-```bash
-venv/bin/python '3-zxing_only_barcode_pipeline/run.py' \
-  'notebooks/data/pdfs/Quality Dossier.pdf' \
-  --output '3-zxing_only_barcode_pipeline/output/quality-dossier' \
-  --angle-step 0
-```
-
-To omit rectified crops, add `--no-crops`.
-
-## 4. Format-aware 2D-first ZXing pipeline
-
-Runs the Data Matrix, QR Code, Code 39, and Code 128 paths:
-
-```bash
-venv/bin/python '4-zxing_2d_barcode_pipeline/run.py' \
-  'notebooks/data/pdfs/Quality Dossier.pdf' \
-  --output '4-zxing_2d_barcode_pipeline/output/quality-dossier' \
-  --formats all \
-  --overwrite
-```
-
-Use `--formats 2d` for only Data Matrix and QR Code, or `--formats 1d` for
-only Code 39 and Code 128. To omit crops, add `--no-crops`.
-
-## 5. Optimized decoding pipeline
-
-Accuracy-gated decoding with batch PDF extraction and page-level concurrency.
-Four workers are the validated setting for the complete workload on this
-10-core MacBook Air:
-
-```bash
-venv/bin/python '5-optimized pipeline/run.py' \
-  'notebooks/data/pdfs/Quality Dossier.pdf' \
-  --output '5-optimized pipeline/output/quality-dossier' \
-  --formats all \
-  --workers 4 \
-  --overwrite
-```
-
-For the fastest run without visual artifacts:
-
-```bash
-venv/bin/python '5-optimized pipeline/run.py' \
-  'notebooks/data/pdfs/Quality Dossier.pdf' \
-  --output '5-optimized pipeline/output/quality-dossier-fast' \
-  --formats all \
-  --workers 4 \
-  --no-crops \
-  --no-overlays \
-  --overwrite
-```
-
-## 5.1 Adaptive generalization pipeline
-
-Project 5 plus scale-aware recovery for small and variably sized uploads:
-
-```bash
-venv/bin/python '5.1-adaptive-generalization-pipeline/run.py' \
-  'notebooks/data/pdfs/Quality Dossier.pdf' \
-  --output '5.1-adaptive-generalization-pipeline/output/quality-dossier' \
-  --formats all \
-  --workers 4 \
-  --overwrite
-```
-
-For JSON-only benchmarking, add `--no-crops --no-overlays`. Use two to four
-workers for mixed collections of small images.
-
-## 5.2 Evidence-guided coarse-to-fine pipeline
-
-The research-selected clean-room pipeline combines a compact learned locator,
-source-resolution crop consensus, an explicit unresolved state, and
-decode-gated QR restoration:
-
-```bash
-venv/bin/python \
-  '5.2-evidence-guided-coarse-to-fine-pipeline/run.py' \
-  'notebooks/data/pdfs/Quality Dossier.pdf' \
-  --output \
-  '5.2-evidence-guided-coarse-to-fine-pipeline/output/quality-dossier' \
-  --device mps \
-  --overwrite
-```
-
-## 5.3 Fast extraction pipeline
-
-Opt-in bounded extraction for known clear, large, dark-on-light symbols. It
-performs one valid-only ZXing-C++ page pass with no proposal or recovery stages:
-
-```bash
-venv/bin/python '5.3-fast-extraction-pipeline/run.py' \
-  'notebooks/data/pdfs/Quality Dossier.pdf' \
-  --output '5.3-fast-extraction-pipeline/output/quality-fast' \
-  --kinds all \
-  --workers 4 \
-  --overwrite
-```
-
-Declare known formats whenever possible, for example
-`--formats EAN13,UPCA`. Use project 5.1 instead for unknown, small, damaged,
-colored, inverted, or photographed symbols.
-
-Use `--formats EAN13,UPCA` only when the application really has that declared
-symbology constraint. Add `--decoded-only --no-overlays` for payload-only
-JSON benchmarking.
-
-## 6. Localization-only pipeline
-
-Locates linear and 2D barcodes without attempting to decode payloads:
-
-```bash
-venv/bin/python '6-localization-only pipeline/run.py' \
-  'notebooks/data/pdfs/Quality Dossier.pdf' \
-  --output '6-localization-only pipeline/output/quality-dossier' \
-  --kinds all \
-  --workers 4 \
-  --overlays \
-  --overwrite
-```
-
-Remove `--overlays` for JSON-only execution. Use `--kinds linear` when only
-1D localization is required.
-
-## 7. CPU coarse-to-fine localization
-
-The latest optimized localization-only pipeline. It uses coarse proposals,
-native-pixel verification, and the fast-negative cascade for empty pages:
-
-```bash
-venv/bin/python '7-cpu-coarse-to-fine-localization/run.py' \
-  'notebooks/data/pdfs/Quality Dossier.pdf' \
-  --output '7-cpu-coarse-to-fine-localization/output/quality-dossier' \
-  --kinds all \
-  --workers 4 \
-  --overlays \
-  --overwrite
-```
-
-Fastest JSON-only complete-localization run:
-
-```bash
-venv/bin/python '7-cpu-coarse-to-fine-localization/run.py' \
-  'notebooks/data/pdfs/Quality Dossier.pdf' \
-  --output '7-cpu-coarse-to-fine-localization/output/quality-dossier-fast' \
-  --kinds all \
-  --workers 4 \
-  --overwrite
-```
-
-Use `--kinds linear --workers 21` only when the two 2D symbols are deliberately
-out of scope. For complete localization, four workers are faster than 21 on
-the tested machine because the matrix and QR stages compete for cache and
-memory bandwidth.
-
-## Running selected pages
-
-Most pipelines support `--pages`. For example:
-
-```bash
-venv/bin/python '4-zxing_2d_barcode_pipeline/run.py' \
-  'notebooks/data/pdfs/Quality Dossier.pdf' \
-  --output '4-zxing_2d_barcode_pipeline/output/difficult-pages' \
-  --formats all \
-  --pages 8,16,19,21 \
-  --overwrite
-```
-
-Projects 2 and 3 do not have an `--overwrite` option. When repeating those
-runs, use a new output directory or remove the previous output directory first.
+Raw dossier inputs and generated run directories remain local and ignored. Only explicitly curated synthetic fixtures, manifests, reports, and source files belong in Git. See [.gitignore](.gitignore) before adding a new dataset or output.

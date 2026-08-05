@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "barcode-detection"
+version = "0.1.0"
+description = "Research archive and integration boundary for industrial barcode detection"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = [
+    "tests",
+    "benchmarks/lab/tests",
+    "archive/versions/v5.2-evidence-guided/tests",
+    "archive/versions/v8-structure-tensor/tests",
+]
+addopts = "-ra --import-mode=importlib"
