@@ -1,5 +1,9 @@
 # Pipeline selection benchmark
 
+This report is a historical record from the Codara application phase. It
+explains why the final repository-owned Tessera and Mosaic compositions were
+chosen; it is not an instruction to install Codara for the current runtime.
+
 Date: 2026-07-28
 
 This benchmark compares the current source of pipelines 5, 5.1, 5.2, and 7

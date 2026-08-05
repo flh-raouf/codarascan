@@ -1,9 +1,22 @@
 # Archive
 
-The archive preserves the project's evolution without making old experiments look like active production modules.
+The archive preserves the project's evolution without making research or old
+implementations look like active production modules.
 
-- [`experiments/`](experiments/README.md) contains the former `bin/` and root notebooks.
-- [`versions/`](versions/README.md) contains the official numbered releases.
-- [`codara/`](codara/README.md) records the external application lineage.
+- [`experiments/`](experiments/README.md) contains exploratory work organized
+  into isolated `atoms/` and end-to-end `pipelines/`.
+- [`versions/`](versions/README.md) contains the official numbered releases,
+  from the deterministic locator through the structure-tensor localizer.
 
-Archive code is retained for comparison and historical reproduction. New features belong in `src/`, `apps/`, or `benchmarks/`.
+Archive code is retained for comparison and historical reproduction. New
+production code belongs in `src/`; evaluation and reproducibility work belongs
+in `benchmarks/`.
+
+## Archive hygiene
+
+Keep this tree limited to source, notebooks, documentation, benchmark reports,
+and deliberately curated historical assets. Generated outputs, build products,
+Python caches, native binaries, and downloaded external model weights stay
+ignored or outside the archive. Historical model files that are small enough to
+version are documented beside their version; external baselines have a
+provenance record and are recreated locally when needed.
