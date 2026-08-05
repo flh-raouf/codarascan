@@ -71,4 +71,3 @@ class FastBarcodeLocator(nn.Module):
         )
         fused = self.refine(self.high_projection(high) + low)
         return self.pixel_shuffle(self.classifier(fused))
-

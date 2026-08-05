@@ -91,4 +91,3 @@ def adapt_current_detections(
         },
         "images": output_images,
     }
-
