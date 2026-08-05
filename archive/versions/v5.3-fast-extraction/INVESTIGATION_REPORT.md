@@ -218,10 +218,9 @@ Standalone selected engine:
 - [fast_direct.py](fast_direct.py)
 - [run.py](run.py)
 
-Codara adapter and registry:
-
-- [extraction_fast.py](../../../src/barcode_detection/integrations/codara/engines/extraction_fast.py)
-- [engine registry](../../../src/barcode_detection/integrations/codara/engines/registry.py)
+The former Codara adapter was a compatibility-only integration snapshot and is
+not part of the installable source tree. The current registry is documented at
+[`src/barcode_detection/engines/registry.py`](../../../src/barcode_detection/engines/registry.py).
 
 Tests pin:
 

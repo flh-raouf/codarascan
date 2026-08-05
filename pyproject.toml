@@ -5,9 +5,28 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "barcode-detection"
 version = "0.1.0"
-description = "Research archive and integration boundary for industrial barcode detection"
+description = "Independent Tessera and Mosaic barcode detection engines with a research archive"
 requires-python = ">=3.10"
-dependencies = ["numpy>=1.24"]
+dependencies = [
+    "numpy>=2.0,<3",
+    "opencv-contrib-python-headless>=4.10,<6",
+    "zxing-cpp>=3.0,<4",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<9"]
+benchmark = [
+    "pytest>=8,<9",
+    "Pillow>=10,<13",
+    "qrcode>=7,<9",
+    "torch>=2.6,<3",
+]
+experiments = [
+    "Pillow>=10,<13",
+    "huggingface_hub>=0.30,<1",
+    "torch>=2.6,<3",
+    "ultralytics>=8,<9",
+]
 
 [tool.setuptools.packages.find]
 where = ["src"]
@@ -16,8 +35,5 @@ where = ["src"]
 pythonpath = ["src"]
 testpaths = [
     "tests",
-    "benchmarks/lab/tests",
-    "archive/versions/v5.2-evidence-guided/tests",
-    "archive/versions/v8-structure-tensor/tests",
 ]
 addopts = "-ra --import-mode=importlib"

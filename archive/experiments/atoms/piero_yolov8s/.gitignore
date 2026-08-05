@@ -1,0 +1,6 @@
+# Downloaded external baseline weights are reproducible from MODEL_PROVENANCE.md.
+models/*.pt
+models/*.torchscript
+models/.cache/
+output/
+__pycache__/
