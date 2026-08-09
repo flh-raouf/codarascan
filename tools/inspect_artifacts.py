@@ -9,6 +9,7 @@ import re
 import tarfile
 import zipfile
 from email.parser import BytesParser
+from glob import glob
 from pathlib import Path, PurePosixPath
 
 FORBIDDEN = re.compile(
@@ -24,6 +25,21 @@ SENSITIVE_CONTENT = re.compile(
 )
 LOCAL_PATH = re.compile(rb"/Users/[^/\x00]+/|/home/[^/\x00]+/|[A-Za-z]:\\Users\\")
 MAX_MEMBER_BYTES = 10 * 1024 * 1024
+
+
+def expand_artifacts(patterns: list[Path]) -> list[Path]:
+    """Expand shell patterns even when the invoking shell leaves them literal."""
+    artifacts: list[Path] = []
+    for pattern in patterns:
+        value = str(pattern)
+        if any(character in value for character in "*?["):
+            matches = sorted(Path(match) for match in glob(value))
+            if not matches:
+                raise SystemExit(f"artifact pattern matched no files: {pattern}")
+            artifacts.extend(matches)
+        else:
+            artifacts.append(pattern)
+    return artifacts
 
 
 def names(path: Path) -> list[str]:
@@ -167,7 +183,7 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("artifacts", nargs="+", type=Path)
     arguments = parser.parse_args()
-    for artifact in arguments.artifacts:
+    for artifact in expand_artifacts(arguments.artifacts):
         inspect(artifact)
     return 0
 
