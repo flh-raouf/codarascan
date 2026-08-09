@@ -4,7 +4,7 @@ Date: 2026-08-09
 
 Scope: GitHub issue #3 and its authoritative comments
 
-Status: locally complete; hosted multi-platform publication evidence remains gated
+Status: complete and published
 
 ## Requirement audit
 
@@ -20,6 +20,8 @@ Status: locally complete; hosted multi-platform publication evidence remains gat
 | Packaging and provenance | Python 3.11–3.14 metadata, Apache-2.0 project license, notices, dependency provenance, native C++ source, SPDX headers, typed marker, package data, wheel/sdist automation | Artifact inspector validates required members, exact metadata, safe paths, size limits, SPDX, credentials/local paths, forbidden corpora/caches, and native wheel binary |
 | Codara migration | Public-API-only adapter for four Tessera/Mosaic product IDs; package pin; copied engine, recovery, product, and native implementation removal | 75 backend tests, installed `site-packages` assertion, migration import scan, backend lint, frontend tests/typecheck/build, compose validation |
 | Documentation and release automation | API, migration, compatibility, worker protocol, release, limitations, security, changelog, contribution, format, release-evidence, CI, and protected release workflows | Workflow YAML parse, source quality gates, artifact build/inspection/smoke, release-set manifest, and `git diff --check` |
+| Hosted release | Twenty CPython 3.11-3.14 native wheels plus one sdist; PyPI trusted publisher bound to `flh-raouf/codarascan` | Release run `31319314031` passed every platform, artifact-evidence, and publish job; PyPI JSON reports 21 files |
+| Registry consumer | Codara production lock pins the PyPI release and ignores the sibling development source | Fresh no-cache and locked no-sources installs had no `direct_url.json`; a representative adapter decoded successfully; hosted backend, frontend, and container jobs passed |
 
 ## Definitive local results
 
@@ -50,15 +52,16 @@ Machine-readable records:
 - `dist/release-manifest.json`
 - `benchmarks/results/format_smoke_macos_arm64_py313_0.1.0.json`
 
-## Remaining external gate
+## Hosted publication results
 
-The local registry-only Codara resolution check fails for the intended reason:
-`codarascan==0.1.0` is not yet present in the package registry. Completion of
-the hosted portion requires explicit publication authority to run the protected
-GitHub release workflow, produce and inspect the 20 CPython 3.11–3.14 wheels
-across Linux x86_64/ARM64, macOS Intel/Apple Silicon, and Windows x86_64 plus
-the sdist, publish through PyPI trusted publishing, refresh Codara from the
-registry-only lock, and build its no-sources production image.
+The repository is published at <https://github.com/flh-raouf/codarascan> and
+PyPI release 0.1.0 is available at
+<https://pypi.org/project/codarascan/0.1.0/>. Release workflow run
+<https://github.com/flh-raouf/codarascan/actions/runs/31319314031> passed the
+five-platform CPython 3.11-3.14 wheel matrix, native-required sdist build and
+smoke, 21-artifact manifest, and trusted publication.
 
-No commit, staging, push, pull request, GitHub issue mutation, release, or PyPI
-publication was performed by this local audit.
+Codara commit `3490b1d` consumes the registry lock. Hosted workflow run
+<https://github.com/flh-raouf/codara/actions/runs/31319896640> passed backend,
+frontend, and production container jobs. The deploy job was correctly skipped
+for the manually dispatched branch verification.

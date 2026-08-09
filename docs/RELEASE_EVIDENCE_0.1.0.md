@@ -91,18 +91,26 @@ through an adapter that imports only the public `codarascan` API. Its tests also
 validate both a real adapter result and a packaged golden example against the
 package-owned JSON Schema.
 
-## Deliberate external gates
+## Hosted release and publication
 
 ```bash
-cd ../codara-app/apps/backend
-uv sync --no-sources --dry-run --no-dev
-# expected pre-publication failure: codarascan==0.1.0 was not found in the
-# package registry
+gh workflow run release.yml --ref main -f publish=true
+# https://github.com/flh-raouf/codarascan/actions/runs/31319314031
+# success: 20 wheels, one sdist, release evidence, and trusted PyPI publish
 ```
 
-The remaining release evidence requires an explicitly approved GitHub release
-workflow run: CPython 3.11-3.14 wheels on Linux x86_64/ARM64, macOS
-Intel/Apple Silicon, and Windows x86_64, followed by protected PyPI trusted
-publishing. Codara's production lock must then be refreshed from that published
-artifact and its no-sources image built. Those steps are intentionally not
-performed by this local pre-publication run.
+The protected workflow completed on commit `f901cdc` after the repository was
+renamed to `flh-raouf/codarascan`. CPython 3.11-3.14 native wheels passed on
+Linux x86_64/ARM64, macOS Intel/Apple Silicon, and Windows x86_64. The native-
+required sdist install, 21-artifact completeness/checksum gate, and PyPI trusted
+publishing also passed. PyPI exposes version 0.1.0 with 20 wheels and one sdist
+at <https://pypi.org/project/codarascan/0.1.0/>. The published sdist SHA-256 is
+`976e9a1fc4986ba41084650c8c0f14b7902bc4bd2dd3916e84e40bd6632b871f`.
+
+Codara's production lock was then refreshed from PyPI and verified in two fresh
+environments. A no-cache, no-sources install ran a representative Tessera QR
+adapter decode, and a locked no-sources install contained no `direct_url.json`,
+proving registry-wheel installation. Hosted Codara run
+<https://github.com/flh-raouf/codara/actions/runs/31319896640> passed all 75
+backend tests, frontend checks, and the production container build from commit
+`3490b1d`.
