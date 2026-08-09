@@ -35,9 +35,9 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/flh-raouf/barcode-detector"
-Issues = "https://github.com/flh-raouf/barcode-detector/issues"
-Source = "https://github.com/flh-raouf/barcode-detector"
+Homepage = "https://github.com/flh-raouf/codarascan"
+Issues = "https://github.com/flh-raouf/codarascan/issues"
+Source = "https://github.com/flh-raouf/codarascan"
 
 [project.scripts]
 codarascan = "codarascan.cli:main"
