@@ -1,28 +1,69 @@
 [build-system]
-requires = ["setuptools>=68"]
+requires = ["setuptools>=75,<84", "wheel>=0.44", "numpy>=2.0,<3"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "barcode-detection"
+name = "codarascan"
 version = "0.1.0"
-description = "Independent Tessera and Mosaic barcode detection engines with a research archive"
-requires-python = ">=3.10"
+description = "Offline barcode localization and decoding for images and PDF documents"
+readme = "README.md"
+requires-python = ">=3.11,<3.15"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE", "THIRD_PARTY_NOTICES.md"]
+authors = [{ name = "Abderraouf FELLAHI" }]
+keywords = ["barcode", "qr-code", "data-matrix", "pdf", "zxing"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Operating System :: MacOS",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Multimedia :: Graphics :: Capture :: Scanners",
+    "Typing :: Typed",
+]
 dependencies = [
     "numpy>=2.0,<3",
     "opencv-contrib-python-headless>=4.10,<6",
     "zxing-cpp>=3.0,<4",
+    "Pillow>=10,<13",
+    "pypdfium2>=4.30,<6",
 ]
 
+[project.urls]
+Homepage = "https://github.com/flh-raouf/barcode-detector"
+Issues = "https://github.com/flh-raouf/barcode-detector/issues"
+Source = "https://github.com/flh-raouf/barcode-detector"
+
+[project.scripts]
+codarascan = "codarascan.cli:main"
+
 [project.optional-dependencies]
-test = ["pytest>=8,<9"]
+test = [
+    "build>=1.2,<2",
+    "jsonschema>=4.23,<5",
+    "pytest>=8,<10",
+    "pytest-cov>=6,<8",
+]
+dev = [
+    "codarascan[test]",
+    "mypy>=1.15,<2",
+    # NumPy 2.5 stubs use Python 3.12 type-statement syntax, which cannot be
+    # parsed by the mypy job that deliberately checks our Python 3.11 floor.
+    # Distribution dependencies remain <3 and artifact smoke covers 2.5.
+    "numpy>=2.0,<2.5",
+    "ruff>=0.12,<1",
+]
 benchmark = [
-    "pytest>=8,<9",
-    "Pillow>=10,<13",
+    "pytest>=8,<10",
     "qrcode>=7,<9",
     "torch>=2.6,<3",
 ]
 experiments = [
-    "Pillow>=10,<13",
     "huggingface_hub>=0.30,<1",
     "torch>=2.6,<3",
     "ultralytics>=8,<9",
@@ -30,10 +71,61 @@ experiments = [
 
 [tool.setuptools.packages.find]
 where = ["src"]
+include = ["codarascan*"]
+
+[tool.setuptools.package-data]
+codarascan = [
+    "py.typed",
+    "schemas/*.json",
+    "engines/common/native/*.cpp",
+]
 
 [tool.pytest.ini_options]
 pythonpath = ["src"]
 testpaths = [
     "tests",
 ]
-addopts = "-ra --import-mode=importlib"
+addopts = "-ra --strict-markers --strict-config --import-mode=importlib"
+markers = [
+    "native: requires the compiled Tessera extension",
+    "integration: exercises complete engine or document flows",
+    "artifact: builds or installs distribution artifacts",
+]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+extend-exclude = ["archive", "benchmarks/lab/external", "third_party"]
+
+[tool.ruff.lint]
+# Keep the release gate focused on correctness errors and deterministic import
+# hygiene. The preserved research-derived engine implementations intentionally
+# retain their validated numerical style until changes are benchmarked.
+select = ["E4", "E7", "E9", "F", "I"]
+
+[tool.mypy]
+python_version = "3.11"
+files = [
+    "src/codarascan/__init__.py",
+    "src/codarascan/core/contracts.py",
+    "src/codarascan/errors.py",
+    "src/codarascan/formats.py",
+    "src/codarascan/inputs.py",
+    "src/codarascan/models.py",
+    "src/codarascan/serialization.py",
+    "src/codarascan/scanner.py",
+    "src/codarascan/documents.py",
+    "src/codarascan/cli.py",
+    "src/codarascan/worker.py",
+]
+strict = true
+warn_unreachable = true
+exclude = ["^archive/", "^benchmarks/lab/external/", "^third_party/"]
+
+[[tool.mypy.overrides]]
+module = ["cv2.*", "pypdfium2.*", "zxingcpp.*"]
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = ["codarascan.engines.*"]
+ignore_errors = true

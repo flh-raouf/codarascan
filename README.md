@@ -1,91 +1,169 @@
-# Barcode Detection
+# CodaraScan
 
-This repository contains the independent Tessera and Mosaic barcode engines,
-their benchmark history, and the experiments that led to them.
+CodaraScan is an offline Python package for locating and decoding barcodes in
+images and PDF documents. It combines two explicit engines behind one stable
+API: Tessera for low latency (`mode="fast"`) and Mosaic for stronger recovery
+(`mode="robust"`). Results preserve quadrilateral geometry, localization-only
+and unresolved states, Unicode text, and original payload bytes.
 
-The repository is deliberately split into three layers:
+> **0.1.0 is alpha software.** APIs and schemas may change during 0.x. Pin an
+> exact version and evaluate your own corpus before production use. All
+> concrete formats readable by the installed ZXing-C++ release are selectable,
+> but degraded-image validation depth varies by format. Stable 1.0 remains
+> blocked on the production gates in [release policy](docs/RELEASE.md).
 
-1. `src/barcode_detection/` is the stable package boundary. It contains the shared contracts, local recovery runtime, native adapter, and active Tessera/Mosaic implementations.
-2. `benchmarks/` contains reproducible evaluation code, curated synthetic fixtures, and committed results.
-3. `archive/` preserves experiments and numbered historical releases without presenting them as current production code.
+## Install
 
-## Start here
+CodaraScan supports CPython 3.11 through 3.14.
 
-- [Architecture](docs/architecture/README.md) — the boundaries and data flow.
-- [Lineage](docs/architecture/lineage.md) — how the experiments became versions, then Codara engines, Tessera, and Mosaic.
-- [Engine runtime](src/barcode_detection/engines/README.md) — the local implementation and product boundaries.
-- [Version archive](archive/versions/README.md) — the numbered releases in order.
-- [Codara compatibility](src/barcode_detection/integrations/codara/README.md) — legacy import paths retained for the application checkout.
-- [Model catalog](models/README.md) — local historical artifacts versus externally-owned final runtime assets.
-- [Contributing](CONTRIBUTING.md) — setup, boundaries, and hygiene rules for changes.
-- [Benchmarks](benchmarks/README.md) — reproducible evaluation code and committed fixtures.
-- [Reports](reports/README.md) — authored reports and their provenance.
-
-## Repository map
-
-```text
-src/barcode_detection/
-├── core/                         shared contracts and domain vocabulary
-├── engines/                      active Tessera/Mosaic implementations and registry
-└── integrations/codara/          compatibility imports and comparison adapters
-
-archive/
-├── experiments/                  isolated atoms and pipeline notebooks
-├── versions/                     official releases 1 through 8
-└── README.md                     archive policy and hygiene rules
-benchmarks/                       benchmark lab, fixtures, and committed results
-docs/                             architecture and lineage documentation
-models/                           model catalog and promotion provenance
-reports/                          authored technical reports
-tests/                            repository-level architecture checks
-third_party/                      vendored dependencies and Git submodules
+```bash
+python -m pip install codarascan==0.1.0
 ```
 
-## Local setup
+PDF support is included in the normal installation through pypdfium2. No
+Poppler executable, server, network connection, runtime model download, or
+Codara application is required.
 
-The active engine runtime is self-contained in this checkout. The historical
-pipelines and optional benchmark experiments have additional dependency sets.
+## Python API
+
+```python
+from codarascan import Scanner
+
+scanner = Scanner(
+    mode="fast",                 # Tessera; use "robust" for Mosaic
+    symbols="all",               # "linear", "2d", or "all"
+    formats=["qr-code", "code-128"],
+    decode=True,
+)
+scanner.warm()                   # optional eager initialization
+
+result = scanner.scan_image("shipping-label.png")
+for symbol in result.symbols:
+    print(symbol.status, symbol.quad)
+    if hasattr(symbol, "text"):
+        print(symbol.format, symbol.text, symbol.raw_bytes)
+```
+
+`scan_image` accepts image paths, encoded image bytes, Pillow images, 2-D
+`uint8` grayscale arrays, and 3/4-channel `uint8` BGR/BGRA arrays. EXIF
+orientation is applied when metadata exists. NumPy arrays are analyzed exactly
+as supplied and copied to isolate scans from caller mutation.
+
+PDF scanning uses one-based page numbers and keeps requested order even with
+parallel analysis:
+
+```python
+document = scanner.scan_document(
+    "batch.pdf",
+    pages=[3, 1, 2],
+    workers=4,                    # default 1; positive integer or "auto"
+    on_error="collect",           # default "raise"
+)
+
+with scanner.iter_document("large.pdf", workers=2) as pages:
+    for page in pages:
+        persist(page)
+    print(pages.complete, pages.errors)
+```
+
+`iter_document` keeps at most the selected worker count in flight and does not
+accumulate returned pages. Both image and document calls accept an optional
+normalized `(x, y, width, height)` ROI and opt-in diagnostics.
+
+One-off `scan_image`, `scan_document`, and `iter_document` functions reuse
+cached immutable scanner configurations. See the complete [API contract](docs/API.md).
+
+## Results
+
+Stable symbol statuses are:
+
+- `decoded`
+- `localized_unresolved_linear`
+- `localized_unresolved_matrix`
+- `localized` when decoding is disabled
+- `review_candidate`
+
+Decoded results expose `text`, its `value` alias, exact `raw_bytes`, canonical
+`format`, kind, confidence, sources, pixel quad, normalized quad, and analyzed
+dimensions. Localization-only results do not have payload or format
+attributes. Confidence is an engine-specific evidence score, not a probability
+and not directly comparable across engines; status is the semantic signal.
+
+`to_json(result)` is deterministic, rejects non-finite numbers, and serializes
+raw bytes as Base64. Schemas and shared golden fixtures ship in
+`codarascan/schemas` for consumer contract tests.
+
+## Formats
+
+```python
+groups = Scanner.supported_formats()
+print([item.name for item in groups["1d"]])
+print([item.name for item in groups["2d"]])
+```
+
+The capability is generated from the installed ZXing-C++ readable catalog and
+contains 27 linear and 13 matrix selections in the pinned 0.1.0 dependency
+range. It deliberately has no experimental/stability field. See
+[compatibility and format status](docs/COMPATIBILITY.md) and the
+[0.1.0 format evidence](benchmarks/results/FORMAT_STATUS_0.1.0.md).
+
+## CLI
+
+```bash
+codarascan image label.png --mode fast --symbols all --json
+codarascan document dossier.pdf --pages 1-4,7 --workers auto --ndjson
+```
+
+Human output is the default. `--json` emits one shared-schema result;
+`--ndjson` streams page objects and a final document summary. Standard output
+is reserved for results. Warnings and debug-output locations use standard
+error. Exit codes are 0 (symbols), 1 (successful no-symbol scan), 2 (invalid
+usage/input), 3 (processing failure), and 4 (partial document result).
+
+The private `codarascan _worker` command provides a persistent, versioned,
+length-prefixed JSON protocol for backend adapters without opening a network
+port. See [worker protocol](docs/WORKER_PROTOCOL.md).
+
+## Native Tessera acceleration
+
+Official wheels are expected to contain `codarascan._sttg_native`. Source
+installs build it when a supported compiler is available. If it cannot load,
+scanning continues through the Python reference backend and emits exactly one
+process-level warning:
+
+> CodaraScan could not load the native Tessera extension. Falling back to the slower Python implementation.
+
+Set `CODARASCAN_FORCE_PYTHON=1` to exercise the reference path. Result metadata
+records `native` or `python-reference`.
+
+## Offline, privacy, and resources
+
+Import, warm, image scanning, PDF rendering, CLI, and worker operations make no
+network requests and emit no telemetry. Inputs, decoded payloads, rendered
+pages, diagnostics, and explicit debug output may be sensitive. Default scans
+leave no persistent crops, overlays, rendered pages, or payload files.
+
+CodaraScan intentionally imposes no hidden limits on input bytes, dimensions,
+pages, workers, CPU, memory, or results. Large images, 300-DPI PDFs, broad
+format searches, diagnostics, and high worker counts can exhaust resources.
+Callers own quotas, isolation, timeouts, admission control, and cancellation.
+
+## Development
 
 ```bash
 git submodule update --init --recursive
-python3 -m venv .venv
-.venv/bin/python -m pip install -U pip
-.venv/bin/python -m pip install -e ".[test]"
-```
-
-Run the repository-level checks with:
-
-```bash
+python3.11 -m venv .venv
+.venv/bin/python -m pip install -e ".[dev]"
+.venv/bin/ruff check src/codarascan tests
+.venv/bin/mypy
 .venv/bin/python -m pytest
+.venv/bin/python -m build
 ```
 
-For the active engines, install the project with its default dependencies and
-load an engine directly:
+Research history remains under `archive/`, `benchmarks/`, and the authored
+barcode report. Those assets are not installed as runtime package data. See
+[contributing](CONTRIBUTING.md), [migration notes](MIGRATION.md),
+[known limitations](docs/KNOWN_LIMITATIONS.md), and [changelog](CHANGELOG.md).
 
-```bash
-.venv/bin/python - <<'PY'
-from pathlib import Path
-
-from barcode_detection.core.contracts import Capability
-from barcode_detection.engines import get_engine
-
-engine = get_engine("tessera-extractor", Capability.DECODE)
-outcome = engine.analyze_page(1, Path("page-0001.png"))
-print([(region.value, region.symbology) for region in outcome.regions])
-PY
-```
-
-The registry also exposes `list_engines()` and `warm_all()` for applications
-that need discovery or startup priming.
-
-For benchmark tests, install the optional benchmark group and run them
-explicitly. Historical pipelines remain isolated under `archive/versions/` and
-use their local README and requirements file.
-
-## Data and confidentiality
-
-Raw dossier inputs and generated run directories remain local and ignored. Only
-explicitly curated synthetic fixtures, manifests, reports, and source files
-belong in Git. See [.gitignore](.gitignore) before adding a new dataset or
-output. Codara remains an optional application consumer, not a runtime
-dependency of this package.
+CodaraScan is licensed under Apache-2.0. Third-party provenance is recorded in
+[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).

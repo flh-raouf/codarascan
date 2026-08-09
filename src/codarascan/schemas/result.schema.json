@@ -1,0 +1,195 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://codarascan.dev/schemas/result-0.1.0.json",
+  "title": "CodaraScan result",
+  "oneOf": [
+    { "$ref": "#/$defs/image" },
+    { "$ref": "#/$defs/page" },
+    { "$ref": "#/$defs/document" }
+  ],
+  "$defs": {
+    "point": {
+      "type": "array",
+      "prefixItems": [
+        { "type": "number", "minimum": 0 },
+        { "type": "number", "minimum": 0 }
+      ],
+      "items": false,
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "normalizedPoint": {
+      "type": "array",
+      "prefixItems": [
+        { "type": "number", "minimum": 0, "maximum": 1 },
+        { "type": "number", "minimum": 0, "maximum": 1 }
+      ],
+      "items": false,
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "quad": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/point" },
+      "minItems": 4,
+      "maxItems": 4
+    },
+    "normalizedQuad": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/normalizedPoint" },
+      "minItems": 4,
+      "maxItems": 4
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["package_version", "engine", "engine_version", "decoder_version", "backend", "mode"],
+      "properties": {
+        "package_version": { "type": "string", "minLength": 1 },
+        "engine": { "type": "string", "minLength": 1 },
+        "engine_version": { "type": "string", "minLength": 1 },
+        "decoder_version": { "type": "string", "minLength": 1 },
+        "backend": { "type": "string", "minLength": 1 },
+        "mode": { "enum": ["fast", "robust"] }
+      }
+    },
+    "symbolBase": {
+      "type": "object",
+      "required": ["status", "kind", "confidence", "quad", "normalized_quad", "image_width", "image_height", "sources"],
+      "properties": {
+        "status": {
+          "enum": ["decoded", "localized_unresolved_linear", "localized_unresolved_matrix", "localized", "review_candidate"]
+        },
+        "kind": { "enum": ["linear", "2d"] },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "quad": { "$ref": "#/$defs/quad" },
+        "normalized_quad": { "$ref": "#/$defs/normalizedQuad" },
+        "image_width": { "type": "integer", "minimum": 1 },
+        "image_height": { "type": "integer", "minimum": 1 },
+        "sources": { "type": "array", "items": { "type": "string" } },
+        "diagnostics": { "type": "object" }
+      }
+    },
+    "localizedSymbol": {
+      "allOf": [
+        { "$ref": "#/$defs/symbolBase" },
+        {
+          "properties": {
+            "status": {
+              "enum": ["localized_unresolved_linear", "localized_unresolved_matrix", "localized", "review_candidate"]
+            }
+          },
+          "allOf": [
+            {
+              "if": {
+                "properties": { "status": { "const": "localized_unresolved_linear" } },
+                "required": ["status"]
+              },
+              "then": { "properties": { "kind": { "const": "linear" } } }
+            },
+            {
+              "if": {
+                "properties": { "status": { "const": "localized_unresolved_matrix" } },
+                "required": ["status"]
+              },
+              "then": { "properties": { "kind": { "const": "2d" } } }
+            }
+          ]
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "decodedSymbol": {
+      "allOf": [
+        { "$ref": "#/$defs/symbolBase" },
+        {
+          "required": ["text", "value", "raw_bytes", "format"],
+          "properties": {
+            "status": { "const": "decoded" },
+            "text": { "type": "string" },
+            "value": { "type": "string" },
+            "raw_bytes": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["encoding", "data"],
+              "properties": {
+                "encoding": { "const": "base64" },
+                "data": { "type": "string", "contentEncoding": "base64" }
+              }
+            },
+            "format": { "type": "string", "minLength": 1 }
+          }
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "symbol": {
+      "oneOf": [
+        { "$ref": "#/$defs/decodedSymbol" },
+        { "$ref": "#/$defs/localizedSymbol" }
+      ]
+    },
+    "image": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "width", "height", "elapsed_ms", "metadata", "symbols"],
+      "properties": {
+        "type": { "const": "image" },
+        "width": { "type": "integer", "minimum": 1 },
+        "height": { "type": "integer", "minimum": 1 },
+        "elapsed_ms": { "type": "number", "minimum": 0 },
+        "metadata": { "$ref": "#/$defs/metadata" },
+        "symbols": { "type": "array", "items": { "$ref": "#/$defs/symbol" } },
+        "diagnostics": { "type": "object" }
+      }
+    },
+    "page": {
+      "type": "object",
+      "required": ["type", "page", "width", "height", "elapsed_ms", "metadata", "symbols"],
+      "properties": {
+        "type": { "const": "page" },
+        "page": { "type": "integer", "minimum": 1 },
+        "width": { "type": "integer", "minimum": 1 },
+        "height": { "type": "integer", "minimum": 1 },
+        "elapsed_ms": { "type": "number", "minimum": 0 },
+        "metadata": { "$ref": "#/$defs/metadata" },
+        "symbols": { "type": "array", "items": { "$ref": "#/$defs/symbol" } },
+        "diagnostics": { "type": "object" }
+      },
+      "additionalProperties": false
+    },
+    "error": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["code", "message"],
+      "properties": {
+        "code": { "type": "string", "minLength": 1 },
+        "message": { "type": "string", "minLength": 1 },
+        "page": { "type": "integer", "minimum": 1 },
+        "context": { "type": "object" }
+      }
+    },
+    "document": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "complete", "elapsed_ms", "metadata", "pages", "errors"],
+      "properties": {
+        "type": { "const": "document" },
+        "complete": { "type": "boolean" },
+        "elapsed_ms": { "type": "number", "minimum": 0 },
+        "metadata": { "$ref": "#/$defs/metadata" },
+        "pages": { "type": "array", "items": { "$ref": "#/$defs/page" } },
+        "errors": { "type": "array", "items": { "$ref": "#/$defs/error" } }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": { "complete": { "const": true } },
+            "required": ["complete"]
+          },
+          "then": { "properties": { "errors": { "maxItems": 0 } } }
+        }
+      ]
+    }
+  }
+}

@@ -3,6 +3,7 @@
 **/.DS_Store
 .idea/
 .vscode/
+.agents/
 
 # Python environments and caches
 venv/
@@ -50,6 +51,7 @@ tmp/
 .coverage
 coverage.xml
 **/coverage/
+/dist/
 
 # Dossier-derived diagnostic tests and images
 

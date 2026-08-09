@@ -1,1 +1,0 @@
-"""Native barcode-localization adapters."""

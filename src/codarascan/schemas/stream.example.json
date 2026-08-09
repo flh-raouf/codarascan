@@ -1,0 +1,15 @@
+{
+  "type": "document_summary",
+  "complete": true,
+  "page_count": 2,
+  "errors": [],
+  "elapsed_ms": 4.5,
+  "metadata": {
+    "package_version": "0.1.0",
+    "engine": "tessera-extractor",
+    "engine_version": "0.1.0",
+    "decoder_version": "3.1.1",
+    "backend": "native",
+    "mode": "fast"
+  }
+}
