@@ -3,6 +3,16 @@
 All notable changes are recorded here. CodaraScan follows semantic versioning
 after 1.0; during 0.x, breaking changes are identified explicitly.
 
+## 0.1.3 - 2026-08-10
+
+- Remove Pillow's process-wide decompression-bomb pixel admission threshold
+  before normalizing image inputs, preserving CodaraScan's documented policy
+  that callers own resource quotas and admission control.
+- Store analyzed `width` and `height` once on each image or PDF page result
+  instead of repeating `image_width` and `image_height` on every serialized
+  symbol. Constructor-only dimensions still validate geometry without being
+  stored on each `SymbolResult`.
+
 ## 0.1.2 - 2026-08-10
 
 - Restrict explicit CLI debug-output directories to mode `0700` and their

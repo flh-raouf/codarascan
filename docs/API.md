@@ -62,7 +62,9 @@ Pixel coordinates use an origin at the orientation-corrected image's top-left,
 with x increasing right and y increasing down. Quads contain top-left,
 top-right, bottom-right, and bottom-left corners in clockwise, non-self-
 intersecting order. `normalized_quad` divides x by image width and y by image
-height. There is no stable bounding-box field.
+height. Image results carry `width` and `height` once at the result level. PDF
+page results carry `page`, `width`, and `height` together. Symbols do not repeat
+their containing image dimensions. There is no stable bounding-box field.
 
 `DecodedSymbolResult` adds `text`, `value`, `raw_bytes`, and canonical `format`
 to the base geometry/status contract. `SymbolResult` used for localization-only,

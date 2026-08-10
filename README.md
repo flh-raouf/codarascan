@@ -16,7 +16,7 @@ For teams looking for a universal barcode detection layer, CodaraScan provides o
 [Formats](#supported-barcode-formats) · [API reference](https://github.com/flh-raouf/codarascan/blob/main/docs/API.md) ·
 [PyPI](https://pypi.org/project/codarascan/)
 
-> **Alpha notice — CodaraScan 0.1.2 is alpha software.** Its APIs and schemas
+> **Alpha notice — CodaraScan 0.1.3 is alpha software.** Its APIs and schemas
 > may change during 0.x. Pin an exact version and evaluate it against your own documents before
 > production use. See the [known limitations](https://github.com/flh-raouf/codarascan/blob/main/docs/KNOWN_LIMITATIONS.md)
 > and [release policy](https://github.com/flh-raouf/codarascan/blob/main/docs/RELEASE.md).
@@ -32,7 +32,7 @@ Most barcode libraries focus on decoding a clean, tightly cropped symbol. Docume
 | Barcode decoding | Returns Unicode text, exact raw payload bytes, and a canonical format name |
 | Document scanning | Reads selected PDF pages, preserves requested order, and supports bounded parallel work |
 | Batch processing | Scans complete or selected multi-page PDFs and can stream pages without accumulating them |
-| Format coverage | 40 selectable formats: 27 linear and 13 matrix selections in version 0.1.2 |
+| Format coverage | 40 selectable formats: 27 linear and 13 matrix selections in version 0.1.3 |
 | Recovery profiles | `fast` Tessera mode for lower latency; `robust` Mosaic mode for stronger recovery |
 | Local processing | No server, network request, telemetry, external executable, or runtime model download |
 | Integration | Typed Python API, deterministic JSON, CLI, schemas, and a private persistent worker protocol |
@@ -59,7 +59,7 @@ python -m pip install codarascan
 For reproducible alpha deployments, pin the current release:
 
 ```bash
-python -m pip install codarascan==0.1.2
+python -m pip install codarascan==0.1.3
 ```
 
 
@@ -225,7 +225,7 @@ Start with `fast`, measure on representative inputs, and choose `robust` where i
 
 ## Supported barcode formats
 
-CodaraScan 0.1.2 exposes **40 selectable barcode formats** generated from the installed ZXing-C++ readable catalog: **27 linear/1D selections** and **13 matrix/2D selections**.
+CodaraScan 0.1.3 exposes **40 selectable barcode formats** generated from the installed ZXing-C++ readable catalog: **27 linear/1D selections** and **13 matrix/2D selections**.
 
 ### 1D and linear barcodes
 
@@ -274,8 +274,11 @@ Every symbol includes:
 - engine-specific `confidence` and contributing `sources`;
 - `quad`: four pixel-space points in top-left, top-right, bottom-right,
   bottom-left order;
-- `normalized_quad`: the same four points normalized by image width and height;
-- analyzed `image_width` and `image_height`.
+- `normalized_quad`: the same four points normalized by image width and height.
+
+Image dimensions are recorded once as `width` and `height` on the containing
+image result. PDF page results record `page`, `width`, and `height` together;
+symbols do not repeat those dimensions.
 
 A `DecodedSymbolResult` additionally includes `format`, `text`, its `value`
 alias, and exact `raw_bytes`.
@@ -323,7 +326,7 @@ Run `codarascan image --help` or `codarascan document --help` for every option.
 
 ## Platform support
 
-Official 0.1.2 wheels target:
+Official 0.1.3 wheels target:
 
 | Operating system | Architectures | Python |
 |---|---|---|
@@ -367,7 +370,7 @@ Yes. Barcode detection, decoding, PDF rendering, the CLI, and the worker all run
 
 ### Is CodaraScan a universal barcode reader?
 
-It is a multi-format barcode detection layer with 40 selectable 1D and 2D formats in version 0.1.2. No honest scanner can guarantee every barcode under every capture condition, so CodaraScan publishes the exact catalog, evidence, and known limitations instead of making an unlimited compatibility claim.
+It is a multi-format barcode detection layer with 40 selectable 1D and 2D formats in version 0.1.3. No honest scanner can guarantee every barcode under every capture condition, so CodaraScan publishes the exact catalog, evidence, and known limitations instead of making an unlimited compatibility claim.
 
 
 ### Which mode should I use?
