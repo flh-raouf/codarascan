@@ -1,0 +1,3 @@
+output/
+__pycache__/
+# The v1 weights are curated historical artifacts and are intentionally visible to Git.

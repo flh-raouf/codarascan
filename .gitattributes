@@ -1,0 +1,3 @@
+*.pdf binary
+*.pt binary
+*.torchscript binary

@@ -1,0 +1,13 @@
+include LICENSE NOTICE THIRD_PARTY_NOTICES.md
+include README.md CHANGELOG.md CONTRIBUTING.md MIGRATION.md SECURITY.md
+include pyproject.toml setup.py
+recursive-include src/codarascan *.py *.json py.typed *.cpp
+recursive-include docs *.md
+prune archive
+prune benchmarks/datasets
+prune docs/barcode-report
+prune reports
+prune third_party
+prune tests
+global-exclude .DS_Store *.py[cod] *.so *.dylib *.dll *.o
+global-exclude __pycache__

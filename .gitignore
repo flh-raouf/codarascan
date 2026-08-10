@@ -1,0 +1,57 @@
+# macOS and editor artifacts
+.DS_Store
+**/.DS_Store
+.idea/
+.vscode/
+.agents/
+
+# Python environments and caches
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Generated dependencies and temporary work
+node_modules/
+tmp/
+*.log
+*.egg-info/
+**/build/
+**/*.so
+**/*.o
+**/external/
+**/output/
+**/runs/
+**/data/
+**/models/.cache/
+**/.pytest_cache/
+**/__pycache__/
+
+# Local checkouts and generated model assets
+/codara-app/
+/models/generated/
+
+# Private source documents and derived outputs (never commit)
+**/private-data/
+**/document-corpora/
+/output/opencv-detailed/
+/test/
+**/piero_yolov8s/output*/
+
+# Historical experiment/version diagnostics
+/archive/versions/v3-zxing-only/dossier_expected.json
+
+# Test and coverage reports
+.coverage
+coverage.xml
+**/coverage/
+/dist/
+
+# Document-derived diagnostic tests and images
+
+# The separately authored LaTeX report and its generated PDF
+/docs/barcode-report/

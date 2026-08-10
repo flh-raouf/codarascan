@@ -1,0 +1,90 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+          submodules: recursive
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: python -m pip install -e ".[dev]"
+      - run: python -m ruff check src/codarascan tests tools benchmarks/format_smoke.py
+      - run: python -m mypy
+      - run: python -m pytest --cov=codarascan --cov-report=xml
+      - run: git diff --check
+
+  supported-python:
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.11", "3.12", "3.13", "3.14"]
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+          submodules: recursive
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python }}
+          cache: pip
+      - run: python -m pip install -e ".[test]"
+        env:
+          CODARASCAN_REQUIRE_NATIVE: "1"
+      - run: python -m pytest
+
+  platform-smoke:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-24.04, ubuntu-24.04-arm, macos-15-intel, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+          submodules: recursive
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+      - run: python -m pip install -e ".[test]"
+        env:
+          CODARASCAN_REQUIRE_NATIVE: "1"
+      - run: python -m pytest tests/test_scanner_integration.py tests/test_native_fallback.py tests/test_native_parity.py tests/test_documents.py
+
+  distributions:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+          submodules: recursive
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+      - run: python -m pip install build
+      - run: python -m build
+        env:
+          CODARASCAN_REQUIRE_NATIVE: "1"
+      - run: python tools/inspect_artifacts.py dist/*.whl dist/*.tar.gz
+      - run: python tools/dependency_manifest.py dist/*.whl --output dist/dependency-manifest.json
+      - run: python -m venv /tmp/codarascan-wheel-smoke
+      - run: /tmp/codarascan-wheel-smoke/bin/python -m pip install dist/*.whl
+      - run: /tmp/codarascan-wheel-smoke/bin/python tools/artifact_smoke.py
+      - uses: actions/upload-artifact@v6
+        with:
+          name: development-distributions
+          path: dist/*
+          if-no-files-found: error

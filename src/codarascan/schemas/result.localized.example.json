@@ -1,0 +1,26 @@
+{
+  "type": "image",
+  "width": 100,
+  "height": 80,
+  "elapsed_ms": 1.5,
+  "metadata": {
+    "package_version": "0.1.0",
+    "engine": "mosaic-extractor",
+    "engine_version": "0.1.0",
+    "decoder_version": "3.1.1",
+    "backend": "python",
+    "mode": "robust"
+  },
+  "symbols": [
+    {
+      "status": "localized_unresolved_matrix",
+      "kind": "2d",
+      "confidence": 0.8,
+      "quad": [[10, 10], [40, 10], [40, 30], [10, 30]],
+      "normalized_quad": [[0.1, 0.125], [0.4, 0.125], [0.4, 0.375], [0.1, 0.375]],
+      "image_width": 100,
+      "image_height": 80,
+      "sources": ["shared-contract-fixture"]
+    }
+  ]
+}

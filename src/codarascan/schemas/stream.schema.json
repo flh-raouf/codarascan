@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://codarascan.dev/schemas/stream-0.1.0.json",
+  "title": "CodaraScan NDJSON document summary",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["type", "complete", "page_count", "errors", "elapsed_ms", "metadata"],
+  "properties": {
+    "type": { "const": "document_summary" },
+    "complete": { "type": "boolean" },
+    "page_count": { "type": "integer", "minimum": 0 },
+    "errors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["code", "message"],
+        "properties": {
+          "code": { "type": "string" },
+          "message": { "type": "string" },
+          "page": { "type": "integer", "minimum": 1 },
+          "context": { "type": "object" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "elapsed_ms": { "type": "number", "minimum": 0 },
+    "metadata": {
+      "type": "object",
+      "required": ["package_version", "engine", "engine_version", "decoder_version", "backend", "mode"],
+      "properties": {
+        "package_version": { "type": "string" },
+        "engine": { "type": "string" },
+        "engine_version": { "type": "string" },
+        "decoder_version": { "type": "string" },
+        "backend": { "type": "string" },
+        "mode": { "enum": ["fast", "robust"] }
+      },
+      "additionalProperties": false
+    }
+  }
+}

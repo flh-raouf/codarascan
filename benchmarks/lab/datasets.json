@@ -1,0 +1,139 @@
+{
+  "schema_version": "barcode-benchmark-provenance-v1",
+  "description": "Downloadable benchmark inputs used by benchmarks/lab. Large files are intentionally kept out of Git.",
+  "datasets": [
+    {
+      "id": "deal-kaist",
+      "title": "Barcode Dataset from Quick Browser and Smart Inference papers",
+      "purpose": "Barcode localization and decoding evaluation from the DEAL benchmark collection.",
+      "source": {
+        "kind": "url",
+        "page": "https://zenodo.org/records/13586402",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "artifacts": [
+        {
+          "path": "benchmarks/lab/data/deal-kaist/barcode_bb.zip",
+          "url": "https://zenodo.org/api/records/13586402/files/barcode_bb.zip/content",
+          "sha256": "cc108ad25e91abc73be1dfc3df26cce5dcacd79f26695a7e522be9afd0d2f59a",
+          "format": "zip"
+        },
+        {
+          "path": "benchmarks/lab/data/deal-kaist/e8_bb.zip",
+          "url": "https://zenodo.org/api/records/13586402/files/e8_bb.zip/content",
+          "sha256": "ffb413e5ff0dd5a1008f6706150b9945ba647ad8b9769cc5b9a586e40642da04",
+          "format": "zip"
+        },
+        {
+          "path": "benchmarks/lab/data/deal-kaist/multi_bb.zip",
+          "url": "https://zenodo.org/api/records/13586402/files/multi_bb.zip/content",
+          "sha256": "bbaa2f38e57483bbf3c38393bf3a90a32db650b8fdb9ea01fdc6ad8b9c47bb56",
+          "format": "zip"
+        },
+        {
+          "path": "benchmarks/lab/data/deal-kaist/real.zip",
+          "url": "https://zenodo.org/api/records/13586402/files/real.zip/content",
+          "sha256": "11d04e7cee06024e8b6d2f89e0136bdccc69554061941dcfa552243fabe68538",
+          "format": "zip"
+        }
+      ]
+    },
+    {
+      "id": "kaggle-barcode-and-qr-v8",
+      "title": "Barcode and QR v8",
+      "purpose": "Pascal VOC barcode and QR image benchmark used by the current pipeline reports.",
+      "source": {
+        "kind": "kaggle",
+        "dataset": "jonathanimmanuel/barcode-and-qr",
+        "version": 8,
+        "page": "https://www.kaggle.com/datasets/jonathanimmanuel/barcode-and-qr",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "artifacts": [
+        {
+          "path": "benchmarks/lab/data/kaggle-barcode-and-qr-v8/archive.zip",
+          "sha256": "90d9cb0c98e1ef289d1bd4f2f95cc3a94f9afb57159c692756e2f0325495301f",
+          "format": "zip"
+        }
+      ]
+    },
+    {
+      "id": "inventbar-parcelbar-kaggle-v1",
+      "title": "InventBar and ParcelBar benchmark datasets",
+      "purpose": "Barcode localization evaluation using the InventBar and ParcelBar collections.",
+      "source": {
+        "kind": "kaggle",
+        "dataset": "chommaphatma/inventbar-and-parcelbar-benchmarkbarcodedatasets",
+        "version": 1,
+        "page": "https://www.kaggle.com/datasets/chommaphatma/inventbar-and-parcelbar-benchmarkbarcodedatasets",
+        "upstream_page": "https://cmu.to/BenchmarkBarcodeDatasets",
+        "license": "CC BY-SA 4.0 (Kaggle mirror metadata)",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "license_note": "Verify the upstream terms at the CMU page before redistributing modified copies."
+      },
+      "artifacts": [
+        {
+          "path": "benchmarks/lab/data/inventbar-parcelbar-kaggle-v1/archive.zip",
+          "sha256": "c66cf45e46af95f4c382a732b476eb1b64394c5b65e6e3dbfaf63e7700836443",
+          "format": "zip"
+        }
+      ]
+    },
+    {
+      "id": "qrdn-v1",
+      "title": "QR-DN1.0",
+      "purpose": "QR restoration and decoding evaluation with clean targets and degraded variants.",
+      "source": {
+        "kind": "manual",
+        "page": "https://data.mendeley.com/datasets/t2bdr663ms/2",
+        "doi": "10.17632/t2bdr663ms.2",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "download_note": "Download QR-DN1.0 from the Mendeley record, save it as the artifact path below, then run verify."
+      },
+      "artifacts": [
+        {
+          "path": "benchmarks/lab/data/qrdn-v1/QR-DN1.0.zip",
+          "filename": "QR-DN1.0.zip",
+          "sha256": "1f175a62239646bd7d6b179245cb0970c03b179c2baf1a5e8e59ba0b156cdf61",
+          "format": "zip"
+        }
+      ]
+    },
+    {
+      "id": "unique-data-ocr-barcodes-sample",
+      "title": "UniqueData OCR barcodes detection sample",
+      "purpose": "OCR-oriented barcode detection sample used for exploratory evaluation only.",
+      "source": {
+        "kind": "url",
+        "page": "https://huggingface.co/datasets/UniqueData/ocr-barcodes-detection",
+        "revision": "03fabbf176acc5d7a5f36e80d050a1ec8e21e6",
+        "license": "CC BY-NC-ND 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "license_note": "Do not redistribute this dataset from the repository. Commercial use requires a license from the provider."
+      },
+      "artifacts": [
+        {
+          "path": "benchmarks/lab/data/unique-data-ocr-barcodes-sample/data/images.tar.gz",
+          "url": "https://huggingface.co/datasets/UniqueData/ocr-barcodes-detection/resolve/03fabbf176acc5d7a5f36e80d050a1ec8e21e6/data/images.tar.gz?download=true",
+          "sha256": "fb7cdd985f5ff88299cdb75f3658aa7b2aaf4280f6e2960cc9005da65544306f",
+          "format": "tar.gz"
+        },
+        {
+          "path": "benchmarks/lab/data/unique-data-ocr-barcodes-sample/data/annotations.xml",
+          "url": "https://huggingface.co/datasets/UniqueData/ocr-barcodes-detection/resolve/03fabbf176acc5d7a5f36e80d050a1ec8e21e6/data/annotations.xml?download=true",
+          "sha256": "9586126ee4e5f8aedf5f22a38c53c131ed9a085b18fd76ce05f84174336c06d4",
+          "format": "file"
+        },
+        {
+          "path": "benchmarks/lab/data/unique-data-ocr-barcodes-sample/data/barcodes.csv",
+          "url": "https://huggingface.co/datasets/UniqueData/ocr-barcodes-detection/resolve/03fabbf176acc5d7a5f36e80d050a1ec8e21e6/data/barcodes.csv?download=true",
+          "sha256": "ca3b0b550ff5b5565d262d814d1b6ea2262dd643dc53f97b47ffd597431ecf95",
+          "format": "file"
+        }
+      ]
+    }
+  ]
+}
