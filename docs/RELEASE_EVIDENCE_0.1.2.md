@@ -4,8 +4,8 @@ Date: 2026-08-10
 
 Scope: documentation refresh, security hardening, public PyPI publication, and
 Codara consumer verification for CodaraScan 0.1.2. This record distinguishes
-completed package publication from the remaining GitHub source-visibility and
-downstream merge gates.
+completed package publication and downstream integration from the remaining
+GitHub source-visibility gate.
 
 ## Source and quality gates
 
@@ -82,9 +82,16 @@ passed all 75 backend tests.
 Codara CI run
 [`31401474599`](https://github.com/flh-raouf/codara/actions/runs/31401474599)
 passed backend checks, frontend typechecking/tests/build, and the production
-container build from the neutral `codarascan-0.1.2-migration` branch. Its
-production deployment job was deliberately skipped for the manual
-migration-branch run.
+container build from the neutral `codarascan-0.1.2-migration` branch. The five
+migration commits were then merged into Codara `main` through
+[Codara PR #3](https://github.com/flh-raouf/codara/pull/3) at merge commit
+`cfb0aca331727b07f00f24c655526d66e5613218`.
+
+Post-merge Codara CI/CD run
+[`31404892126`](https://github.com/flh-raouf/codara/actions/runs/31404892126)
+passed backend checks, frontend typechecking/tests/build, the production
+container build, the OpenScaler deployment, and the public endpoint health
+check.
 
 ## Public-source safety gate
 

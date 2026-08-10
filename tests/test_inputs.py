@@ -57,6 +57,19 @@ def test_encoded_png_and_pillow_have_equivalent_pixels() -> None:
     np.testing.assert_array_equal(from_pillow.pixels, from_bytes.pixels)
 
 
+def test_encoded_input_has_no_pillow_pixel_admission_limit(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    stream = BytesIO()
+    Image.new("RGB", (7, 5), "white").save(stream, "PNG")
+    monkeypatch.setattr(Image, "MAX_IMAGE_PIXELS", 1)
+
+    normalized = normalize_image(stream.getvalue())
+
+    assert (normalized.width, normalized.height) == (7, 5)
+    assert Image.MAX_IMAGE_PIXELS is None
+
+
 @pytest.mark.parametrize("wrapper", [bytes, bytearray, memoryview])
 def test_every_documented_encoded_byte_container(wrapper: type) -> None:
     stream = BytesIO()

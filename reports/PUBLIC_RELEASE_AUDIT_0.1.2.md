@@ -9,8 +9,7 @@ from PyPI. The README shown by PyPI is current, and a clean Codara consumer
 install passes its application suite.
 
 The complete objective is not yet closed: public GitHub visibility is gated on
-GitHub Support purging immutable pre-rewrite pull-request refs, and the Codara
-migration commit is pushed but not merged into Codara's default branch.
+GitHub Support purging immutable pre-rewrite pull-request refs.
 
 ## Requirement status
 
@@ -28,7 +27,7 @@ migration commit is pushed but not merged into Codara's default branch.
 | GitHub Actions logs and retained artifacts | Complete | 18 logs and 25 bundles/60 distributions audited with zero confidential-data findings |
 | Immutable GitHub pull-request object purge | Pending external platform action | three remote `refs/pull/*/head` refs remain; repository stays private |
 | Codara package migration implementation | Complete on migration branch | commit `031ee46`, registry lock, 75 tests, CI run `31401474599` |
-| Codara default-branch integration | Pending repository merge | migration branch is pushed; its earlier pull request is closed and unmerged |
+| Codara default-branch integration | Complete | Codara PR #3, merge commit `cfb0aca`, and successful post-merge CI/CD run `31404892126` including deployment and public health verification |
 
 Detailed commands and release identifiers are recorded in
 [`docs/RELEASE_EVIDENCE_0.1.2.md`](../docs/RELEASE_EVIDENCE_0.1.2.md).

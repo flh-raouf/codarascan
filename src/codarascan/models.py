@@ -6,7 +6,7 @@ from __future__ import annotations
 import base64
 import math
 from collections.abc import Mapping
-from dataclasses import dataclass, field
+from dataclasses import InitVar, dataclass, field
 from enum import Enum
 from types import MappingProxyType
 from typing import Any
@@ -19,14 +19,14 @@ def _mapping(value: Mapping[str, Any] | None) -> Mapping[str, Any]:
 def _validate_quad(
     quad: Quadrilateral,
     *,
-    width: int,
-    height: int,
+    width: int | None,
+    height: int | None,
     normalized: bool,
 ) -> None:
     if len(quad) != 4:
         raise ValueError("quadrilaterals must contain exactly four points")
-    maximum_x = 1.0 if normalized else float(width)
-    maximum_y = 1.0 if normalized else float(height)
+    maximum_x = 1.0 if normalized else math.inf if width is None else float(width)
+    maximum_y = 1.0 if normalized else math.inf if height is None else float(height)
     tolerance = 1e-9
     for point in quad:
         if not -tolerance <= point.x <= maximum_x + tolerance:
@@ -116,37 +116,37 @@ class SymbolResult:
     confidence: float
     quad: Quadrilateral
     normalized_quad: Quadrilateral
-    image_width: int
-    image_height: int
+    image_width: InitVar[int]
+    image_height: InitVar[int]
     sources: tuple[str, ...] = ()
     diagnostics: Mapping[str, Any] = field(default_factory=lambda: MappingProxyType({}))
 
-    def __post_init__(self) -> None:
+    def __post_init__(self, image_width: int, image_height: int) -> None:
         if not math.isfinite(self.confidence) or not 0.0 <= self.confidence <= 1.0:
             raise ValueError("confidence must be finite and within [0, 1]")
-        if self.image_width <= 0 or self.image_height <= 0:
+        if image_width <= 0 or image_height <= 0:
             raise ValueError("image dimensions must be positive")
         _validate_quad(
             self.quad,
-            width=self.image_width,
-            height=self.image_height,
+            width=image_width,
+            height=image_height,
             normalized=False,
         )
         _validate_quad(
             self.normalized_quad,
-            width=self.image_width,
-            height=self.image_height,
+            width=None,
+            height=None,
             normalized=True,
         )
         for point, normalized_point in zip(self.quad, self.normalized_quad, strict=True):
             if not math.isclose(
                 normalized_point.x,
-                point.x / self.image_width,
+                point.x / image_width,
                 rel_tol=0.0,
                 abs_tol=1e-7,
             ) or not math.isclose(
                 normalized_point.y,
-                point.y / self.image_height,
+                point.y / image_height,
                 rel_tol=0.0,
                 abs_tol=1e-7,
             ):
@@ -167,8 +167,6 @@ class SymbolResult:
             "confidence": self.confidence,
             "quad": [point.to_list() for point in self.quad],
             "normalized_quad": [point.to_list() for point in self.normalized_quad],
-            "image_width": self.image_width,
-            "image_height": self.image_height,
             "sources": list(self.sources),
         }
         if include_diagnostics and self.diagnostics:
@@ -182,8 +180,8 @@ class DecodedSymbolResult(SymbolResult):
     raw_bytes: bytes = b""
     format: str = ""
 
-    def __post_init__(self) -> None:
-        SymbolResult.__post_init__(self)
+    def __post_init__(self, image_width: int, image_height: int) -> None:
+        SymbolResult.__post_init__(self, image_width, image_height)
         if self.status is not SymbolStatus.DECODED:
             raise ValueError("DecodedSymbolResult requires decoded status")
         if not isinstance(self.text, str):
@@ -229,11 +227,25 @@ class ImageResult:
             raise ValueError("image dimensions must be positive")
         if not math.isfinite(self.elapsed_ms) or self.elapsed_ms < 0:
             raise ValueError("elapsed_ms must be finite and non-negative")
-        if any(
-            symbol.image_width != self.width or symbol.image_height != self.height
-            for symbol in self.symbols
-        ):
-            raise ValueError("symbol dimensions must match the containing image")
+        for symbol in self.symbols:
+            _validate_quad(symbol.quad, width=self.width, height=self.height, normalized=False)
+            for point, normalized_point in zip(
+                symbol.quad, symbol.normalized_quad, strict=True
+            ):
+                if not math.isclose(
+                    normalized_point.x,
+                    point.x / self.width,
+                    rel_tol=0.0,
+                    abs_tol=1e-7,
+                ) or not math.isclose(
+                    normalized_point.y,
+                    point.y / self.height,
+                    rel_tol=0.0,
+                    abs_tol=1e-7,
+                ):
+                    raise ValueError(
+                        "normalized quadrilateral must match containing image dimensions"
+                    )
 
     def to_dict(self, *, include_diagnostics: bool = False) -> dict[str, Any]:
         output: dict[str, Any] = {

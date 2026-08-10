@@ -37,7 +37,24 @@ def test_published_schema_accepts_document_results(tmp_path: Path) -> None:
     path = tmp_path / "schema.pdf"
     Image.fromarray(image).convert("RGB").save(path, "PDF", resolution=150)
     result = Scanner(symbols="2d", formats=["qr-code"]).scan_document(path)
-    jsonschema.validate(json.loads(to_json(result)), schema)
+    serialized = json.loads(to_json(result))
+    jsonschema.validate(serialized, schema)
+    page = serialized["pages"][0]
+    assert {"page", "width", "height"} <= page.keys()
+    assert not {"image_width", "image_height"} & page["symbols"][0].keys()
+
+
+def test_image_dimensions_are_serialized_once_per_image() -> None:
+    info = next(item for item in Scanner.supported_formats()["2d"] if item.name == "qr-code")
+    image, _ = clean_fixture(info)
+    serialized = json.loads(to_json(Scanner(formats=["qr-code"]).scan_image(image)))
+
+    assert (serialized["width"], serialized["height"]) == (image.shape[1], image.shape[0])
+    assert serialized["symbols"]
+    assert all(
+        not {"image_width", "image_height"} & symbol.keys()
+        for symbol in serialized["symbols"]
+    )
 
 
 def test_published_golden_fixtures_validate_against_their_shared_schemas() -> None:

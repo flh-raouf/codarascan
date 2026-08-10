@@ -25,7 +25,7 @@ python -m pytest --cov=codarascan --cov-report=term-missing
 python -m build
 python tools/inspect_artifacts.py dist/*.whl dist/*.tar.gz
 python tools/dependency_manifest.py dist/*.whl --output dist/dependency-manifest.json
-python benchmarks/format_smoke.py --mode robust --repeats 3
+python -m benchmarks.format_smoke --mode robust --repeats 3
 git diff --check
 ```
 
@@ -55,4 +55,4 @@ parity across Python/CLI/worker/Codara and any included Node wrapper; complete
 Codara package consumption without copied engines; and licensing, privacy,
 offline, upgrade, and artifact reviews.
 
-0.1.0 does not claim these production gates.
+No 0.x release claims these production gates.

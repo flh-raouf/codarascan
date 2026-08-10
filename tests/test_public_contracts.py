@@ -137,7 +137,17 @@ def test_localized_symbol_has_no_payload_attributes_or_serialized_fields() -> No
     assert not hasattr(symbol, "value")
     assert not hasattr(symbol, "raw_bytes")
     assert not hasattr(symbol, "format")
-    assert not {"text", "value", "raw_bytes", "format", "bounding_box"} & symbol.to_dict().keys()
+    assert not {
+        "text",
+        "value",
+        "raw_bytes",
+        "format",
+        "bounding_box",
+        "image_width",
+        "image_height",
+    } & symbol.to_dict().keys()
+    assert not hasattr(symbol, "image_width")
+    assert not hasattr(symbol, "image_height")
 
 
 def test_decoded_symbol_preserves_bytes_and_value_alias() -> None:
@@ -217,7 +227,7 @@ def test_result_models_enforce_container_and_completion_invariants() -> None:
         image_width=10,
         image_height=10,
     )
-    with pytest.raises(ValueError, match="dimensions"):
+    with pytest.raises(ValueError, match="containing image dimensions"):
         ImageResult((symbol,), 20, 10, 1.0, metadata)
     with pytest.raises(ValueError, match="complete"):
         DocumentResult(

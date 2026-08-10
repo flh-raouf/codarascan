@@ -82,6 +82,11 @@ def _from_array(value: NDArray[Any]) -> NormalizedImage:
 def normalize_image(value: ImageInput) -> NormalizedImage:
     """Normalize a supported input into an owned OpenCV-compatible array."""
 
+    # CodaraScan's public contract deliberately leaves resource admission and
+    # quotas to its caller. Pillow otherwise rejects encoded images above its
+    # process-wide pixel threshold before CodaraScan can decode them.
+    Image.MAX_IMAGE_PIXELS = None
+
     if isinstance(value, np.ndarray):
         return _from_array(value)
     if isinstance(value, Image.Image):

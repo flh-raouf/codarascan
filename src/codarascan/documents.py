@@ -60,7 +60,7 @@ def _document_source(value: DocumentInput) -> str | bytes:
             )
         if path.suffix.lower() != ".pdf":
             raise DocumentError(
-                "the 0.1.0 document API supports PDF files only",
+                "the document API supports PDF files only",
                 context={"path": str(path), "type": path.suffix.lower()},
             )
         return str(path)
