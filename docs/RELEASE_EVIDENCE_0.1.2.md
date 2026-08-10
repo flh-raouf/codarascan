@@ -80,10 +80,11 @@ pins `codarascan==0.1.2` and commits a registry-backed production lock. A clean
 passed all 75 backend tests.
 
 Codara CI run
-[`31399715346`](https://github.com/flh-raouf/codara/actions/runs/31399715346)
+[`31401474599`](https://github.com/flh-raouf/codara/actions/runs/31401474599)
 passed backend checks, frontend typechecking/tests/build, and the production
-container build. Its production deployment job was deliberately skipped for
-the manual migration-branch run.
+container build from the neutral `codarascan-0.1.2-migration` branch. Its
+production deployment job was deliberately skipped for the manual
+migration-branch run.
 
 ## Public-source safety gate
 
