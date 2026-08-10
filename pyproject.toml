@@ -70,7 +70,7 @@ codarascan = "codarascan.cli:main"
 test = [
     "build>=1.2,<2",
     "jsonschema>=4.23,<5",
-    "pytest>=8,<10",
+    "pytest>=9.0.3,<10",
     "pytest-cov>=6,<8",
 ]
 dev = [
@@ -83,7 +83,7 @@ dev = [
     "ruff>=0.12,<1",
 ]
 benchmark = [
-    "pytest>=8,<10",
+    "pytest>=9.0.3,<10",
     "qrcode>=7,<9",
     "torch>=2.6,<3",
 ]
