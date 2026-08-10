@@ -53,7 +53,7 @@ def test_help_and_version_are_public_cli_surfaces(
     with pytest.raises(SystemExit) as exit_info:
         main(["--version"])
     assert exit_info.value.code == 0
-    assert capsys.readouterr().out == "codarascan 0.1.0 (Apache-2.0)\n"
+    assert capsys.readouterr().out == "codarascan 0.1.1 (Apache-2.0)\n"
 
 
 def test_image_json_uses_shared_schema_and_stdout_is_clean(

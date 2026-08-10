@@ -7,6 +7,7 @@ from __future__ import annotations
 import argparse
 import re
 import tarfile
+import tomllib
 import zipfile
 from email.parser import BytesParser
 from glob import glob
@@ -25,6 +26,13 @@ SENSITIVE_CONTENT = re.compile(
 )
 LOCAL_PATH = re.compile(rb"/Users/[^/\x00]+/|/home/[^/\x00]+/|[A-Za-z]:\\Users\\")
 MAX_MEMBER_BYTES = 10 * 1024 * 1024
+
+
+def project_version() -> str:
+    """Return the release version declared by the source checkout."""
+    pyproject = Path(__file__).resolve().parents[1] / "pyproject.toml"
+    with pyproject.open("rb") as file:
+        return str(tomllib.load(file)["project"]["version"])
 
 
 def expand_artifacts(patterns: list[Path]) -> list[Path]:
@@ -152,7 +160,7 @@ def inspect(path: Path) -> None:
     metadata_errors = []
     expected_metadata = {
         "Name": "codarascan",
-        "Version": "0.1.0",
+        "Version": project_version(),
         "License-Expression": "Apache-2.0",
         "Requires-Python": "<3.15,>=3.11",
     }

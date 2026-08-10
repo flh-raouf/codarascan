@@ -97,7 +97,7 @@ def main() -> int:
             capture_output=True,
             text=True,
         )
-        assert version.stdout == "codarascan 0.1.0 (Apache-2.0)\n"
+        assert version.stdout == f"codarascan {codarascan.__version__} (Apache-2.0)\n"
         assert version.stderr == ""
 
         worker = subprocess.Popen(

@@ -7,7 +7,15 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import tomllib
 from pathlib import Path
+
+
+def project_version() -> str:
+    """Return the release version declared by the source checkout."""
+    pyproject = Path(__file__).resolve().parents[1] / "pyproject.toml"
+    with pyproject.open("rb") as file:
+        return str(tomllib.load(file)["project"]["version"])
 
 
 def main() -> int:
@@ -31,7 +39,7 @@ def main() -> int:
     manifest = {
         "schema_version": 1,
         "distribution": "codarascan",
-        "version": "0.1.0",
+        "version": project_version(),
         "artifact_count": len(artifacts),
         "artifacts": [
             {

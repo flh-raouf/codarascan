@@ -3,6 +3,15 @@
 All notable changes are recorded here. CodaraScan follows semantic versioning
 after 1.0; during 0.x, breaking changes are identified explicitly.
 
+## 0.1.1 - 2026-08-10
+
+- Reworked the project README into comprehensive package documentation with
+  installation guidance, practical image/PDF examples, engine selection,
+  supported formats, deployment notes, troubleshooting, and an FAQ.
+- Improved package discovery metadata, project links, keywords, and maintainer
+  contact information.
+- No runtime behavior or public API changed in this documentation-only release.
+
 ## 0.1.0 - 2026-08-09
 
 - Renamed the distribution and import package to `codarascan`.
