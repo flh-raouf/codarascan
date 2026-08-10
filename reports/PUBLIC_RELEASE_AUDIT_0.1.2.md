@@ -25,6 +25,7 @@ migration commit is pushed but not merged into Codara's default branch.
 | Multi-platform release automation | Complete | release workflow `31398141966` |
 | PyPI 0.1.2 and current README | Complete | PyPI release page, JSON metadata, and clean no-cache install |
 | Confidential-data cleanup in normal Git history and distributable artifacts | Complete | rewritten sanitized branch, artifact privacy checks, and source security review |
+| GitHub Actions logs and retained artifacts | Complete | 18 logs and 25 bundles/60 distributions audited with zero confidential-data findings |
 | Immutable GitHub pull-request object purge | Pending external platform action | three remote `refs/pull/*/head` refs remain; repository stays private |
 | Codara package migration implementation | Complete on migration branch | commit `031ee46`, registry lock, 75 tests, CI run `31401474599` |
 | Codara default-branch integration | Pending repository merge | migration branch is pushed; its earlier pull request is closed and unmerged |

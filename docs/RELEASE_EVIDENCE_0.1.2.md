@@ -104,6 +104,23 @@ Author field and only anonymous or generic dataset-generator Creator metadata.
 The maintainer name and contact email remain intentionally public in package
 metadata, the README, and the license notices.
 
+GitHub Actions history was audited separately because workflow logs and
+artifacts become externally visible with a public repository. All 18 retained
+CodaraScan workflow logs were downloaded and scanned; no personal paths,
+internal dossier or dataset names, research notebook names, or checkpoint paths
+were present. All 25 retained artifact bundles were downloaded, yielding 60
+wheel and source-distribution files across versions 0.1.0-0.1.2. Every file
+passed the matching-version artifact inspector for forbidden content, local
+paths, credentials, unsafe archive paths, license/SPDX coverage, and packaging
+boundaries. One duplicate CI run records the branch label used before the
+neutral branch rename, but contains no confidential data.
+
+The GitHub Support payload has been derived and retained privately: repository
+identity, three affected pull requests, the first-changed-commit mapping, and
+confirmation that the rewrite reported no filtering problems, no LFS object
+store exists, and GitHub reports zero forks. Sensitive object identifiers are
+intentionally not reproduced in this public evidence file.
+
 The repository's issue #3 was deleted. Main rejects force-pushes and deletions,
 enforces administrators, linear history, resolved conversations, pull-request
 flow, and the complete up-to-date CI matrix. Dependabot and automated security
