@@ -3,7 +3,7 @@
 All notable changes are recorded here. CodaraScan follows semantic versioning
 after 1.0; during 0.x, breaking changes are identified explicitly.
 
-## 0.1.0 - Unreleased alpha
+## 0.1.0 - 2026-08-09
 
 - Renamed the distribution and import package to `codarascan`.
 - Added immutable, reusable Tessera/Mosaic `Scanner` APIs and cached one-off calls.
