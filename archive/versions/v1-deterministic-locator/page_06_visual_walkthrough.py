@@ -1760,7 +1760,7 @@ print("PASS: the walkthrough and barcode_locator.locate_page agree on page 6.")
 # The system does not trust one fragile image filter. It collects several
 # deterministic pieces of evidence, normalizes each candidate's geometry, then
 # verifies physical barcode properties before producing a result. No detector
-# has been trained on company documents.
+# has been trained on the evaluation documents.
 #
 # ## Research basis
 #

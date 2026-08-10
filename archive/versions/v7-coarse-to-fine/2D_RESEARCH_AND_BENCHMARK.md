@@ -127,7 +127,7 @@ repeated median of 54.6 ms/page, retaining the same eight regions. That is a
 15.5% throughput improvement. The old permissive 33.3 ms/page branch was
 faster only because it emitted unverified document texture.
 
-### Other VN lots
+### Additional private corpora
 
 | Dossier | Strict baseline | Optimized | Result |
 |---|---:|---:|---:|
