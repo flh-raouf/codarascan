@@ -2,6 +2,8 @@
 from __future__ import annotations
 
 import json
+import os
+import stat
 from importlib.resources import files
 from pathlib import Path
 
@@ -208,3 +210,36 @@ def test_debug_output_is_unique_and_sensitivity_marked(
     assert len(runs) == 2 and runs[0] != runs[1]
     assert all((run / "SENSITIVE_DATA_WARNING.txt").is_file() for run in runs)
     assert all((run / "result.json").is_file() for run in runs)
+
+
+@pytest.mark.skipif(os.name == "nt", reason="POSIX permission bits are not portable to Windows")
+def test_debug_output_is_private_under_a_permissive_umask(
+    tmp_path: Path, capsys: pytest.CaptureFixture[str]
+) -> None:
+    path = _qr_path(tmp_path / "private-debug.png")
+    root = tmp_path / "shared"
+    root.mkdir(mode=0o777)
+    root.chmod(0o777)
+    previous_umask = os.umask(0o022)
+    try:
+        assert (
+            main(
+                [
+                    "image",
+                    str(path),
+                    "--mode",
+                    "robust",
+                    "--debug-output",
+                    str(root),
+                ]
+            )
+            == EXIT_SUCCESS
+        )
+    finally:
+        os.umask(previous_umask)
+    capsys.readouterr()
+
+    (run,) = tuple(root.iterdir())
+    assert stat.S_IMODE(run.stat().st_mode) == 0o700
+    assert stat.S_IMODE((run / "SENSITIVE_DATA_WARNING.txt").stat().st_mode) == 0o600
+    assert stat.S_IMODE((run / "result.json").stat().st_mode) == 0o600

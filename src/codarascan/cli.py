@@ -152,15 +152,19 @@ def _human_document(result: DocumentResult) -> str:
 
 def _debug_result(result: ImageResult | DocumentResult, root: Path, diagnostics: bool) -> Path:
     destination = root.expanduser() / f"codarascan-{uuid.uuid4().hex}"
-    destination.mkdir(parents=True, exist_ok=False)
-    (destination / "SENSITIVE_DATA_WARNING.txt").write_text(
+    destination.mkdir(mode=0o700, parents=True, exist_ok=False)
+    warning_path = destination / "SENSITIVE_DATA_WARNING.txt"
+    warning_path.write_text(
         "This directory may contain sensitive decoded payloads and diagnostics.\n",
         encoding="utf-8",
     )
-    (destination / "result.json").write_text(
+    warning_path.chmod(0o600)
+    result_path = destination / "result.json"
+    result_path.write_text(
         to_json(result, include_diagnostics=diagnostics, indent=2) + "\n",
         encoding="utf-8",
     )
+    result_path.chmod(0o600)
     return destination
 
 

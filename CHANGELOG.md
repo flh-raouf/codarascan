@@ -3,6 +3,13 @@
 All notable changes are recorded here. CodaraScan follows semantic versioning
 after 1.0; during 0.x, breaking changes are identified explicitly.
 
+## Unreleased
+
+- Restrict explicit CLI debug-output directories to mode `0700` and their
+  sensitivity marker and result manifest to mode `0600` on POSIX systems.
+- Pin every GitHub Actions dependency to a verified full commit SHA and add a
+  regression check that rejects mutable workflow references.
+
 ## 0.1.1 - 2026-08-10
 
 - Reworked the project README into comprehensive package documentation with
