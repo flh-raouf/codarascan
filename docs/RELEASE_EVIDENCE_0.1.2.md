@@ -94,6 +94,15 @@ Normal branches and tags expose only the sanitized history. The source
 repository must not be made public until GitHub confirms the server-side purge
 and cached-view cleanup.
 
+The preserved research tree also passed a targeted publication-residue scan:
+it contains no personal filesystem paths, internal document names, `VN LOT`
+labels, or assistant-environment cache names. Research notebook cache examples
+now use the neutral `barcode-research` label, and private benchmark groups use
+generic corpus names. All retained synthetic benchmark PDFs have an empty
+Author field and only anonymous or generic dataset-generator Creator metadata.
+The maintainer name and contact email remain intentionally public in package
+metadata, the README, and the license notices.
+
 The repository's issue #3 was deleted. Main rejects force-pushes and deletions,
 enforces administrators, linear history, resolved conversations, pull-request
 flow, and the complete up-to-date CI matrix. Dependabot and automated security
@@ -105,4 +114,3 @@ The standard security review reported two medium findings; both were fixed in
 0.1.2 and their original reproductions no longer succeed. The environment did
 not provide the managed read-only profile required by the deeper independent
 scan, so this record does not claim that unavailable coverage.
-
