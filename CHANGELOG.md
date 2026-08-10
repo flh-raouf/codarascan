@@ -3,7 +3,7 @@
 All notable changes are recorded here. CodaraScan follows semantic versioning
 after 1.0; during 0.x, breaking changes are identified explicitly.
 
-## Unreleased
+## 0.1.2 - 2026-08-10
 
 - Restrict explicit CLI debug-output directories to mode `0700` and their
   sensitivity marker and result manifest to mode `0600` on POSIX systems.

@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: Apache-2.0
 """CodaraScan public API."""
 
-__version__ = "0.1.1"
+__version__ = "0.1.2"
 
 from .core.contracts import Roi
 from .documents import DocumentInput, DocumentStream, ErrorPolicy, WorkerCount

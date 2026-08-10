@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "codarascan"
-version = "0.1.1"
+version = "0.1.2"
 description = "Open-source, offline barcode detection, localization, and decoding for images and PDFs"
 readme = "README.md"
 requires-python = ">=3.11,<3.15"
