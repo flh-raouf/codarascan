@@ -2,7 +2,7 @@
 
 Date: 2026-08-09
 
-Scope: GitHub issue #3 and its authoritative comments
+Scope: CodaraScan 0.1.0 public release contract
 
 Status: complete and published
 
@@ -18,10 +18,10 @@ Status: complete and published
 | CLI and worker | Versioned CLI JSON/JSONL; strict length-prefixed JSON worker; capability, scan, stream, cancel, shutdown, and protocol errors | CLI and worker suites plus clean-installed artifact smoke; worker schemas reject unknown fields, booleans as IDs, nonfinite values, oversized and malformed frames |
 | Schemas | Result, stream, and worker JSON Schemas plus decoded/localized/stream golden examples | Package schema suite and Codara consumer validation of both a golden example and a real result |
 | Packaging and provenance | Python 3.11–3.14 metadata, Apache-2.0 project license, notices, dependency provenance, native C++ source, SPDX headers, typed marker, package data, wheel/sdist automation | Artifact inspector validates required members, exact metadata, safe paths, size limits, SPDX, credentials/local paths, forbidden corpora/caches, and native wheel binary |
-| Codara migration | Public-API-only adapter for four Tessera/Mosaic product IDs; package pin; copied engine, recovery, product, and native implementation removal | 75 backend tests, installed `site-packages` assertion, migration import scan, backend lint, frontend tests/typecheck/build, compose validation |
+| Downstream integration | Public-API-only adapter coverage and package pinning | Consumer tests, installed `site-packages` assertion, import scan, lint, and application build validation |
 | Documentation and release automation | API, migration, compatibility, worker protocol, release, limitations, security, changelog, contribution, format, release-evidence, CI, and protected release workflows | Workflow YAML parse, source quality gates, artifact build/inspection/smoke, release-set manifest, and `git diff --check` |
-| Hosted release | Twenty CPython 3.11-3.14 native wheels plus one sdist; PyPI trusted publisher bound to `flh-raouf/codarascan` | Release run `31319314031` passed every platform, artifact-evidence, and publish job; PyPI JSON reports 21 files |
-| Registry consumer | Codara production lock pins the PyPI release and ignores the sibling development source | Fresh no-cache and locked no-sources installs had no `direct_url.json`; a representative adapter decoded successfully; hosted backend, frontend, and container jobs passed |
+| Hosted release | Twenty CPython 3.11-3.14 native wheels plus one sdist; PyPI trusted publisher bound to `flh-raouf/codarascan` | Every platform, artifact-evidence, and publish job passed; PyPI JSON reports 21 files |
+| Registry consumer | A downstream application lock pins the PyPI release and ignores sibling development sources | Fresh no-cache and locked no-sources installs had no `direct_url.json`; representative adapter and application checks passed |
 
 ## Definitive local results
 
@@ -29,8 +29,7 @@ Status: complete and published
 Ruff shipped/CI scope:                         passed
 mypy strict configuration:                    50 source files, no issues
 pytest with coverage and native parity:       185 passed in 4.63s, 46% total
-Codara backend pytest:                        75 passed in 0.77s
-Codara frontend:                              56 tests; typecheck and build passed
+Downstream consumer verification:             passed
 Robust installed-wheel format benchmark:      40/40 decoded; 0 wrong payloads
 Wheel artifact inspection:                    67 members, passed
 Sdist artifact inspection:                    96 members, passed
@@ -56,12 +55,8 @@ Machine-readable records:
 
 The repository is published at <https://github.com/flh-raouf/codarascan> and
 PyPI release 0.1.0 is available at
-<https://pypi.org/project/codarascan/0.1.0/>. Release workflow run
-<https://github.com/flh-raouf/codarascan/actions/runs/31319314031> passed the
+<https://pypi.org/project/codarascan/0.1.0/>. The release workflow passed the
 five-platform CPython 3.11-3.14 wheel matrix, native-required sdist build and
-smoke, 21-artifact manifest, and trusted publication.
-
-Codara commit `3490b1d` consumes the registry lock. Hosted workflow run
-<https://github.com/flh-raouf/codara/actions/runs/31319896640> passed backend,
-frontend, and production container jobs. The deploy job was correctly skipped
-for the manually dispatched branch verification.
+smoke, 21-artifact manifest, and trusted publication. A downstream application
+was also verified against the registry release without using a sibling source
+checkout.

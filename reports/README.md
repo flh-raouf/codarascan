@@ -1,5 +1,8 @@
 # Reports
 
-Only authored, reviewable deliverables belong here. Generated benchmark outputs remain under ignored local run directories.
+Only authored, reviewable, privacy-audited deliverables belong here. Generated
+benchmark outputs remain under ignored local run directories.
 
-The technical report is under [`technical/`](technical/). It is retained as a historical deliverable; its source dossier is not committed.
+Technical reports derived from private evaluation documents are deliberately
+excluded. Publish a report here only when its text, figures, metadata, source
+references, and embedded assets are independently safe to redistribute.

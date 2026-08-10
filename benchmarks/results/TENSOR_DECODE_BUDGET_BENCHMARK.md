@@ -86,15 +86,15 @@ linear decoding is therefore valid but cannot materially solve the independent
 
 ## Reproduction
 
-This is a historical Codara integration benchmark. Its original benchmark
+This is a historical downstream integration benchmark. Its original benchmark
 script and application runtime are not part of this repository; the migrated
 Tessera/Mosaic runtime is exercised through the public registry instead.
 
 ```bash
-# Run from the corresponding Codara backend checkout. The benchmark script
+# Run from the corresponding downstream application checkout. The benchmark script
 # and its runtime dependencies are not included in this repository.
-cd /path/to/codara-app/apps/backend
+cd /path/to/downstream-application/backend
 .venv/bin/python benchmarks/tensor_decode_budget.py \
-  --datasets quality,balanced,stress,vn \
+  --datasets private-a,synthetic-balanced,synthetic-stress \
   --output /tmp/tensor-decode-budget.json
 ```

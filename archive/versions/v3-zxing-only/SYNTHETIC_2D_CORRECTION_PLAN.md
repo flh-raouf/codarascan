@@ -8,7 +8,7 @@ This is a read-only audit of the current run in:
 
 It is compared against:
 
-`output/pdf/Synthetic private evaluation document - 2D barcode ground truth.csv`
+`output/pdf/Synthetic Quality Dossier - 2D barcode ground truth.csv`
 
 No Python source was changed during this audit.
 

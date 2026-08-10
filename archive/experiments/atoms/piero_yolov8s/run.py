@@ -13,7 +13,7 @@ from time import perf_counter
 
 ROOT = Path(__file__).resolve().parent
 REPO_ROOT = ROOT.parent
-DEFAULT_PDF = REPO_ROOT / "notebooks" / "data" / "pdfs" / "private evaluation document.pdf"
+DEFAULT_PDF = REPO_ROOT / "notebooks" / "data" / "pdfs" / "private-evaluation-document.pdf"
 MODEL_REPO = "Piero2411/YOLOV8s-Barcode-Detection"
 MODEL_FILE = "YOLOV8s_Barcode_Detection.pt"
 

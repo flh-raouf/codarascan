@@ -14,9 +14,9 @@ in `benchmarks/`.
 
 ## Archive hygiene
 
-Keep this tree limited to source, notebooks, documentation, benchmark reports,
-and deliberately curated historical assets. Generated outputs, build products,
-Python caches, native binaries, and downloaded external model weights stay
-ignored or outside the archive. Historical model files that are small enough to
-version are documented beside their version; external baselines have a
-provenance record and are recreated locally when needed.
+Keep this tree limited to source, output-free notebooks, documentation,
+benchmark reports, and deliberately curated historical assets. Generated
+outputs, private corpora, build products, Python caches, native binaries, and
+learned or downloaded model weights stay ignored or outside the archive.
+Historical model directories document reproducibility and provenance without
+redistributing checkpoint binaries.

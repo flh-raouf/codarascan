@@ -8,7 +8,7 @@ discard a visually convincing barcode.
 
 ## What the dossier actually contains
 
-`private evaluation document.pdf` is a 21-page A3 scan. Each page is essentially one
+`private-evaluation-document.pdf` is a 21-page A3 scan. Each page is essentially one
 approximately 200-ppi JPEG raster rather than a vector PDF, so rendering it at
 1200 dpi would only interpolate pixels. The useful input is its native raster.
 

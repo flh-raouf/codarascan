@@ -33,7 +33,7 @@ Poppler commands `pdfinfo`, `pdfimages`, and `pdftoppm` must be installed.
 
 ```bash
 venv/bin/python zxing_only_barcode_pipeline/run.py \
-  'notebooks/data/pdfs/private evaluation document.pdf' \
+  'notebooks/data/pdfs/private-evaluation-document.pdf' \
   --output zxing_only_barcode_pipeline/output/dossier
 ```
 

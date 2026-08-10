@@ -81,7 +81,7 @@ From the `barcode-detection` repository root:
 
 ```bash
 venv/bin/python 'archive/versions/v5.1-adaptive-generalization/run.py' \
-  'archive/experiments/notebooks/data/pdfs/private evaluation document.pdf' \
+  'archive/experiments/notebooks/data/pdfs/private-evaluation-document.pdf' \
   --output 'archive/versions/v5.1-adaptive-generalization/output/my-run' \
   --formats all \
   --workers 4 \
@@ -92,7 +92,7 @@ Fast JSON-only run:
 
 ```bash
 venv/bin/python 'archive/versions/v5.1-adaptive-generalization/run.py' \
-  'archive/experiments/notebooks/data/pdfs/private evaluation document.pdf' \
+  'archive/experiments/notebooks/data/pdfs/private-evaluation-document.pdf' \
   --output 'archive/versions/v5.1-adaptive-generalization/output/my-fast-run' \
   --formats all \
   --workers 4 \

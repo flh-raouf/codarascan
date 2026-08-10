@@ -35,11 +35,9 @@ tmp/
 /codara-app/
 /models/generated/
 
-# Confidential company source documents (never commit)
-**/private evaluation document.pdf
-**/private evaluation document.pdf
-
-# Confidential outputs derived from private evaluation document.pdf
+# Private source documents and derived outputs (never commit)
+**/private-data/
+**/document-corpora/
 /output/opencv-detailed/
 /test/
 **/piero_yolov8s/output*/
@@ -53,7 +51,7 @@ coverage.xml
 **/coverage/
 /dist/
 
-# Dossier-derived diagnostic tests and images
+# Document-derived diagnostic tests and images
 
 # The separately authored LaTeX report and its generated PDF
 /docs/barcode-report/

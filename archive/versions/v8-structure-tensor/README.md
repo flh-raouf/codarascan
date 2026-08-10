@@ -57,7 +57,7 @@ PDF input, automatic document profile, JSON only:
 
 ```bash
 ../../../.venv/bin/python run.py \
-  '../../experiments/notebooks/data/pdfs/private evaluation document.pdf' \
+  '../../experiments/notebooks/data/pdfs/private-evaluation-document.pdf' \
   --output 'output/quality-fast' \
   --profile auto \
   --workers 8 \
@@ -68,7 +68,7 @@ Add overlays without including artifact generation in engine timing:
 
 ```bash
 ../../../.venv/bin/python run.py \
-  '../../experiments/notebooks/data/pdfs/private evaluation document.pdf' \
+  '../../experiments/notebooks/data/pdfs/private-evaluation-document.pdf' \
   --output 'output/quality-visual' \
   --profile auto \
   --workers 8 \

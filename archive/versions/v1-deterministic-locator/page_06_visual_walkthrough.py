@@ -16,7 +16,7 @@
 # %% [markdown]
 # # Deterministic barcode locator - complete visual walkthrough
 #
-# ## Page 6 of `private evaluation document.pdf`
+# ## Page 6 of `private-evaluation-document.pdf`
 #
 # This notebook opens the implementation in `barcode_locator.py` and exposes the
 # complete page-6 journey:
@@ -105,9 +105,9 @@ sys.path.insert(0, str(PROJECT_DIR))
 import barcode_locator as bl  # noqa: E402
 
 PDF_CANDIDATES = [
-    REPOSITORY_DIR / "archive" / "experiments" / "notebooks" / "data" / "pdfs" / "private evaluation document.pdf",
-    REPOSITORY_DIR / "archive" / "experiments" / "bin" / "data" / "pdfs" / "private evaluation document.pdf",
-    REPOSITORY_DIR / "private evaluation document.pdf",
+    REPOSITORY_DIR / "archive" / "experiments" / "notebooks" / "data" / "pdfs" / "private-evaluation-document.pdf",
+    REPOSITORY_DIR / "archive" / "experiments" / "bin" / "data" / "pdfs" / "private-evaluation-document.pdf",
+    REPOSITORY_DIR / "private-evaluation-document.pdf",
 ]
 PDF_PATH = next((path for path in PDF_CANDIDATES if path.exists()), None)
 
@@ -305,7 +305,7 @@ def explain_visual(
 if PDF_PATH is None:
     fallback = PROJECT_DIR / "output" / "dossier-rerun" / "rendered-pages" / "pages" / "page-06.png"
     if not fallback.exists():
-        raise FileNotFoundError("private evaluation document.pdf and the page-6 fallback image are both missing")
+        raise FileNotFoundError("private-evaluation-document.pdf and the page-6 fallback image are both missing")
     PAGE_PATH = fallback
     render_command = "Used the existing rendered page because the source PDF was not found."
 else:

@@ -1,14 +1,10 @@
 # v5.2 historical model artifacts
 
-These weights belong to the evidence-guided v5.2 experiment. They are not
-loaded by Tessera or Mosaic and are kept only so the archived version can be
-reproduced.
+The evidence-guided v5.2 experiment originally evaluated learned checkpoint
+artifacts. Those binaries are not required by Tessera or Mosaic and are not
+distributed in this public research archive because their training-data and
+redistribution provenance is incomplete.
 
-| File | SHA-256 |
-| --- | --- |
-| `tiny-barcode-locator.pt` | `81b7491a3b75ced0d0df8380f30e4aef4d096fd557f6ae209ef60f370ef77002` |
-| `tiny-qr-restorer.pt` | `a9cee5182aad7bc7587c34f9ed926bfa9bd78c4a8162b66d14cf4835a42bda2f` |
-
-The repository does not infer training-data ownership or redistribution rights
-from the files themselves. Confirm provenance and licensing before publishing
-this archive as a public release.
+The archived source remains available for architectural comparison. Recreate
+new checkpoints only from data you are authorized to use, and keep generated
+weights outside Git.

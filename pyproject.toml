@@ -5,12 +5,14 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "codarascan"
 version = "0.1.0"
-description = "Offline multi-format barcode detection, localization, and decoding for images and PDFs"
+description = "Open-source, offline barcode detection, localization, and decoding for images and PDFs"
 readme = "README.md"
 requires-python = ">=3.11,<3.15"
 license = "Apache-2.0"
 license-files = ["LICENSE", "NOTICE", "THIRD_PARTY_NOTICES.md"]
-authors = [{ name = "Abderraouf FELLAHI" }]
+authors = [
+    { name = "Abderraouf FELLAHI", email = "ma_fellahi@esi.dz" },
+]
 keywords = [
     "barcode",
     "barcode-detection",

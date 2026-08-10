@@ -7,7 +7,7 @@ accept generic `matrix_2d` regions. That signal is useful for finding compact
 two-dimensional texture, but it is not barcode-specific. Dense text, table
 intersections, stamps, and mechanical drawings can produce the same response.
 
-On `private corpus A.pdf`, the old 2D mode returned 140 regions on 100 pages. Visual
+On `private-corpus-a.pdf`, the old 2D mode returned 140 regions on 100 pages. Visual
 inspection showed that most were ordinary document texture. Pipeline 5.1
 decoded six real Data Matrix symbols on pages 5, 45, 75, 94, 152, and 226.
 
@@ -168,7 +168,7 @@ Run only the frozen 1D branch:
 
 ```bash
 venv/bin/python 'archive/versions/v7-coarse-to-fine/run.py' \
-  '/path/to/private-project/docs/vn pour raouf/private corpus A/private corpus A.pdf' \
+  '/path/to/private-document.pdf' \
   --output '/tmp/private-evaluation-corpus-p7-linear' \
   --kinds linear \
   --workers 4 \
@@ -179,7 +179,7 @@ Run only the corrected 2D branch:
 
 ```bash
 venv/bin/python 'archive/versions/v7-coarse-to-fine/run.py' \
-  '/path/to/private-project/docs/vn pour raouf/private corpus A/private corpus A.pdf' \
+  '/path/to/private-document.pdf' \
   --output '/tmp/private-evaluation-corpus-p7-2d' \
   --kinds 2d \
   --workers 4 \

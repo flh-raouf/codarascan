@@ -16,7 +16,7 @@ The default `2d` mode uses:
 
 ```bash
 venv/bin/python zxing_2d_barcode_pipeline/run.py \
-  'output/pdf/Synthetic private evaluation document - 50 scanned 2D barcode pages.pdf' \
+  'output/pdf/Synthetic Quality Dossier - 50 scanned 2D barcode pages.pdf' \
   --output zxing_2d_barcode_pipeline/output/synthetic-2d-dossier \
   --formats 2d \
   --overwrite
@@ -27,7 +27,7 @@ venv/bin/python zxing_2d_barcode_pipeline/run.py \
 ```bash
 venv/bin/python zxing_2d_barcode_pipeline/regression.py \
   zxing_2d_barcode_pipeline/output/synthetic-2d-dossier/detections.json \
-  --expected-csv 'output/pdf/Synthetic private evaluation document - 2D barcode ground truth.csv' \
+  --expected-csv 'output/pdf/Synthetic Quality Dossier - 2D barcode ground truth.csv' \
   --require-no-unresolved \
   --require-no-review
 ```

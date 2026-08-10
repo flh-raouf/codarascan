@@ -81,7 +81,7 @@ From the `barcode-detection` repository root:
 
 ```bash
 venv/bin/python 'archive/versions/v5.3-fast-extraction/run.py' \
-  'archive/experiments/notebooks/data/pdfs/private evaluation document.pdf' \
+  'archive/experiments/notebooks/data/pdfs/private-evaluation-document.pdf' \
   --output 'archive/versions/v5.3-fast-extraction/output/quality-fast' \
   --kinds all \
   --workers 4 \

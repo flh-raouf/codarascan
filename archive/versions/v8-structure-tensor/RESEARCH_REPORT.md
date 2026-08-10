@@ -330,7 +330,7 @@ Localization was scored with the neutral benchmark harness:
 - linear ground truth only.
 
 Development and holdout partitions used stable image IDs where available.
-private evaluation document and private document corpus document references used validated Pipeline 7/5.1
+private evaluation document references used validated Pipeline 7/5.1
 geometry. Public datasets include independent annotations, but several had
 already been inspected during earlier research. Results should therefore be
 read as strong regression evidence, not a pristine academic blind test.

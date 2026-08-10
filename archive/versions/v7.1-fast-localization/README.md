@@ -20,7 +20,7 @@ From the barcode-detection repository root:
 
 ```bash
 venv/bin/python 'archive/versions/v7.1-fast-localization/run.py' \
-  'archive/experiments/notebooks/data/pdfs/private evaluation document.pdf' \
+  'archive/experiments/notebooks/data/pdfs/private-evaluation-document.pdf' \
   --output 'archive/versions/v7.1-fast-localization/output/my-run' \
   --profile fast \
   --workers 1 \
@@ -94,7 +94,7 @@ verified linear branch:
 
 ```bash
 venv/bin/python 'archive/versions/v7-coarse-to-fine/run.py' \
-  '/path/to/private corpus A.pdf' \
+  '/path/to/private-corpus-a.pdf' \
   --output 'archive/versions/v7.1-fast-localization/output/vn-linear' \
   --kinds linear \
   --workers 4 \

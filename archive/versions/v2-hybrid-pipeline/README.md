@@ -51,7 +51,7 @@ Full dossier:
 
 ```bash
 venv/bin/python hybrid_barcode_pipeline/run.py \
-  'notebooks/data/pdfs/private evaluation document.pdf' \
+  'notebooks/data/pdfs/private-evaluation-document.pdf' \
   --output hybrid_barcode_pipeline/output/dossier \
   --engine auto
 ```
@@ -60,7 +60,7 @@ Regression pages only:
 
 ```bash
 venv/bin/python hybrid_barcode_pipeline/run.py \
-  'notebooks/data/pdfs/private evaluation document.pdf' \
+  'notebooks/data/pdfs/private-evaluation-document.pdf' \
   --pages 8,16,19,21 \
   --output hybrid_barcode_pipeline/output/regression \
   --engine auto
