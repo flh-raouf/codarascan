@@ -29,10 +29,15 @@ python benchmarks/format_smoke.py --mode robust --repeats 3
 git diff --check
 ```
 
-The exact local pre-publication results for 0.1.0 are recorded in
-[RELEASE_EVIDENCE_0.1.0.md](RELEASE_EVIDENCE_0.1.0.md). Platform-matrix and
-publication results are appended only after the protected release workflow is
-explicitly approved and run.
+Release records:
+
+- [CodaraScan 0.1.2 release evidence](RELEASE_EVIDENCE_0.1.2.md) covers the
+  current PyPI release, security hardening, provenance, and Codara verification.
+- [CodaraScan 0.1.0 release evidence](RELEASE_EVIDENCE_0.1.0.md) preserves the
+  original alpha-publication record.
+
+Platform-matrix and publication results are recorded only after the protected
+release workflow is explicitly approved and run.
 
 The release workflow builds CPython 3.11-3.14 wheels on Linux x86_64/ARM64,
 macOS Intel/Apple Silicon, and Windows x86_64. Artifact upload and PyPI trusted
