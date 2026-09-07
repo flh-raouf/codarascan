@@ -16,7 +16,7 @@ For teams looking for a universal barcode detection layer, CodaraScan provides o
 [Formats](#supported-barcode-formats) · [API reference](https://github.com/flh-raouf/codarascan/blob/main/docs/API.md) ·
 [PyPI](https://pypi.org/project/codarascan/)
 
-> **Alpha notice — CodaraScan 0.1.3 is alpha software.** Its APIs and schemas
+> **Alpha notice — CodaraScan 0.2.0 is alpha software.** Its APIs and schemas
 > may change during 0.x. Pin an exact version and evaluate it against your own documents before
 > production use. See the [known limitations](https://github.com/flh-raouf/codarascan/blob/main/docs/KNOWN_LIMITATIONS.md)
 > and [release policy](https://github.com/flh-raouf/codarascan/blob/main/docs/RELEASE.md).
@@ -32,8 +32,8 @@ Most barcode libraries focus on decoding a clean, tightly cropped symbol. Docume
 | Barcode decoding | Returns Unicode text, exact raw payload bytes, and a canonical format name |
 | Document scanning | Reads selected PDF pages, preserves requested order, and supports bounded parallel work |
 | Batch processing | Scans complete or selected multi-page PDFs and can stream pages without accumulating them |
-| Format coverage | 40 selectable formats: 27 linear and 13 matrix selections in version 0.1.3 |
-| Recovery profiles | `fast` Tessera mode for lower latency; `robust` Mosaic mode for stronger recovery |
+| Format coverage | 40 selectable formats: 27 linear and 13 matrix selections in version 0.2.0 |
+| Recovery profiles | `fast` Tessera for lower latency; `robust` Mosaic for stronger recovery; `panorama` for maximum recall |
 | Local processing | No server, network request, telemetry, external executable, or runtime model download |
 | Integration | Typed Python API, deterministic JSON, CLI, schemas, and a private persistent worker protocol |
 | Deployment | Native wheels for supported Linux, macOS, and Windows targets; Python fallback for Tessera |
@@ -59,7 +59,7 @@ python -m pip install codarascan
 For reproducible alpha deployments, pin the current release:
 
 ```bash
-python -m pip install codarascan==0.1.3
+python -m pip install codarascan==0.2.0
 ```
 
 
@@ -71,7 +71,7 @@ python -m pip install codarascan==0.1.3
 from codarascan import DecodedSymbolResult, Scanner
 
 scanner = Scanner(
-    mode="fast",       # "fast" (Tessera) or "robust" (Mosaic)
+    mode="fast",       # "fast" (Tessera), "robust" (Mosaic), or "panorama"
     symbols="all",     # "linear", "2d", or "all"
     decode=True,
 )
@@ -210,22 +210,25 @@ A difficult symbol may be localized without being decoded. CodaraScan keeps that
 | `localized` | Geometry-only result produced with `decode=False` |
 | `review_candidate` | A barcode-like region was found with weaker evidence and may require human review |
 
-Confidence is an engine-specific evidence score in `[0, 1]`, not a calibrated probability. It is not directly comparable between Tessera and Mosaic. Treat `status` as the primary semantic signal.
+Confidence is an engine-specific evidence score in `[0, 1]`, not a calibrated probability. It is not directly comparable between Tessera, Mosaic, and Panorama. Treat `status` as the primary semantic signal.
 
-## Fast vs. robust barcode scanning
+## Choosing a scanning engine
 
-CodaraScan makes the performance/recovery choice explicit. It does not switch engines automatically.
+CodaraScan makes the performance/recovery choice explicit.
 
 | Mode | Engine | Best fit | Trade-off |
 |---|---|---|---|
 | `mode="fast"` | Tessera | Low-latency document scanning and common workflows | Less exhaustive recovery |
 | `mode="robust"` | Mosaic | Difficult inputs where stronger recovery is worth more work | Higher CPU time and latency |
+| `mode="panorama"` | Panorama | Maximum-recall extraction and review workflows | Highest CPU time and latency; extraction only |
 
-Start with `fast`, measure on representative inputs, and choose `robust` where it materially improves your corpus. Avoid choosing a mode from synthetic benchmarks alone.
+Start with `fast`, measure on representative inputs, and choose `robust` or
+`panorama` where the additional recovery materially improves your corpus.
+Avoid choosing a mode from synthetic benchmarks alone.
 
 ## Supported barcode formats
 
-CodaraScan 0.1.3 exposes **40 selectable barcode formats** generated from the installed ZXing-C++ readable catalog: **27 linear/1D selections** and **13 matrix/2D selections**.
+CodaraScan 0.2.0 exposes **40 selectable barcode formats** generated from the installed ZXing-C++ readable catalog: **27 linear/1D selections** and **13 matrix/2D selections**.
 
 ### 1D and linear barcodes
 
@@ -326,7 +329,7 @@ Run `codarascan image --help` or `codarascan document --help` for every option.
 
 ## Platform support
 
-Official 0.1.3 wheels target:
+Official 0.2.0 wheels target:
 
 | Operating system | Architectures | Python |
 |---|---|---|
@@ -370,12 +373,14 @@ Yes. Barcode detection, decoding, PDF rendering, the CLI, and the worker all run
 
 ### Is CodaraScan a universal barcode reader?
 
-It is a multi-format barcode detection layer with 40 selectable 1D and 2D formats in version 0.1.3. No honest scanner can guarantee every barcode under every capture condition, so CodaraScan publishes the exact catalog, evidence, and known limitations instead of making an unlimited compatibility claim.
+It is a multi-format barcode detection layer with 40 selectable 1D and 2D formats in version 0.2.0. No honest scanner can guarantee every barcode under every capture condition, so CodaraScan publishes the exact catalog, evidence, and known limitations instead of making an unlimited compatibility claim.
 
 
 ### Which mode should I use?
 
-Begin with `mode="fast"` for lower latency. Evaluate `mode="robust"` when difficult inputs justify stronger recovery and extra computation. Benchmark both on your actual documents.
+Begin with `mode="fast"` for lower latency. Evaluate `mode="robust"` for
+difficult inputs and `mode="panorama"` when maximum recall justifies the extra
+work. Benchmark the relevant modes on your actual documents.
 
 ### Is CodaraScan open source and usable commercially?
 

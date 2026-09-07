@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://codarascan.dev/schemas/result-0.1.3.json",
+  "$id": "https://codarascan.dev/schemas/result-0.2.0.json",
   "title": "CodaraScan result",
   "oneOf": [
     { "$ref": "#/$defs/image" },
@@ -50,7 +50,7 @@
         "engine_version": { "type": "string", "minLength": 1 },
         "decoder_version": { "type": "string", "minLength": 1 },
         "backend": { "type": "string", "minLength": 1 },
-        "mode": { "enum": ["fast", "robust"] }
+        "mode": { "enum": ["fast", "robust", "panorama"] }
       }
     },
     "symbolBase": {

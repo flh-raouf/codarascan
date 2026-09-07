@@ -43,6 +43,7 @@ from .models import (
 class ScanMode(str, Enum):
     FAST = "fast"
     ROBUST = "robust"
+    PANORAMA = "panorama"
 
 
 class SymbolGroup(str, Enum):
@@ -128,6 +129,8 @@ class Scanner:
             raise ConfigurationError(
                 "decode must be a boolean", context={"parameter": "decode"}
             )
+        if mode is ScanMode.PANORAMA and not self.decode:
+            raise ConfigurationError("panorama mode requires decode=True")
         raw_formats: tuple[str, ...]
         if self.formats is None:
             raw_formats = ()
@@ -174,11 +177,12 @@ class Scanner:
             engine = self._engine
             if engine is None:
                 suffix = "extractor" if self.decode else "localizer"
-                engine_id = (
-                    f"tessera-{suffix}"
-                    if self.mode is ScanMode.FAST
-                    else f"mosaic-{suffix}"
-                )
+                family = {
+                    ScanMode.FAST: "tessera",
+                    ScanMode.ROBUST: "mosaic",
+                    ScanMode.PANORAMA: "panorama",
+                }[cast(ScanMode, self.mode)]
+                engine_id = f"{family}-{suffix}"
                 from .core.contracts import Capability
 
                 capability = Capability.DECODE if self.decode else Capability.DETECT
@@ -221,6 +225,8 @@ class Scanner:
                 backend = loader.backend_name()
             except Exception:
                 backend = "python-reference"
+        elif mode is ScanMode.PANORAMA:
+            backend = "hybrid"
         return ScanMetadata(
             package_version=__version__,
             engine=engine.info.id,

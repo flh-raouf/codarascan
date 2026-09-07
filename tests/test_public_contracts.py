@@ -53,6 +53,12 @@ def test_every_public_scanner_combination_and_configuration_snapshot() -> None:
         assert scanner.symbols.value == symbols
         assert scanner.decode is decode
 
+    panorama = Scanner(mode="panorama", symbols="all", decode=True)
+    assert panorama.mode is scanner_module.ScanMode.PANORAMA
+
+    with pytest.raises(ConfigurationError, match="requires decode=True"):
+        Scanner(mode="panorama", decode=False)
+
     mutable = ["QRCode"]
     scanner = Scanner(symbols="2d", formats=mutable)
     mutable[0] = "data-matrix"
@@ -86,6 +92,18 @@ def test_convenience_cache_reuses_only_equal_immutable_configuration() -> None:
 
 def test_tessera_public_route_always_uses_stronger_2d_profile() -> None:
     assert Scanner(mode="fast", symbols="2d")._engine_options()["mode"] == "robust"
+
+
+def test_panorama_uses_the_canonical_package_engine() -> None:
+    scanner = Scanner(mode="panorama")
+    assert scanner._get_engine().info.id == "panorama-extractor"
+
+    from codarascan.engines import Capability, get_engine
+
+    assert (
+        get_engine("high-recall-extractor", Capability.DECODE).info.id
+        == "panorama-extractor"
+    )
 
 
 @pytest.mark.parametrize("mode", ["auto", "", 1, True])

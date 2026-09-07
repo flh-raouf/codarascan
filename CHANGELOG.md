@@ -3,6 +3,14 @@
 All notable changes are recorded here. CodaraScan follows semantic versioning
 after 1.0; during 0.x, breaking changes are identified explicitly.
 
+## 0.2.0 - 2026-09-07
+
+- Add the Panorama high-recall extraction engine and public
+  `Scanner(mode="panorama")` API. Panorama reconciles complementary Tessera,
+  whole-page ZXing, split-guard, and failure-tolerant Mosaic results.
+- Preserve `high-recall-extractor` as an input alias for
+  `panorama-extractor` while exposing only the new canonical identity.
+
 ## 0.1.3 - 2026-08-10
 
 - Remove Pillow's process-wide decompression-bomb pixel admission threshold

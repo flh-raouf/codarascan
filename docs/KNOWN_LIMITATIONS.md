@@ -1,4 +1,4 @@
-# Known limitations in 0.1.3 alpha
+# Known limitations in 0.2.0 alpha
 
 - Degraded-corpus validation is deepest for established QR Code, Data Matrix,
   and common linear workflows. Broader catalog blur, glare, perspective,
@@ -9,7 +9,7 @@
   structure-tensor linear localizer is tuned for document layouts and does not
   guarantee clean-crop localization for every linear family.
 - Confidence values are not calibrated probabilities and are not comparable
-  between Tessera and Mosaic.
+  between Tessera, Mosaic, and Panorama.
 - Native and Python-reference Tessera geometry is tolerance-equivalent, not
   pixel-identical.
 - PDF support does not expose a password parameter in 0.1. Password-protected
