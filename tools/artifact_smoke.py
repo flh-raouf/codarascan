@@ -61,8 +61,13 @@ def main() -> int:
     fast_linear = Scanner(
         mode="fast", symbols="linear", formats=["code-128"]
     ).scan_image(canvas)
+    panorama_linear = Scanner(
+        mode="panorama", symbols="linear", formats=["code-128"]
+    ).scan_image(canvas)
     assert fast_qr.symbols[0].text == robust_qr.symbols[0].text == "ARTIFACT-QR"  # type: ignore[attr-defined]
     assert fast_linear.symbols[0].text == "ARTIFACT-CODE128"  # type: ignore[attr-defined]
+    assert panorama_linear.symbols[0].text == "ARTIFACT-CODE128"  # type: ignore[attr-defined]
+    assert panorama_linear.metadata.engine == "panorama-extractor"
     assert fast_qr.metadata.backend == "native"
 
     with tempfile.TemporaryDirectory(prefix="codarascan-artifact-") as directory:

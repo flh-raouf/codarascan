@@ -95,8 +95,8 @@ class ScanMetadata:
         ):
             if not isinstance(getattr(self, name), str) or not getattr(self, name):
                 raise ValueError(f"metadata {name} must be a non-empty string")
-        if self.mode not in {"fast", "robust"}:
-            raise ValueError("metadata mode must be fast or robust")
+        if self.mode not in {"fast", "robust", "panorama"}:
+            raise ValueError("metadata mode must be fast, robust, or panorama")
 
     def to_dict(self) -> dict[str, str]:
         return {

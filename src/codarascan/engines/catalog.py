@@ -11,7 +11,7 @@ from dataclasses import dataclass
 from typing import Literal
 
 CapabilityName = Literal["detect", "decode"]
-Role = Literal["recommended", "base"]
+Role = Literal["recommended", "base", "high-recall"]
 
 
 @dataclass(frozen=True)
@@ -49,5 +49,11 @@ ENGINE_CATALOG: tuple[EngineSpec, ...] = (
         capability="decode",
         role="base",
         source="src/codarascan/engines/mosaic/extraction.py",
+    ),
+    EngineSpec(
+        name="Panorama",
+        capability="decode",
+        role="high-recall",
+        source="src/codarascan/engines/panorama/extraction.py",
     ),
 )

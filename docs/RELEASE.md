@@ -7,7 +7,7 @@ Every 0.x release must:
 - pass Ruff, strict public-boundary mypy, unit/integration tests, and native
   fallback/parity checks;
 - build wheel and sdist artifacts and install them outside the source tree;
-- smoke fast/robust linear and matrix scans, PDFium PDF scanning, CLI JSON, and
+- smoke Tessera/Mosaic linear and matrix scans, Panorama extraction, PDFium PDF scanning, CLI JSON, and
   framed worker output from installed artifacts;
 - include the native extension in official wheels and verify forced fallback;
 - include Apache-2.0 license, notice, attribution, schemas, and native source;
@@ -47,7 +47,7 @@ publication authority.
 
 ## 1.0 blocking gates
 
-Stable 1.0 additionally requires frozen per-format Tessera/Mosaic accuracy,
+Stable 1.0 additionally requires frozen per-format Tessera/Mosaic/Panorama accuracy,
 false-positive, zero-wrong-decode, duplicate, geometry, degraded-case, latency,
 throughput, and peak-memory thresholds; every input/status/error contract;
 native/reference and prior-Poppler/PDFium parity; all official wheels; schema

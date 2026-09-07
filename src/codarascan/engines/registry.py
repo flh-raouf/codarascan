@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: Apache-2.0
-"""Production Tessera and Mosaic engine registry.
+"""Production Tessera, Mosaic, and Panorama engine registry.
 
 The registry is the only runtime entry point for product engines. The engines
 and their shared recovery pipeline are repository-owned; callers do not need an
@@ -19,12 +19,14 @@ from codarascan.core.contracts import (
 
 from .mosaic.detection import ENGINE as _MOSAIC_LOCALIZER
 from .mosaic.extraction import ENGINE as _MOSAIC_EXTRACTOR
+from .panorama.extraction import ENGINE as _PANORAMA_EXTRACTOR
 from .tessera.detection import ENGINE as _TESSERA_LOCALIZER
 from .tessera.extraction import ENGINE as _TESSERA_EXTRACTOR
 
 _REGISTRY: dict[str, Engine] = {
     _TESSERA_EXTRACTOR.info.id: _TESSERA_EXTRACTOR,
     _MOSAIC_EXTRACTOR.info.id: _MOSAIC_EXTRACTOR,
+    _PANORAMA_EXTRACTOR.info.id: _PANORAMA_EXTRACTOR,
     _TESSERA_LOCALIZER.info.id: _TESSERA_LOCALIZER,
     _MOSAIC_LOCALIZER.info.id: _MOSAIC_LOCALIZER,
 }
@@ -36,6 +38,7 @@ _LEGACY_ENGINE_IDS: dict[str, str] = {
     "tensor-p7-localizer": "tessera-localizer",
     "guarded-adaptive-extractor-v3": "mosaic-extractor",
     "guarded-adaptive-localizer-v3": "mosaic-localizer",
+    "high-recall-extractor": "panorama-extractor",
 }
 
 DEFAULT_BY_CAPABILITY: dict[Capability, str] = {

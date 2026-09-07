@@ -5,12 +5,13 @@
 `Scanner(mode="fast", symbols="all", formats=None, decode=True)` is immutable,
 hashable, lazily initialized, reusable, and safe to share across threads.
 
-- `mode`: `fast` selects Tessera; `robust` selects Mosaic. There is no `auto`
-  mode or cross-engine fallback.
+- `mode`: `fast` selects Tessera, `robust` selects Mosaic, and `panorama`
+  selects the high-recall Panorama composition. There is no `auto` mode.
 - `symbols`: `linear`, `2d`, or `all`.
 - `formats`: optional canonical names or accepted aliases. Contradictions with
   `symbols` and unknown names fail at construction.
-- `decode`: a strict boolean. False produces geometry-only public results.
+- `decode`: a strict boolean. False produces geometry-only public results and
+  is supported by Tessera and Mosaic; Panorama is extraction-only.
 
 `warm()` performs the same idempotent initialization used on first scan.
 

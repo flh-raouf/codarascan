@@ -48,7 +48,7 @@ def load_registry() -> Any:
             missing.startswith(f"{module}.") for module in engine_modules
         ):
             raise RuntimeError(
-                "The Tessera/Mosaic runtime is unavailable because "
+                "The Tessera/Mosaic/Panorama runtime is unavailable because "
                 f"{missing!r} is missing. Install the engine dependencies with "
                 "`pip install -e .` before loading the registry."
             ) from exc

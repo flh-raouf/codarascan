@@ -82,7 +82,9 @@ def _workers(value: str) -> int | str:
 
 
 def _add_scanner_options(parser: argparse.ArgumentParser) -> None:
-    parser.add_argument("--mode", choices=("fast", "robust"), default="fast")
+    parser.add_argument(
+        "--mode", choices=("fast", "robust", "panorama"), default="fast"
+    )
     parser.add_argument("--symbols", choices=("linear", "2d", "all"), default="all")
     parser.add_argument("--formats", type=_formats)
     parser.add_argument("--no-decode", action="store_true")
