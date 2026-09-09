@@ -180,7 +180,7 @@ def test_public_panorama_mode_returns_canonical_metadata(tmp_path: Path) -> None
     }
     assert result.metadata.mode == "panorama"
     assert result.metadata.engine == "panorama-extractor"
-    assert result.metadata.package_version == "0.2.0"
+    assert result.metadata.package_version == "0.2.1"
 
 
 def test_panorama_applies_roi_after_full_page_localization(tmp_path: Path) -> None:

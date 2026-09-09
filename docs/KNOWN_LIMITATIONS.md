@@ -1,4 +1,4 @@
-# Known limitations in 0.2.0 alpha
+# Known limitations in 0.2.1 alpha
 
 - Degraded-corpus validation is deepest for established QR Code, Data Matrix,
   and common linear workflows. Broader catalog blur, glare, perspective,

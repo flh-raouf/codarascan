@@ -4,6 +4,14 @@
 adapters. It reads standard input and writes standard output. It opens no
 socket, HTTP server, or external connection. Warnings use standard error.
 
+The request pool defaults to one worker. Set `codarascan _worker --workers 4`
+or `python -m codarascan.worker --workers 4` to process up to four requests
+concurrently. Python callers can use `WorkerServer(reader, writer, workers=4)`.
+The count must be a positive integer; it is never inferred from CPU count.
+This controls concurrent requests. The separate `workers` parameter for
+`scan_document` and `iter_document` controls page analysis within each request
+and still defaults to 1 (with explicit `"auto"` supported).
+
 Each message is four bytes containing an unsigned big-endian payload length,
 followed by exactly that many UTF-8 JSON bytes. JSON may contain newlines and
 may be larger than a line. The worker applies no additional public frame-size

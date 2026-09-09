@@ -20,6 +20,7 @@ from PIL import Image
 from codarascan.worker import (
     PROTOCOL_VERSION,
     ProtocolError,
+    WorkerServer,
     read_frame,
     write_frame,
 )
@@ -77,11 +78,11 @@ def _read(stream: BinaryIO) -> dict[str, Any]:
     return response
 
 
-def _worker() -> subprocess.Popen[bytes]:
+def _worker(*args: str) -> subprocess.Popen[bytes]:
     environment = dict(os.environ)
     environment["PYTHONPATH"] = str(Path(__file__).resolve().parents[1] / "src")
     return subprocess.Popen(
-        [sys.executable, "-m", "codarascan.worker"],
+        [sys.executable, "-m", "codarascan.worker", *args],
         stdin=subprocess.PIPE,
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
@@ -127,8 +128,11 @@ def test_nonfinite_json_numbers_are_protocol_errors(constant: bytes) -> None:
 
 
 @pytest.mark.integration
-def test_persistent_worker_capabilities_scanner_scan_release_and_shutdown() -> None:
-    process = _worker()
+@pytest.mark.parametrize("args", [(), ("--workers", "4")])
+def test_persistent_worker_capabilities_scanner_scan_release_and_shutdown(
+    args: tuple[str, ...],
+) -> None:
+    process = _worker(*args)
     assert process.stdin and process.stdout and process.stderr
     _write(process.stdin, _request(1, "capabilities"))
     capabilities = _read(process.stdout)
@@ -321,3 +325,55 @@ def test_worker_module_contains_no_network_transport() -> None:
     source = files("codarascan").joinpath("worker.py").read_text()
     assert "import socket" not in source
     assert "HTTPServer" not in source
+
+
+@pytest.mark.parametrize("workers", [0, -1, True, False, 1.5, "4", "auto", None])
+def test_server_rejects_invalid_worker_count(workers: object) -> None:
+    from codarascan.errors import ConfigurationError
+
+    with pytest.raises(ConfigurationError, match="workers must be a positive integer"):
+        WorkerServer(io.BytesIO(), io.BytesIO(), workers=workers)  # type: ignore[arg-type]
+
+
+@pytest.mark.parametrize("workers", [None, 4])
+def test_server_limits_concurrent_requests(workers: int | None) -> None:
+    import threading
+
+    kwargs = {} if workers is None else {"workers": workers}
+    server = WorkerServer(io.BytesIO(), io.BytesIO(), **kwargs)
+    count = workers or 1
+    started = threading.Barrier(count + 1)
+    release = threading.Event()
+    extra_started = threading.Event()
+
+    def block() -> None:
+        started.wait(timeout=5)
+        assert release.wait(timeout=5)
+
+    try:
+        futures = [server._executor.submit(block) for _ in range(count)]
+        started.wait(timeout=5)
+        extra = server._executor.submit(extra_started.set)
+        assert not extra_started.wait(timeout=0.1)
+        release.set()
+        for future in futures:
+            future.result(timeout=5)
+        extra.result(timeout=5)
+        assert extra_started.is_set()
+    finally:
+        release.set()
+        server._executor.shutdown(wait=True)
+
+
+@pytest.mark.parametrize("command", ["codarascan.worker", "codarascan.cli"])
+@pytest.mark.parametrize("value", ["0", "-1", "1.5", "auto"])
+def test_worker_cli_rejects_invalid_count(command: str, value: str) -> None:
+    args = [sys.executable, "-m", command]
+    if command == "codarascan.cli":
+        args.append("_worker")
+    result = subprocess.run(
+        [*args, "--workers", value], input=b"", capture_output=True, timeout=10,
+    )
+    assert result.returncode == 2
+    assert result.stdout == b""
+    assert b"workers must be a positive integer" in result.stderr
