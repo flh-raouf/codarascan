@@ -6,7 +6,6 @@ from __future__ import annotations
 import base64
 import binascii
 import json
-import os
 import struct
 import sys
 import threading
@@ -15,7 +14,7 @@ from concurrent.futures import Future, ThreadPoolExecutor
 from typing import Any, BinaryIO, cast
 
 from . import __version__
-from .errors import CodaraScanError, ProtocolError
+from .errors import CodaraScanError, ConfigurationError, ProtocolError
 from .scanner import Scanner
 
 PROTOCOL_VERSION = 1
@@ -116,7 +115,9 @@ def _error_payload(error: BaseException) -> dict[str, Any]:
 
 
 class WorkerServer:
-    def __init__(self, reader: BinaryIO, writer: BinaryIO) -> None:
+    def __init__(self, reader: BinaryIO, writer: BinaryIO, *, workers: int = 1) -> None:
+        if isinstance(workers, bool) or not isinstance(workers, int) or workers < 1:
+            raise ConfigurationError("workers must be a positive integer")
         self.reader = reader
         self.writer = writer
         self._write_lock = threading.Lock()
@@ -125,7 +126,7 @@ class WorkerServer:
         self._active_lock = threading.RLock()
         self._active: dict[Any, threading.Event] = {}
         self._executor = ThreadPoolExecutor(
-            max_workers=max(1, os.cpu_count() or 1),
+            max_workers=workers,
             thread_name_prefix="codarascan-worker",
         )
 
@@ -390,12 +391,14 @@ class WorkerServer:
             future.add_done_callback(completed_callback)
 
 
-def main() -> int:
-    return WorkerServer(sys.stdin.buffer, sys.stdout.buffer).run()
+def main(*, workers: int = 1) -> int:
+    return WorkerServer(sys.stdin.buffer, sys.stdout.buffer, workers=workers).run()
 
 
 if __name__ == "__main__":
-    raise SystemExit(main())
+    from .cli import main as cli_main
+
+    raise SystemExit(cli_main(["_worker", *sys.argv[1:]]))
 
 
 __all__ = [

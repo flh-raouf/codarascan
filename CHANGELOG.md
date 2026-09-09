@@ -3,6 +3,14 @@
 All notable changes are recorded here. CodaraScan follows semantic versioning
 after 1.0; during 0.x, breaking changes are identified explicitly.
 
+## 0.2.1 - 2026-09-09
+
+- Make persistent worker request concurrency configurable with
+  `codarascan _worker --workers N` and `WorkerServer(..., workers=N)`.
+- Default the persistent request pool to one worker instead of deriving its
+  size from the host CPU count, and document its interaction with PDF page
+  workers.
+
 ## 0.2.0 - 2026-09-07
 
 - Add the Panorama high-recall extraction engine and public

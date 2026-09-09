@@ -81,6 +81,16 @@ def _workers(value: str) -> int | str:
     return parsed
 
 
+def _request_workers(value: str) -> int:
+    try:
+        parsed = int(value)
+    except ValueError as exc:
+        raise argparse.ArgumentTypeError("workers must be a positive integer") from exc
+    if parsed < 1:
+        raise argparse.ArgumentTypeError("workers must be a positive integer")
+    return parsed
+
+
 def _add_scanner_options(parser: argparse.ArgumentParser) -> None:
     parser.add_argument(
         "--mode", choices=("fast", "robust", "panorama"), default="fast"
@@ -119,7 +129,11 @@ def build_parser() -> argparse.ArgumentParser:
     document.add_argument("--workers", type=_workers, default=1)
     document.add_argument("--on-error", choices=("raise", "collect"), default="raise")
     _add_scanner_options(document)
-    subparsers.add_parser("_worker")
+    worker = subparsers.add_parser("_worker")
+    worker.add_argument(
+        "--workers", type=_request_workers, default=1,
+        help="number of concurrent requests (default: 1)",
+    )
     return parser
 
 
@@ -233,7 +247,7 @@ def run(arguments: argparse.Namespace) -> int:
     if arguments.command == "_worker":
         from .worker import main as worker_main
 
-        return worker_main()
+        return worker_main(workers=arguments.workers)
     scanner = _scanner(arguments)
     if arguments.command == "image":
         result: ImageResult | DocumentResult = scanner.scan_image(
